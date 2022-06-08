@@ -236,6 +236,15 @@ h2 {
   background-color: #C7F6FA;
 }
 
+i {
+  font-size: 2.441rem;
+  margin-right: 1rem;
+}
+
+.stack--title {
+  font-size: 1.25rem;
+}
+
 section {
   padding: 3.052rem 0;
 }
