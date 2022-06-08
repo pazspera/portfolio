@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Karla:wght@400;700&family=Merriweather:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Karla:wght@300;400;700&family=Merriweather:wght@700&display=swap');
 
 @import "abstract/variables";
+@import "abstract/mixins";
 
 @import "base/resets";
 @import "base/typography";
+
+@import "components/btn";
+@import "components/hero";
 
 @import "layout/header";
