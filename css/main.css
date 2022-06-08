@@ -150,16 +150,11 @@ h2 {
   line-height: 1.6;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
   width: 100px;
   margin-bottom: 1.563rem;
 }
@@ -173,6 +168,14 @@ h2 {
 }
 .skill-item span {
   margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  grid-auto-flow: row dense;
 }
 
 .navbar {
