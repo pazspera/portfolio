@@ -1,0 +1,22 @@
+body {
+  font-family: $font-text;
+  line-height: 1.6rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: $size3;
+}

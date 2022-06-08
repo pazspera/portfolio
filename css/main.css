@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Karla:wght@400;700&family=Merriweather:wght@700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #F5F5F5;
+  color: #191716;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  line-height: 1.6rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.953rem;
+}
+
+.navbar {
+  background-color: #191716;
+}
+.navbar-brand {
+  font-size: 1.563rem;
+  font-family: "Fredericka the Great", cursive;
+  padding: 0;
+}
+.navbar .nav-link {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.navbar-dark,
+.navbar-brand,
+.navbar-nav,
+.nav-link {
+  color: #ECEDE8 !important;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-dark:hover, .navbar-dark:focus,
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-nav:hover,
+.navbar-nav:focus,
+.nav-link:hover,
+.nav-link:focus {
+  color: #F3A712 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark,
+.navbar-toggler {
+  color: rgba(236, 237, 232, 0.3);
+}
+.navbar-dark:hover, .navbar-dark:focus,
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  color: rgba(236, 237, 232, 0.3);
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    margin-left: 1.25rem;
+  }
+}/*# sourceMappingURL=main.css.map */
