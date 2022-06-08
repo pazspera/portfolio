@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -233,4 +234,8 @@ h2 {
 }
 section {
   padding: 3.052rem 0;
+}
+
+.spacer {
+  height: 10vh;
 }/*# sourceMappingURL=main.css.map */
