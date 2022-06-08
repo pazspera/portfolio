@@ -51,7 +51,7 @@
      */
 
   &__title span {
-    font-size: $size3;
+    font-size: $size2;
     padding: 0.05em 0.3em 0.05em 0.3em;
     line-height: 1.3;
   }
@@ -74,11 +74,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .hero__title span {
-    font-size: $size2;
-  }
-}
 
 @media (min-width: 1200px) {
   .hero__title span {
