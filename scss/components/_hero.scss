@@ -58,9 +58,10 @@
 
   &__text span {
     font-size: $size4;
+    text-transform: uppercase;
     padding: 0.25em 0.7em;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 200;
   }
 }
 

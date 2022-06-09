@@ -1,12 +1,17 @@
 .proyectos {
-    background-color: $primary--light;
+  background-color: $primary--light;
 }
 
 i.proyect-icon {
-    font-size: $size2;
-    margin-right: 1rem;
+  font-size: $size2;
+  margin-right: 1rem;
 }
 
 .stack--title {
-    font-size: $size5;
+  font-size: $size5;
+}
+
+.proyects__text {
+  font-size: $size5;
+  line-height: 1.6;
 }
