@@ -29,6 +29,8 @@ body {
 
 p {
   line-height: 1.6rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 h1,
@@ -70,6 +72,9 @@ h2 {
   color: #ECEDE8;
   transition: all 0.25s ease-in-out;
   border: 1px solid #191716;
+}
+.btn__submit {
+  width: 100%;
 }
 
 .hero {
@@ -183,6 +188,34 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 16px;
   grid-auto-flow: row dense;
+}
+
+label {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-links i {
+  font-size: 2.441rem;
+  margin-right: 1rem;
+}
+
+.form-control:focus {
+  border-color: #C7F6FA;
+  box-shadow: 0 0 0 0.25rem #C7F6FA;
 }
 
 .navbar {

@@ -3,8 +3,7 @@
 }
 
 i.proyect-icon {
-  font-size: $size2;
-  margin-right: 1rem;
+  @include icon-format;
 }
 
 .stack--title {
@@ -12,6 +11,5 @@ i.proyect-icon {
 }
 
 .proyects__text {
-  font-size: $size5;
-  line-height: 1.6;
+  @include main-text;
 }

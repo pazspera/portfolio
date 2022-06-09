@@ -7,8 +7,7 @@
 }
 
 .about__text {
-  font-size: $size5;
-  line-height: 1.6;
+  @include main-text;
 }
 
 .skill-item {
@@ -31,7 +30,7 @@
 
   span {
     margin-top: 0.5rem;
-    font-size: $size6
+    font-size: $size6;
   }
 }
 
@@ -41,4 +40,3 @@
   gap: 16px;
   grid-auto-flow: row dense;
 }
-

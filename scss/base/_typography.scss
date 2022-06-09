@@ -5,6 +5,7 @@ body {
 
 p {
   line-height: 1.6rem;
+  @include main-text;
 }
 
 h1,
