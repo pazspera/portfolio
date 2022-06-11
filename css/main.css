@@ -172,11 +172,7 @@ h2 {
 }
 .skill-item i {
   font-size: 2.441rem;
-  transition: all 0.25s ease-in-out;
-}
-.skill-item i:hover {
-  color: #0FA3B1;
-  transition: all 0.25s ease-in-out;
+  padding: 0;
 }
 .skill-item span {
   margin-top: 0.5rem;
@@ -211,6 +207,16 @@ textarea {
 .social-links i {
   font-size: 2.441rem;
   margin-right: 1rem;
+}
+
+.social-links__icons {
+  text-decoration: none;
+  color: #191716;
+  transition: all 0.25s ease-in-out;
+}
+.social-links__icons:hover {
+  color: #0FA3B1;
+  transition: all 0.25s ease-in-out;
 }
 
 .form-control:focus {

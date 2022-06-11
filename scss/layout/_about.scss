@@ -20,12 +20,7 @@
 
   i {
     font-size: $size2;
-    transition: all 0.25s ease-in-out;
-
-    &:hover {
-      color: $primary;
-      transition: all 0.25s ease-in-out;
-    }
+    padding: 0;
   }
 
   span {
