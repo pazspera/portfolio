@@ -47,6 +47,13 @@ h2 {
   font-size: 1.953rem;
 }
 
+a.link {
+  color: #0FA3B1;
+}
+a.link:hover, a.link:focus, a.link:visited {
+  color: #0A6870;
+}
+
 .btn {
   border-radius: 0;
   text-transform: uppercase;
