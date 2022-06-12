@@ -21,3 +21,20 @@ d.addEventListener("keyup", (e) => {
     }
   }
 });
+
+d.addEventListener("submit", (e) => {
+  const $loader = d.querySelector(".contact-form-loader"),
+    $response = d.querySelector(".contact-form-response");
+
+  $loader.classList.remove("d-none");
+
+  setTimeout(() => {
+    $loader.classList.add("d-none");
+    $response.classList.remove("d-none");
+    $form.reset();
+
+    setTimeout(() => {
+      $response.classList.add("d-none");
+    }, 3000);
+  }, 3000);
+});
