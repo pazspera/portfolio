@@ -244,20 +244,29 @@
             <div class="col-12 col-lg-6 mb-5">
               <form class="contact-form">
                 <div class="mb-3">
-                  <label for="name" class="form-label">Nombre</label>
+                  <label for="name" class="form-label">Nombre *</label>
                   <input type="text" name="name" class="form-control" autocomplete="off" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required />
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" name="email" class="form-control" autocomplete="off" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
+                  <label for="email" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    autocomplete="off"
+                    title="Email incorrecto"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                    required
+                  />
                 </div>
                 <div class="mb-3">
-                  <label for="message" class="form-label">Mensaje</label>
+                  <label for="message" class="form-label">Mensaje *</label>
                   <textarea name="message" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres" required></textarea>
                 </div>
+                <div class="form-text">* Campos requeridos</div>
                 <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
                 <div class="contact-form-loader d-none">
-                  <img src="./img/tail-spin.svg" alt="Cargando">
+                  <img src="./img/tail-spin.svg" alt="Cargando" />
                 </div>
                 <div class="contact-form-response d-none">
                   <p>Tu mensaje fue enviado</p>
