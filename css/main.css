@@ -228,15 +228,23 @@ textarea {
   border: thin solid #33851E;
 }
 
-/* .contact-form [required]:invalid {
-  border: thin solid $error;
-} */
+.contact-form [required]:invalid {
+  border: thin solid #DA1B2B;
+}
+
 .contact-form-error {
-  margin-top: -1rem;
   font-size: 0.8rem;
   background-color: #DA1B2B;
   color: #ECEDE8;
   transition: all 800ms ease;
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.none {
+  display: none;
 }
 
 .contact-form-error.is-active {

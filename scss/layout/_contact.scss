@@ -41,31 +41,38 @@ textarea {
   border: thin solid $success;
 }
 
-/* .contact-form [required]:invalid {
+.contact-form [required]:invalid {
   border: thin solid $error;
-} */
+}
 
 .contact-form-error {
-  margin-top: -1rem;
   font-size: $size7;
   background-color: $error;
   color: $white;
   transition: all 800ms ease;
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.none {
+  display: none;
 }
 
 .contact-form-error.is-active {
-  display: block;
-  animation: show-message 1s 1 normal 0s ease-out both;
+	display: block;
+	animation: show-message 1s 1 normal 0s ease-out both;
 }
 
 @keyframes show-message {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
 
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
 }
