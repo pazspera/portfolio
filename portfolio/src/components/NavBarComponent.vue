@@ -2,7 +2,7 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">Paz Spera</a>
+        <router-link class="navbar-brand" :to="{ name: 'home' }">Paz Spera</router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,13 +17,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#acerca">Acerca de</a>
+              <router-link class="nav-link" :to="{ name: 'about' }">Acerca de</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#proyectos">Proyectos</a>
+              <router-link class="nav-link" :to="{ name: 'projects' }">Proyectos</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacto">Contacto</a>
+              <router-link class="nav-link" :to="{ name: 'contact' }">Contacto</router-link>
             </li>
           </ul>
         </div>
