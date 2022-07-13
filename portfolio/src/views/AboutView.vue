@@ -84,7 +84,7 @@ export default {
   data() {
     return {
       imagePaz: {
-        src: "https://github.com/pazspera/portfolio/blob/main/portfolio/src/assets/img/paz.jpg",
+        src: "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/paz.jpg",
         alt: "Paz Spera",
       },
     };
