@@ -23,7 +23,7 @@
               <router-link class="nav-link" :to="{ name: 'projects' }">Proyectos</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'contact' }">Contacto</router-link>
+              <router-link class="nav-link" :to="{ name: 'contact' }" :active='$route.name =="contact"'>Contacto</router-link>
             </li>
           </ul>
         </div>
