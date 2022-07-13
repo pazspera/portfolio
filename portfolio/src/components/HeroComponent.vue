@@ -1,0 +1,106 @@
+<template>
+  <section class="hero" id="hero">
+    <div class="hero__container container">
+      <div class="row">
+        <div class="col-12 col-md-9 col-lg-8">
+          <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
+          <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
+          <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "HeroComponent",
+};
+</script>
+
+<style lang="scss">
+@import "@/assets/scss/main.scss";
+
+.hero {
+  height: 95vh;
+  padding: 1em 0;
+  display: flex;
+  @include background-image;
+  background-position: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__title {
+    margin: 0.5em 0;
+    letter-spacing: 2px;
+    font-family: $font-title;
+  }
+
+  &__text {
+    font-size: $size1;
+    font-family: $font-text;
+  }
+
+  &__title,
+  &__text {
+    color: $white;
+    align-self: start;
+    justify-self: center;
+    text-align: left;
+  }
+
+  /* El span pone el fondo de color y así 
+    puedo tener que el fondo se mantenga en todo
+    el texto sin depender de las col */
+
+  &__title span,
+  &__text span {
+    background-color: $black;
+    /*  agregar los dos que brave no soporta 
+            box-decoration-break solo
+         */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /*  box-decoration-break en el span junto con 
+        text-align en el title/text hacen que el 
+        fondo se pegue al contenido del texto
+     */
+
+  &__title span {
+    font-size: $size2;
+    padding: 0.05em 0.3em 0.05em 0.3em;
+    line-height: 1.3;
+  }
+
+  &__text span {
+    font-size: $size4;
+    text-transform: uppercase;
+    padding: 0.25em 0.7em;
+    line-height: 1.6;
+    font-weight: 200;
+  }
+}
+
+#hero {
+  background-image: url(@/assets/img/hero_bg.jpg);
+}
+
+@media (min-width: 1600px) {
+  .hero {
+    height: 85vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__title span {
+    font-size: $size1;
+  }
+}
+</style>

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="container my-5">
-      <div class="row">
-        <h1>About View</h1>
-      </div>
-    </div>
+    <h1>About View</h1>
   </div>
 </template>
 
