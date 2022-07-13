@@ -11,6 +11,9 @@
 <script>
 export default {
   name: "ContactView",
+  mounted() {
+    document.title = "Contacto - Paz Spera";
+  },
 };
 </script>
 

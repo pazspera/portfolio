@@ -11,6 +11,9 @@
 <script>
 export default {
   name: "ProjectsView",
+  mounted() {
+    document.title = "Proyectos - Paz Spera";
+  },
 };
 </script>
 

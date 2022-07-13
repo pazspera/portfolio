@@ -11,6 +11,9 @@
 <script>
 export default {
   name: "HomeView",
+  mounted() {
+    document.title = "Home - Paz Spera";
+  },
 };
 </script>
 

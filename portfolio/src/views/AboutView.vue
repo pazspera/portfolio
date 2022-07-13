@@ -11,6 +11,9 @@
 <script>
 export default {
   name: "AboutView",
+  mounted() {
+    document.title = "Acerca de - Paz Spera";
+  },
 };
 </script>
 
