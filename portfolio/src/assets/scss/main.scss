@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Karla:wght@200;300;400;700&family=Merriweather:wght@700&display=swap");
+
+// Colors
+$black: #191716;
+$white: #ecede8;
+$light-gray: #f5f5f5;
+$dark-gray: #d9d9d9;
+$primary: #0fa3b1;
+$primary--light: #c7f6fa;
+$primary--dark: #0a6870;
+$error: #da1b2b;
+$success: #33851e;
+
+// Fonts
+$font-text: "Karla", sans-serif;
+$font-title: "Merriweather", serif;
+$font-logo: "Fredericka the Great", cursive;
+
+// Sizes
+$size1: 3.052rem;
+$size2: 2.441rem;
+$size3: 1.953rem;
+$size4: 1.563rem;
+$size5: 1.25rem;
+$size6: 1rem;
+$size7: 0.8rem;
+$size8: 0.64rem;
+
+@mixin background-image {
+  max-width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin main-text {
+  font-size: $size5;
+  line-height: 1.6;
+}
+
+@mixin icon-format {
+  font-size: $size2;
+  margin-right: 1rem;
+}
+
+// Resets
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: $light-gray;
+  color: $black;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Typography
+body {
+  font-family: $font-text;
+  line-height: 1.6rem;
+}
+
+p {
+  line-height: 1.6rem;
+  @include main-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: $size3;
+}
+
+a.link {
+  color: $primary;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $primary--dark;
+  }
+}
+
+// Sections
+section {
+  padding: $size1 0;
+}
+
+.spacer {
+  height: 10vh;
+}
+
+// Btn
+.btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+
+  &__primary {
+    padding: 0.75rem 1.5rem;
+    font-size: $size5;
+  }
+
+  &__secondary {
+    font-size: $size7;
+    padding: 0.5rem 1rem;
+  }
+
+  &__primary,
+  &__secondary {
+    background-color: $white;
+    color: $black;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid $black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $black;
+      color: $white;
+      transition: all 0.25s ease-in-out;
+      border: 1px solid $black;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+  }
+}
