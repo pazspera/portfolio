@@ -24,6 +24,48 @@
           "link": "https://github.com/pazspera/viernes-web"
         }
       ]
+    },
+    {
+      "title": "Hot Rod Records",
+      "description": "Ecommerce de una tienda de música especializada en rock 'n' roll. Vinilos, Elvis Presley y WordPress.",
+      "role": "Diseñadora UI, desarrolladora, redactora de contenido",
+      "tech_stack": ["<i class='devicon-wordpress-plain proyect-icon'></i>", "<i class='devicon-woocommerce-plain-wordmark proyect-icon'></i>"],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_hotrod.jpg",
+        "alt": "Mockup sitio web del proyecto Hot Rod Records"
+      },
+      "btns": [
+        {
+          "name": "Sitio",
+          "link": "https://hotrodrecords.tk/"
+        }
+      ]
+    },
+    {
+      "title": "Kaio Sushi",
+      "description": "Ecommerce de un local de venta de sushi. El proyecto incluye un carrito funcional desarrollado mayormente con Vanilla JavaScript y unos detalles de jQuery.",
+      "role": "Diseñadora UI, desarrolladora frontend",
+      "tech_stack": [
+        "<i class='devicon-html5-plain proyect-icon'></i>",
+        "<i class='devicon-sass-original proyect-icon'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
+        "<i class='devicon-javascript-plain proyect-icon'></i>",
+        "<i class='devicon-jquery-plain proyect-icon'></i>"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "alt": "Mockup sitio web del proyecto Kaio Sushi"
+      },
+      "btns": [
+        {
+          "name": "Sitio",
+          "link": "https://pazspera.github.io/kaio-sushi/"
+        },
+        {
+          "name": "Repositorio Github",
+          "link": "https://github.com/pazspera/kaio-sushi"
+        }
+      ]
     }
   ]
 }
