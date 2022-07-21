@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col mb-5">
-            <h2>Prueba componente</h2>
+            <h2>Proyectos</h2>
           </div>
         </div>
       </div>
@@ -28,7 +28,6 @@ export default {
   },
   mounted() {
     document.title = "Proyectos - Paz Spera";
-    console.log(this.projects);
   },
   data() {
     return {
