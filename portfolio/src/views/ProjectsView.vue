@@ -88,10 +88,13 @@
 </template>
 
 <script>
+import json from "@/assets/data/projects.json";
+
 export default {
   name: "ProjectsView",
   mounted() {
     document.title = "Proyectos - Paz Spera";
+    console.log(this.projects);
   },
   data() {
     return {
@@ -107,8 +110,9 @@ export default {
         src: "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
         alt: "Mockup sitio web del proyecto Kaio Sushi",
       },
-    }
-  }
+      projects: json.projects,
+    };
+  },
 };
 </script>
 
