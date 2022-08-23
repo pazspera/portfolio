@@ -17,8 +17,7 @@
                 <BaseInput type="email" label="Email *" v-model="form.email" />
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label">Mensaje *</label>
-                <textarea name="message" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres" v-model="form.message" required></textarea>
+                <BaseTextArea label="Mensaje *" />
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
@@ -54,11 +53,13 @@
 
 <script>
 import BaseInput from "@/components/BaseInput.vue";
+import BaseTextArea from "@/components/BaseTextArea.vue";
 
 export default {
   name: "ContactView",
   components: {
     BaseInput,
+    BaseTextArea,
   },
   mounted() {
     document.title = "Contacto - Paz Spera";
