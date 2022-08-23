@@ -11,14 +11,14 @@
           <div class="col-12 col-lg-6 mb-5">
             <form target="_blank" class="contact-form" action="https://formsubmit.co/7ceabb42100b9b4fb07ac102ce7f9e7b" method="POST">
               <div class="mb-3">
-                <BaseInput type="text" label="Nombre *" />
+                <BaseInput type="text" label="Nombre *" v-model="form.name" />
               </div>
               <div class="mb-3">
-                <BaseInput type="email" label="Email *"/>
+                <BaseInput type="email" label="Email *" v-model="form.email" />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje *</label>
-                <textarea name="message" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres" required></textarea>
+                <textarea name="message" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres" v-model="form.message" required></textarea>
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
@@ -29,6 +29,8 @@
                 <p>Tu mensaje fue enviado</p>
               </div>
             </form>
+
+            <pre>{{ form }}</pre>
           </div>
           <div class="col-12 col-lg-5 offset-lg-1 py-4">
             <p>
@@ -63,6 +65,11 @@ export default {
   },
   data() {
     return {
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
       imgSpinner: {
         src: "https://raw.githubusercontent.com/pazspera/portfolio/9b22274cf3b6cc885099a9be202e7aa179a216db/portfolio/src/assets/img/tail-spin.svg",
         alt: "Cargando",

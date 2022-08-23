@@ -1,6 +1,6 @@
 <template>
   <label class="form-label" v-if="label">{{ label }}</label>
-  <input class="form-control" v-bind="$attrs" :value="modelValue" @input="$emit('update:modelValue', '$event.target.value')" />
+  <input class="form-control" v-bind="$attrs" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
 </template>
 
 <script>
