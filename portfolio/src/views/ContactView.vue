@@ -9,18 +9,50 @@
         </div>
         <div class="row">
           <div class="col-12 col-lg-6 mb-5">
-            <form target="_blank" class="contact-form" action="https://formsubmit.co/7ceabb42100b9b4fb07ac102ce7f9e7b" method="POST">
+            <form class="contact-form" @submit.prevent="submitForm">
               <div class="mb-3">
-                <BaseInput type="text" label="Nombre *" v-model="form.name" />
+                <label for="name" class="form-label">Nombre *</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  v-model="form.nombre"
+                  autocomplete="off"
+                  title="Nombre solo acepta letras y espacios en blanco"
+                  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <BaseInput type="email" label="Email *" v-model="form.email" />
+                <label for="email" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  v-model="form.email"
+                  autocomplete="off"
+                  title="Email incorrecto"
+                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <BaseTextArea label="Mensaje *" />
+                <label for="message" class="form-label">Mensaje *</label>
+                <textarea
+                  name="message"
+                  v-model="form.mensaje"
+                  cols="30"
+                  rows="6"
+                  class="form-control"
+                  data-pattern="^.{1,255}$"
+                  title="El mensaje no debe exceder los 255 caracteres"
+                  required
+                ></textarea>
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
+              <pre>{{ form }}</pre>
+              <!-- Response -->
               <div class="contact-form-loader d-none my-5 d-flex justify-content-center">
                 <img :="imgSpinner" />
               </div>
@@ -28,8 +60,6 @@
                 <p>Tu mensaje fue enviado</p>
               </div>
             </form>
-
-            <pre>{{ form }}</pre>
           </div>
           <div class="col-12 col-lg-5 offset-lg-1 py-4">
             <p>
@@ -52,30 +82,49 @@
 </template>
 
 <script>
-import BaseInput from "@/components/BaseInput.vue";
-import BaseTextArea from "@/components/BaseTextArea.vue";
+import useVuelidate from "@vuelidate/core";
+import { required, email, minLength, alpha } from "@vuelidate/validators";
 
 export default {
   name: "ContactView",
-  components: {
-    BaseInput,
-    BaseTextArea,
-  },
   mounted() {
     document.title = "Contacto - Paz Spera";
+  },
+  setup() {
+    return { v$: useVuelidate() };
   },
   data() {
     return {
       form: {
-        name: "",
+        nombre: "",
         email: "",
-        message: "",
+        mensaje: "",
       },
       imgSpinner: {
         src: "https://raw.githubusercontent.com/pazspera/portfolio/9b22274cf3b6cc885099a9be202e7aa179a216db/portfolio/src/assets/img/tail-spin.svg",
         alt: "Cargando",
       },
     };
+  },
+  validations: {
+    form: {
+      nombre: {
+        required,
+        alpha,
+        minLength: minLength(2),
+      },
+      email: { required, email },
+      mensaje: { required },
+    },
+  },
+  methods: {
+    submitForm() {
+      if (!this.$v.form.$invalid) {
+        console.log("Form Submitted");
+      } else {
+        console.log("Invalid form");
+      }
+    },
   },
 };
 </script>

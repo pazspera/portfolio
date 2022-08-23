@@ -11,24 +11,13 @@
           <div class="col-12 col-lg-6 mb-5">
             <form target="_blank" class="contact-form" action="https://formsubmit.co/7ceabb42100b9b4fb07ac102ce7f9e7b" method="POST">
               <div class="mb-3">
-                <label for="name" class="form-label">Nombre *</label>
-                <input type="text" name="name" class="form-control" autocomplete="off" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required />
+                <BaseInput type="text" label="Nombre *" v-model="form.name" />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  autocomplete="off"
-                  title="Email incorrecto"
-                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-                  required
-                />
+                <BaseInput type="email" label="Email *" v-model="form.email" />
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label">Mensaje *</label>
-                <textarea name="message" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres" required></textarea>
+                <BaseTextArea label="Mensaje *" />
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
@@ -39,6 +28,8 @@
                 <p>Tu mensaje fue enviado</p>
               </div>
             </form>
+
+            <pre>{{ form }}</pre>
           </div>
           <div class="col-12 col-lg-5 offset-lg-1 py-4">
             <p>
@@ -61,13 +52,25 @@
 </template>
 
 <script>
+import BaseInput from "@/components/BaseInput.vue";
+import BaseTextArea from "@/components/BaseTextArea.vue";
+
 export default {
   name: "ContactView",
+  components: {
+    BaseInput,
+    BaseTextArea,
+  },
   mounted() {
     document.title = "Contacto - Paz Spera";
   },
   data() {
     return {
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
       imgSpinner: {
         src: "https://raw.githubusercontent.com/pazspera/portfolio/9b22274cf3b6cc885099a9be202e7aa179a216db/portfolio/src/assets/img/tail-spin.svg",
         alt: "Cargando",
