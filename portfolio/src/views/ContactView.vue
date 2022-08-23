@@ -12,13 +12,16 @@
             <form class="contact-form" @submit.prevent="submitForm">
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre *</label>
-                <input type="text" name="name" class="form-control" v-model="form.nombre" autocomplete="off" />
-                <p v-if="v$.form.nombre.$invalid" class="contact-form-error">El nombre es requerido</p>
+                <input type="text" class="form-control" v-model="form.nombre" autocomplete="off" />
+                <p v-if="v$.form.nombre.required" class="contact-form-error">El nombre es requerido</p>
+                <p v-else-if="v$.form.nombre.alpha" class="contact-form-error">El nombre solo acepta letras</p>
+                <p v-else-if="v$.form.nombre.minLength" class="contact-form-error">El nombre debe tener más de 2 caracteres</p>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email *</label>
                 <input type="email" name="email" class="form-control" v-model="form.email" autocomplete="off" />
-                <p v-if="v$.form.email.$invalid" class="contact-form-error">Email incorrecto</p>
+                <p v-if="!v$.form.email.required" class="contact-form-error">El email es requerido</p>
+                <p v-else-if="!v$.form.email.email" class="contact-form-error">Formato de email incorrecto</p>
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje *</label>
@@ -85,12 +88,17 @@ export default {
   validations: {
     form: {
       nombre: {
-        required,
-        alpha,
+        required: required,
+        alpha: alpha,
         minLength: minLength(2),
       },
-      email: { required, email },
-      mensaje: { required },
+      email: {
+        required: required,
+        email: email,
+      },
+      mensaje: {
+        required: required,
+      },
     },
   },
   methods: {
