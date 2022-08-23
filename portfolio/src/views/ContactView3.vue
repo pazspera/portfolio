@@ -13,20 +13,14 @@
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre *</label>
                 <input type="text" class="form-control" v-model="form.nombre" autocomplete="off" />
-                <p v-if="v$.form.nombre.required" class="contact-form-error">El nombre es requerido</p>
-                <p v-else-if="v$.form.nombre.alpha" class="contact-form-error">El nombre solo acepta letras</p>
-                <p v-else-if="v$.form.nombre.minLength" class="contact-form-error">El nombre debe tener más de 2 caracteres</p>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email *</label>
                 <input type="email" name="email" class="form-control" v-model="form.email" autocomplete="off" />
-                <p v-if="!v$.form.email.required" class="contact-form-error">El email es requerido</p>
-                <p v-else-if="!v$.form.email.email" class="contact-form-error">Formato de email incorrecto</p>
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje *</label>
                 <textarea name="message" v-model="form.mensaje" cols="30" rows="6" class="form-control"></textarea>
-                <p v-if="v$.form.mensaje.$invalid" class="contact-form-error">El mensaje es requerido</p>
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
@@ -61,8 +55,6 @@
 </template>
 
 <script>
-import useVuelidate from "@vuelidate/core";
-import { required, email, minLength, alpha } from "@vuelidate/validators";
 
 export default {
   name: "ContactView",
@@ -71,7 +63,6 @@ export default {
   },
   data() {
     return {
-      v$: useVuelidate(),
       form: {
         nombre: "",
         email: "",
@@ -80,24 +71,6 @@ export default {
       imgSpinner: {
         src: "https://raw.githubusercontent.com/pazspera/portfolio/9b22274cf3b6cc885099a9be202e7aa179a216db/portfolio/src/assets/img/tail-spin.svg",
         alt: "Cargando",
-      },
-    };
-  },
-  validations() {
-    return {
-      form: {
-        nombre: {
-          required: required,
-          alpha: alpha,
-          minLength: minLength(2),
-        },
-        email: {
-          required: required,
-          email: email,
-        },
-        mensaje: {
-          required: required,
-        },
       },
     };
   },
