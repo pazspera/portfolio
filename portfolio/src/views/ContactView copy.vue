@@ -11,10 +11,20 @@
           <div class="col-12 col-lg-6 mb-5">
             <form target="_blank" class="contact-form" action="https://formsubmit.co/7ceabb42100b9b4fb07ac102ce7f9e7b" method="POST">
               <div class="mb-3">
-                <BaseInput type="text" label="Nombre *" />
+                <label for="name" class="form-label">Nombre *</label>
+                <input type="text" name="name" class="form-control" autocomplete="off" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required />
               </div>
               <div class="mb-3">
-                <BaseInput type="email" label="Email *"/>
+                <label for="email" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  autocomplete="off"
+                  title="Email incorrecto"
+                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                  required
+                />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje *</label>
@@ -51,13 +61,8 @@
 </template>
 
 <script>
-import BaseInput from "@/components/BaseInput.vue";
-
 export default {
   name: "ContactView",
-  components: {
-    BaseInput,
-  },
   mounted() {
     document.title = "Contacto - Paz Spera";
   },
