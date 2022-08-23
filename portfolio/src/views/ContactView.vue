@@ -20,7 +20,6 @@
                   autocomplete="off"
                   title="Nombre solo acepta letras y espacios en blanco"
                   pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -33,21 +32,11 @@
                   autocomplete="off"
                   title="Email incorrecto"
                   pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-                  required
                 />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje *</label>
-                <textarea
-                  name="message"
-                  v-model="form.mensaje"
-                  cols="30"
-                  rows="6"
-                  class="form-control"
-                  data-pattern="^.{1,255}$"
-                  title="El mensaje no debe exceder los 255 caracteres"
-                  required
-                ></textarea>
+                <textarea name="message" v-model="form.mensaje" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres"></textarea>
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
@@ -119,8 +108,14 @@ export default {
   },
   methods: {
     submitForm() {
-      if (!this.$v.form.$invalid) {
-        console.log("Form Submitted");
+      const nombreIsValid = !!this.form.nombre;
+      const emailIsValid = !!this.form.email;
+      const mensajeIsValid = !!this.form.mensaje;
+
+      const formIsValid = nombreIsValid && emailIsValid && mensajeIsValid;
+
+      if (formIsValid) {
+        console.log("Form Submitted", this.form);
       } else {
         console.log("Invalid form");
       }
