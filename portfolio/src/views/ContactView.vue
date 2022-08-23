@@ -12,31 +12,18 @@
             <form class="contact-form" @submit.prevent="submitForm">
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre *</label>
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  v-model="form.nombre"
-                  autocomplete="off"
-                  title="Nombre solo acepta letras y espacios en blanco"
-                  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-                />
+                <input type="text" name="name" class="form-control" v-model="form.nombre" autocomplete="off" />
+                <p v-if="v$.form.nombre.$invalid" class="contact-form-error">El nombre es requerido</p>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  v-model="form.email"
-                  autocomplete="off"
-                  title="Email incorrecto"
-                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-                />
+                <input type="email" name="email" class="form-control" v-model="form.email" autocomplete="off" />
+                <p v-if="v$.form.email.$invalid" class="contact-form-error">Email incorrecto</p>
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje *</label>
-                <textarea name="message" v-model="form.mensaje" cols="30" rows="6" class="form-control" data-pattern="^.{1,255}$" title="El mensaje no debe exceder los 255 caracteres"></textarea>
+                <textarea name="message" v-model="form.mensaje" cols="30" rows="6" class="form-control"></textarea>
+                <p v-if="v$.form.mensaje.$invalid" class="contact-form-error">El mensaje es requerido</p>
               </div>
               <div class="form-text">* Campos requeridos</div>
               <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
@@ -108,13 +95,7 @@ export default {
   },
   methods: {
     submitForm() {
-      const nombreIsValid = !!this.form.nombre;
-      const emailIsValid = !!this.form.email;
-      const mensajeIsValid = !!this.form.mensaje;
-
-      const formIsValid = nombreIsValid && emailIsValid && mensajeIsValid;
-
-      if (formIsValid) {
+      if (!this.v$.form.$invalid) {
         console.log("Form Submitted", this.form);
       } else {
         console.log("Invalid form");
@@ -166,43 +147,21 @@ textarea {
 }
 
 // Estilos validaciones
-.contact-form [required]:valid {
-  border: thin solid $success;
-}
-
-.contact-form [required]:invalid {
-  border: thin solid $error;
-}
-
 .contact-form-error {
-  font-size: $size7;
-  background-color: $error;
-  color: $white;
-  transition: all 800ms ease;
-  padding: 0.5rem;
-  display: flex;
-  width: 100%;
-  text-align: center;
+  color: $error;
+  font-size: $size6;
 }
 
-.none {
-  display: none;
+input.error,
+input.error:focus,
+textarea.error,
+textarea.error:focus {
+  border-color: $error;
 }
-
-.contact-form-error.is-active {
-  display: block;
-  animation: show-message 1s 1 normal 0s ease-out both;
-}
-
-@keyframes show-message {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
+input.valid,
+input.valid:focus,
+textarea.valid,
+textarea.valid:focus {
+  border-color: $primary;
 }
 </style>
