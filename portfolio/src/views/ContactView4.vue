@@ -54,10 +54,20 @@
 </template>
 
 <script>
+import useVuelidate from "@vuelidate/core";
+import { required } from "@vuelidate/validators";
+
+let regexEmail = /\S+@\S+\.\S+/;
+
+const validateEmail = (string) => regexEmail.test(string);
+
 export default {
   name: "ContactView",
   mounted() {
     document.title = "Contacto - Paz Spera";
+  },
+  setup() {
+    return { v$: useVuelidate() };
   },
   data() {
     return {
@@ -72,9 +82,23 @@ export default {
       },
     };
   },
+  validations() {
+    return {
+      form: {
+        name: { required },
+        email: { required, validateEmail },
+        message: { required },
+      },
+    };
+  },
   methods: {
     submitForm() {
-        console.log("Submit form")
+      this.v$.$validate();
+      if (!this.v$.$error) {
+        alert("Form submitted");
+      } else {
+        alert("Form failed validation");
+      }
     },
   },
 };
