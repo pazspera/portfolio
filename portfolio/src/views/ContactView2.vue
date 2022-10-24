@@ -56,7 +56,7 @@ import BaseInput from "@/components/BaseInput.vue";
 import BaseTextArea from "@/components/BaseTextArea.vue";
 
 export default {
-  name: "ContactView",
+  name: "ContactView2",
   components: {
     BaseInput,
     BaseTextArea,

@@ -11,22 +11,21 @@
           <form class="contact-form" @submit.prevent="submitForm">
             <div class="mb-3">
               <label for="name" class="form-label">Nombre *</label>
-              <input type="text" class="form-control" v-model="form.nombre" autocomplete="off" />
-              <p v-if="!v$.form.nombre.required" class="contact-form-error">El campo nombre es requerido</p>
+              <input type="text" class="form-control" v-model="form.name" autocomplete="off" />
+              <p>{{ form.name }}</p>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email *</label>
               <input type="email" name="email" class="form-control" v-model="form.email" autocomplete="off" />
-              <p v-if="v$.form.email.$invalid" class="contact-form-error">El campo email es requerido</p>
+              <p>{{ form.email }}</p>
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Mensaje *</label>
-              <textarea name="message" v-model="form.mensaje" cols="30" rows="6" class="form-control"></textarea>
-              <p v-if="v$.form.mensaje.$invalid" class="contact-form-error">El campo mensaje es requerido</p>
+              <textarea name="message" v-model="form.message" cols="30" rows="6" class="form-control"></textarea>
+              <p>{{ form.message }}</p>
             </div>
             <div class="form-text">* Campos requeridos</div>
             <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
-            <pre>{{ form }}</pre>
             <!-- Response -->
             <div class="contact-form-loader d-none my-5 d-flex justify-content-center">
               <img :="imgSpinner" />
@@ -55,23 +54,17 @@
 </template>
 
 <script>
-import useVuelidate from "@vuelidate/core";
-import { required, minLength, alpha, email } from "@vuelidate/validators";
-
 export default {
-  name: "ContactView3",
+  name: "ContactView",
   mounted() {
     document.title = "Contacto - Paz Spera";
-  },
-  setup() {
-    return { v$: useVuelidate() };
   },
   data() {
     return {
       form: {
-        nombre: "",
+        name: "",
         email: "",
-        mensaje: "",
+        message: "",
       },
       imgSpinner: {
         src: "https://raw.githubusercontent.com/pazspera/portfolio/9b22274cf3b6cc885099a9be202e7aa179a216db/portfolio/src/assets/img/tail-spin.svg",
@@ -79,22 +72,9 @@ export default {
       },
     };
   },
-  validations() {
-    return {
-      form: {
-        nombre: { required, alpha, minLength: minLength(2) }, // v$.form.nombre.alpha
-        email: { required, email },
-        mensaje: { required },
-      },
-    };
-  },
   methods: {
     submitForm() {
-      if (!this.v$.form.$invalid) {
-        console.log("Form Submitted", this.form);
-      } else {
-        console.log("Invalid form");
-      }
+        console.log("Submit form")
     },
   },
 };
