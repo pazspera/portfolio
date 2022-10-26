@@ -11,6 +11,7 @@ import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import ContactView from "@/views/ContactView6.vue";
+import ThankYouView from "@/views/ThankYouView.vue";
 
 // Routes (configuration)
 const routes = [
@@ -34,6 +35,11 @@ const routes = [
     component: ContactView,
     name: "contact",
   },
+  {
+    path: "/thank-you",
+    component: ThankYouView,
+    name: "thankYou",
+  },
 ];
 
 // Router object
@@ -42,7 +48,11 @@ const router = createRouter({
   routes,
 });
 
+// Exporta el router para poder usarlo en componentes
+export default router;
+
 // Vue instance
 const app = createApp(App);
 app.use(router);
 app.mount("#app");
+

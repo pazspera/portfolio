@@ -142,22 +142,23 @@ export default {
         body: formData,
       })
         .then((response) => (response.ok ? response.json() : Promise.reject(response)))
-        .then((json) => {
+        .then(() => {
+          // Envía a thank you page
+          this.$router.push("/thank-you");
           // Oculta loader
-          $loader.classList.add("d-none");
+          // $loader.classList.add("d-none");
           // Muestra respuesta envío
-          $response.classList.remove("d-none");
-          let fetchResponse = json.message || "Mensaje enviado";
-          $response.innerHTML = `<p>${fetchResponse}</p>`;
+          // $response.classList.remove("d-none");
+          // let fetchResponse = json.message || "Mensaje enviado";
+          // $response.innerHTML = `<p>${fetchResponse}</p>`;
           // Reset formulario
-          this.resetForm();
+          // this.resetForm();
         })
         .catch((err) => {
           $loader.classList.add("d-none");
           let message = err.statusText || "Ocurrió un error al enviar, intenta nuevamente";
           $response.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
-        })
-        ;
+        });
     },
   },
 };
