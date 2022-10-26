@@ -14,22 +14,19 @@
             <div class="mb-3">
               <label for="name" class="form-label">Nombre*</label>
               <Field type="text" name="name" class="form-control" v-model="form.name" :rules="validateName" />
-              <p>{{ form.name }}</p>
-              <p><ErrorMessage name="name" /></p>
+              <span class="contact-form-error"><ErrorMessage name="name" /></span>
             </div>
             <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label">Email*</label>
               <Field type="email" name="email" class="form-control" v-model="form.email" :rules="validateEmail" />
-              <p>{{ form.email }}</p>
-              <p><ErrorMessage name="email" /></p>
+              <span class="contact-form-error"><ErrorMessage name="email" /></span>
             </div>
             <!-- Message -->
             <div class="mb-3">
               <label for="message" class="form-label">Mensaje*</label>
               <Field as="textarea" name="message" cols="30" rows="6" class="form-control" v-model="form.message" :rules="validateMessage"></Field>
-              <p>{{ form.message }}</p>
-              <p><ErrorMessage name="message" /></p>
+              <span class="contact-form-error"><ErrorMessage name="message" /></span>
             </div>
             <div class="form-text">* Campos requeridos</div>
             <!-- Submit -->
@@ -170,4 +167,5 @@ textarea.valid,
 textarea.valid:focus {
   border-color: $primary;
 }
+
 </style>
