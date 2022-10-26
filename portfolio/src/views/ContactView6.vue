@@ -10,6 +10,8 @@
         <!-- Formulario -->
         <div class="col-12 col-lg-6 mb-5">
           <Form class="contact-form" @submit="submitForm">
+            <!-- Date -->
+            <input type="hidden" name="fechaContacto" v-model="form.date" />
             <!-- Name -->
             <div class="mb-3">
               <label for="name" class="form-label">Nombre*</label>
@@ -31,6 +33,10 @@
             <div class="form-text">* Campos requeridos</div>
             <!-- Submit -->
             <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
+            <!-- Loader -->
+            <div class="contact-form-loader d-none my-5 d-flex justify-content-center">
+              <img :="imgSpinner" />
+            </div>
           </Form>
         </div>
         <!-- Texto y redes -->
@@ -55,6 +61,8 @@
 <script>
 import { Form, Field, ErrorMessage } from "vee-validate";
 
+let currentDate = new Date().toLocaleDateString();
+
 export default {
   name: "ContactView6",
   components: {
@@ -71,6 +79,11 @@ export default {
         name: "",
         email: "",
         message: "",
+        date: currentDate,
+      },
+      imgSpinner: {
+        src: "https://raw.githubusercontent.com/pazspera/portfolio/9b22274cf3b6cc885099a9be202e7aa179a216db/portfolio/src/assets/img/tail-spin.svg",
+        alt: "Cargando",
       },
     };
   },
@@ -101,8 +114,21 @@ export default {
       return true;
     },
     submitForm(values) {
-      console.log("Form submitted");
-      console.log(values);
+      let loader = document.querySelector(".contact-form-loader");
+
+      loader.classList.remove("d-none");
+
+      // Crea un FormData con los values del data
+      // para enviar por fetch, incluyendo date
+      let formData = new FormData();
+      formData.append("date", this.form.date);
+      formData.append("name", values.name);
+      formData.append("email", values.email);
+      formData.append("message", values.message);
+      console.log(formData.get("date"));
+      console.log(formData.get("name"));
+      console.log(formData.get("email"));
+      console.log(formData.get("message"));
     },
   },
 };
@@ -167,5 +193,4 @@ textarea.valid,
 textarea.valid:focus {
   border-color: $primary;
 }
-
 </style>
