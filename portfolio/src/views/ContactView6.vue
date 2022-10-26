@@ -9,25 +9,32 @@
       <div class="row">
         <!-- Formulario -->
         <div class="col-12 col-lg-6 mb-5">
-          <form class="contact-form" @submit.prevent="submitForm">
+          <Form class="contact-form" @submit="submitForm">
+            <!-- Name -->
             <div class="mb-3">
               <label for="name" class="form-label">Nombre*</label>
-              <input type="text" name="name" class="form-control" v-model="form.name"/>
+              <Field type="text" name="name" class="form-control" v-model="form.name" :rules="validateName" />
               <p>{{ form.name }}</p>
+              <p><ErrorMessage name="name" /></p>
             </div>
+            <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label">Email*</label>
-              <input type="email" name="email" class="form-control" v-model="form.email" />
+              <Field type="email" name="email" class="form-control" v-model="form.email" :rules="validateEmail" />
               <p>{{ form.email }}</p>
+              <p><ErrorMessage name="email" /></p>
             </div>
+            <!-- Message -->
             <div class="mb-3">
               <label for="message" class="form-label">Mensaje*</label>
-              <textarea name="message" cols="30" rows="6" class="form-control" v-model="form.message"></textarea>
+              <Field as="textarea" name="message" cols="30" rows="6" class="form-control" v-model="form.message" :rules="validateMessage"></Field>
               <p>{{ form.message }}</p>
+              <p><ErrorMessage name="message" /></p>
             </div>
             <div class="form-text">* Campos requeridos</div>
+            <!-- Submit -->
             <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
-          </form>
+          </Form>
         </div>
         <!-- Texto y redes -->
         <div class="col-12 col-lg-5 offset-lg-1 py-4">
@@ -49,8 +56,15 @@
 </template>
 
 <script>
+import { Form, Field, ErrorMessage } from "vee-validate";
+
 export default {
   name: "ContactView6",
+  components: {
+    Form,
+    Field,
+    ErrorMessage,
+  },
   mounted() {
     document.title = "Contacto - Paz Spera";
   },
@@ -62,6 +76,37 @@ export default {
         message: "",
       },
     };
+  },
+  methods: {
+    validateName(value) {
+      if (!value) {
+        return "El campo Nombre es requerido";
+      }
+      return true;
+    },
+    validateEmail(value) {
+      let regexEmail = /\S+@\S+\.\S+/;
+
+      if (!value) {
+        return "El campo Email es requerido";
+      }
+
+      if (!regexEmail.test(value)) {
+        return "Formato de email inválido";
+      }
+      return true;
+    },
+    validateMessage(value) {
+      if (!value) {
+        return "El campo Mensaje es requerido";
+      }
+
+      return true;
+    },
+    submitForm(values) {
+      console.log("Form submitted");
+      console.log(values);
+    },
   },
 };
 </script>
