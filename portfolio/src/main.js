@@ -9,8 +9,8 @@ import App from "./App.vue";
 // Views
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
-import ProjectsView from "@/views/ContactView4.vue";
-import ContactView from "@/views/ContactView5.vue";
+import ProjectsView from "@/views/ProjectsView.vue";
+import ContactView from "@/views/ContactView6.vue";
 
 // Routes (configuration)
 const routes = [
