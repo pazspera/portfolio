@@ -11,7 +11,7 @@
         <div class="col-12 col-lg-6 mb-5">
           <Form class="contact-form" @submit="submitForm">
             <!-- Date -->
-            <input type="hidden" name="fechaContacto" v-model="form.date" />
+            <input type="hidden" name="date" v-model="form.date" />
             <!-- Name -->
             <div class="mb-3">
               <label for="name" class="form-label">Nombre*</label>
@@ -34,9 +34,11 @@
             <!-- Submit -->
             <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
             <!-- Loader -->
-            <div class="contact-form-loader d-none my-5 d-flex justify-content-center">
+            <div class="contact-form-loader d-none my-4 d-flex justify-content-center">
               <img :="imgSpinner" />
             </div>
+            <!-- Response -->
+            <div class="contact-form-response my-3 d-none text-center"></div>
           </Form>
         </div>
         <!-- Texto y redes -->
@@ -62,6 +64,7 @@
 import { Form, Field, ErrorMessage } from "vee-validate";
 
 let currentDate = new Date().toLocaleDateString();
+let scriptURL = "https://script.google.com/macros/s/AKfycbz-KFfIkAMRFLq1Z_6D9srmM_N3zwd2P0SBTaqnj9Ga0Da8pDxoeYdUkHB0TV8hEKw/exec";
 
 export default {
   name: "ContactView6",
@@ -113,10 +116,17 @@ export default {
 
       return true;
     },
+    resetForm() {
+      this.form.name = null;
+      this.form.email = null;
+      this.form.message = null;
+    },
     submitForm(values) {
-      let loader = document.querySelector(".contact-form-loader");
+      let $loader = document.querySelector(".contact-form-loader");
+      let $response = document.querySelector(".contact-form-response");
 
-      loader.classList.remove("d-none");
+      // Muestra loader
+      $loader.classList.remove("d-none");
 
       // Crea un FormData con los values del data
       // para enviar por fetch, incluyendo date
@@ -125,10 +135,29 @@ export default {
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("message", values.message);
-      console.log(formData.get("date"));
-      console.log(formData.get("name"));
-      console.log(formData.get("email"));
-      console.log(formData.get("message"));
+
+      // Fetch envío formulario
+      fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => (response.ok ? response.json() : Promise.reject(response)))
+        .then((json) => {
+          // Oculta loader
+          $loader.classList.add("d-none");
+          // Muestra respuesta envío
+          $response.classList.remove("d-none");
+          let fetchResponse = json.message || "Mensaje enviado";
+          $response.innerHTML = `<p>${fetchResponse}</p>`;
+          // Reset formulario
+          this.resetForm();
+        })
+        .catch((err) => {
+          $loader.classList.add("d-none");
+          let message = err.statusText || "Ocurrió un error al enviar, intenta nuevamente";
+          $response.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+        })
+        ;
     },
   },
 };
