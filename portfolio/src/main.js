@@ -10,7 +10,7 @@ import App from "./App.vue";
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
-import ContactView from "@/views/ContactView6.vue";
+import ContactView from "@/views/ContactView.vue";
 import ThankYouView from "@/views/ThankYouView.vue";
 
 // Routes (configuration)
