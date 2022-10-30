@@ -64,7 +64,8 @@
 import { Form, Field, ErrorMessage } from "vee-validate";
 
 let currentDate = new Date().toLocaleDateString();
-let scriptURL = "https://script.google.com/macros/s/AKfycbz-KFfIkAMRFLq1Z_6D9srmM_N3zwd2P0SBTaqnj9Ga0Da8pDxoeYdUkHB0TV8hEKw/exec";
+let scriptURL = "https://script.google.com/macros/s/AKfycbxuWnx0f2in60iGr0OMJnBlIbQHaJMFBVQnDosRxo7ZNANFw4emlVR-SDKqNs_1f_Jj/exec";
+let formURL = "https://formsubmit.co/ajax/7ceabb42100b9b4fb07ac102ce7f9e7b";
 
 export default {
   name: "ContactView",
@@ -121,6 +122,14 @@ export default {
       this.form.email = null;
       this.form.message = null;
     },
+    saveToSheet(formData) {
+      fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    },
     submitForm(values) {
       let $loader = document.querySelector(".contact-form-loader");
       let $response = document.querySelector(".contact-form-response");
@@ -137,11 +146,12 @@ export default {
       formData.append("message", values.message);
 
       // Fetch envío formulario
-      fetch(scriptURL, {
+      fetch(formURL, {
         method: "POST",
         body: formData,
       })
         .then((response) => (response.ok ? response.json() : Promise.reject(response)))
+        .then((formData) => this.saveToSheet(formData))
         .then(() => {
           // Envía a thank you page
           this.$router.push("/thank-you");
