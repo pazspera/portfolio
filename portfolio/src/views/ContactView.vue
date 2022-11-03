@@ -64,7 +64,7 @@
 import { Form, Field, ErrorMessage } from "vee-validate";
 
 let currentDate = new Date().toLocaleDateString();
-let scriptURL = "https://script.google.com/macros/s/AKfycbw2yfD0SotEHhYZUgI976KahCowB7Hrdu-hgeeBOSgSllirIBsM3oBhyb5NINoxumpI/exec";
+let scriptURL = "https://script.google.com/macros/s/AKfycbw5rDWrqcW5Ej6vCHipd1QPgJ-NEZB5_sfxztFICe1V_RpzwuXuuBFC-R53ZYLCTPAzKw/exec";
 let formURL = "https://formsubmit.co/ajax/7ceabb42100b9b4fb07ac102ce7f9e7b";
 
 export default {
@@ -145,13 +145,14 @@ export default {
       formData.append("email", values.email);
       formData.append("message", values.message);
 
+      this.saveToSheet(formData);
+
       // Fetch envío formulario
       fetch(formURL, {
         method: "POST",
         body: formData,
       })
         .then((response) => (response.ok ? response.json() : Promise.reject(response)))
-        .then((formData) => this.saveToSheet(formData))
         .then(() => {
           // Envía a thank you page
           this.$router.push("/thank-you");
