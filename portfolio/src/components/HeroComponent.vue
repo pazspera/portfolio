@@ -3,9 +3,15 @@
     <div class="hero__container container">
       <div class="row">
         <div class="col-12 col-md-9 col-lg-8">
-          <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
-          <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
-          <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
+          <transition appear name="fade">
+            <div>
+              <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
+
+              <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
+
+              <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
@@ -27,6 +33,7 @@ export default {
   display: flex;
   @include background-image;
   background-position: center;
+  overflow: hidden;
 
   &__container {
     display: flex;
@@ -102,5 +109,20 @@ export default {
   .hero__title span {
     font-size: $size1;
   }
+}
+
+/* Transition styles */
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.fade-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-enter-active {
+  transition: all 0.45s ease-in;
 }
 </style>
