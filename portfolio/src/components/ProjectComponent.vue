@@ -1,9 +1,9 @@
 <template>
   <div class="row mb-5">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
       <img :="project.image" />
     </div>
-    <div class="col-12 col-lg-5 offset-lg-1">
+    <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true">
       <div class="mb-5">
         <h3 class="mb-3">{{ project.title }}</h3>
         <p class="proyects__text">{{ project.description }}</p>
@@ -22,6 +22,11 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
 export default {
   name: "ProjectComponent",
   props: {

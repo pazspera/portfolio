@@ -12,7 +12,6 @@
       <div class="container" v-for="project in projects" :key="project.title">
         <ProjectComponent :project="project" />
       </div>
-
     </section>
   </div>
 </template>
@@ -20,6 +19,8 @@
 <script>
 import json from "@/assets/data/projects.json";
 import ProjectComponent from "@/components/ProjectComponent.vue";
+
+import "aos/dist/aos.css";
 
 export default {
   name: "ProjectsView",
