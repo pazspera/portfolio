@@ -9,45 +9,43 @@
       <div class="row">
         <!-- Formulario -->
         <div class="col-12 col-lg-6 mb-5">
-          <transiton appear name="fade">
-            <div>
-              <Form class="contact-form" @submit="submitForm">
-                <!-- Date -->
-                <input type="hidden" name="date" v-model="form.date" />
-                <!-- Name -->
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nombre*</label>
-                  <Field type="text" name="name" class="form-control" v-model="form.name" :rules="validateName" />
-                  <span class="contact-form-error"><ErrorMessage name="name" /></span>
-                </div>
-                <!-- Email -->
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email*</label>
-                  <Field type="email" name="email" class="form-control" v-model="form.email" :rules="validateEmail" />
-                  <span class="contact-form-error"><ErrorMessage name="email" /></span>
-                </div>
-                <!-- Message -->
-                <div class="mb-3">
-                  <label for="message" class="form-label">Mensaje*</label>
-                  <Field as="textarea" name="message" cols="30" rows="6" class="form-control" v-model="form.message" :rules="validateMessage"></Field>
-                  <span class="contact-form-error"><ErrorMessage name="message" /></span>
-                </div>
-                <div class="form-text">* Campos requeridos</div>
-                <!-- Submit -->
-                <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
-                <!-- Loader -->
-                <div class="contact-form-loader d-none my-4 d-flex justify-content-center">
-                  <img :="imgSpinner" />
-                </div>
-                <!-- Response -->
-                <div class="contact-form-response my-3 d-none text-center"></div>
-              </Form>
-            </div>
-          </transiton>
+          <transition appear @before-enter="beforeEnterLeft" @enter="enterLeft">
+            <Form class="contact-form" @submit="submitForm">
+              <!-- Date -->
+              <input type="hidden" name="date" v-model="form.date" />
+              <!-- Name -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre*</label>
+                <Field type="text" name="name" class="form-control" v-model="form.name" :rules="validateName" />
+                <span class="contact-form-error"><ErrorMessage name="name" /></span>
+              </div>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email*</label>
+                <Field type="email" name="email" class="form-control" v-model="form.email" :rules="validateEmail" />
+                <span class="contact-form-error"><ErrorMessage name="email" /></span>
+              </div>
+              <!-- Message -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje*</label>
+                <Field as="textarea" name="message" cols="30" rows="6" class="form-control" v-model="form.message" :rules="validateMessage"></Field>
+                <span class="contact-form-error"><ErrorMessage name="message" /></span>
+              </div>
+              <div class="form-text">* Campos requeridos</div>
+              <!-- Submit -->
+              <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
+              <!-- Loader -->
+              <div class="contact-form-loader d-none my-4 d-flex justify-content-center">
+                <img :="imgSpinner" />
+              </div>
+              <!-- Response -->
+              <div class="contact-form-response my-3 d-none text-center"></div>
+            </Form>
+          </transition>
         </div>
         <!-- Texto y redes -->
         <div class="col-12 col-lg-5 offset-lg-1 py-4">
-          <transition appear name="fade">
+          <transition appear @before-enter="beforeEnterRight" @enter="enterRight">
             <div>
               <p>
                 ¿Dudas, comentarios, ganas de charlar sobre el maravilloso mundo del desarrollo frontend? Pueden completar el formulario y una paloma mensajera digital me traerá el mensaje a la
@@ -71,6 +69,7 @@
 
 <script>
 import { Form, Field, ErrorMessage } from "vee-validate";
+import gsap from "gsap";
 
 let currentDate = new Date().toLocaleDateString();
 let scriptURL = "https://script.google.com/macros/s/AKfycbw5rDWrqcW5Ej6vCHipd1QPgJ-NEZB5_sfxztFICe1V_RpzwuXuuBFC-R53ZYLCTPAzKw/exec";
@@ -179,6 +178,33 @@ export default {
           let message = err.statusText || "Ocurrió un error al enviar, intenta nuevamente";
           $response.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
         });
+    },
+    beforeEnterLeft(el) {
+      el.style.transform = "translateY(100px)";
+      el.style.transform = "translateX(-100px)";
+      el.style.opacity = 0;
+    },
+    enterLeft(el) {
+      gsap.to(el, {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 1,
+      });
+    },
+    beforeEnterRight(el) {
+      el.style.transform = "translateY(-100px)";
+      el.style.transform = "translateX(100px)";
+      el.style.opacity = 0;
+    },
+    enterRight(el) {
+      gsap.to(el, {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.25,
+      });
     },
   },
 };
