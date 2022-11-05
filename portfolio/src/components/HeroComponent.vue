@@ -3,13 +3,27 @@
     <div class="hero__container container">
       <div class="row">
         <div class="col-12 col-md-9 col-lg-8">
+          <!-- Transition con gsap -->
+          <!-- <transition appear @before-enter="beforeEnterFirst" @enter="enterFirst">
+            <div>
+              <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
+
+              <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
+            </div>
+          </transition>
+
+          <transition appear @before-enter="beforeEnterSecond" @enter="enterSecond">
+            <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
+          </transition> -->
+
+          <!-- Transiton con css classes -->
           <transition appear name="fade" >
             <div>
-              <p class="hero__text" :data-index="0"><span>Hola, soy Paz Spera</span></p>
+              <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
 
-              <h1 class="hero__title mb-5" :data-index="1"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
+              <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
 
-              <router-link :to="{ name: 'projects' }" class="btn btn__primary" :data-index="2">Ver proyectos</router-link>
+              <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
             </div>
           </transition>
         </div>
@@ -19,9 +33,35 @@
 </template>
 
 <script>
+import gsap from "gsap";
 
 export default {
   name: "HeroComponent",
+  methods: {
+    beforeEnterFirst(el) {
+      el.style.opacity = 0;
+      el.style.transform = "translateY(100px)";
+    },
+    enterFirst(el) {
+      gsap.to(el, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+      });
+    },
+    beforeEnterSecond(el) {
+      el.style.opacity = 0;
+      el.style.transform = "translateY(75px)";
+    },
+    enterSecond(el) {
+      gsap.to(el, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+      });
+    },
+  },
 };
 </script>
 
