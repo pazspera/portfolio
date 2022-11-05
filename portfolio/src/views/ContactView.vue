@@ -9,51 +9,60 @@
       <div class="row">
         <!-- Formulario -->
         <div class="col-12 col-lg-6 mb-5">
-          <Form class="contact-form" @submit="submitForm">
-            <!-- Date -->
-            <input type="hidden" name="date" v-model="form.date" />
-            <!-- Name -->
-            <div class="mb-3">
-              <label for="name" class="form-label">Nombre*</label>
-              <Field type="text" name="name" class="form-control" v-model="form.name" :rules="validateName" />
-              <span class="contact-form-error"><ErrorMessage name="name" /></span>
+          <transiton appear name="fade">
+            <div>
+              <Form class="contact-form" @submit="submitForm">
+                <!-- Date -->
+                <input type="hidden" name="date" v-model="form.date" />
+                <!-- Name -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nombre*</label>
+                  <Field type="text" name="name" class="form-control" v-model="form.name" :rules="validateName" />
+                  <span class="contact-form-error"><ErrorMessage name="name" /></span>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email*</label>
+                  <Field type="email" name="email" class="form-control" v-model="form.email" :rules="validateEmail" />
+                  <span class="contact-form-error"><ErrorMessage name="email" /></span>
+                </div>
+                <!-- Message -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Mensaje*</label>
+                  <Field as="textarea" name="message" cols="30" rows="6" class="form-control" v-model="form.message" :rules="validateMessage"></Field>
+                  <span class="contact-form-error"><ErrorMessage name="message" /></span>
+                </div>
+                <div class="form-text">* Campos requeridos</div>
+                <!-- Submit -->
+                <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
+                <!-- Loader -->
+                <div class="contact-form-loader d-none my-4 d-flex justify-content-center">
+                  <img :="imgSpinner" />
+                </div>
+                <!-- Response -->
+                <div class="contact-form-response my-3 d-none text-center"></div>
+              </Form>
             </div>
-            <!-- Email -->
-            <div class="mb-3">
-              <label for="email" class="form-label">Email*</label>
-              <Field type="email" name="email" class="form-control" v-model="form.email" :rules="validateEmail" />
-              <span class="contact-form-error"><ErrorMessage name="email" /></span>
-            </div>
-            <!-- Message -->
-            <div class="mb-3">
-              <label for="message" class="form-label">Mensaje*</label>
-              <Field as="textarea" name="message" cols="30" rows="6" class="form-control" v-model="form.message" :rules="validateMessage"></Field>
-              <span class="contact-form-error"><ErrorMessage name="message" /></span>
-            </div>
-            <div class="form-text">* Campos requeridos</div>
-            <!-- Submit -->
-            <button type="submit" class="btn btn__primary btn__submit mt-3">Enviar</button>
-            <!-- Loader -->
-            <div class="contact-form-loader d-none my-4 d-flex justify-content-center">
-              <img :="imgSpinner" />
-            </div>
-            <!-- Response -->
-            <div class="contact-form-response my-3 d-none text-center"></div>
-          </Form>
+          </transiton>
         </div>
         <!-- Texto y redes -->
         <div class="col-12 col-lg-5 offset-lg-1 py-4">
-          <p>
-            ¿Dudas, comentarios, ganas de charlar sobre el maravilloso mundo del desarrollo frontend? Pueden completar el formulario y una paloma mensajera digital me traerá el mensaje a la brevedad.
-          </p>
-          <p>
-            También pueden enviarme unas señales de humo a
-            <a class="link" href="mailto:spera.paz@gmail.com?Subject=Contacto%Portfolio" target="_blank" rel="noopener noreferrer">spera.paz@gmail.com</a>.
-          </p>
-          <div class="social-links mt-5">
-            <a class="social-links__icons" href="https://github.com/pazspera" rel="noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-            <a class="social-links__icons" href="https://www.linkedin.com/in/paz-spera/" rel="noreferrer" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-          </div>
+          <transition appear name="fade">
+            <div>
+              <p>
+                ¿Dudas, comentarios, ganas de charlar sobre el maravilloso mundo del desarrollo frontend? Pueden completar el formulario y una paloma mensajera digital me traerá el mensaje a la
+                brevedad.
+              </p>
+              <p>
+                También pueden enviarme unas señales de humo a
+                <a class="link" href="mailto:spera.paz@gmail.com?Subject=Contacto%Portfolio" target="_blank" rel="noopener noreferrer">spera.paz@gmail.com</a>.
+              </p>
+              <div class="social-links mt-5">
+                <a class="social-links__icons" href="https://github.com/pazspera" rel="noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                <a class="social-links__icons" href="https://www.linkedin.com/in/paz-spera/" rel="noreferrer" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+              </div>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
@@ -233,5 +242,27 @@ input.valid:focus,
 textarea.valid,
 textarea.valid:focus {
   border-color: $primary;
+}
+
+/* Transition styles */
+.fadeLeft-enter-from {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.fadeLeft-enter-to,
+.fadeRight-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fadeRight-enter-from {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.fadeLeft-enter-active,
+.fadeRight-enter-active {
+  transition: all 0.45s ease-in;
 }
 </style>
