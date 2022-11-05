@@ -8,12 +8,12 @@
       </div>
       <div class="row">
         <div class="col-10 col-lg-4">
-          <transition appear name="fadeLeft">
+          <transition appear name="fadeLeft" @before-enter="beforeEnterLeft" @enter="enterLeft">
             <img :="imagePaz" class="image--shadow mb-5" />
           </transition>
         </div>
         <div class="col col-lg-7 offset-lg-1">
-          <transition appear name="fadeRight">
+          <transition appear name="fadeRight" @before-enter="beforeEnterRight" @enter="enterRight">
             <div>
               <p class="about__text">¡Hola Mundo! Soy Paz Spera, desarrolladora frontend y diseñadora UI de Buenos Aires, Argentina.</p>
               <p class="about__text">
@@ -82,6 +82,8 @@
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
   name: "AboutView",
   mounted() {
@@ -94,6 +96,35 @@ export default {
         alt: "Paz Spera",
       },
     };
+  },
+  methods: {
+    beforeEnterLeft(el) {
+      el.style.transform = "translateY(100px)";
+      el.style.transform = "translateX(-100px)";
+      el.style.opacity = 0;
+    },
+    enterLeft(el) {
+      gsap.to(el, {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 1,
+      });
+    },
+    beforeEnterRight(el) {
+      el.style.transform = "translateY(-100px)";
+      el.style.transform = "translateX(100px)";
+      el.style.opacity = 0;
+    },
+    enterRight(el) {
+      gsap.to(el, {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+      });
+    },
   },
 };
 </script>
@@ -140,7 +171,7 @@ export default {
 }
 
 /* Transition styles */
-.fadeLeft-enter-from {
+/* .fadeLeft-enter-from {
   opacity: 0;
   transform: translateX(-200px);
 }
@@ -159,5 +190,5 @@ export default {
 .fadeLeft-enter-active,
 .fadeRight-enter-active {
   transition: all 0.45s ease-in;
-}
+} */
 </style>

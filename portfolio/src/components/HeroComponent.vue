@@ -3,13 +3,13 @@
     <div class="hero__container container">
       <div class="row">
         <div class="col-12 col-md-9 col-lg-8">
-          <transition appear name="fade">
+          <transition appear name="fade" >
             <div>
-              <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
+              <p class="hero__text" :data-index="0"><span>Hola, soy Paz Spera</span></p>
 
-              <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
+              <h1 class="hero__title mb-5" :data-index="1"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
 
-              <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
+              <router-link :to="{ name: 'projects' }" class="btn btn__primary" :data-index="2">Ver proyectos</router-link>
             </div>
           </transition>
         </div>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
 export default {
   name: "HeroComponent",
 };
