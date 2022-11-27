@@ -46,6 +46,14 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior() {
+    /* return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 });
+      }, 500);
+    }); */
+    return { left: 0, top: 0, behavior: "smooth" };
+  },
 });
 
 // Exporta el router para poder usarlo en componentes
@@ -55,4 +63,3 @@ export default router;
 const app = createApp(App);
 app.use(router);
 app.mount("#app");
-
