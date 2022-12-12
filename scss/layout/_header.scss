@@ -1,0 +1,48 @@
+.navbar {
+    background-color: $black;
+
+    &-brand {
+        font-size: $size4;
+        font-family: $font-logo;
+        padding: 0;
+    }
+    
+    .nav-link {
+        font-size: $size5;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+    }
+}
+
+// Override color a los nav-links
+.navbar-dark, 
+.navbar-brand,
+.navbar-nav,
+.nav-link {
+    color: $white !important;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $primary !important;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+// Override color del navbar-toggler
+.navbar-dark, 
+.navbar-toggler {
+    color: rgba($white, 0.3);
+
+    &:hover,
+    &:focus {
+        color: rgba($white, 0.3);
+    }
+}
+ 
+@media(min-width: 992px) {
+    .nav-link {
+        margin-left: $size5;
+    }
+}
