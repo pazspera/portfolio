@@ -2,9 +2,9 @@
   <section class="not-found">
     <div class="container">
       <div class="col d-flex flex-column justify-content-center align-items-center col-not-found">
-        <h1>¡Oh, no! La página no está disponible</h1>
+        <h1 class="mb-3">¡Oh, no! La página no está disponible</h1>
         <p>Pero nunca es tarde para volver a empezar.</p>
-        <router-link :to="{ name: 'home' }" class="btn btn__primary">Volver al inicio</router-link>
+        <router-link :to="{ name: 'home' }" class="btn btn__primary mt-4">Volver al inicio</router-link>
       </div>
     </div>
   </section>
