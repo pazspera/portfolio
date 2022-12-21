@@ -2,7 +2,7 @@
   <section class="not-found">
     <div class="container">
       <div class="col d-flex flex-column justify-content-center align-items-center col-not-found">
-        <img :="errorImg" class="mb-4" />
+        <img :="errorImg" class="mb-4 errorImg" />
         <h1 class="mb-3">¡Oh, no! La página no está disponible</h1>
         <router-link :to="{ name: 'home' }" class="btn btn__primary mt-4">Volver al inicio</router-link>
       </div>
@@ -30,5 +30,9 @@ export default {
 <style scoped>
 .col-not-found {
   height: 70vh;
+}
+.errorImg {
+  width: 150px;
+  height: 150px;
 }
 </style>
