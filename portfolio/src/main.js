@@ -12,6 +12,7 @@ import AboutView from "@/views/AboutView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import ContactView from "@/views/ContactView.vue";
 import ThankYouView from "@/views/ThankYouView.vue";
+import NotFoundView from "@/views/NotFoundView.vue";
 
 // Routes (configuration)
 const routes = [
@@ -39,6 +40,15 @@ const routes = [
     path: "/thank-you",
     component: ThankYouView,
     name: "thankYou",
+  },
+  // 404 catchall for all routes that don't exist
+  {
+    // This is a regex that we have to write exactly for it to workz
+    path: "/:catchAll(.*)",
+    // path: "/:pathMatch(.*)*",
+    // path: "/not-found",
+    component: NotFoundView,
+    name: "notFound",
   },
 ];
 
