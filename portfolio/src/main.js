@@ -44,11 +44,12 @@ const routes = [
   // 404 catchall for all routes that don't exist
   {
     // This is a regex that we have to write exactly for it to workz
-    path: "/:catchAll(.*)",
-    // path: "/:pathMatch(.*)*",
+    // path: "/:catchAll(.*)",
+    path: '/:pathMatch(.*)',
     // path: "/not-found",
-    component: NotFoundView,
-    name: "notFound",
+    // component: NotFoundView,
+    // name: "notFound",
+    redirect: '/not-found'
   },
   {
     // This is a regex that we have to write exactly for it to workz
