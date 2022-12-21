@@ -1,15 +1,13 @@
 <template>
-  <section>
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class="col">
+  <section class="not-found">
+    <div class="container">
+      <div class="col d-flex flex-column justify-content-center align-items-center">
         <h1>¡Oh, no! La página no está disponible</h1>
         <p>Pero nunca es tarde para volver a empezar.</p>
-        <router-link :to="{ name: 'home'}" class="btn btn__primary">Volver al inicio</router-link>
+        <router-link :to="{ name: 'home' }" class="btn btn__primary">Volver al inicio</router-link>
       </div>
     </div>
   </section>
-  <h1>404</h1>
-  <h2>Page not found</h2>
 </template>
 
 <script>
@@ -18,4 +16,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.not-found {
+  min-height: 100vh;
+}
+</style>
