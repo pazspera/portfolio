@@ -50,6 +50,14 @@ const routes = [
     component: NotFoundView,
     name: "notFound",
   },
+  {
+    // This is a regex that we have to write exactly for it to workz
+    path: "/not-found",
+    // path: "/:pathMatch(.*)*",
+    // path: "/not-found",
+    component: NotFoundView,
+    name: "notFound",
+  },
 ];
 
 // Router object
