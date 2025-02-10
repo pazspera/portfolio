@@ -66,6 +66,28 @@
           "link": "https://github.com/pazspera/kaio-sushi"
         }
       ]
+    }, 
+    {
+      "title": "Silverfert",
+      "description": "Destacar que es multilenguaje y en PHP",
+      "role": "Diseñadora UI, desarrolladora frontend",
+      "techStack": [
+        "<i class='devicon-html5-plain proyect-icon'></i>",
+        "<i class='devicon-sass-original proyect-icon'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
+        "<i class='devicon-javascript-plain proyect-icon'></i>",
+        "<i class='devicon-jquery-plain proyect-icon'></i>"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "alt": "Mockup sitio web del proyecto Kaio Sushi"
+      },
+      "btns": [
+        {
+          "name": "Behance",
+          "link": "https://pazspera.github.io/kaio-sushi/"
+        }
+      ]
     }
   ]
 }
