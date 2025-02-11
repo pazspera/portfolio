@@ -1,6 +1,97 @@
 {
   "projects": [
     {
+      "title": "Silverfert",
+      "description": "Destacar que es multilenguaje y en PHP",
+      "role": "Diseñadora UI, desarrolladora frontend",
+      "techStack": [
+        "<i class='devicon-javascript-plain proyect-icon'></i>",
+        "<i class='devicon-vuejs-plain proyect-icon'></i>",
+        "<i class='devicon-php-plain proyect-icon'></i>",
+        "<i class='devicon-sass-original proyect-icon'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
+        "<i class='devicon-html5-plain proyect-icon'></i>"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "alt": "Mockup sitio web del proyecto Kaio Sushi"
+      },
+      "btns": [
+        {
+          "name": "Behance",
+          "link": "https://pazspera.github.io/kaio-sushi/"
+        }
+      ]
+    },
+    {
+      "title": "Silverfert",
+      "description": "Destacar que es multilenguaje y en PHP",
+      "role": "Diseñadora UI, desarrolladora frontend",
+      "techStack": [
+        "<i class='devicon-javascript-plain proyect-icon'></i>",
+        "<i class='devicon-vuejs-plain proyect-icon'></i>",
+        "<i class='devicon-php-plain proyect-icon'></i>",
+        "<i class='devicon-sass-original proyect-icon'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
+        "<i class='devicon-html5-plain proyect-icon'></i>"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "alt": "Mockup sitio web del proyecto Kaio Sushi"
+      },
+      "btns": [
+        {
+          "name": "Behance",
+          "link": "https://pazspera.github.io/kaio-sushi/"
+        }
+      ]
+    },
+    {
+      "title": "Silverfert",
+      "description": "Destacar que es multilenguaje y en PHP",
+      "role": "Diseñadora UI, desarrolladora frontend",
+      "techStack": [
+        "<i class='devicon-javascript-plain proyect-icon'></i>",
+        "<i class='devicon-vuejs-plain proyect-icon'></i>",
+        "<i class='devicon-php-plain proyect-icon'></i>",
+        "<i class='devicon-sass-original proyect-icon'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
+        "<i class='devicon-html5-plain proyect-icon'></i>"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "alt": "Mockup sitio web del proyecto Kaio Sushi"
+      },
+      "btns": [
+        {
+          "name": "Behance",
+          "link": "https://pazspera.github.io/kaio-sushi/"
+        }
+      ]
+    },
+    {
+      "title": "New Flag",
+      "description": "Destacar que es multilenguaje y en PHP",
+      "role": "Diseñadora UI, desarrolladora frontend",
+      "techStack": [
+        "<i class='devicon-html5-plain proyect-icon'></i>",
+        "<i class='devicon-sass-original proyect-icon'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
+        "<i class='devicon-javascript-plain proyect-icon'></i>",
+        "<i class='devicon-jquery-plain proyect-icon'></i>"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "alt": "Mockup sitio web del proyecto Kaio Sushi"
+      },
+      "btns": [
+        {
+          "name": "Behance",
+          "link": "https://pazspera.github.io/kaio-sushi/"
+        }
+      ]
+    },
+    {
       "title": "Viernes",
       "description": "Sitio web del ciclo de cine de los Viernes en La casa del Craizy. Este es un proyecto personal muy querido que lleva la crónica de las películas compartidas con amigxs durante la pandemia.",
       "role": "Diseñadora UI, desarrolladora frontend",
@@ -64,28 +155,6 @@
         {
           "name": "Repositorio Github",
           "link": "https://github.com/pazspera/kaio-sushi"
-        }
-      ]
-    }, 
-    {
-      "title": "Silverfert",
-      "description": "Destacar que es multilenguaje y en PHP",
-      "role": "Diseñadora UI, desarrolladora frontend",
-      "techStack": [
-        "<i class='devicon-html5-plain proyect-icon'></i>",
-        "<i class='devicon-sass-original proyect-icon'></i>",
-        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
-        "<i class='devicon-javascript-plain proyect-icon'></i>",
-        "<i class='devicon-jquery-plain proyect-icon'></i>"
-      ],
-      "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
-        "alt": "Mockup sitio web del proyecto Kaio Sushi"
-      },
-      "btns": [
-        {
-          "name": "Behance",
-          "link": "https://pazspera.github.io/kaio-sushi/"
         }
       ]
     }
