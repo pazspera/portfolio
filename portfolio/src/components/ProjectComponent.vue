@@ -8,7 +8,8 @@
         <h3 class="mb-3">{{ project.title }}</h3>
         <p class="proyects__text">{{ project.description }}</p>
         <p v-if="project.descriptionExtra" class="proyects__text">{{ project.descriptionExtra }}</p>
-        <p class="proyects__text"><strong>Rol:</strong> {{ project.role }}</p>
+        <p class="proyects__text"><strong>Rol:</strong></p>
+        <span v-for="role in project.roles" :key="role" class="badge badge-role me-2">{{ role }}</span>
       </div>
       <h4 class="mb-3 stack--title">Desarrollado con:</h4>
       <div class="stack">
@@ -38,4 +39,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "@/assets/scss/main.scss";
+
+.badge-role {
+  text-transform: uppercase;
+  background-color: $primary--dark;
+}
+</style>

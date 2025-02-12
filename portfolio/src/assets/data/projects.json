@@ -4,7 +4,9 @@
       "title": "DB Marketing",
       "description": "Rediseño integral del sitio web de DB Marketing, centrado en mejorar la experiencia de usuario y optimizar la conversión.",
       "descriptionExtra": "Trabajé en la renovación de la identidad visual, la reestructuración del contenido de los servicios y la creación de un sistema en PHP para mejorar la escalabilidad del sitio. Además, desarrollé un sistema de diseño en Figma para garantizar la coherencia de los componentes en diferentes vistas y optimizar el proceso de diseño.",
-      "role": "Diseñadora UI, desarrolladora frontend, UX writer",
+      "roles": [
+        "Diseñadora UI", "Desarrolladora frontend", "UX writer"
+      ], 
       "techStack": [
         "<i class='devicon-vuejs-plain proyect-icon'></i>",
         "<i class='devicon-javascript-plain proyect-icon'></i>",
@@ -28,7 +30,9 @@
     {
       "title": "Viernes",
       "description": "Sitio web del ciclo de cine de los Viernes en La casa del Craizy. Este es un proyecto personal muy querido que lleva la crónica de las películas compartidas con amigxs durante la pandemia.",
-      "role": "Diseñadora UI, desarrolladora frontend",
+      "roles": [
+        "Diseñadora UI", "Desarrolladora frontend"
+      ], 
       "techStack": [
         "<i class='devicon-html5-plain proyect-icon'></i>",
         "<i class='devicon-sass-original proyect-icon'></i>",
@@ -53,7 +57,9 @@
     {
       "title": "Hot Rod Records",
       "description": "Ecommerce de una tienda de música especializada en rock 'n' roll. Vinilos, Elvis Presley y WordPress.",
-      "role": "Diseñadora UI, desarrolladora, redactora de contenido",
+      "roles": [
+        "Diseñadora UI", "Desarrolladora frontend", "Redactora de contenido"
+      ], 
       "techStack": ["<i class='devicon-wordpress-plain proyect-icon'></i>", "<i class='devicon-woocommerce-plain-wordmark proyect-icon'></i>"],
       "image": {
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_hotrod.jpg",
@@ -69,7 +75,9 @@
     {
       "title": "Kaio Sushi",
       "description": "Ecommerce de un local de venta de sushi. El proyecto incluye un carrito funcional desarrollado mayormente con Vanilla JavaScript y unos detalles de jQuery.",
-      "role": "Diseñadora UI, desarrolladora frontend",
+      "roles": [
+        "Diseñadora UI", "Desarrolladora frontend"
+      ], 
       "techStack": [
         "<i class='devicon-html5-plain proyect-icon'></i>",
         "<i class='devicon-sass-original proyect-icon'></i>",
