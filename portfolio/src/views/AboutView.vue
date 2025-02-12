@@ -25,6 +25,18 @@
               <h3 class="mt-5 mb-3">Habilidades</h3>
               <div class="skills-grid pt-4">
                 <div class="skill-item">
+                  <i class="devicon-javascript-plain"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <i class="devicon-vuejs-plain"></i>
+                  <span>Vue</span>
+                </div>
+                <div class="skill-item">
+                  <i class="devicon-php-plain"></i>
+                  <span>PHP</span>
+                </div>
+                <div class="skill-item">
                   <i class="devicon-html5-plain"></i>
                   <span>HTML</span>
                 </div>
@@ -33,36 +45,16 @@
                   <span>CSS</span>
                 </div>
                 <div class="skill-item">
-                  <i class="devicon-javascript-plain"></i>
-                  <span>JavaScript</span>
-                </div>
-                <div class="skill-item">
-                  <i class="devicon-jquery-plain"></i>
-                  <span>jQuery</span>
-                </div>
-                <div class="skill-item">
-                  <i class="devicon-vuejs-plain"></i>
-                  <span>Vue</span>
+                  <i class="devicon-sass-original"></i>
+                  <span>Sass</span>
                 </div>
                 <div class="skill-item">
                   <i class="devicon-bootstrap-plain"></i>
                   <span>Bootstrap</span>
                 </div>
                 <div class="skill-item">
-                  <i class="devicon-sass-original"></i>
-                  <span>Sass</span>
-                </div>
-                <div class="skill-item">
                   <i class="devicon-git-plain"></i>
                   <span>Git</span>
-                </div>
-                <div class="skill-item">
-                  <i class="devicon-wordpress-plain"></i>
-                  <span>WordPress</span>
-                </div>
-                <div class="skill-item">
-                  <i class="devicon-woocommerce-plain-wordmark"></i>
-                  <span>WooCommerce</span>
                 </div>
                 <div class="skill-item">
                   <i class="devicon-figma-plain"></i>
@@ -72,6 +64,10 @@
                   <i class="devicon-photoshop-plain"></i>
                   <span>Photoshop</span>
                 </div>
+                <div class="skill-item">
+                  <i class="devicon-wordpress-plain"></i>
+                  <span>WordPress</span>
+                </div>                
               </div>
             </div>
           </transition>
