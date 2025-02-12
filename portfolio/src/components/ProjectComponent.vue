@@ -7,6 +7,7 @@
       <div class="mb-5">
         <h3 class="mb-3">{{ project.title }}</h3>
         <p class="proyects__text">{{ project.description }}</p>
+        <p v-if="project.descriptionExtra" class="proyects__text">{{ project.descriptionExtra }}</p>
         <p class="proyects__text"><strong>Rol:</strong> {{ project.role }}</p>
       </div>
       <h4 class="mb-3 stack--title">Desarrollado con:</h4>
