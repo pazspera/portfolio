@@ -49,4 +49,8 @@ export default {
   text-transform: uppercase;
   background-color: $primary--dark;
 }
+
+.proyect-icon {
+  font-size:12px;
+}
 </style>
