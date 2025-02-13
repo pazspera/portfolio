@@ -5,6 +5,7 @@
         :navigation="navigationOptions"
         pagination
         :loop="true"
+        :class="{ 'swiper-nav-visible' : swiperNavVisible}"
     >
         <swiper-slide v-for="(img, index) in images" :key="index">
             <img :src="img" class="slide-img" @click="toggleSwiperNavVisibility" />
@@ -33,9 +34,9 @@ export default {
     data() {
         return {
             modules: [ Navigation, Pagination ],
-            navigationOptions: {
+            /* navigationOptions: {
                 hideOnClick: true,
-            },
+            }, */
             swiperNavVisible: false,
             visible: false,
             modalImage: "",
@@ -43,11 +44,11 @@ export default {
     },
     methods: {
         showLightbox(img) {
-            this.modalImga = img;
+            this.modalImage = img;
             this.visible = true;
         }, 
         toggleSwiperNavVisibility() {
-            this.toggleSwiperNavVisibility = !this.toggleSwiperNavVisibility;
+            this.swiperNavVisible = !this.swiperNavVisible;
         }
     }
 }
@@ -61,12 +62,13 @@ export default {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  visibility: hidden;  /* Ocultar botones por defecto */
+  visibility: hidden;
   transition: visibility 0.3s ease;
 }
 
-.swiper-button-next.swiper-button-visible,
-.swiper-button-prev.swiper-button-visible {
-  visibility: visible;  /* Mostrar botones cuando sean visibles */
+.swiper-nav-visible .swiper-button-next,
+.swiper-nav-visible .swiper-button-prev {
+  visibility: visible;
 }
+
 </style>

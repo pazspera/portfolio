@@ -20,7 +20,7 @@
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/portfolio/src/assets/img/mockup_db_marketing.jpg",
         "alt": "Mockup sitio web DB Marketing"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/portfolio/src/assets/img/proyecto-db-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/portfolio/src/assets/img/proyecto-db-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/portfolio/src/assets/img/proyecto-db-03.jpg"],
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/proyecto-db-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/proyecto-db-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/proyecto-db-03.jpg"],
       "btns": [
         {
           "name": "Sitio",
@@ -41,10 +41,10 @@
         "<i class='devicon-javascript-plain proyect-icon' title='JavaScript'></i>"
       ],
       "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_viernes.jpg",
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
         "alt": "Mockup sitio web del proyecto Viernes"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_viernes.jpg"],
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg"],
       "btns": [
         {
           "name": "Sitio",
@@ -64,10 +64,10 @@
       ], 
       "techStack": ["<i class='devicon-wordpress-plain proyect-icon' title='WordPress'></i>", "<i class='devicon-woocommerce-plain-wordmark proyect-icon' title='Woo Commerce'></i>"],
       "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_hotrod.jpg",
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_hotrod.jpg",
         "alt": "Mockup sitio web del proyecto Hot Rod Records"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_viernes.jpg"],
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_hotrod.jpg"],
       "btns": [
         {
           "name": "Sitio",
@@ -89,10 +89,10 @@
         "<i class='devicon-jquery-plain proyect-icon'></i>"
       ],
       "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_kaio.jpg",
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_kaio.jpg",
         "alt": "Mockup sitio web del proyecto Kaio Sushi"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_viernes.jpg"],
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_kaio.jpg"],
       "btns": [
         {
           "name": "Sitio",
