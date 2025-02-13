@@ -1,7 +1,8 @@
 <template>
   <div class="row mb-5">
     <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
-      <img :="project.image" />
+      <!-- <img :="project.image" /> -->
+      <ImageSlider :images="project.imagesSlider"/>
     </div>
     <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true">
       <div class="mb-5">
@@ -26,11 +27,13 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ImageSlider from "./ImageSlider.vue";
 
 AOS.init();
 
 export default {
   name: "ProjectComponent",
+  components: {ImageSlider},
   props: {
     project: {
       type: Object,

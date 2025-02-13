@@ -2,12 +2,13 @@
     <swiper 
         :modules="modules"
         :slides-per-view="1"
-        navigation
+        :navigation="navigationOptions"
         pagination
+        :loop="true"
     >
-        <swiper-style v-for="(img, index in images)" :key="index">
+        <swiper-slide v-for="(img, index) in images" :key="index">
             <img :src="img" class="slide-img" />
-        </swiper-style> 
+        </swiper-slide> 
    </swiper>
 </template>
 
@@ -16,7 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules"; 
 
 export default {
     components: {Swiper, SwiperSlide},
@@ -27,7 +28,12 @@ export default {
         }
     },
     data() {
-
+        return {
+            modules: [ Navigation, Pagination ],
+            navigationOptions: {
+                hideOnClick: true,
+            }
+        }
     }
 }
 </script>
