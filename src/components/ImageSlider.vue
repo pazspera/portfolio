@@ -34,9 +34,9 @@ export default {
     data() {
         return {
             modules: [ Navigation, Pagination ],
-            /* navigationOptions: {
+            navigationOptions: {
                 hideOnClick: true,
-            }, */
+            },
             swiperNavVisible: false,
             visible: false,
             modalImage: "",
