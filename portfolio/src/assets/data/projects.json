@@ -8,13 +8,13 @@
         "Diseñadora UI", "Desarrolladora frontend", "UX writer"
       ], 
       "techStack": [
-        "<i class='devicon-vuejs-plain proyect-icon'></i>",
-        "<i class='devicon-javascript-plain proyect-icon'></i>",
-        "<i class='devicon-php-plain proyect-icon'></i>",
-        "<i class='devicon-html5-plain proyect-icon'></i>",
-        "<i class='devicon-sass-original proyect-icon'></i>",
-        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
-        "<i class='devicon-figma-plain proyect-icon'></i>"
+        "<i class='devicon-vuejs-plain proyect-icon' title='Vue.js'></i>",
+        "<i class='devicon-javascript-plain proyect-icon' title='JavaScript'></i>",
+        "<i class='devicon-php-plain proyect-icon' title='PHP'></i>",
+        "<i class='devicon-html5-plain proyect-icon' title='HTML5'></i>",
+        "<i class='devicon-sass-original proyect-icon' title='Sass'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon' title='Bootstrap'></i>",
+        "<i class='devicon-figma-plain proyect-icon' title='Figma'></i>"
       ],
       "image": {
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/portfolio/src/assets/img/mockup_db_marketing.jpg",
@@ -34,10 +34,10 @@
         "Diseñadora UI", "Desarrolladora frontend"
       ], 
       "techStack": [
-        "<i class='devicon-html5-plain proyect-icon'></i>",
-        "<i class='devicon-sass-original proyect-icon'></i>",
-        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
-        "<i class='devicon-javascript-plain proyect-icon'></i>"
+        "<i class='devicon-html5-plain proyect-icon' title='HTML5'></i>",
+        "<i class='devicon-sass-original proyect-icon' title='Sass'></i>",
+        "<i class='devicon-bootstrap-plain proyect-icon' title='Bootstrap'></i>",
+        "<i class='devicon-javascript-plain proyect-icon' title='JavaScript'></i>"
       ],
       "image": {
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_viernes.jpg",
@@ -60,7 +60,7 @@
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend", "Redactora de contenido"
       ], 
-      "techStack": ["<i class='devicon-wordpress-plain proyect-icon'></i>", "<i class='devicon-woocommerce-plain-wordmark proyect-icon'></i>"],
+      "techStack": ["<i class='devicon-wordpress-plain proyect-icon' title='WordPress'></i>", "<i class='devicon-woocommerce-plain-wordmark proyect-icon' title='Woo Commerce'></i>"],
       "image": {
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/main/portfolio/src/assets/img/mockup_hotrod.jpg",
         "alt": "Mockup sitio web del proyecto Hot Rod Records"
