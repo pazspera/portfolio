@@ -5,16 +5,23 @@
       <ImageSlider :images="project.imagesSlider"/>
     </div>
     <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true">
-      <div class="mb-5">
+      <div class="mb-4">
         <h3 class="mb-3">{{ project.title }}</h3>
         <p class="proyects__text">{{ project.description }}</p>
         <p v-if="project.descriptionExtra" class="proyects__text">{{ project.descriptionExtra }}</p>
+      </div>
+      <div class="mb-3" v-if="project.cliente">
+        <p class="mb-0"><strong>Cliente:</strong> {{ project.cliente }}</p>
+      </div>
+      <div class="mb-3">
         <p class="mb-0"><strong>Rol:</strong></p>
         <span v-for="role in project.roles" :key="role" class="badge badge-role me-2">{{ role }}</span>
       </div>
-      <p class="mb-2"><strong>Tecnologías utilizadas:</strong></p>
-      <div class="stack mb-4">
-        <span v-for="tech in project.techStack" :key="tech" v-html="tech"></span>
+      <div class="mb-3">
+        <p class="mb-2"><strong>Tecnologías utilizadas:</strong></p>
+        <div class="stack mb-4">
+          <span v-for="tech in project.techStack" :key="tech" v-html="tech"></span>
+        </div>
       </div>
       <div class="btns my-3">
         <a v-for="btn in project.btns" :key="btn" :href="btn.link" class="btn btn__secondary me-3" rel="noreferrer" target="_blank">{{ btn.name }}</a>

@@ -7,7 +7,7 @@
         :loop="true"
         :class="{ 'swiper-nav-visible' : swiperNavVisible}"
     >
-        <swiper-slide v-for="(img, index) in images" :key="index">
+        <swiper-slide v-for="(img, index) in images" :key="index" class="mb-3">
             <img :src="img" class="slide-img" @click="toggleSwiperNavVisibility" />
         </swiper-slide> 
    </swiper>

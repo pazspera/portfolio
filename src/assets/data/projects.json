@@ -1,12 +1,13 @@
 {
   "projects": [
     {
-      "title": "DB Marketing",
-      "description": "Rediseño integral del sitio web de DB Marketing, centrado en mejorar la experiencia de usuario y optimizar la conversión.",
+      "title": "Rediseño de sitio institucional con enfoque en UX",
+      "description": "Actualización y reestructuración del sitio web de DB Marketing, centrado en mejorar la experiencia de usuario y optimizar la conversión.",
       "descriptionExtra": "Trabajé en la renovación de la identidad visual, la reestructuración del contenido de los servicios y la creación de un sistema en PHP para mejorar la escalabilidad del sitio. Además, desarrollé un sistema de diseño en Figma para garantizar la coherencia de los componentes en diferentes vistas y optimizar el proceso de diseño.",
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend", "UX writer"
       ], 
+      "cliente": "DB Marketing",
       "techStack": [
         "<i class='devicon-vuejs-plain proyect-icon' title='Vue.js'></i>",
         "<i class='devicon-javascript-plain proyect-icon' title='JavaScript'></i>",
@@ -29,11 +30,13 @@
       ]
     },
     {
-      "title": "New Flag",
-      "description": "Descripcion",
+      "title": "Landing page con formulario personalizado",
+      "description": "El proyecto consistió en crear una landing page para una campaña comercial. Se utilizó la identidad de marca como base para asegurar coherencia con el diseño del sitio web original.",
+      "descriptionExtra": "Además, se implementó un formulario personalizado con múltiples campos para recopilar la información requerida por el cliente. El sitio fue optimizado para ser completamente responsive y fácil de navegar.",
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend"
-      ], 
+      ],
+      "cliente": "New Flag", 
       "techStack": [
         "<i class='devicon-html5-plain proyect-icon' title='HTML5'></i>",
         "<i class='devicon-bootstrap-plain proyect-icon' title='Bootstrap'></i>",
@@ -77,54 +80,6 @@
         {
           "name": "Repositorio Github",
           "link": "https://github.com/pazspera/viernes-web"
-        }
-      ]
-    },
-    {
-      "title": "Hot Rod Records",
-      "description": "Ecommerce de una tienda de música especializada en rock 'n' roll. Vinilos, Elvis Presley y WordPress.",
-      "roles": [
-        "Diseñadora UI", "Desarrolladora frontend", "Redactora de contenido"
-      ], 
-      "techStack": ["<i class='devicon-wordpress-plain proyect-icon' title='WordPress'></i>", "<i class='devicon-woocommerce-plain-wordmark proyect-icon' title='Woo Commerce'></i>"],
-      "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_hotrod.jpg",
-        "alt": "Mockup sitio web del proyecto Hot Rod Records"
-      },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_hotrod.jpg"],
-      "btns": [
-        {
-          "name": "Sitio",
-          "link": "https://hotrodrecords.tk/"
-        }
-      ]
-    },
-    {
-      "title": "Kaio Sushi",
-      "description": "Ecommerce de un local de venta de sushi. El proyecto incluye un carrito funcional desarrollado mayormente con Vanilla JavaScript y unos detalles de jQuery.",
-      "roles": [
-        "Diseñadora UI", "Desarrolladora frontend"
-      ], 
-      "techStack": [
-        "<i class='devicon-html5-plain proyect-icon'></i>",
-        "<i class='devicon-sass-original proyect-icon'></i>",
-        "<i class='devicon-bootstrap-plain proyect-icon'></i>",
-        "<i class='devicon-javascript-plain proyect-icon'></i>",
-        "<i class='devicon-jquery-plain proyect-icon'></i>"
-      ],
-      "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_kaio.jpg",
-        "alt": "Mockup sitio web del proyecto Kaio Sushi"
-      },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_kaio.jpg"],
-      "btns": [
-        {
-          "name": "Sitio",
-          "link": "https://pazspera.github.io/kaio-sushi/"
-        },
-        {
-          "name": "Repositorio Github",
-          "link": "https://github.com/pazspera/kaio-sushi"
         }
       ]
     }
