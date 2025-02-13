@@ -44,7 +44,7 @@
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
         "alt": "Mockup sitio web del proyecto Viernes"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-02.jpg", "https://github.com/pazspera/portfolio/blob/main/src/assets/img/landing-distribuidora-03.jpg"],
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-03.jpg"],
       "btns": [
         {
           "name": "Sitio",

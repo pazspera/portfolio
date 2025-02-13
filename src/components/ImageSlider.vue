@@ -2,7 +2,7 @@
     <swiper 
         :modules="modules"
         :slides-per-view="1"
-        :navigation="navigationOptions"
+        navigation
         pagination
         :loop="true"
         :class="{ 'swiper-nav-visible' : swiperNavVisible}"
@@ -34,9 +34,6 @@ export default {
     data() {
         return {
             modules: [ Navigation, Pagination ],
-            navigationOptions: {
-                hideOnClick: true,
-            },
             swiperNavVisible: false,
             visible: false,
             modalImage: "",
