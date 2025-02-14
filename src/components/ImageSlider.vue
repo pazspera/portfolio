@@ -1,6 +1,7 @@
 <template>
     <swiper 
         :modules="modules"
+        :grab-cursor="true"
         :slides-per-view="1"
         navigation
         pagination
