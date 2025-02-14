@@ -56,8 +56,31 @@
       ]
     },
     {
+      "title": "Creación de carruseles educativos y contenido visual para redes sociales",
+      "description": "El propósito de la campaña para una agencia de traducción era mejorar el posicionamiento de la marca en redes sociales, educando a la audiencia con contenido visualmente atractivo y útil.",
+      "descriptionExtra": "Desarrollé publicaciones en inglés, enfocadas en captar el interés de la buyer persona con temas relevantes. Creé carruseles educativos y piezas gráficas diseñadas para aumentar la interacción orgánica, logrando mayor alcance, especialmente en las publicaciones con múltiples slides.",
+      "roles": [
+        "Diseñadora de contenido", "UX writer"
+      ],
+      "image": {
+        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
+        "alt": "Mockup sitio web del proyecto Viernes"
+      },
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg"],
+      "btns": [
+        {
+          "name": "Sitio",
+          "link": "https://pazspera.github.io/viernes-web/index.html"
+        },
+        {
+          "name": "Repositorio Github",
+          "link": "https://github.com/pazspera/viernes-web"
+        }
+      ]
+    },
+    {
       "title": "Viernes",
-      "description": "Sitio web del ciclo de cine de los Viernes en el servidor La casa del Craizy. Este es un proyecto personal muy querido que lleva la crónica de las películas compartidas con amigxs durante la pandemia.",
+      "description": "Sitio web del ciclo de cine de los Viernes en el servidor \"La casa del Craizy\". Este es un proyecto personal muy querido que lleva la crónica de las películas compartidas con amigxs durante la pandemia.",
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend"
       ], 
