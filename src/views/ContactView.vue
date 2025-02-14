@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         <!-- Formulario -->
-        <div class="col-12 col-lg-6 mb-5">
+        <div class="col-12 col-lg-6 mb-5 order-2 order-lg-1">
           <transition appear @before-enter="beforeEnterLeft" @enter="enterLeft">
             <Form class="contact-form" @submit="submitForm">
               <!-- Date -->
@@ -44,16 +44,11 @@
           </transition>
         </div>
         <!-- Texto y redes -->
-        <div class="col-12 col-lg-5 offset-lg-1 py-4">
+        <div class="col-12 col-lg-5 offset-lg-1 py-4 order-1 order-lg-2">
           <transition appear @before-enter="beforeEnterRight" @enter="enterRight">
             <div>
               <p>
-                ¿Dudas, comentarios, ganas de charlar sobre el maravilloso mundo del desarrollo frontend? Pueden completar el formulario y una paloma mensajera digital me traerá el mensaje a la
-                brevedad.
-              </p>
-              <p>
-                También pueden enviarme unas señales de humo a
-                <a class="link" href="mailto:spera.paz@gmail.com?Subject=Contacto%Portfolio" target="_blank" rel="noopener noreferrer">spera.paz@gmail.com</a>.
+                Las mejores ideas empiezan con una conversación. Completá el formulario y veamos cómo darle forma juntos.
               </p>
               <div class="social-links mt-5">
                 <a class="social-links__icons" href="https://github.com/pazspera" rel="noreferrer" target="_blank"><i class="devicon-github-original"></i></a>

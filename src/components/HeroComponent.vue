@@ -21,7 +21,7 @@
             <div>
               <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
 
-              <h1 class="hero__title mb-5"><span>Desarrolladora frontend &amp; Diseñadora UI</span></h1>
+              <h1 class="hero__title mb-5"><span>Diseñadora UX/UI &amp; Desarrolladora Frontend</span></h1>
 
               <router-link :to="{ name: 'projects' }" class="btn btn__primary">Ver proyectos</router-link>
             </div>

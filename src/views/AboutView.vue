@@ -15,14 +15,12 @@
         <div class="col col-lg-7 offset-lg-1">
           <transition appear @before-enter="beforeEnterRight" @enter="enterRight">
             <div>
-              <p class="about__text">¡Hola Mundo! Soy Paz Spera, desarrolladora frontend y diseñadora UI de Buenos Aires, Argentina.</p>
+              <p class="about__text">¡Hola, soy Paz! Diseño interfaces, escribo código y convierto ideas en experiencias digitales efectivas. Mi objetivo es crear soluciones funcionales y atractivas, asegurando que cada detalle sume a la experiencia del usuario.</p>
               <p class="about__text">
-                Más allá de la innovación técnica, la tecnología nos ofrece constantemente nuevas formas de comunicarnos. Combinar un código organizado y funcional con un diseño atractivo y accesible
-                es donde comienza la magia.
+                Desde el concepto hasta la implementación, cada paso del proceso cuenta. Estas son las tecnologías con las que doy vida a mis proyectos: 
               </p>
 
               <!-- Habilidades -->
-              <h3 class="mt-5 mb-3">Habilidades</h3>
               <div class="skills-grid pt-4">
                 <div class="skill-item">
                   <i class="devicon-javascript-plain"></i>
