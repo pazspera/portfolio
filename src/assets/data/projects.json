@@ -62,11 +62,12 @@
       "roles": [
         "Diseñadora de contenido", "UX writer"
       ],
+      "cliente": "IEB Translation Services", 
       "image": {
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
         "alt": "Mockup sitio web del proyecto Viernes"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg"],
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carruseles-redes-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carruseles-redes-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carruseles-redes-03.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carruseles-redes-04.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carruseles-redes-05.jpg"],
       "btns": [
         {
           "name": "Sitio",
