@@ -67,7 +67,7 @@ import { Form, Field, ErrorMessage } from "vee-validate";
 import gsap from "gsap";
 
 let currentDate = new Date().toLocaleDateString();
-let scriptURL = "https://script.google.com/macros/s/AKfycbw5rDWrqcW5Ej6vCHipd1QPgJ-NEZB5_sfxztFICe1V_RpzwuXuuBFC-R53ZYLCTPAzKw/exec";
+let scriptURL = "https://script.google.com/macros/s/AKfycbyBoHriBIVMgfn1InUt0hCGWxpdGK3TEX_9S1xP_6TT0G1nhf4SiALlYehfV86NUfheaw/exec";
 let formURL = "https://formsubmit.co/ajax/7ceabb42100b9b4fb07ac102ce7f9e7b";
 
 export default {
