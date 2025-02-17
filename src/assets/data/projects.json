@@ -7,7 +7,6 @@
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend", "UX writer"
       ], 
-      "cliente": "DB Marketing",
       "techStack": [
         "<i class='devicon-vuejs-plain proyect-icon' title='Vue.js'></i>",
         "<i class='devicon-javascript-plain proyect-icon' title='JavaScript'></i>",
@@ -36,7 +35,6 @@
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend"
       ],
-      "cliente": "New Flag", 
       "techStack": [
         "<i class='devicon-html5-plain proyect-icon' title='HTML5'></i>",
         "<i class='devicon-bootstrap-plain proyect-icon' title='Bootstrap'></i>",
@@ -47,13 +45,7 @@
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
         "alt": "Mockup sitio web del proyecto Viernes"
       },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-03.jpg"],
-      "btns": [
-        {
-          "name": "Sitio",
-          "link": "https://distribucionenfarmacias.com/"
-        }
-      ]
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-03.jpg"]
     },
     {
       "title": "Creación de carruseles educativos y contenido visual para redes sociales",
@@ -62,7 +54,6 @@
       "roles": [
         "Diseñadora de contenido", "UX writer"
       ],
-      "cliente": "IEB Translation Services", 
       "image": {
         "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
         "alt": "Mockup sitio web del proyecto Viernes"

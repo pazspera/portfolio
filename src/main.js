@@ -3,6 +3,7 @@ import "bootstrap/dist/js/bootstrap.js";
 
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
+import VueHotjar from 'vue-hotjar-next';
 
 import App from "./App.vue";
 
@@ -81,4 +82,9 @@ export default router;
 // Vue instance
 const app = createApp(App);
 app.use(router);
+app.use(VueHotjar, {
+  id: 5307863,
+  isProduction: true,
+  snippetVersion: 6
+});
 app.mount("#app");

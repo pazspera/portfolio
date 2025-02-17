@@ -19,6 +19,7 @@
     "vee-validate": "^4.7.1",
     "vue": "^3.2.13",
     "vue-easy-lightbox": "^1.19.0",
+    "vue-hotjar-next": "^2.1.0",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
