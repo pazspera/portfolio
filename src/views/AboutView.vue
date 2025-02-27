@@ -17,7 +17,7 @@
             <div>
               <p class="about__text">¡Hola, soy Paz! Diseño interfaces, escribo código y convierto ideas en experiencias digitales efectivas. Mi objetivo es crear soluciones funcionales y atractivas, asegurando que cada detalle sume a la experiencia del usuario.</p>
               <p class="about__text">
-                Desde el concepto hasta la implementación, cada paso del proceso cuenta. Estas son las tecnologías con las que doy vida a mis proyectos: 
+                Desde el concepto hasta la implementación, cada paso del proceso cuenta. Estas son las tecnologías con las que desarrollo mis proyectos: 
               </p>
 
               <!-- Habilidades -->

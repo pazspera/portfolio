@@ -60,15 +60,19 @@
       </div>
     </div>
   </section>
+
+  
 </template>
 
 <script>
 import { Form, Field, ErrorMessage } from "vee-validate";
 import gsap from "gsap";
+import { Resend } from "resend";
 
 let currentDate = new Date().toLocaleDateString();
 let scriptURL = "https://script.google.com/macros/s/AKfycbyBoHriBIVMgfn1InUt0hCGWxpdGK3TEX_9S1xP_6TT0G1nhf4SiALlYehfV86NUfheaw/exec";
 let formURL = "https://formsubmit.co/ajax/7ceabb42100b9b4fb07ac102ce7f9e7b";
+
 
 export default {
   name: "ContactView",
@@ -133,12 +137,34 @@ export default {
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     },
+    sendEmail() {
+      const resend = new Resend(process.env.VUE_APP_RESENDER_API_KEY);
+
+      try {
+        resend.emails.send({
+        from: "Portfolio Paz <no-reply@pazspera.com.ar>",
+        to: ["spera.paz@gmail.com"],
+        subject: "Formulario contacto portafolio",
+        html: `<h1>Formulario de contacto portafoliio</h1>
+                <ul>
+                  <li>Nombre: ${this.form.name}</li>
+                  <li>Email: ${this.form.email}</li>
+                  <li>Mensaje: ${this.form.mensaje}</li>
+                </ul>`,
+      });
+      } catch (error) {
+        return console.log(error);
+      }
+    },
     submitForm(values) {
       let $loader = document.querySelector(".contact-form-loader");
       let $response = document.querySelector(".contact-form-response");
 
       // Muestra loader
       $loader.classList.remove("d-none");
+
+      // Manda correo usando Resend
+      this.sendEmail();
 
       // Crea un FormData con los values del data
       // para enviar por fetch, incluyendo date
