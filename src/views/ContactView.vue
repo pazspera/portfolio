@@ -268,8 +268,8 @@ textarea {
 
 // Reset color inputs formuarios
 .form-control:focus {
-  border-color: $primary--light;
-  box-shadow: 0 0 0 0.25rem $primary--light;
+  border-color: $primary--dark-transparency;
+  box-shadow: 0 0 0 0.25rem $primary--dark-transparency;
 }
 
 // Estilos validaciones
