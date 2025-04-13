@@ -69,7 +69,7 @@ export default {
 @import "@/assets/scss/main.scss";
 
 .hero {
-  height: 95vh;
+  min-height: 95vh;
   padding: 1em 0;
   display: flex;
   @include background-image;
