@@ -71,7 +71,7 @@ import gsap from "gsap";
 let currentDate = new Date().toLocaleDateString();
 const scriptURL = "https://script.google.com/macros/s/AKfycbyBoHriBIVMgfn1InUt0hCGWxpdGK3TEX_9S1xP_6TT0G1nhf4SiALlYehfV86NUfheaw/exec";
 // let formURL = "https://formsubmit.co/ajax/7ceabb42100b9b4fb07ac102ce7f9e7b";
-const sendEmailURL = "https://pazspera.com.ar/sendEmail.php";
+// const sendEmailURL = "https://pazspera.com.ar/sendEmail.php";
 
 
 export default {
@@ -139,7 +139,7 @@ export default {
     },
     submitForm(values) {
       let $loader = document.querySelector(".contact-form-loader");
-      let $response = document.querySelector(".contact-form-response");
+      // let $response = document.querySelector(".contact-form-response");
 
       // Muestra loader
       $loader.classList.remove("d-none");
@@ -154,8 +154,12 @@ export default {
 
       this.saveToSheet(formData);
 
+      setTimeout(() => {
+        this.$router.push("/thank-you");
+      }, 3500);
+
       // Fetch envío formulario
-      fetch(sendEmailURL, {
+      /* fetch(sendEmailURL, {
         method: "POST",
         body: formData,
         mode: 'cors',
@@ -180,7 +184,7 @@ export default {
           $loader.classList.add("d-none");
           let message = err.statusText || "Ocurrió un error al enviar, intenta nuevamente";
           $response.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
-        });
+        }); */
     },
     beforeEnterLeft(el) {
       el.style.transform = "translateY(100px)";

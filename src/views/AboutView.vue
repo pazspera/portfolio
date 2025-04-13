@@ -65,16 +65,16 @@
                   <span>Material UI</span>
                 </div>
                 <div class="skill-item">
-                  <i class="devicon-git-plain"></i>
-                  <span>Git</span>
-                </div>
-                <div class="skill-item">
                   <i class="devicon-figma-plain"></i>
                   <span>Figma</span>
                 </div>
                 <div class="skill-item">
                   <i class="devicon-photoshop-plain"></i>
                   <span>Photoshop</span>
+                </div>
+                <div class="skill-item">
+                  <i class="devicon-git-plain"></i>
+                  <span>Git</span>
                 </div>
                 <div class="skill-item">
                   <i class="devicon-wordpress-plain"></i>
