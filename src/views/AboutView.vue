@@ -15,9 +15,11 @@
         <div class="col col-lg-7 offset-lg-1">
           <transition appear @before-enter="beforeEnterRight" @enter="enterRight">
             <div>
-              <p class="about__text">¡Hola, soy Paz! Diseño interfaces, escribo código y convierto ideas en experiencias digitales efectivas. Mi objetivo es crear soluciones funcionales y atractivas, asegurando que cada detalle sume a la experiencia del usuario.</p>
+              <p class="about__text">¡Hola, soy Paz! <strong>Transformo ideas en soluciones digitales que captan, persuaden y generan resultados.</strong> </p>
+              <p class="about__text">Combino mi experiencia en UX/UI, desarrollo frontend y redacción de contenido para crear campañas comerciales efectivas.</p>
+              <p class="about__text">Esta versatilidad me permite <strong>acompañar cada proyecto de principio a fin, integrando estrategia, diseño, implementación y comunicación</strong>.</p>
               <p class="about__text">
-                Desde el concepto hasta la implementación, cada paso del proceso cuenta. Estas son las tecnologías con las que desarrollo mis proyectos: 
+                Mi metodología se basa en la <strong>optimización y mejora continua</strong>, asegurando que cada proyecto se mantenga alineado con los requerimientos del negocio y las necesidades de los usuarios. Estas son las tecnologías que uso para lograrlo: 
               </p>
 
               <!-- Habilidades -->
