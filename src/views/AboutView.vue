@@ -31,6 +31,14 @@
                   <span>Vue</span>
                 </div>
                 <div class="skill-item">
+                  <i class="devicon-react-original"></i>
+                  <span>React</span>
+                </div>
+                <div class="skill-item">
+                  <i class="devicon-firebase-plain"></i>
+                  <span>Firebase</span>
+                </div>
+                <div class="skill-item">
                   <i class="devicon-php-plain"></i>
                   <span>PHP</span>
                 </div>
@@ -49,6 +57,10 @@
                 <div class="skill-item">
                   <i class="devicon-bootstrap-plain"></i>
                   <span>Bootstrap</span>
+                </div>
+                <div class="skill-item">
+                  <i class="devicon-materialui-plain"></i>
+                  <span>Material UI</span>
                 </div>
                 <div class="skill-item">
                   <i class="devicon-git-plain"></i>
