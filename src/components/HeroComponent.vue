@@ -18,7 +18,7 @@
 
           <!-- Transiton con css classes -->
           <transition appear name="fade" >
-            <div>
+            <div class="hero__content-container">
               <p class="hero__text"><span>Hola, soy Paz Spera</span></p>
 
               <h1 class="hero__title mb-5"><span>Diseñadora UX/UI &amp; Desarrolladora Frontend</span></h1>
@@ -81,6 +81,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   &__title {
