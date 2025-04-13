@@ -61,23 +61,28 @@
       "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carrusel-redes-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carrusel-redes-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carrusel-redes-03.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carrusel-redes-04.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/carrusel-redes-05.jpg"]
     },
     {
-      "title": "Landing page con formulario personalizado",
-      "description": "El proyecto consistió en crear una landing page para una campaña comercial. Se utilizó la identidad de marca como base para asegurar coherencia con el diseño del sitio web original.",
-      "descriptionExtra": "Además, se implementó un formulario personalizado con múltiples campos para recopilar la información requerida por el cliente. El sitio fue optimizado para ser completamente responsive y fácil de navegar.",
+      "title": "Caladan Games",
+      "description": "Proyecto que recrea un ecommerce de juegos de mesa, donde los usuarios pueden explorar un catálogo, ver detalles de producto, gestionar el carrito y completar el proceso de compra.",
+      "descriptionExtra": "La implementación se realizó con React, Material UI, CSS Modules, Firebase, React Router y React Hook Form, combinando un diseño minimalista y una paleta de colores inspirada en el universo de \"Dune\".",
       "roles": [
         "Diseñadora UI", "Desarrolladora frontend"
-      ],
+      ], 
       "techStack": [
-        "<i class='devicon-html5-plain proyect-icon' title='HTML5'></i>",
-        "<i class='devicon-bootstrap-plain proyect-icon' title='Bootstrap'></i>",
-        "<i class='devicon-javascript-plain proyect-icon' title='JavaScript'></i>",
-        "<i class='devicon-vuejs-plain proyect-icon' title='Vue.js'></i>"
+        "<i class='devicon-react-original proyect-icon' title='React'></i>",
+        "<i class='devicon-materialui-plain proyect-icon' title='Material UI'></i>",
+        "<i class='devicon-firebase-plain proyect-icon' title='Firebase'></i>"
       ],
-      "image": {
-        "src": "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/mockup_viernes.jpg",
-        "alt": "Mockup sitio web del proyecto Viernes"
-      },
-      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-01.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-02.jpg", "https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/landing-distribuidora-03.jpg"]
+      "imagesSlider": ["https://raw.githubusercontent.com/pazspera/portfolio/refs/heads/main/src/assets/img/ecommerce-react.jpg"],
+      "btns": [
+        {
+          "name": "Sitio",
+          "link": "https://ecommerce-react-seven-sepia.vercel.app/"
+        },
+        {
+          "name": "Repositorio Github",
+          "link": "https://github.com/pazspera/ecommerce-react"
+        }
+      ]
     },
     {
       "title": "Viernes",
