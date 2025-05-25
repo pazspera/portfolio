@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Colors */
+  /* - Primary */
   --color-primary-100: #C9F4F9;
   --color-primary-200: #99E8F0;
   --color-primary-300: #70D4DE;
@@ -12,12 +13,14 @@
   --color-primary-700: #096771;
   --color-primary-800: #074F57;
   --color-primary-900: #033035;
-  --color-test: #FFFBFA;
+  /* - Background */
+  --color-bg-light: #FFEFEB;
   /* Typography */
   --font-title: "Merriweather", "serif";
   --font-text: "Karla", "sans-serif";
+  --font-logo: "Fredericka the Great", "serif";
 }
 
 body {
-  @apply bg-test
+  @apply bg-bg-light
 }
