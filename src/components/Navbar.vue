@@ -42,10 +42,28 @@ const toggleMenu = () => {
     </div>
 
     <!-- Mobile menu -->
-    <div v-if="menuOpen" class="flex-col md:flex md:flex-row items-center justify-start md:space-x-1 pb-3 md:pb-0">
-      <NavLink href="#" label="Proyectos"/>
-      <NavLink href="#" label="Acerca de"/>
-      <NavLink href="#" label="Contacto"/>
-    </div>
+    <transition name="fade-slide">
+      <div v-if="menuOpen" class="flex-col md:flex md:flex-row items-center justify-start md:space-x-1 pb-3 md:pb-0">
+        <NavLink href="#" label="Proyectos"/>
+        <NavLink href="#" label="Acerca de"/>
+        <NavLink href="#" label="Contacto"/>
+      </div>
+    </transition>
   </header>
 </template>
+
+<style scoped>
+.fade-slide-enter-active, .fade-slide-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-slide-enter-from, .fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-slide-enter-to, .fade-slide-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
