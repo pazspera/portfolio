@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Bars3Icon, SunIcon, MoonIcon } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
+import NavLink from "./NavLink.vue";
 
 const menuOpen = ref(false);
 const toggleMenu = () => {
@@ -14,7 +15,7 @@ const toggleMenu = () => {
     <div class="container mx-auto px-4 py-1.5 md:px-0">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
-        <span class="font-logo text-2xl text-primary-100 hover:text-primary-400 hover:font-bold transition ease-in-out">PS</span>
+        <NavLink href="#" label="PS"/>
 
         <div class="ml-auto flex items-center gap-6">
           <!-- Desktop links -->
