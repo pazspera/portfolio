@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { Bars3Icon, SunIcon, MoonIcon } from "@heroicons/vue/24/outline";
+import { Bars3Icon } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
 import NavLink from "./NavLink.vue";
 import NavLogo from "./NavLogo.vue";
+import DarkToggle from "./DarkToggle.vue";
 
 const menuOpen = ref(false);
 const toggleMenu = () => {
@@ -28,10 +29,7 @@ const toggleMenu = () => {
   
           <!-- Buttons -->
           <div class="flex items-center gap-6">
-            <button>
-              <SunIcon class="w-6 h-6 text-primary-100 hover:text-primary-400 transition ease-in-out"/>
-              <MoonIcon class="w-6 h-6 text-primary-100 hover:text-primary-400 transition ease-in-out"/>
-            </button>
+            <DarkToggle />
             <button @click="toggleMenu">
               <Bars3Icon class="w-6 h-6 text-primary-100 cursor-pointer hover:text-primary-400 transition ease-in-out md:hidden"/>
             </button>
