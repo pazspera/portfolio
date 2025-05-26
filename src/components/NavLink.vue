@@ -12,5 +12,5 @@ const props = defineProps({
 </script>
 
 <template>
-  <a :href="href" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">{label}</a>
+  <a :href="props.href" class="py-2 px-3 block uppercase font-semibold text-primary-100 hover:text-primary-400  hover:underline hover:underline-offset-8 transition ease-in-out">{{props.label}}</a>
 </template>

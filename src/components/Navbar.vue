@@ -2,6 +2,7 @@
 import { Bars3Icon, SunIcon, MoonIcon } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
 import NavLink from "./NavLink.vue";
+import NavLogo from "./NavLogo.vue";
 
 const menuOpen = ref(false);
 const toggleMenu = () => {
@@ -15,14 +16,14 @@ const toggleMenu = () => {
     <div class="container mx-auto px-4 py-1.5 md:px-0">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
-        <NavLink href="#" label="PS"/>
+        <NavLogo href="#" label="PS" class="font-logo text-2xl font-normal"/>
 
         <div class="ml-auto flex items-center gap-6">
           <!-- Desktop links -->
           <div class="hidden md:flex md:flex-row gap-4">
-            <a href="#" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">Proyectos</a>
-            <a href="#" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">Acerca de</a>
-            <a href="#" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">Contacto</a>
+            <NavLink href="#" label="Proyectos"/>
+            <NavLink href="#" label="Acerca de"/>
+            <NavLink href="#" label="Contacto"/>
           </div>
   
           <!-- Buttons -->
@@ -42,9 +43,9 @@ const toggleMenu = () => {
 
     <!-- Mobile menu -->
     <div v-if="menuOpen" class="flex-col md:flex md:flex-row items-center justify-start md:space-x-1 pb-3 md:pb-0">
-      <a href="#" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">Proyectos</a>
-      <a href="#" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">Acerca de</a>
-      <a href="#" class="py-2 px-3 block text-primary-100  hover:text-primary-400 hover:font-bold transition ease-in-out">Contacto</a>
+      <NavLink href="#" label="Proyectos"/>
+      <NavLink href="#" label="Acerca de"/>
+      <NavLink href="#" label="Contacto"/>
     </div>
   </header>
 </template>
