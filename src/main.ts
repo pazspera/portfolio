@@ -1,5 +1,16 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+const savedTheme = localStorage.getItem("vueuse-color-scheme");
+const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+if(!savedTheme) {
+  if(systemPrefersDark){
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}
+
+createApp(App).mount("#app");
