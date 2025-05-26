@@ -4,8 +4,10 @@ import Navbar from './components/Navbar.vue';
 
 <template>
   <Navbar />
-  <h1 class="font-title color-primary-900">Hello World!</h1>
-  <div class="w-20 h-20 bg-primary-500"></div>
+  <div class="container mx-auto py-8">    
+    <h1 class="font-title color-primary-900">Hello World!</h1>
+    <div class="w-20 h-20 bg-primary-500"></div>
+  </div>
 </template>
 
 <style scoped>
