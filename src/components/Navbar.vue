@@ -14,7 +14,7 @@ const toggleMenu = () => {
 
 <template>
   <header class="bg-primary-800 w-full h-auto ">
-    <div class="container mx-auto px-4 py-1.5 md:px-0">
+    <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
         <NavLogo href="#" label="PS" class="font-logo text-2xl font-normal"/>
@@ -28,7 +28,7 @@ const toggleMenu = () => {
           </div>
   
           <!-- Buttons -->
-          <div class="flex items-center gap-6">
+          <div class="flex items-end gap-4 md:gap-0">
             <DarkToggle />
             <button @click="toggleMenu">
               <Bars3Icon class="w-6 h-6 text-primary-100 cursor-pointer hover:text-primary-400 transition ease-in-out md:hidden"/>
