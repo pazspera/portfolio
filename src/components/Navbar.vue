@@ -13,7 +13,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="bg-primary-800 w-full h-auto ">
+  <header class="bg-primary-800 dark:bg-primary-300 w-full h-auto ">
     <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
