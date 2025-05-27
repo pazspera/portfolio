@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue';
-import Hero from './sections/Hero.vue';
 import Footer from './components/Footer.vue';
+import Hero from './sections/Hero.vue';
+import AcercaDe from './sections/AcercaDe.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Footer from './components/Footer.vue';
     <Navbar />
     <main class="container mx-auto px-4 md:px-6 py-8">
       <Hero />
+      <AcercaDe />
       <h1 class="font-title color-primary-900">Hello World!</h1>
       <p>​</p>
       <div class="w-20 h-20 bg-primary-500"></div>
