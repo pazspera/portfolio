@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionTitle from '../components/SectionTitle.vue';
+import SectionTitle from '../components/typography/SectionTitle.vue';
 </script>
 
 <template>
