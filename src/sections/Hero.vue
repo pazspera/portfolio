@@ -32,4 +32,4 @@ import ButtonText from '../components/ButtonText.vue';
       </div>
     </div>
   </section>
-</template>
+</template>gi
