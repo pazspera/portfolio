@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import SectionTitle from '../components/typography/SectionTitle.vue';
+import HighlightText from '../components/typography/HighlightText.vue';
 </script>
 
 <template>
   <section class="py-12 lg:py-16 2xl:py-20">
     <SectionTitle text="Acerca de" />
+    <HighlightText>
+      Diseñar, escribir y programar son medios, no fines. <br> Lo importante es construir soluciones que funcionen.
+    </HighlightText>
     <p class="text-lg font-bold mb-3">Diseñar, escribir y programar son medios, no fines. <br> Lo importante es construir soluciones que funcionen.</p>
     <p class="mb-2">Mi enfoque combina tres disciplinas (UX/UI, desarrollo frontend y copywriting) para un mismo fin: que cada proyecto tenga impacto.</p>
     <p class="mb-2">El primer paso es entender el negocio: qué necesita lograr y a quién se dirige. A partir de eso, diseño y redacto contenido que conecte con esa audiencia, con foco en claridad, persuasión y conversión.</p>

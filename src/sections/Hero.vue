@@ -10,9 +10,9 @@ import ButtonText from '../components/ButtonText.vue';
       <div class="grid grid-cols-1 md:grid-cols-8 gap-6">
         <!-- Texto -->
         <div class="md:col-span-5 lg:pe-10">
-          <p class="text-sm lg:text-lg">¡Hola, soy Paz! Me especializo en</p>
-          <h1 class="font-title text-4xl/tight lg:text-5xl/tight xl:text-6xl/tight font-bold mt-2 mb-4 text-primary-900">Captar la atención, guiar al usuario y lograr conversiones</h1>
-          <p class="text-lg lg:text-2xl">Cuando el diseño, el código y las palabras trabajan en equipo, los resultados no tardan en llegar.</p>
+          <p class="text-sm lg:text-lg xl:text-2xl">¡Hola, soy Paz! Me especializo en</p>
+          <h1 class="font-title text-4xl/tight lg:text-5xl/tight xl:text-6xl/tight 2xl:text-7xl/tight font-bold mt-2 mb-4 text-primary-900">Captar la atención, guiar al usuario y lograr conversiones</h1>
+          <p class="text-lg/tight lg:text-2xl/tight xl:text-3xl/tight">Cuando el diseño, el código y las palabras trabajan en equipo, los resultados no tardan en llegar.</p>
           <div class="mt-6 flex gap-6">
             <ButtonContained href="#" label="Ver proyectos"/>
             <ButtonText href="#" label="Contacto"/>
