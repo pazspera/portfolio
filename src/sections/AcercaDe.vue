@@ -2,13 +2,21 @@
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
 import MainText from "../components/typography/MainText.vue";
+import TechChip from "../components/TechChip.vue";
+
+const techStack = [
+  { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+  { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg', alt: 'Logo de Vue.js', label: "Vue"},
+
+]
+
 </script>
 
 <template>
   <section class="py-12 lg:py-16 2xl:py-20">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-12">
-        <div class="md:col-span-10 lg:col-span-9">
+        <div class="md:col-span-10 lg:col-span-9 xl:col-span-8">
           <SectionTitle text="Acerca de" />
           <HighlightText>
             Diseñar, escribir y programar son medios, no fines. <br> Lo importante es construir soluciones que funcionen.
@@ -24,7 +32,15 @@ import MainText from "../components/typography/MainText.vue";
           </MainText>  
           <MainText class="font-semibold text-primary-700 dark:text-primary-500">
             Iterando evolucionamos.
-          </MainText>  
+          </MainText>
+          
+          <div class="py-6">
+            <TechChip 
+              v-for="(tech, index) in techStack"
+              :key="index"
+              :tech="tech"
+            />
+          </div>
         </div>
       </div>
     </div>
