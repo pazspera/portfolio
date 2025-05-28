@@ -5,8 +5,21 @@ import MainText from "../components/typography/MainText.vue";
 import TechChip from "../components/TechChip.vue";
 
 const techStack = [
-  { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
-  { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg', alt: 'Logo de Vue.js', label: "Vue"},
+  { src: '/src/assets/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+  { src: '/src/assets/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
+  { src: '/src/assets/react-original.svg', alt: 'Logo de React', label: "React"},
+  { src: '/src/assets/firebase-original.svg', alt: 'Logo de Firebase', label: "Firebase"},
+  { src: '/src/assets/php-original.svg', alt: 'Logo de PHP', label: "PHP"},
+  { src: '/src/assets/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
+  { src: '/src/assets/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
+  { src: '/src/assets/tailwindcss-original.svg', alt: 'Logo de Tailwind', label: "Tailwind"},
+  { src: '/src/assets/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
+  { src: '/src/assets/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
+  { src: '/src/assets/sass-original.svg', alt: 'Logo de Sass', label: "Sass"},
+  { src: '/src/assets/git-original.svg', alt: 'Logo de Git', label: "Git"},
+  { src: '/src/assets/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
+  { src: '/src/assets/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"},
+  { src: '/src/assets/wordpress-plain.svg', alt: 'Logo de Wodpress', label: "Wordpress"},
 
 ]
 
@@ -34,12 +47,15 @@ const techStack = [
             Iterando evolucionamos.
           </MainText>
           
-          <div class="py-6">
-            <TechChip 
-              v-for="(tech, index) in techStack"
-              :key="index"
-              :tech="tech"
-            />
+          <div class="py-6 bg-gray-200">  
+
+            <div class="flex flex-wrap gap-3 px-2 lg:px-9 justify-center">
+              <TechChip 
+                v-for="(tech, index) in techStack"
+                :key="index"
+                :tech="tech"
+              />
+            </div>
           </div>
         </div>
       </div>
