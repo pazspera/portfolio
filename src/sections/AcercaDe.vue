@@ -2,6 +2,7 @@
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
 import MainText from "../components/typography/MainText.vue";
+import SecondaryTitle from "../components/typography/SecondaryTitle.vue";
 import TechChip from "../components/TechChip.vue";
 
 const techStack = [
@@ -20,7 +21,6 @@ const techStack = [
   { src: '/src/assets/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
   { src: '/src/assets/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"},
   { src: '/src/assets/wordpress-plain.svg', alt: 'Logo de Wodpress', label: "Wordpress"},
-
 ]
 
 </script>
@@ -47,8 +47,8 @@ const techStack = [
             Iterando evolucionamos.
           </MainText>
           
-          <div class="py-6 bg-gray-200">  
-
+          <div class="mt-8 py-6  bg-gray-200 rounded-2xl">  
+            <SecondaryTitle text="Tecnologías que uso" class="text-center mb-6  text-primary-900"/>
             <div class="flex flex-wrap gap-3 px-2 lg:px-9 justify-center">
               <TechChip 
                 v-for="(tech, index) in techStack"
