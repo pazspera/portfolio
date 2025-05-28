@@ -25,9 +25,10 @@
 }
 
 html {
-  @apply bg-light text-zinc-900 font-text;
+  @apply bg-light text-zinc-900 font-text; 
 }
 
 html.dark {
   @apply bg-dark text-zinc-200 font-text;
 }
+
