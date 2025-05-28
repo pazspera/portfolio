@@ -11,9 +11,6 @@ import AcercaDe from './sections/AcercaDe.vue';
     <main class="container mx-auto px-4 md:px-6 py-8">
       <Hero />
       <AcercaDe />
-      <h1 class="font-title color-primary-900">Hello World!</h1>
-      <p>​</p>
-      <div class="w-20 h-20 bg-primary-500"></div>
     </main>
     <Footer />
   </div>
