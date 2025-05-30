@@ -6,7 +6,7 @@ import AcercaDe from './sections/AcercaDe.vue';
 </script>
 
 <template>
-  <div class="bg-light dark:bg-dark text-zinc-900 dark:text-zinc-200 transition-colors duration-300 ease-in-out">
+  <div class="font-text bg-light dark:bg-dark text-zinc-900 dark:text-zinc-200 transition-colors duration-500 ease-in-out" id="app">
     <Navbar />
     <main class="container mx-auto px-4 md:px-6 py-8">
       <Hero />
