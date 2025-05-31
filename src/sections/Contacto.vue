@@ -31,18 +31,18 @@ import ButtonContained from '../components/ButtonContained.vue';
           <form>
             <div class="flex flex-col mb-3">
               <label for="name">Nombre *</label>
-              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900 ">
+              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
             </div>
             <div class="flex flex-col mb-3">
               <label for="email">Email *</label>
-              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900 ">
+              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
             </div>
             <div class="flex flex-col mb-3">
               <label for="message">Mensaje *</label>
-              <textarea name="message" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900"></textarea>
+              <textarea name="message" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
             </div>
             <div class="mt-6 flex">
-              <ButtonContained label="Enviar" class="w-full" />
+              <ButtonContained label="Enviar" class="w-full" type="submit" />
             </div>
           </form>
         </div>
