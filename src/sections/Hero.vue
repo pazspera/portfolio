@@ -9,7 +9,7 @@ import RoleLabel from "../components/typography/RoleLabel.vue";
 
 
 <template>
-  <section class="bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-4 sm:px-6 lg:px-8 pt-6 lg:pt-8 pb-18 sm:pb-16 md:pb-8 xl:pb-10 rounded-br-[120px] md:rounded-r-[120px] md:rounded-br-none">
+  <section class="bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-4 sm:px-6 lg:px-8 pt-6 lg:pt-8 xl:pt-10 pb-14 sm:pb-12 md:pb-6 lg:pb-8 xl:pb-10 rounded-br-[120px] md:rounded-r-[120px] md:rounded-br-none">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-8 gap-6">
         <!-- Texto -->
