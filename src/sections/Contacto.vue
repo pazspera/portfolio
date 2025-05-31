@@ -13,14 +13,20 @@ import MainText from "../components/typography/MainText.vue"
           <MainText>
             Las mejores ideas empiezan con una conversación. Completá el formulario y veamos cómo darle forma juntos.
           </MainText>
-          <div>
-            <!-- Links redes -->
+          <!-- Links redes -->
+          <div class="flex gap-4 items-center justify-center py-4">
+            <a href="https://www.linkedin.com/in/paz-spera/" target="_blank" rel="noopener noreferrer" class="p-1 text-primary-900 hover:text-primary-400 transition ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200"> 
+            <i class="devicon-linkedin-plain text-2xl lg:text-3xl"></i>
+          </a>
+          <a href="https://github.com/pazspera" target="_blank" rel="noopener noreferrer" class="p-1 text-primary-100 hover:text-primary-400 transition ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200">
+            <i class="devicon-github-original text-2xl lg:text-3xl"></i>
+          </a>
           </div>
         </div>
         <!-- Form -->
         <div>
           <form>
-
+            
           </form>
         </div>
       </div>
