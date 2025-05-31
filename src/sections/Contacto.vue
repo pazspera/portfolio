@@ -2,6 +2,25 @@
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import MainText from "../components/typography/MainText.vue";
 import ButtonContained from '../components/ButtonContained.vue';
+
+import { reactive } from "vue";
+
+type ContactForm = {
+  name: string,
+  email: string, 
+  message: string,
+}
+
+const form = reactive<ContactForm>({
+  name: "",
+  email: "",
+  message: "",
+})
+
+const handleSubmit = () => {
+  console.log(form);
+}
+
 </script>
 
 <template>
@@ -28,18 +47,18 @@ import ButtonContained from '../components/ButtonContained.vue';
         </div>
         <!-- Form -->
         <div class="md:pl-4">
-          <form>
+          <form @submit.prevent="handleSubmit">
             <div class="flex flex-col mb-3">
               <label for="name">Nombre *</label>
-              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
+              <input type="text" name="name" v-model="form.name" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
             </div>
             <div class="flex flex-col mb-3">
               <label for="email">Email *</label>
-              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
+              <input type="text" name="name" v-model="form.email" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
             </div>
             <div class="flex flex-col mb-3">
               <label for="message">Mensaje *</label>
-              <textarea name="message" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
+              <textarea name="message" v-model="form.message" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
             </div>
             <div class="mt-6 flex">
               <ButtonContained label="Enviar" class="w-full" type="submit" />
