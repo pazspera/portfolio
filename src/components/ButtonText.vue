@@ -1,19 +1,15 @@
 <script setup lang="ts">
-const props = defineProps({
-  href: {
-    type: String,
-    required: true,
-  },
-  label: {
-    type: String,
-    required: true,
-  }
-})
+const props = defineProps<{
+  href?: string,
+  label: string,
+  type?: "button" | "submit" | "reset",
+}>();
+const type = props.type ?? "button";
 </script>
 
 <template>
-  <a :href="props.href" class="uppercase px-4 py-2 2xl:px-6 2xl:py-3 rounded-sm text-primary-900 font-bold text-base lg:text-lg xl:text-xl 2xl:text-2xl hover:bg-gray-200/40 focus-visible:ring-2 focus-visible:ring-primary-500 
+  <a :href="href" :type="type" class="uppercase px-4 py-2 2xl:px-6 2xl:py-3 rounded-sm text-primary-900 font-bold text-base lg:text-lg xl:text-xl 2xl:text-2xl hover:bg-gray-200/40 focus-visible:ring-2 focus-visible:ring-primary-500 
   dark:focus-visible:ring-primary-700 focus-visible:outline-none active:bg-primary-900/20 transition">
-    {{ props.label }}
+    {{ label }}
   </a>
 </template>

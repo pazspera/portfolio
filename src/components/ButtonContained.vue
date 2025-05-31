@@ -4,7 +4,7 @@ const props = defineProps<{
   label: string,
   type?: "button" | "submit" | "reset",
 }>()
-const type = props.type ?? "button"
+const type = props.type ?? "button";
 </script>
 
 <template>
