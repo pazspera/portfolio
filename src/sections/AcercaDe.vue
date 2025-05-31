@@ -30,7 +30,7 @@ const techStack = [
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-12">
         <div class="md:col-span-10 lg:col-span-9 xl:col-span-8">
-          <SectionTitle text="Acerca de" />
+          <SectionTitle text="Acerca de" class="text-primary-900 dark:text-primary-300" />
           <HighlightText>
             Diseñar, escribir y programar son medios, no fines. <br> Lo importante es construir soluciones que funcionen.
           </HighlightText>

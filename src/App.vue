@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar.vue';
 import Footer from './components/Footer.vue';
 import Hero from './sections/Hero.vue';
 import AcercaDe from './sections/AcercaDe.vue';
+import Contacto from "./sections/Contacto.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import AcercaDe from './sections/AcercaDe.vue';
     <main class="container mx-auto px-4 md:px-6 py-8">
       <Hero />
       <AcercaDe />
+      <Contacto />
     </main>
     <Footer />
   </div>
