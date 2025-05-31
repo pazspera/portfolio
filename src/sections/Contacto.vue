@@ -39,7 +39,7 @@ import ButtonContained from '../components/ButtonContained.vue';
               <label for="message">Mensaje *</label>
               <textarea name="message" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900"></textarea>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 flex">
               <ButtonContained label="Enviar" class="w-full" />
             </div>
           </form>
