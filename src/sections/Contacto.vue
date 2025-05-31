@@ -9,16 +9,34 @@ type ContactForm = {
   name: string,
   email: string, 
   message: string,
+  date: string
 }
+
+const date = new Date().toLocaleDateString();
+const sheetURL = import.meta.env.VITE_SHEET_URL;
 
 const form = reactive<ContactForm>({
   name: "",
   email: "",
   message: "",
+  date: date
 })
 
 const handleSubmit = () => {
-  console.log(form);
+
+  const formData = new FormData();
+  formData.append("name", form.name);
+  formData.append("email", form.email);
+  formData.append("message", form.message);
+  formData.append("date", date);
+
+  // send form to sheet
+  fetch(sheetURL, {
+    method: "POST",
+    body: formData
+  })
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
 }
 
 </script>
