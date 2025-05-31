@@ -23,3 +23,14 @@
   --font-text: "Karla", "sans-serif";
   --font-logo: "Fredericka the Great", "serif";
 }
+
+
+@custom-utility {
+  .bg-light {
+    background-color: #ffefeb;
+  }
+
+  .bg-dark {
+    background-color: #272838;
+  }
+}
