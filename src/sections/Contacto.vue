@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SectionTitle from '../components/typography/SectionTitle.vue';
-import MainText from "../components/typography/MainText.vue"
+import MainText from "../components/typography/MainText.vue";
+import ButtonContained from '../components/ButtonContained.vue';
 </script>
 
 <template>
@@ -26,7 +27,21 @@ import MainText from "../components/typography/MainText.vue"
         <!-- Form -->
         <div>
           <form>
-            
+            <div class="flex flex-col mb-3">
+              <label for="name">Nombre *</label>
+              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900 ">
+            </div>
+            <div class="flex flex-col mb-3">
+              <label for="email">Email *</label>
+              <input type="text" name="name" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900 ">
+            </div>
+            <div class="flex flex-col mb-3">
+              <label for="message">Mensaje *</label>
+              <textarea name="message" class="block bg-white py-1.5 px-3 rounded-md text-base text-zinc-900"></textarea>
+            </div>
+            <div class="mb-3">
+              <ButtonContained label="Enviar" class="w-full" />
+            </div>
           </form>
         </div>
       </div>

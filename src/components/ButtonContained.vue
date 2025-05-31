@@ -2,7 +2,7 @@
 const props = defineProps({
   href: {
     type: String,
-    required: true,
+    required: false,
   },
   label: {
     type: String,
