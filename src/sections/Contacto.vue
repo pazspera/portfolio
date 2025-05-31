@@ -3,7 +3,9 @@ import SectionTitle from '../components/typography/SectionTitle.vue';
 import MainText from "../components/typography/MainText.vue";
 import ButtonContained from '../components/ButtonContained.vue';
 
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
+import useVuelidate from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
 
 type ContactForm = {
   name: string,
@@ -22,7 +24,25 @@ const form = reactive<ContactForm>({
   date: date
 })
 
-const handleSubmit = () => {
+const validationRules = computed(() => {
+  return {
+    name: { required },
+    email: { required, email },
+    message: { required },
+  }
+})
+
+
+const v$ = useVuelidate(validationRules, form);
+
+const handleSubmit = async () => {
+  const result = await v$.value.$validate();
+
+  if(result) {
+    console.log("form ok");
+  } else {
+    console.log("hay errores")
+  }
 
   const formData = new FormData();
   formData.append("name", form.name);
@@ -68,15 +88,21 @@ const handleSubmit = () => {
           <form @submit.prevent="handleSubmit">
             <div class="flex flex-col mb-3">
               <label for="name">Nombre *</label>
-              <input type="text" name="name" v-model="form.name" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
+              <input type="text" name="name" v-model="form.name" @blur="v$.name.$touch()" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
+              <span v-if="v$.name.$dirty && v$.name.$error">El nombre es requerido</span>
             </div>
             <div class="flex flex-col mb-3">
               <label for="email">Email *</label>
-              <input type="text" name="name" v-model="form.email" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
+              <input type="text" name="name" v-model="form.email" @blur="v$.email.$touch()" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
+              <span v-if="v$.email.$dirty && v$.email.$error">
+                <span v-if="v$.email.required.$invalid">El email es requerido</span>
+                <span v-if="v$.email.email.$invalid">El email es requerido</span>
+              </span>
             </div>
             <div class="flex flex-col mb-3">
               <label for="message">Mensaje *</label>
-              <textarea name="message" v-model="form.message" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
+              <textarea name="message" v-model="form.message" @blur="v$.message.$touch()" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
+              <span v-if="v$.message.$dirty && v$.message.$error">El mensaje es requerido</span>
             </div>
             <div class="mt-6 flex">
               <ButtonContained label="Enviar" class="w-full" type="submit" />
