@@ -2,6 +2,7 @@
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import MainText from "../components/typography/MainText.vue";
 import ButtonContained from '../components/ButtonContained.vue';
+import ErrorMessage from "../components/ErrorMessage.vue"
 
 import { reactive, computed } from "vue";
 import useVuelidate from "@vuelidate/core";
@@ -89,20 +90,31 @@ const handleSubmit = async () => {
             <div class="flex flex-col mb-3">
               <label for="name">Nombre *</label>
               <input type="text" name="name" v-model="form.name" @blur="v$.name.$touch()" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
-              <span v-if="v$.name.$dirty && v$.name.$error">El nombre es requerido</span>
+              <ErrorMessage v-if="v$.name.$dirty && v$.name.$error">
+                Uh, me perdí tu nombre. ¿Lo podrías volver a escribir?
+              </ErrorMessage>
             </div>
             <div class="flex flex-col mb-3">
               <label for="email">Email *</label>
               <input type="text" name="name" v-model="form.email" @blur="v$.email.$touch()" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
-              <span v-if="v$.email.$dirty && v$.email.$error">
-                <span v-if="v$.email.required.$invalid">El email es requerido</span>
-                <span v-if="v$.email.email.$invalid">El email es requerido</span>
+              <span v-if="v$.email.$dirty && v$.email.$error" class="mt-2">
+                <ErrorMessage v-if="v$.email.required.$invalid">
+                  Necesito un email para ponerme en contacto. Mi paloma mensajera está de vacaciones
+                </ErrorMessage>
+                <ErrorMessage v-if="v$.email.email.$invalid">
+                  Mmm... ese formato es un poco extraño. Debería ser parecido a nombre@dominio.com
+                </ErrorMessage>
               </span>
             </div>
             <div class="flex flex-col mb-3">
               <label for="message">Mensaje *</label>
               <textarea name="message" v-model="form.message" @blur="v$.message.$touch()" class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
-              <span v-if="v$.message.$dirty && v$.message.$error">El mensaje es requerido</span>
+              <ErrorMessage v-if="v$.message.$dirty && v$.message.$error">
+                Me dejaste con la intriga. ¿Qué ibas a decir?
+              </ErrorMessage>
+            </div>
+            <div class="my-2">
+              <span class="text-sm">* Campos requeridos</span>
             </div>
             <div class="mt-6 flex">
               <ButtonContained label="Enviar" class="w-full" type="submit" />
