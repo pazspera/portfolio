@@ -159,7 +159,7 @@ const handleSubmit = async () => {
               <ErrorMessage v-if="submitError" :content="submitError" html/>
             </div>
             <div class="mt-6 flex">
-              <ButtonContained label="Enviar" class="w-full" type="submit" />
+              <ButtonContained label="Enviar" class="w-full" type="submit" :loading="isSubmitting" />
             </div>
           </form>
         </div>
