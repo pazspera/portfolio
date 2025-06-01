@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/vue": "^2.2.0",
     "@tailwindcss/vite": "^4.1.7",
     "@vuelidate/core": "^2.0.3",

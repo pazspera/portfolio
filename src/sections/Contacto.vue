@@ -7,6 +7,7 @@ import ErrorMessage from "../components/ErrorMessage.vue"
 import { reactive, computed, ref } from "vue";
 import useVuelidate from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
+import emailjs from "@emailjs/browser";
 
 type ContactForm = {
   name: string,
@@ -17,6 +18,9 @@ type ContactForm = {
 
 const date = new Date().toLocaleDateString();
 const sheetURL = import.meta.env.VITE_SHEET_URL;
+const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const form = reactive<ContactForm>({
   name: "",
@@ -57,11 +61,34 @@ const handleSubmit = async () => {
         body: formData
       });
 
-      if (!res.ok) throw new Error("Error al enviar el formulario");
+      if (!res.ok) throw new Error("Error al enviar al Google Sheet");
+
+      // send email
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          user_name: form.name,
+          user_email: form.email,
+          message: form.message,
+          date: form.date,
+        },
+        publicKey
+      );
+
+      // reset form
+      form.name = "";
+      form.email = "";
+      form.message = "";
 
     } catch (error) {
       submitError.value = `Algo falló en el envío. No sos vos, soy yo. Podés escribirme directamente a <a href="mailto:spera.paz@gmail.com" class="underline">spera.paz@gmail.com</a>.`;
+    } finally {
+      isSubmitting.value = false;
     }
+  } else {
+    // in case the validations don't pass
+    isSubmitting.value = false;
   }
 
 }
