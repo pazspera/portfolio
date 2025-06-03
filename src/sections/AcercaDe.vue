@@ -47,7 +47,7 @@ const techStack = [
             Iterando evolucionamos.
           </MainText>
           
-          <div class="mt-8 py-6  bg-gray-200 rounded-2xl">  
+          <div class="mt-8 py-6  bg-slate-200 rounded-2xl">  
             <SecondaryTitle text="Tecnologías que uso" class="text-center mb-6  text-primary-900"/>
             <div class="flex flex-wrap gap-3 px-2 lg:px-9 justify-center">
               <TechChip 
