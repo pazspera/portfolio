@@ -4,6 +4,7 @@ import Footer from './components/Footer.vue';
 import Hero from './sections/Hero.vue';
 import AcercaDe from './sections/AcercaDe.vue';
 import Contacto from "./sections/Contacto.vue";
+import Proyectos from './sections/Proyectos.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Contacto from "./sections/Contacto.vue";
     <Navbar />
     <main class="container mx-auto px-4 md:px-6 py-8">
       <Hero />
+      <Proyectos />
       <AcercaDe />
       <Contacto />
     </main>
