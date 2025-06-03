@@ -3,6 +3,7 @@ import CardTitle from "../components/typography/CardTitle.vue";
 import MainText from "../components/typography/MainText.vue";
 import ButtonContained from "./ButtonContained.vue";
 import { ref } from "vue";
+import type { RouteLocationRaw } from "vue-router";
 
 type Project = {
   id: number,
@@ -10,8 +11,8 @@ type Project = {
   text: string,
   imgDefault: string,
   imgHover: string,
-  alt: string
-  // Falta agregar ruta 
+  alt: string,
+  to: RouteLocationRaw,
 }
 
 defineProps<{
@@ -36,7 +37,9 @@ const isHovered = ref(false);
       <MainText>
         {{ project.text }}
       </MainText>
-      <ButtonContained label="Ver caso de estudio" class="mt-4" size="small" />
+      <ButtonContained class="mt-4" size="small" :to="project.to"> 
+        Ver caso de estudio
+      </ButtonContained>
     </div>
   </article>
 </template>

@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import Loader from './Loader.vue';
+import type { RouteLocationRaw } from "vue-router";
 
 const props = defineProps<{
   href?: string,
-  label: string,
   type?: "button" | "submit" | "reset",
   loading?: boolean,
-  size?: "small" | "medium"
+  size?: "small" | "medium",
+  to?: RouteLocationRaw
 }>()
 const type = props.type ?? "button";
 
@@ -16,7 +17,7 @@ const sizeMedium = "text-base lg:text-lg xl:text-xl 2xl:text-2xl px-4 py-2 2xl:p
 </script>
 
 <template>
-  <!-- renders a y href is passed -->
+  <!-- renders a if href is passed -->
   <a 
     v-if="href"
     :href="href"
@@ -25,12 +26,28 @@ const sizeMedium = "text-base lg:text-lg xl:text-xl 2xl:text-2xl px-4 py-2 2xl:p
       size === 'small' ? sizeSmall : sizeMedium
     ]"
     >
-    <span>{{ label }}</span>
+    <span>
+      <slot></slot>
+    </span>
   </a>
 
-  <!-- renders button if no href present -->
+  <!-- renders router-link if to is passed -->
+  <router-link 
+    v-else-if="to"
+    :to="to"
+    :class="[
+      'flex justify-center items-center uppercase w-fit rounded-sm bg-primary-500 text-primary-900 font-bold  hover:bg-primary-900 focus-visible:ring-2 focus-visible:ring-primary-700 focus-visible:outline-none  active:bg-primary-700 hover:text-primary-100 transition dark:bg-primary-900 dark:hover:bg-primary-800 dark:text-primary-100 dark:focus-visible:ring-primary-300 cursor-pointer',
+      size === 'small' ? sizeSmall : sizeMedium
+    ]"
+    >
+    <span>
+      <slot></slot>
+    </span>
+  </router-link>
+
+  <!-- renders button if type is passed -->
   <button
-    v-else 
+    v-else-if="type"
     :type="type" 
     :disabled="loading"
     :class="[
@@ -43,8 +60,9 @@ const sizeMedium = "text-base lg:text-lg xl:text-xl 2xl:text-2xl px-4 py-2 2xl:p
     </span>
 
     <span v-else>
-      {{ label }}
+      <slot></slot>
     </span>
   </button>
+
 </template>
 

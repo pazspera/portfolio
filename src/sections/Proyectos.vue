@@ -10,7 +10,8 @@ const projects = [
     // agregar ruta para btn
     imgDefault: new URL("../assets/card-institutional-redesign-default.jpg", import.meta.url).href,
     imgHover: new URL("../assets/card-institutional-redesign-hover.jpg", import.meta.url).href,
-    alt: "Mockups de proyecto de rediseño de sitio institucional"
+    alt: "Mockups de proyecto de rediseño de sitio institucional",
+    to: { name: 'rediseno' }
   },
   {
     id: 3,
@@ -19,7 +20,8 @@ const projects = [
     // agregar ruta para btn
     imgDefault: new URL("../assets/card-contenido-redes-default.jpg", import.meta.url).href,
     imgHover: new URL("../assets/card-contenido-redes-hover.jpg", import.meta.url).href,
-    alt: "Mockups de publicaciones para redes sociales"
+    alt: "Mockups de publicaciones para redes sociales",
+    to: { name: 'redes' }
   }
 ]
 
@@ -31,8 +33,8 @@ const projects = [
       <SectionTitle text="Proyectos" class="text-primary-900 dark:text-primary-300" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <ProjectCard
-            v-for="(project, index) in projects"
-            :key="index"
+            v-for="project in projects"
+            :key="project.id"
             :project="project"
           />
       </div>
