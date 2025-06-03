@@ -9,7 +9,16 @@ const router = createRouter({
     { path: "/", name: "home", component: Home },
     { path: "/rediseno-institucional", name: "rediseno", component: RedisenoSitioInstitucional },
     { path: "/contenido-redes", name: "redes", component: ContenidoRedes }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if(to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+    return { top: 0 }
+  }
 })
 
 export default router;
