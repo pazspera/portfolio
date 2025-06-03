@@ -19,7 +19,9 @@ const toggleMenu = () => {
     <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
-        <NavLogo href="#" label="PS" class="font-logo text-2xl font-normal"/>
+        <NavLogo href="#" class="font-logo text-2xl font-normal">
+          PS
+        </NavLogo>
 
         <div class="ml-auto flex items-center gap-6">
           <!-- Desktop links -->
