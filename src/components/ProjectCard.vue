@@ -1,18 +1,33 @@
-<script setup>
+<script setup lang="ts">
 import CardTitle from "../components/typography/CardTitle.vue";
 import MainText from "../components/typography/MainText.vue";
 import ButtonContained from "./ButtonContained.vue";
+
+type Project = {
+  id: number,
+  title: string,
+  text: string,
+  imgDefault: string,
+  imgHover: string,
+  alt: string
+  // Falta agregar ruta 
+}
+
+defineProps<{
+  project: Project
+}>();
+
 </script>
 
 <template>
   <div class="rounded-lg overflow-hidden">
-    <img src="../assets/card-contenido-redes-default.jpg" alt="" class="w-full">
+    <img :src="project.imgDefault" :alt="project.alt" class="w-full">
     <div class="p-6 bg-slate-300 dark:bg-slate-700 dark:text-zinc-200">
       <CardTitle class="mb-2 text-primary-900 dark:text-primary-300">
-        Contenido estratégico para redes 
+        {{ project.title }}
       </CardTitle>
       <MainText>
-        Desarrollo de piezas y textos para campañas en redes sociales, ajustados a la voz y público de cada marca. Las acciones buscan mejorar la interacción y el posicionamiento orgánico.
+        {{ project.text }}
       </MainText>
       <ButtonContained label="Ver caso de estudio" class="mt-4" />
     </div>

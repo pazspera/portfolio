@@ -1,6 +1,28 @@
 <script setup lang="ts">
 import ProjectCard from "../components/ProjectCard.vue"
 import SectionTitle from "../components/typography/SectionTitle.vue";
+
+const projects = [
+  {
+    id: 1,
+    title: "Rediseño de sitio institucional",
+    text: "Reestructuración desde cero con foco en usabilidad, actualización visual de la identidad de marca y desarrollo de componentes consistentes a través de un sistema de diseño personalizado.",
+    // agregar ruta para btn
+    imgDefault: new URL("../assets/card-institutional-redesign-default.jpg", import.meta.url).href,
+    imgHover: new URL("../assets/card-institutional-redesign-hover.jpg", import.meta.url).href,
+    alt: "Mockups de proyecto de rediseño de sitio institucional"
+  },
+  {
+    id: 3,
+    title: "Contenido estratégico para redes",
+    text: "Desarrollo de piezas y textos para campañas en redes sociales, ajustados a la voz y público de cada marca. Las acciones buscan mejorar la interacción y el posicionamiento orgánico.",
+    // agregar ruta para btn
+    imgDefault: new URL("../assets/card-contenido-redes-default.jpg", import.meta.url).href,
+    imgHover: new URL("../assets/card-contenido-redes-hover.jpg", import.meta.url).href,
+    alt: "Mockups de publicaciones para redes sociales"
+  }
+]
+
 </script>
 
 <template>
@@ -8,8 +30,11 @@ import SectionTitle from "../components/typography/SectionTitle.vue";
     <div class="container mx-auto">
       <SectionTitle text="Proyectos" class="text-primary-900 dark:text-primary-300" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <ProjectCard/>
-          <ProjectCard/>
+          <ProjectCard
+            v-for="(project, index) in projects"
+            :key="index"
+            :project="project"
+          />
       </div>
     </div>
   </section>
