@@ -36,7 +36,7 @@ const isHovered = ref(false);
       <MainText>
         {{ project.text }}
       </MainText>
-      <ButtonContained label="Ver caso de estudio" class="mt-4" />
+      <ButtonContained label="Ver caso de estudio" class="mt-4" size="small" />
     </div>
   </article>
 </template>
