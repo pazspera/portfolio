@@ -26,7 +26,7 @@ const techStack = [
 </script>
 
 <template>
-  <section class="py-12 lg:py-16 2xl:py-20">
+  <section class="py-12 lg:py-16 2xl:py-20" id="acerca-de">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-12">
         <div class="md:col-span-10 lg:col-span-9 xl:col-span-8">

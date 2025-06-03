@@ -19,16 +19,14 @@ const toggleMenu = () => {
     <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
-        <NavLogo href="#" class="font-logo text-2xl font-normal">
-          PS
-        </NavLogo>
+        <NavLogo href="#" class="font-logo text-2xl font-normal">PS</NavLogo>
 
         <div class="ml-auto flex items-center gap-6">
           <!-- Desktop links -->
           <div class="hidden md:flex md:flex-row gap-4">
-            <NavLink href="#" label="Proyectos"/>
-            <NavLink href="#" label="Acerca de"/>
-            <NavLink href="#" label="Contacto"/>
+            <NavLink to="/#proyectos">Proyectos</NavLink>
+            <NavLink to="/#acerca-de">Acerca De</NavLink>
+            <NavLink to="/#contacto">Contacto</NavLink>
           </div>
   
           <!-- Buttons -->
@@ -48,9 +46,9 @@ const toggleMenu = () => {
     <!-- Mobile menu -->
     <transition name="fade-slide">
       <div v-if="menuOpen" class="flex-col md:flex md:flex-row items-center justify-start md:space-x-1 pb-3 md:pb-0">
-        <NavLink href="#" label="Proyectos"/>
-        <NavLink href="#" label="Acerca de"/>
-        <NavLink href="#" label="Contacto"/>
+        <NavLink to="/#proyectos" >Proyectos</NavLink>
+        <NavLink to="/#acerca-de" >Acerca de</NavLink>
+        <NavLink to="/#contacto" >Contacto</NavLink>
       </div>
     </transition>
   </header>
