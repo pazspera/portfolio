@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import "./style.css";
 import "devicon/devicon.min.css";
+import router from "./router";
 import App from "./App.vue";
 
 const savedTheme = localStorage.getItem("vueuse-color-scheme");
@@ -14,4 +15,6 @@ if(!savedTheme) {
   }
 }
 
-createApp(App).mount("#app");
+createApp(App);
+App.use(router);
+App.mount("#app");
