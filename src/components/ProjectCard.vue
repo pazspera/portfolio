@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CardTitle from "../components/typography/CardTitle.vue";
+import TertiaryTitle from "../components/typography/TertiaryTitle.vue";
 import MainText from "../components/typography/MainText.vue";
 import ButtonContained from "./ButtonContained.vue";
 import { ref } from "vue";
@@ -31,9 +31,9 @@ const isHovered = ref(false);
   >
     <img :src="isHovered ? project.imgHover : project.imgDefault" :alt="project.alt" class="w-full h-auto object-cover transition-opacity duration-500">
     <div class="p-6 bg-slate-300 dark:bg-slate-700 dark:text-zinc-200 d-flex flex-col">
-      <CardTitle class="mb-2 text-primary-900 dark:text-primary-300">
+      <TertiaryTitle class="mb-2 text-primary-900 dark:text-primary-300">
         {{ project.title }}
-      </CardTitle>
+      </TertiaryTitle>
       <MainText>
         {{ project.text }}
       </MainText>
