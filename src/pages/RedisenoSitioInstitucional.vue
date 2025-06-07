@@ -8,7 +8,7 @@ import MainText from '../components/typography/MainText.vue';
 
 <template>
   <HeroProject></HeroProject>
-  <section class="py-8 grid grid-cols-1">
+  <section class="py-8">
     <div class="lg:mb-6">
       <SectionTitle>
         Resumen del proyecto
@@ -48,5 +48,32 @@ import MainText from '../components/typography/MainText.vue';
       </div>
     </div>
   </section>
-  
+  <section class="py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <SectionTitle>
+          Desafío
+        </SectionTitle>
+      </div>
+      <div class="lg:col-span-8 lg:ps-8">
+        <ul>
+          <li class="list-disc ps-4">
+            <MainText>
+              El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la empresa ya ofrecía ocho, pero esa información no estaba reflejada online.
+            </MainText>
+          </li>
+          <li class="list-disc ps-4">
+            <MainText>
+              Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de DB Marketing.
+            </MainText>
+          </li>
+          <li class="list-disc ps-4">
+            <MainText>
+              Se requería implementar la nueva identidad visual (logo, paleta, tipografía) que solo existía en materiales offline.
+            </MainText>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </template>
