@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h3 class="font-title font-bold text-2xl mb-3">
+  <h3 class="font-title font-bold text-2xl">
     <slot></slot>
   </h3>
 </template>
