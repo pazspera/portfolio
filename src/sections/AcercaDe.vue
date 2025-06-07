@@ -33,7 +33,7 @@ const techStack = [
           <SectionTitle class="text-primary-900 dark:text-primary-300">
             Acerca de
           </SectionTitle>
-          <HighlightText>
+          <HighlightText class="font-bold">
             Diseñar, escribir y programar son medios, no fines. <br> Lo importante es construir soluciones que funcionen.
           </HighlightText>
           <MainText>
