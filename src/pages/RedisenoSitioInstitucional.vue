@@ -8,7 +8,7 @@ import MainText from '../components/typography/MainText.vue';
 
 <template>
   <HeroProject></HeroProject>
-  <section class="py-8">
+  <section class="pt-12 pb-8">
     <div class="lg:mb-6">
       <SectionTitle>
         Resumen del proyecto
@@ -20,7 +20,7 @@ import MainText from '../components/typography/MainText.vue';
           Rediseñé el sitio institucional de DB Marketing para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
         </HighlightText>
       </div>
-      <div class="lg:col-span-4 lg:order-first lg:pe-5">
+      <div class="lg:col-span-4 lg:order-first lg:pe-5 max-w-[400px] bg-primary-100 dark:bg-primary-300 py-4 px-8 rounded-lg dark:text-zinc-900">
         <div class="pt-4 pb-2">
           <SecondaryTitle>
             Rol
@@ -48,27 +48,27 @@ import MainText from '../components/typography/MainText.vue';
       </div>
     </div>
   </section>
-  <section class="py-8">
+  <section class="py-6">
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="lg:col-span-4">
         <SectionTitle>
           Desafío
         </SectionTitle>
       </div>
-      <div class="lg:col-span-8 lg:ps-8">
+      <div class="lg:col-span-8 ps-4 lg:ps-8">
         <ul>
-          <li class="list-disc ps-4">
-            <MainText>
+          <li class="list-disc list-inside pb-3">
+            <MainText class="inline ">
               El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la empresa ya ofrecía ocho, pero esa información no estaba reflejada online.
             </MainText>
           </li>
-          <li class="list-disc ps-4">
-            <MainText>
+          <li class="list-disc list-inside pb-3">
+            <MainText class="inline">
               Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de DB Marketing.
             </MainText>
           </li>
-          <li class="list-disc ps-4">
-            <MainText>
+          <li class="list-disc list-inside pb-3">
+            <MainText class="inline">
               Se requería implementar la nueva identidad visual (logo, paleta, tipografía) que solo existía en materiales offline.
             </MainText>
           </li>
