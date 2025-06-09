@@ -102,7 +102,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
       Enfoque y metodología
     </SectionTitle>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Relevamiento de información
         </SecondaryTitle>
@@ -110,7 +110,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
           Entrevisté a referentes de cada área para comprender el público, los beneficios y la metodología de sus servicios. Esto evidenció tres problemas: falta de claridad, lenguaje demasiado técnico y contenido sin actualizar.
         </MainText>
       </div>
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Arquitectura de información
         </SecondaryTitle>
@@ -118,7 +118,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
           Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar 3 iteraciones del mapa debido a cambios de prioridades internas.
         </MainText>
       </div>
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Wireframes y prototipos
         </SecondaryTitle>
@@ -126,7 +126,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
           Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar flujos según urgencia de promover ciertos servicios.
         </MainText>
       </div>
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Sistema de diseño
         </SecondaryTitle>
@@ -134,7 +134,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
           Desarrollé un sistema de diseño en Figma basado en Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad.
         </MainText>
       </div>
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Copywriting centrado en el usuario
         </SecondaryTitle>
@@ -142,7 +142,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
           Redacté contenidos que comunicaban beneficios de forma clara y persuasiva, resaltando cómo resolvían las necesidades de los prospectos.
         </MainText>
       </div>
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Desarrollo frontend
         </SecondaryTitle>
@@ -150,7 +150,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
           El sitio fue desarrollado en HTML, CSS y JavaScript. A medida que avanzaba, empecé a implementar PHP para dividir el contenido en archivos reutilizables y más fáciles de actualizar.
         </MainText>
       </div>
-      <div class="pb-5 md:pe-6 max-w-[480px]">
+      <div class="pb-5 md:pe-6 max-w-[450px]">
         <SecondaryTitle>
           Materiales promocionales
         </SecondaryTitle>
