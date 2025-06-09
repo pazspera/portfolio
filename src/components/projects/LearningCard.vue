@@ -1,16 +1,7 @@
 <script setup lang="ts">
 import TertiaryTitle from "../typography/TertiaryTitle.vue";
 import MainText from "../typography/MainText.vue";
-
-type Conclusion = {
-  id: number,
-  img: {
-    src: string,
-    alt: string,
-  },
-  title: string,
-  text: string
-}
+import type { Conclusion } from "../../types/proyects";
 
 defineProps<{
   conclusion: Conclusion;

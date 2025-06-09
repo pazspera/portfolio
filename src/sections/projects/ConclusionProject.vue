@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import SectionTitle from '../../components/typography/SectionTitle.vue';
 import LearningCard from '../../components/projects/LearningCard.vue';
+import type { Conclusion } from "../../types/proyects";
 
-const props = defineProps<>({
-  conclusions: Conclusions[];
-});
+defineProps<{
+  conclusions: Conclusion[],
+}>();
 
 </script>
 
@@ -14,6 +15,7 @@ const props = defineProps<>({
       <SectionTitle>
         Aprendizajes 
       </SectionTitle>
+      <LearningCard v-for="item in conclusions" :key="item.id" :conclusion="item" />
     </div>
   </section>
 </template>

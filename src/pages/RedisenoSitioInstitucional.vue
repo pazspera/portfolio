@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import HeroProject from '../sections/projects/HeroProject.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
@@ -6,6 +6,7 @@ import SecondaryTitle from '../components/typography/SecondaryTitle.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ConclusionProject from '../sections/projects/ConclusionProject.vue';
+import type { Conclusion } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -13,7 +14,7 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
 import imgOldVideo from "../assets/institucional-viejo-video.jpg";
 import imgNewVideo from "../assets/institucional-nuevo-video.jpg"
 
-const conclusions = [
+const conclusions: Conclusion[] = [
   {
     id: 1,
     img: {
@@ -266,5 +267,5 @@ const conclusions = [
   </section>
 
   <!-- Aprendizajes -->
-  <ConclusionProject  />
+  <ConclusionProject :conclusions="conclusions" />
 </template>
