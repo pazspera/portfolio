@@ -4,10 +4,15 @@ import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
 import SecondaryTitle from '../components/typography/SecondaryTitle.vue';
 import MainText from '../components/typography/MainText.vue';
+
+import { VueCompareImage } from 'vue3-compare-image';
+import imgOldHome from "../assets/institucional-viejo-home.jpg";
+import imgNewHome from "../assets/institucional-nuevo-home.jpg";
 </script>
 
 <template>
   <HeroProject></HeroProject>
+  <!-- Resumen -->
   <section class="pt-12 pb-8">
     <div class="lg:mb-6">
       <SectionTitle>
@@ -20,7 +25,7 @@ import MainText from '../components/typography/MainText.vue';
           Rediseñé el sitio institucional de DB Marketing para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
         </HighlightText>
       </div>
-      <div class="lg:col-span-4 lg:order-first lg:pe-5 max-w-[400px] bg-primary-100 dark:bg-primary-300 py-4 px-8 rounded-lg dark:text-zinc-900">
+      <div class="lg:col-span-4 lg:order-first lg:pe-5 mt-4  max-w-[400px] bg-primary-100 dark:bg-primary-300 py-4 px-8 rounded-lg dark:text-zinc-900">
         <div class="pt-4 pb-2">
           <SecondaryTitle>
             Rol
@@ -48,6 +53,7 @@ import MainText from '../components/typography/MainText.vue';
       </div>
     </div>
   </section>
+  <!-- Desafío -->
   <section class="py-6">
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="lg:col-span-4">
@@ -75,5 +81,19 @@ import MainText from '../components/typography/MainText.vue';
         </ul>
       </div>
     </div>
+  </section>
+  <!-- Image compare -->
+  <section class="py-6">
+    <VueCompareImage 
+      :leftImage="imgOldHome" 
+      :rightImage="imgNewHome" 
+      leftImageAlt="Versión anterior del hero y sección principal del sitio institucional"
+      rightImageAlt="Versión rediseñada del hero y sección principal del sitio institucional"
+      keyboard="true" 
+      keyboardStep="0.1"
+      sliderLineColor="#033035"
+      sliderLineWidth="3"
+      sliderPositionPercentage="0.5"
+    />
   </section>
 </template>
