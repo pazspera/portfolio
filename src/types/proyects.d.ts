@@ -5,5 +5,6 @@ export type Conclusion = {
     alt: string,
   },
   title: string,
-  text: string
+  text: string,
+  class?: string,
 }

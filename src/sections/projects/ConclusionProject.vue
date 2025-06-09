@@ -10,12 +10,14 @@ defineProps<{
 </script>
 
 <template>
-  <section class="bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-4 sm:px-6 lg:px-8 pt-6 lg:pt-8 xl:pt-10 pb-14 sm:pb-12 md:pb-6 lg:pb-8 xl:pb-10 lg:my-8 rounded-tl-[120px] md:rounded-bl-[120px] md:rounded-tl-none"> 
+  <section class="bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-8 lg:px-10 xl:px-12 py-8 lg:py-10 xl:py-12 rounded-tr-[120px] md:rounded-bl-[120px] md:rounded-tr-none"> 
     <div class="container mx-auto">
-      <SectionTitle>
+      <SectionTitle class="text-primary-900 mb-8">
         Aprendizajes 
       </SectionTitle>
-      <LearningCard v-for="item in conclusions" :key="item.id" :conclusion="item" />
+      <div class="grid grid-cols-1 md:grid-cols-8 gap-6">
+        <LearningCard v-for="item in conclusions" :key="item.id" :conclusion="item" />
+      </div>
     </div>
   </section>
 </template>

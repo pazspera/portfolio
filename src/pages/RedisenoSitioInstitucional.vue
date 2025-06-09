@@ -22,7 +22,8 @@ const conclusions: Conclusion[] = [
       alt: "Pieza acercándose a completar un rompecabezas"
     },
     title: "Pensar en componentes",
-    text: "Crear un sistema de diseño lleva tiempo al principio, pero permite escalar más rápido y con mayor solidez. Resolver algo “como sea” genera deuda técnica que termina frenando el desarrollo a largo plazo."
+    text: "Crear un sistema de diseño lleva tiempo al principio, pero permite escalar más rápido y con mayor solidez. Resolver algo “como sea” genera deuda técnica que termina frenando el desarrollo a largo plazo.",
+    class: "md:col-span-4"
   },
   {
     id: 2,
@@ -31,7 +32,8 @@ const conclusions: Conclusion[] = [
       alt: "Calendario con un icono representando iteración dentro"
     },
     title: "Iterar, no esperar",
-    text: "Querer tener todo listo antes de empezar no siempre es viable. Los cambios de prioridades durante el proceso me demostraron el valor de trabajar en ciclos  que permitan adaptarse sin perder el foco."
+    text: "Querer tener todo listo antes de empezar no siempre es viable. Los cambios de prioridades durante el proceso me demostraron el valor de trabajar en ciclos  que permitan adaptarse sin perder el foco.",
+    class: "md:col-span-4"
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ const conclusions: Conclusion[] = [
       alt: "Viñetas de diálogo con letras de distintos idiomas"
     },
     title: "Hablar el mismo idioma",
-    text: "Usar la misma terminología en diseño y en código evita confusiones, incluso si la misma persona ocupa ambos roles. Nombres genéricos o poco funcionales entorpecen la evolución del sistema."
+    text: "Usar la misma terminología en diseño y en código evita confusiones, incluso si la misma persona ocupa ambos roles. Nombres genéricos o poco funcionales entorpecen la evolución del sistema.",
+    class: "md:col-span-4"
   },
   {
     id: 4,
@@ -49,7 +52,8 @@ const conclusions: Conclusion[] = [
       alt: "Capas superpuestas de un diseño"
     },
     title: "Organizar para avanzar",
-    text: "Dividir el proyecto en etapas y sprints ayuda a sostener el avance, incluso cuando hay urgencias diarias. Sin planificación, es fácil quedar atrapada en lo inmediato y no llegar a los objetivos del rediseño."
+    text: "Dividir el proyecto en etapas y sprints ayuda a sostener el avance, incluso cuando hay urgencias diarias. Sin planificación, es fácil quedar atrapada en lo inmediato y no llegar a los objetivos del rediseño.",
+    class: "md:col-span-4"
   },
   {
     id: 5,
@@ -58,7 +62,8 @@ const conclusions: Conclusion[] = [
       alt: "Mapa con un plan estratégico detrás de una pieza de ajedrez"
     },
     title: "Construir con visión",
-    text: "La urgencia empuja a improvisar, pero sin organización solo se construyen parches. Apostar al orden desde el principio es lo que permite crecer con foco, claridad y solidez en el tiempo."
+    text: "La urgencia empuja a improvisar, pero sin organización solo se construyen parches. Apostar al orden desde el principio es lo que permite crecer con foco, claridad y solidez en el tiempo.",
+    class: "md:col-span-4 md:col-start-3"
   },
 ]
 </script>
@@ -69,7 +74,7 @@ const conclusions: Conclusion[] = [
   <!-- Resumen -->
   <section class="pt-12 pb-8">
     <div class="lg:mb-6">
-      <SectionTitle>
+      <SectionTitle class="text-primary-900 dark:text-primary-300">
         Resumen del proyecto
       </SectionTitle>
     </div>
@@ -112,7 +117,7 @@ const conclusions: Conclusion[] = [
   <section class="py-6">
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="lg:col-span-4">
-        <SectionTitle>
+        <SectionTitle class="text-primary-900 dark:text-primary-300">
           Desafío
         </SectionTitle>
       </div>
@@ -155,7 +160,7 @@ const conclusions: Conclusion[] = [
 
   <!-- Enfoque y proceso -->
   <section class="py-6">
-    <SectionTitle class="mb-8">
+    <SectionTitle class="text-primary-900 dark:text-primary-300 mb-8">
       Enfoque y metodología
     </SectionTitle>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,7 +177,7 @@ const conclusions: Conclusion[] = [
           Arquitectura de información
         </template>
         <template #text>
-          Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar 3 iteraciones del mapa debido a cambios de prioridades internas.
+          Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar tres iteraciones del mapa debido a cambios de prioridades internas.
         </template>
       </ProjectTextCol>
       <ProjectTextCol>
@@ -235,7 +240,7 @@ const conclusions: Conclusion[] = [
 
   <!-- Impacto -->
   <section class="py-5">
-    <SectionTitle class="mb-8">
+    <SectionTitle class="text-primary-900 dark:text-primary-300 mb-8">
       Impacto
     </SectionTitle>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
