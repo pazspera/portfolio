@@ -4,6 +4,7 @@ import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
 import SecondaryTitle from '../components/typography/SecondaryTitle.vue';
 import MainText from '../components/typography/MainText.vue';
+import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -102,62 +103,62 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
       Enfoque y metodología
     </SectionTitle>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+      <ProjectTextCol>
+        <template #title>
           Relevamiento de información
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           Entrevisté a referentes de cada área para comprender el público, los beneficios y la metodología de sus servicios. Esto evidenció tres problemas: falta de claridad, lenguaje demasiado técnico y contenido sin actualizar.
-        </MainText>
-      </div>
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
           Arquitectura de información
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar 3 iteraciones del mapa debido a cambios de prioridades internas.
-        </MainText>
-      </div>
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
           Wireframes y prototipos
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar flujos según urgencia de promover ciertos servicios.
-        </MainText>
-      </div>
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
           Sistema de diseño
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           Desarrollé un sistema de diseño en Figma basado en Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad.
-        </MainText>
-      </div>
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
           Copywriting centrado en el usuario
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           Redacté contenidos que comunicaban beneficios de forma clara y persuasiva, resaltando cómo resolvían las necesidades de los prospectos.
-        </MainText>
-      </div>
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
           Desarrollo frontend
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           El sitio fue desarrollado en HTML, CSS y JavaScript. A medida que avanzaba, empecé a implementar PHP para dividir el contenido en archivos reutilizables y más fáciles de actualizar.
-        </MainText>
-      </div>
-      <div class="pb-5 md:pe-6 max-w-[450px]">
-        <SecondaryTitle>
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
           Materiales promocionales
-        </SecondaryTitle>
-        <MainText>
+        </template>
+        <template #text>
           Diseñé presentaciones y flyers digitales para campañas de email marketing, reflejando la nueva organización de servicios.
-        </MainText>
-      </div>
+        </template>
+      </ProjectTextCol>
     </div>
   </section>
 </template>
