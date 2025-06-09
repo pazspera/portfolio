@@ -5,6 +5,7 @@ import HighlightText from '../components/typography/HighlightText.vue';
 import SecondaryTitle from '../components/typography/SecondaryTitle.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
+import ConclusionProject from '../sections/projects/ConclusionProject.vue';
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -15,6 +16,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
 
 <template>
   <HeroProject></HeroProject>
+
   <!-- Resumen -->
   <section class="pt-12 pb-8">
     <div class="lg:mb-6">
@@ -56,6 +58,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
       </div>
     </div>
   </section>
+
   <!-- Desafío -->
   <section class="py-6">
     <div class="grid grid-cols-1 lg:grid-cols-12">
@@ -85,6 +88,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
       </div>
     </div>
   </section>
+
   <!-- Image compare home -->
   <section class="py-6">
     <VueCompareImage 
@@ -99,6 +103,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
       :sliderPositionPercentage="0.5"
     />
   </section>
+
   <!-- Enfoque y proceso -->
   <section class="py-6">
     <SectionTitle class="mb-8">
@@ -163,6 +168,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
       </ProjectTextCol>
     </div>
   </section>
+
   <!-- Image compare video -->
   <section class="py-6">
     <VueCompareImage
@@ -177,6 +183,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
       :sliderPositionPercentage="0.5"
     />
   </section>
+
   <!-- Impacto -->
   <section class="py-5">
     <SectionTitle class="mb-8">
@@ -209,4 +216,7 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
       </ProjectTextCol>
     </div>
   </section>
+
+  <!-- Aprendizajes -->
+  <ConclusionProject></ConclusionProject>
 </template>
