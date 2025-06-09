@@ -6,6 +6,7 @@ import SecondaryTitle from '../components/typography/SecondaryTitle.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ConclusionProject from '../sections/projects/ConclusionProject.vue';
+import ButtonContained from "../components/ButtonContained.vue";
 import type { Conclusion } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
@@ -273,4 +274,11 @@ const conclusions: Conclusion[] = [
 
   <!-- Aprendizajes -->
   <ConclusionProject :conclusions="conclusions" />
+
+  <!-- Botón a proyectos -->
+  <section class="my-8">
+    <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
+      Ver más proyectos
+    </ButtonContained>
+  </section> 
 </template>
