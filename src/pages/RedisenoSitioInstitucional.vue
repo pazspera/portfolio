@@ -96,4 +96,68 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
       sliderPositionPercentage="0.5"
     />
   </section>
+  <!-- Enfoque y proceso -->
+  <section class="py-6">
+    <SectionTitle class="mb-8">
+      Enfoque y metodología
+    </SectionTitle>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Relevamiento de información
+        </SecondaryTitle>
+        <MainText>
+          Entrevisté a referentes de cada área para comprender el público, los beneficios y la metodología de sus servicios. Esto evidenció tres problemas: falta de claridad, lenguaje demasiado técnico y contenido sin actualizar.
+        </MainText>
+      </div>
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Arquitectura de información
+        </SecondaryTitle>
+        <MainText>
+          Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar 3 iteraciones del mapa debido a cambios de prioridades internas.
+        </MainText>
+      </div>
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Wireframes y prototipos
+        </SecondaryTitle>
+        <MainText>
+          Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar flujos según urgencia de promover ciertos servicios.
+        </MainText>
+      </div>
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Sistema de diseño
+        </SecondaryTitle>
+        <MainText>
+          Desarrollé un sistema de diseño en Figma basado en Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad.
+        </MainText>
+      </div>
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Copywriting centrado en el usuario
+        </SecondaryTitle>
+        <MainText>
+          Redacté contenidos que comunicaban beneficios de forma clara y persuasiva, resaltando cómo resolvían las necesidades de los prospectos.
+        </MainText>
+      </div>
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Desarrollo frontend
+        </SecondaryTitle>
+        <MainText>
+          El sitio fue desarrollado en HTML, CSS y JavaScript. A medida que avanzaba, empecé a implementar PHP para dividir el contenido en archivos reutilizables y más fáciles de actualizar.
+        </MainText>
+      </div>
+      <div class="pb-5 md:pe-6 max-w-[480px]">
+        <SecondaryTitle>
+          Materiales promocionales
+        </SecondaryTitle>
+        <MainText>
+          Diseñé presentaciones y flyers digitales para campañas de email marketing, reflejando la nueva organización de servicios.
+        </MainText>
+      </div>
+    </div>
+  </section>
 </template>
