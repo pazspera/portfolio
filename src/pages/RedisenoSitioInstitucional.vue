@@ -9,6 +9,8 @@ import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
 import imgNewHome from "../assets/institucional-nuevo-home.jpg";
+import imgOldVideo from "../assets/institucional-viejo-video.jpg";
+import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
 </script>
 
 <template>
@@ -83,18 +85,18 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
       </div>
     </div>
   </section>
-  <!-- Image compare -->
+  <!-- Image compare home -->
   <section class="py-6">
     <VueCompareImage 
       :leftImage="imgOldHome" 
       :rightImage="imgNewHome" 
       leftImageAlt="Versión anterior del hero y sección principal del sitio institucional"
       rightImageAlt="Versión rediseñada del hero y sección principal del sitio institucional"
-      keyboard="true" 
-      keyboardStep="0.1"
+      :keyboard="true" 
+      :keyboardStep="0.1"
       sliderLineColor="#033035"
-      sliderLineWidth="3"
-      sliderPositionPercentage="0.5"
+      :sliderLineWidth="3"
+      :sliderPositionPercentage="0.5"
     />
   </section>
   <!-- Enfoque y proceso -->
@@ -160,6 +162,20 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
         </template>
       </ProjectTextCol>
     </div>
+  </section>
+  <!-- Image compare video -->
+  <section class="py-6">
+    <VueCompareImage
+      :leftImage="imgOldVideo"
+      :rightImage="imgNewVideo" 
+      leftImageAlt="Versión anterior de la página de producción de video"
+      rightImageAlt="Versión anterior de la página de producción de video"
+      :keyboard="true"
+      :keyboardStep="0.1"
+      sliderLineColor="#033035"
+      :sliderLineWidth="3"
+      :sliderPositionPercentage="0.5"
+    />
   </section>
   <!-- Impacto -->
   <section class="py-5">
