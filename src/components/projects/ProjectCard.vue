@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TertiaryTitle from "../components/typography/TertiaryTitle.vue";
-import MainText from "../components/typography/MainText.vue";
-import ButtonContained from "./ButtonContained.vue";
+import TertiaryTitle from "../typography/TertiaryTitle.vue"
+import MainText from "../typography/MainText.vue";
+import ButtonContained from "../ButtonContained.vue";
 import { ref } from "vue";
 import type { RouteLocationRaw } from "vue-router";
 

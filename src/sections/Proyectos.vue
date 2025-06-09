@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProjectCard from "../components/ProjectCard.vue"
+import ProjectCard from "../components/projects/ProjectCard.vue";
 import SectionTitle from "../components/typography/SectionTitle.vue";
 
 const projects = [
