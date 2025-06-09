@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import SectionTitle from '../../components/typography/SectionTitle.vue';
+import LearningCard from '../../components/projects/LearningCard.vue';
+
+const props = defineProps<>({
+  conclusions: Conclusions[];
+});
 
 </script>
 

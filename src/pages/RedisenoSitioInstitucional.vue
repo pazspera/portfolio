@@ -11,7 +11,55 @@ import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
 import imgNewHome from "../assets/institucional-nuevo-home.jpg";
 import imgOldVideo from "../assets/institucional-viejo-video.jpg";
-import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
+import imgNewVideo from "../assets/institucional-nuevo-video.jpg"
+
+const conclusions = [
+  {
+    id: 1,
+    img: {
+      src: "/src/assets/rediseno-institucional-componentes.png",
+      alt: "Pieza acercándose a completar un rompecabezas"
+    },
+    title: "Pensar en componentes",
+    text: "Crear un sistema de diseño lleva tiempo al principio, pero permite escalar más rápido y con mayor solidez. Resolver algo “como sea” genera deuda técnica que termina frenando el desarrollo a largo plazo."
+  },
+  {
+    id: 2,
+    img: {
+      src: "/src/assets/rediseno-institucional-iterar.png",
+      alt: "Calendario con un icono representando iteración dentro"
+    },
+    title: "Iterar, no esperar",
+    text: "Querer tener todo listo antes de empezar no siempre es viable. Los cambios de prioridades durante el proceso me demostraron el valor de trabajar en ciclos  que permitan adaptarse sin perder el foco."
+  },
+  {
+    id: 3,
+    img: {
+      src: "/src/assets/rediseno-institucional-idioma.png",
+      alt: "Viñetas de diálogo con letras de distintos idiomas"
+    },
+    title: "Hablar el mismo idioma",
+    text: "Usar la misma terminología en diseño y en código evita confusiones, incluso si la misma persona ocupa ambos roles. Nombres genéricos o poco funcionales entorpecen la evolución del sistema."
+  },
+  {
+    id: 4,
+    img: {
+      src: "/src/assets/rediseno-institucional-organizar.png",
+      alt: "Capas superpuestas de un diseño"
+    },
+    title: "Organizar para avanzar",
+    text: "Dividir el proyecto en etapas y sprints ayuda a sostener el avance, incluso cuando hay urgencias diarias. Sin planificación, es fácil quedar atrapada en lo inmediato y no llegar a los objetivos del rediseño."
+  },
+  {
+    id: 5,
+    img: {
+      src: "/src/assets/rediseno-institucional-vision.png",
+      alt: "Mapa con un plan estratégico detrás de una pieza de ajedrez"
+    },
+    title: "Construir con visión",
+    text: "La urgencia empuja a improvisar, pero sin organización solo se construyen parches. Apostar al orden desde el principio es lo que permite crecer con foco, claridad y solidez en el tiempo."
+  },
+]
 </script>
 
 <template>
@@ -218,5 +266,5 @@ import imgNewVideo from "../assets/institucional-nuevo-video.jpg";
   </section>
 
   <!-- Aprendizajes -->
-  <ConclusionProject></ConclusionProject>
+  <ConclusionProject  />
 </template>
