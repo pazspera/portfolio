@@ -161,4 +161,36 @@ import imgNewHome from "../assets/institucional-nuevo-home.jpg";
       </ProjectTextCol>
     </div>
   </section>
+  <!-- Impacto -->
+  <section class="py-5">
+    <SectionTitle class="mb-8">
+      Impacto
+    </SectionTitle>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <ProjectTextCol>
+        <template #title>
+          Visiblidad interna
+        </template>
+        <template #text>
+          Empleados conocieron la oferta completa de los servicios, mejorando la coordinación entre áreas de marketing, ventas, producción y telemarketing.
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
+          Claridad para clientes potenciales
+        </template>
+        <template #text>
+          La buyer persona ahora entiende rápidamente la gama de soluciones de DB Marketing, reduciendo dudas y acortando el proceso de prospección.
+        </template>
+      </ProjectTextCol>
+      <ProjectTextCol>
+        <template #title>
+          Aumento de acciones comerciales
+        </template>
+        <template #text>
+          La nueva presentación del sitio sirvió como base para múltiples campañas que destacaban las fortalezas de cada servicio, acelerando el proceso de generación de leads.
+        </template>
+      </ProjectTextCol>
+    </div>
+  </section>
 </template>
