@@ -70,8 +70,14 @@ const conclusions: Conclusion[] = [
 </script>
 
 <template>
-  <HeroProject></HeroProject>
-
+  <HeroProject>
+    <template #title>
+      Rediseño de sitio institucional
+    </template>
+    <template #text>
+      Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
+    </template>
+  </HeroProject>
   <!-- Resumen -->
   <section class="pt-12 pb-8">
     <div class="lg:mb-6">

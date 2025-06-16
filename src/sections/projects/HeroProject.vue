@@ -10,10 +10,10 @@ import HeroBlurb from "../../components/typography/HeroBlurb.vue"
         <!-- Text -->
          <div class="md:col-span-4 lg:col-span-6 2xl:col-span-9 lg:max-xl:not-first:pe-10 lg:flex lg:flex-col lg:justify-center">
             <HeroTitle>
-              Rediseño de sitio institucional
+              <slot name="title"></slot>
             </HeroTitle>
             <HeroBlurb>
-              Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
+              <slot name="text"></slot>
             </HeroBlurb>
          </div>
          <!-- Image -->
