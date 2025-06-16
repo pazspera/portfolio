@@ -7,6 +7,7 @@ import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ConclusionProject from '../sections/projects/ConclusionProject.vue';
 import ButtonContained from "../components/ButtonContained.vue";
+import RoleCard from '../components/projects/RoleCard.vue';
 import type { Conclusion } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
@@ -94,32 +95,18 @@ const conclusions: Conclusion[] = [
           Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
         </HighlightText>
       </div>
-      <div class="lg:col-span-4 lg:order-first lg:pe-5 mt-4  max-w-[400px] bg-primary-100 dark:bg-primary-300 py-4 px-8 rounded-lg dark:text-zinc-900">
-        <div class="pt-4 pb-2">
-          <SecondaryTitle>
-            Rol
-          </SecondaryTitle>
-          <MainText>
-            Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)
-          </MainText>
-        </div>
-        <div class="py-2">
-          <SecondaryTitle>
-            Cliente
-          </SecondaryTitle>
-          <MainText>
-            Agencia de telemarketing y generación de leads B2B
-          </MainText>
-        </div>
-        <div class="py-2">
-          <SecondaryTitle>
-            Duración
-          </SecondaryTitle>
-          <MainText>
-            7 meses
-          </MainText>
-        </div>
-      </div>
+      <!-- Rol -->
+      <RoleCard>
+        <template #role>
+          Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)
+        </template>
+        <template #client>
+          Agencia de telemarketing y generación de leads B2B
+        </template>
+        <template #duration>
+          7 meses
+        </template>
+      </RoleCard>
     </div>
   </section>
 

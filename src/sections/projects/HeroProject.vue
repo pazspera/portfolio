@@ -3,8 +3,8 @@ import HeroTitle from '../../components/typography/HeroTitle.vue';
 import HeroBlurb from "../../components/typography/HeroBlurb.vue";
 
 type ImgHero = {
-  imgSrc: string,
-  imgAlt: string,
+  imgSrc?: string,
+  imgAlt?: string,
 }
 
 defineProps<{
@@ -18,7 +18,7 @@ defineProps<{
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 2xl:grid-cols-18 gap-2">
         <!-- Text -->
-         <div class="md:col-span-4 lg:col-span-6 2xl:col-span-9 lg:max-xl:not-first:pe-10 lg:flex lg:flex-col lg:justify-center">
+         <div class="md:col-span-4 lg:col-span-6 2xl:col-span-9 lg:max-xl:not-first:pe-8 lg:flex lg:flex-col lg:justify-center">
             <HeroTitle>
               <slot name="title"></slot>
             </HeroTitle>
