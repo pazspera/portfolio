@@ -82,7 +82,7 @@ const conclusions: Conclusion[] = [
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="lg:col-span-8 lg:order-last lg:ps-8 lg:pt-4">
         <HighlightText>
-          Rediseñé el sitio institucional de DB Marketing para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
+          Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
         </HighlightText>
       </div>
       <div class="lg:col-span-4 lg:order-first lg:pe-5 mt-4  max-w-[400px] bg-primary-100 dark:bg-primary-300 py-4 px-8 rounded-lg dark:text-zinc-900">
@@ -91,7 +91,7 @@ const conclusions: Conclusion[] = [
             Rol
           </SecondaryTitle>
           <MainText>
-            Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo).
+            Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)
           </MainText>
         </div>
         <div class="py-2">
@@ -99,7 +99,7 @@ const conclusions: Conclusion[] = [
             Cliente
           </SecondaryTitle>
           <MainText>
-            DB Marketing
+            Agencia de telemarketing y generación de leads B2B
           </MainText>
         </div>
         <div class="py-2">
@@ -107,7 +107,7 @@ const conclusions: Conclusion[] = [
             Duración
           </SecondaryTitle>
           <MainText>
-            7 meses (Febrero 2024 a Septiembre 2024)
+            7 meses
           </MainText>
         </div>
       </div>
@@ -126,12 +126,12 @@ const conclusions: Conclusion[] = [
         <ul>
           <li class="list-disc list-inside pb-3">
             <MainText class="inline ">
-              El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la empresa ya ofrecía ocho, pero esa información no estaba reflejada online.
+              El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la agencia ya ofrecía ocho, pero esa información no estaba reflejada online.
             </MainText>
           </li>
           <li class="list-disc list-inside pb-3">
             <MainText class="inline">
-              Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de DB Marketing.
+              Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de la agencia.
             </MainText>
           </li>
           <li class="list-disc list-inside pb-3">
@@ -194,7 +194,7 @@ const conclusions: Conclusion[] = [
           Sistema de diseño
         </template>
         <template #text>
-          Desarrollé un sistema de diseño en Figma basado en Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad.
+          Desarrollé un sistema de diseño en Figma aplicando la metodología de Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad.
         </template>
       </ProjectTextCol>
       <ProjectTextCol>
@@ -210,7 +210,7 @@ const conclusions: Conclusion[] = [
           Desarrollo frontend
         </template>
         <template #text>
-          El sitio fue desarrollado en HTML, CSS y JavaScript. A medida que avanzaba, empecé a implementar PHP para dividir el contenido en archivos reutilizables y más fáciles de actualizar.
+          El sitio fue desarrollado en HTML, CSS y JavaScript. Implementé componentes reutilizables en Vue.js para la gestión de formularios complejos, optimizando la interactividad y validaciones. 
         </template>
       </ProjectTextCol>
       <ProjectTextCol>
@@ -218,7 +218,7 @@ const conclusions: Conclusion[] = [
           Materiales promocionales
         </template>
         <template #text>
-          Diseñé presentaciones y flyers digitales para campañas de email marketing, reflejando la nueva organización de servicios.
+          Diseñé presentaciones comerciales y flyers digitales para email marketing y propuestas a clientes potenciales. Estas piezas reflejaron la nueva organización de servicios, detallando soluciones y explicando la oferta de servicios.
         </template>
       </ProjectTextCol>
     </div>
@@ -247,18 +247,18 @@ const conclusions: Conclusion[] = [
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <ProjectTextCol>
         <template #title>
-          Visiblidad interna
+          Mejora en la visiblidad interna
         </template>
         <template #text>
-          Empleados conocieron la oferta completa de los servicios, mejorando la coordinación entre áreas de marketing, ventas, producción y telemarketing.
+          El nuevo sitio dio un panorama integral de la oferta de servicios para los empleados. Esto optimizó la coordinación interna y facilitó la cooperación entre las áreas de marketing, ventas y operaciones. 
         </template>
       </ProjectTextCol>
       <ProjectTextCol>
         <template #title>
-          Claridad para clientes potenciales
+          Mayor claridad para prospectos
         </template>
         <template #text>
-          La buyer persona ahora entiende rápidamente la gama de soluciones de DB Marketing, reduciendo dudas y acortando el proceso de prospección.
+          La gama de soluciones de la agencia se presentó de forma más fácil de entender, reduciendo las dudas de los clientes potenciales. Este cambio agilizó el proceso de prospección, volviéndolo más efectivo.
         </template>
       </ProjectTextCol>
       <ProjectTextCol>
@@ -266,7 +266,7 @@ const conclusions: Conclusion[] = [
           Aumento de acciones comerciales
         </template>
         <template #text>
-          La nueva presentación del sitio sirvió como base para múltiples campañas que destacaban las fortalezas de cada servicio, acelerando el proceso de generación de leads.
+          La nueva presentación del sitio sirvió como base estratégica para múltiples campañas. Estas destacaron las fortalezas de cada servicio, acelerando el proceso de generación de leads y las oportunidades de negocio.
         </template>
       </ProjectTextCol>
     </div>

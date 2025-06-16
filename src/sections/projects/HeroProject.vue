@@ -13,7 +13,7 @@ import HeroBlurb from "../../components/typography/HeroBlurb.vue"
               Rediseño de sitio institucional
             </HeroTitle>
             <HeroBlurb>
-              Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una consultora de datos y marketing.
+              Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
             </HeroBlurb>
          </div>
          <!-- Image -->
