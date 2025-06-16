@@ -70,7 +70,10 @@ const conclusions: Conclusion[] = [
 </script>
 
 <template>
-  <HeroProject>
+  <HeroProject :imgHero="{
+    imgSrc: '/src/assets/mockup_rediseno_institucional.png',
+    imgAlt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'
+  }">
     <template #title>
       Rediseño de sitio institucional
     </template>
