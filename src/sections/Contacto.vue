@@ -64,7 +64,7 @@ const handleSubmit = async () => {
       if (!res.ok) throw new Error("Error al enviar al Google Sheet");
 
       // send email
-      await emailjs.send(
+      const emailRes = await emailjs.send(
         serviceID,
         templateID,
         {
@@ -75,6 +75,10 @@ const handleSubmit = async () => {
         },
         publicKey
       );
+
+      if(emailRes.status !== 200) {
+        throw new Error(`Error al enviar correo: ${res.status}: ${res.text}`);
+      }
 
       // reset form
       form.name = "";

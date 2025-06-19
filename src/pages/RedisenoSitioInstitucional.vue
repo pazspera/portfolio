@@ -2,7 +2,6 @@
 import HeroProject from '../sections/projects/HeroProject.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
-import SecondaryTitle from '../components/typography/SecondaryTitle.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ConclusionProject from '../sections/projects/ConclusionProject.vue';
