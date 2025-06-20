@@ -9,3 +9,7 @@ export type Conclusion = {
   class?: string,
 }
 
+export type Desafio = {
+  id: number,
+  text: string,
+}

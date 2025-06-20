@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
-import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
+import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ButtonContained from "../components/ButtonContained.vue";
-import type { Conclusion } from "../types/proyects";
+import type { Conclusion, Desafio } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -67,6 +67,21 @@ const conclusions: Conclusion[] = [
   },
 ]
 
+const challenges: Desafio[] = [
+  {
+    id: 1,
+    text: "El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la agencia ya ofrecía ocho, pero esa información no estaba reflejada online."
+  },
+  {
+    id: 2,
+    text: "Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de la agencia."
+  }, 
+  {
+    id: 3,
+    text: "Se requería implementar la nueva identidad visual (logo, paleta, tipografía) que solo existía en materiales offline."
+  }
+]
+
 </script>
 
 <template>
@@ -81,6 +96,7 @@ const conclusions: Conclusion[] = [
       Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
     </template>
   </ProjectHero>
+
   <!-- Resumen -->
   <ProjectResumen>
     <template #summary>
@@ -98,34 +114,7 @@ const conclusions: Conclusion[] = [
   </ProjectResumen>
 
   <!-- Desafío -->
-  <section class="py-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12">
-      <div class="lg:col-span-4">
-        <SectionTitle class="text-primary-900 dark:text-primary-300">
-          Desafío
-        </SectionTitle>
-      </div>
-      <div class="lg:col-span-8 ps-4 lg:ps-8">
-        <ul>
-          <li class="list-disc list-inside pb-3">
-            <MainText class="inline ">
-              El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la agencia ya ofrecía ocho, pero esa información no estaba reflejada online.
-            </MainText>
-          </li>
-          <li class="list-disc list-inside pb-3">
-            <MainText class="inline">
-              Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de la agencia.
-            </MainText>
-          </li>
-          <li class="list-disc list-inside pb-3">
-            <MainText class="inline">
-              Se requería implementar la nueva identidad visual (logo, paleta, tipografía) que solo existía en materiales offline.
-            </MainText>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <ProjectDesafio :desafios="challenges" />
 
   <!-- Image compare home -->
   <section class="py-6">
