@@ -4,6 +4,7 @@ import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
 import MainText from '../components/typography/MainText.vue';
 import RoleCard from '../components/projects/RoleCard.vue';
+import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 </script>
 
 <template>

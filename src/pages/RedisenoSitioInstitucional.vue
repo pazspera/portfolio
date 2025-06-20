@@ -7,13 +7,14 @@ import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from "../components/ButtonContained.vue";
 import RoleCard from '../components/projects/RoleCard.vue';
-import type { Conclusion } from "../types/proyects";
+import type { Conclusion, Resumen } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
 import imgNewHome from "../assets/institucional-nuevo-home.jpg";
 import imgOldVideo from "../assets/institucional-viejo-video.jpg";
 import imgNewVideo from "../assets/institucional-nuevo-video.jpg"
+import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 
 const conclusions: Conclusion[] = [
   {
@@ -67,6 +68,16 @@ const conclusions: Conclusion[] = [
     class: "md:col-span-4 md:col-start-3"
   },
 ]
+
+const summary: Resumen = {
+  summary: "Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.",
+  roleCard: {
+    role: "Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)",
+    client: "Agencia de telemarketing y generación de leads B2B",
+    duration: "7 meses",
+  }
+} 
+
 </script>
 
 <template>
@@ -82,32 +93,7 @@ const conclusions: Conclusion[] = [
     </template>
   </ProjectHero>
   <!-- Resumen -->
-  <section class="pt-12 pb-8">
-    <div class="lg:mb-6">
-      <SectionTitle class="text-primary-900 dark:text-primary-300">
-        Resumen del proyecto
-      </SectionTitle>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-12">
-      <div class="lg:col-span-8 lg:order-last lg:ps-8 lg:pt-4">
-        <HighlightText>
-          Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
-        </HighlightText>
-      </div>
-      <!-- Rol -->
-      <RoleCard>
-        <template #role>
-          Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)
-        </template>
-        <template #client>
-          Agencia de telemarketing y generación de leads B2B
-        </template>
-        <template #duration>
-          7 meses
-        </template>
-      </RoleCard>
-    </div>
-  </section>
+  <ProjectResumen :resumen="summary" />
 
   <!-- Desafío -->
   <section class="py-6">
