@@ -4,8 +4,9 @@ import SectionTitle from '../components/typography/SectionTitle.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ButtonContained from "../components/ButtonContained.vue";
-import type { Conclusion, Desafio } from "../types/proyects";
+import type { Conclusion, Desafio, ItemEnfoque } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -82,6 +83,44 @@ const challenges: Desafio[] = [
   }
 ]
 
+const methodology: ItemEnfoque[] = [
+  {
+    id: 1,
+    title: "Relevamiento de información",
+    text: "Entrevisté a referentes de cada área para comprender el público, los beneficios y la metodología de sus servicios. Esto evidenció tres problemas: falta de claridad, lenguaje demasiado técnico y contenido sin actualizar."
+  },
+  {
+    id: 2,
+    title: "Arquitectura de información",
+    text: "Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar tres iteraciones del mapa debido a cambios de prioridades internas."
+  },
+  {
+    id: 3,
+    title: "Wireframes y prototipos",
+    text: "Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar flujos según urgencia de promover ciertos servicios."
+  },
+  {
+    id: 4,
+    title: "Sistema de diseño",
+    text: "Desarrollé un sistema de diseño en Figma aplicando la metodología de Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad."
+  },
+  {
+    id: 5,
+    title: "Copywriting centrado en el usuario",
+    text: "Redacté contenidos que comunicaban beneficios de forma clara y persuasiva, resaltando cómo resolvían las necesidades de los prospectos."
+  },
+  {
+    id: 6,
+    title: "Desarrollo frontend",
+    text: "El sitio fue desarrollado en HTML, CSS y JavaScript. Implementé componentes reutilizables en Vue.js para la gestión de formularios complejos, optimizando la interactividad y validaciones."
+  },
+  {
+    id: 7,
+    title: "Materiales promocionales",
+    text: "Diseñé presentaciones comerciales y flyers digitales para email marketing y propuestas a clientes potenciales. Estas piezas reflejaron la nueva organización de servicios, detallando soluciones y explicando la oferta de servicios."
+  }
+]
+
 </script>
 
 <template>
@@ -132,69 +171,7 @@ const challenges: Desafio[] = [
   </section>
 
   <!-- Enfoque y proceso -->
-  <section class="py-6">
-    <SectionTitle class="text-primary-900 dark:text-primary-300 mb-8">
-      Enfoque y metodología
-    </SectionTitle>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <ProjectTextCol>
-        <template #title>
-          Relevamiento de información
-        </template>
-        <template #text>
-          Entrevisté a referentes de cada área para comprender el público, los beneficios y la metodología de sus servicios. Esto evidenció tres problemas: falta de claridad, lenguaje demasiado técnico y contenido sin actualizar.
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Arquitectura de información
-        </template>
-        <template #text>
-          Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar tres iteraciones del mapa debido a cambios de prioridades internas.
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Wireframes y prototipos
-        </template>
-        <template #text>
-          Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar flujos según urgencia de promover ciertos servicios.
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Sistema de diseño
-        </template>
-        <template #text>
-          Desarrollé un sistema de diseño en Figma aplicando la metodología de Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad.
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Copywriting centrado en el usuario
-        </template>
-        <template #text>
-          Redacté contenidos que comunicaban beneficios de forma clara y persuasiva, resaltando cómo resolvían las necesidades de los prospectos.
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Desarrollo frontend
-        </template>
-        <template #text>
-          El sitio fue desarrollado en HTML, CSS y JavaScript. Implementé componentes reutilizables en Vue.js para la gestión de formularios complejos, optimizando la interactividad y validaciones. 
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Materiales promocionales
-        </template>
-        <template #text>
-          Diseñé presentaciones comerciales y flyers digitales para email marketing y propuestas a clientes potenciales. Estas piezas reflejaron la nueva organización de servicios, detallando soluciones y explicando la oferta de servicios.
-        </template>
-      </ProjectTextCol>
-    </div>
-  </section>
+  <ProjectEnfoque :itemsEnfoque="methodology" /> 
 
   <!-- Image compare video -->
   <section class="py-6">

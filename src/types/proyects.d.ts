@@ -13,3 +13,9 @@ export type Desafio = {
   id: number,
   text: string,
 }
+
+export type ItemEnfoque = {
+  id: number,
+  title: string,
+  text: string,
+}

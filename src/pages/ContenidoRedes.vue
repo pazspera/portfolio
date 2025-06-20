@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
-import SectionTitle from '../components/typography/SectionTitle.vue';
-import MainText from '../components/typography/MainText.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 
-import type { Desafio } from '../types/proyects';
+import type { Desafio, ItemEnfoque } from '../types/proyects';
 
 const challenges: Desafio[] = [
   {
@@ -21,6 +20,34 @@ const challenges: Desafio[] = [
     text: "La agencia de traducción global necesitaba educar sobre la importancia de la traducción profesional certificada. El objetivo era resaltar el valor del conocimiento humano frente a las soluciones automatizadas."
   }
 ]
+
+const methodology: ItemEnfoque[] = [
+  {
+    id: 1,
+    title: "Análisis de audiencia y puntos de dolor",
+    text: 'El primer paso fue hacer una investigación para entender a la audiencia objetivo. Identifiqué sus "pain points" específicos y los argumentos más convincentes para presentar soluciones relevantes.'
+  },
+  {
+    id: 2,
+    title: "Estrategia de contenido educativo",
+    text: "Desarrollé una estrategia de contenido enfocada en educar y empoderar a la buyer persona. Brindé valor con información clave para la toma de decisiones, desde la importancia de la certificación hasta la mejora en la generación de leads."
+  },
+  {
+    id: 3,
+    title: "Diseño de contenido multiplataforma",
+    text: "Fui responsable de la conceptualización, redacción y diseño de piezas. Creé copies persuasivos y carruseles para LinkedIn e Instagram, priorizando LinkedIn por ser la plataforma principal para el público B2B."
+  },
+  {
+    id: 4,
+    title: "Redacción de artículos especializados",
+    text: "Investigué y redacté artículos de blog detallados para posicionar a las marcas como autoridades. Este contenido educativo buscaba proveer valor y aumentar el tráfico orgánico, abordando temas relevantes y especializados."
+  },
+  {
+    id: 5,
+    title: "Unificación de identidad de marca",
+    text: "Aseguré una voz de marca consistente y reconocible en todas las comunicaciones. Diseñé piezas gráficas y carruseles visualmente atractivos, que reflejaban la identidad de cada marca para lograr cohesión y profesionalismo."
+  }
+] 
 
 </script>
 
@@ -55,4 +82,9 @@ const challenges: Desafio[] = [
 
   <!-- Desafío -->
   <ProjectDesafio :desafios="challenges" />
+
+  <!-- Enfoque y metodología -->
+  <ProjectEnfoque :itemsEnfoque="methodology" />
+
+
 </template>
