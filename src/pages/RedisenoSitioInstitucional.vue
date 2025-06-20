@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HeroProject from '../sections/projects/HeroProject.vue';
+import ProjectHero from '../sections/projects/ProjectHero.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import HighlightText from '../components/typography/HighlightText.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
-import ConclusionProject from '../sections/projects/ConclusionProject.vue';
+import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from "../components/ButtonContained.vue";
 import RoleCard from '../components/projects/RoleCard.vue';
 import type { Conclusion } from "../types/proyects";
@@ -70,7 +70,7 @@ const conclusions: Conclusion[] = [
 </script>
 
 <template>
-  <HeroProject :imgHero="{
+  <ProjectHero :imgHero="{
     imgSrc: '/src/assets/mockup_rediseno_institucional.png',
     imgAlt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'
   }">
@@ -80,7 +80,7 @@ const conclusions: Conclusion[] = [
     <template #text>
       Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
     </template>
-  </HeroProject>
+  </ProjectHero>
   <!-- Resumen -->
   <section class="pt-12 pb-8">
     <div class="lg:mb-6">
@@ -268,7 +268,7 @@ const conclusions: Conclusion[] = [
   </section>
 
   <!-- Aprendizajes -->
-  <ConclusionProject :conclusions="conclusions" />
+  <ProjectConclusion :conclusions="conclusions" />
 
   <!-- Botón a proyectos -->
   <section class="my-8">
