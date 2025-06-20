@@ -3,6 +3,25 @@ import ProjectHero from '../sections/projects/ProjectHero.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
+import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+
+import type { Desafio } from '../types/proyects';
+
+const challenges: Desafio[] = [
+  {
+    id: 1,
+    text: "Establecer una presencia digital distintiva y persuasiva para ambas agencias en mercados competitivos. Era crucial definir una voz y estética de marca consistentes."
+  },
+  {
+    id: 2,
+    text: "Para la agencia de telemarketing, el reto fue comunicar su reposicionamiento estratégico. Esto implicaba integrar nuevos servicios sin perder el foco en su experiencia histórica en telemarketing."
+  },
+  {
+    id: 3,
+    text: "La agencia de traducción global necesitaba educar sobre la importancia de la traducción profesional certificada. El objetivo era resaltar el valor del conocimiento humano frente a las soluciones automatizadas."
+  }
+]
+
 </script>
 
 <template>
@@ -35,32 +54,5 @@ import ProjectResumen from '../sections/projects/ProjectResumen.vue';
   </ProjectResumen>
 
   <!-- Desafío -->
-  <section class="py-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12">
-      <div class="lg:col-span-4">
-        <SectionTitle class="text-primary-900 dark:text-primary-300">
-          Desafío
-        </SectionTitle>
-      </div>
-      <div class="lg:col-span-8 ps-4 lg:ps-8">
-        <ul>
-          <li class="list-disc list-inside pb-3">
-            <MainText class="inline">
-              Establecer una presencia digital distintiva y persuasiva para ambas agencias en mercados competitivos. Era crucial definir una voz y estética de marca consistentes.
-            </MainText>
-          </li>
-          <li class="list-disc list-inside pb-3">
-            <MainText class="inline">
-              Para la agencia de telemarketing, el reto fue comunicar su reposicionamiento estratégico. Esto implicaba integrar nuevos servicios sin perder el foco en su experiencia histórica en telemarketing.
-            </MainText>
-          </li>
-          <li class="list-disc list-inside pb-3">
-            <MainText class="inline">
-              La agencia de traducción global necesitaba educar sobre la importancia de la traducción profesional certificada. El objetivo era resaltar el valor del conocimiento humano frente a las soluciones automatizadas.
-            </MainText>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <ProjectDesafio :desafios="challenges" />
 </template>
