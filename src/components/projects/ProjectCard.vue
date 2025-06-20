@@ -30,7 +30,7 @@ const isHovered = ref(false);
     @mouseleave="isHovered = false"
   >
     <img :src="isHovered ? project.imgHover : project.imgDefault" :alt="project.alt" class="w-full h-auto object-cover transition-opacity duration-500">
-    <div class="p-6 bg-slate-300 dark:bg-slate-700 dark:text-zinc-200 d-flex flex-col">
+    <div class="p-6 bg-slate-300 dark:bg-slate-700 dark:text-zinc-200 d-flex flex-col flex-grow rounded-b-lg">
       <TertiaryTitle class="mb-2 text-primary-900 dark:text-primary-300">
         {{ project.title }}
       </TertiaryTitle>

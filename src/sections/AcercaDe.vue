@@ -40,7 +40,7 @@ const techStack = [
             Mi enfoque combina tres disciplinas (UX/UI, desarrollo frontend y copywriting) para un mismo fin: que cada proyecto tenga impacto.
           </MainText>
           <MainText>
-            El primer paso es entender el negocio: qué necesita lograr y a quién se dirige. A partir de eso, diseño y redacto contenido que conecte con esa audiencia, con foco en claridad, persuasión y conversión.
+            El primer paso es entender el negocio: qué necesita lograr y a quién se dirige. A partir de eso, diseño y redacto contenido que conecte con esa audiencia, priorizando la claridad, persuasión y conversión.
           </MainText>  
           <MainText>
             Después, valido con usuarios reales para asegurarme de que el mensaje conecte y detectar puntos de fricción. Porque una solución efectiva no se improvisa: se construye, se prueba y se ajusta hasta que convierte.
