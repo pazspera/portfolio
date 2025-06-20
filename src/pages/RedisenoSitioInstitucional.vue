@@ -5,15 +5,16 @@ import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
+import ProjectResumen from '../sections/projects/ProjectResumen.vue';
+import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ButtonContained from "../components/ButtonContained.vue";
-import type { Conclusion, Desafio, ItemEnfoque } from "../types/proyects";
+import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
 import imgNewHome from "../assets/institucional-nuevo-home.jpg";
 import imgOldVideo from "../assets/institucional-viejo-video.jpg";
 import imgNewVideo from "../assets/institucional-nuevo-video.jpg"
-import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 
 const conclusions: Conclusion[] = [
   {
@@ -121,6 +122,24 @@ const methodology: ItemEnfoque[] = [
   }
 ]
 
+const impact: ItemImpacto[] = [
+  {
+    id: 1,
+    title: "Mejora en la visiblidad interna",
+    text: "El nuevo sitio dio un panorama integral de la oferta de servicios para los empleados. Esto optimizó la coordinación interna y facilitó la cooperación entre las áreas de marketing, ventas y operaciones. "
+  }, 
+  {
+    id: 2,
+    title: "Mayor claridad para prospectos",
+    text: "La gama de soluciones de la agencia se presentó de forma más fácil de entender, reduciendo las dudas de los clientes potenciales. Este cambio agilizó el proceso de prospección, volviéndolo más efectivo."
+  },
+  {
+    id: 3,
+    title: "Aumento de acciones comerciales",
+    text: "La nueva presentación del sitio sirvió como base estratégica para múltiples campañas. Estas destacaron las fortalezas de cada servicio, acelerando el proceso de generación de leads y las oportunidades de negocio."
+  }
+]
+
 </script>
 
 <template>
@@ -189,37 +208,7 @@ const methodology: ItemEnfoque[] = [
   </section>
 
   <!-- Impacto -->
-  <section class="py-5">
-    <SectionTitle class="text-primary-900 dark:text-primary-300 mb-8">
-      Impacto
-    </SectionTitle>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <ProjectTextCol>
-        <template #title>
-          Mejora en la visiblidad interna
-        </template>
-        <template #text>
-          El nuevo sitio dio un panorama integral de la oferta de servicios para los empleados. Esto optimizó la coordinación interna y facilitó la cooperación entre las áreas de marketing, ventas y operaciones. 
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Mayor claridad para prospectos
-        </template>
-        <template #text>
-          La gama de soluciones de la agencia se presentó de forma más fácil de entender, reduciendo las dudas de los clientes potenciales. Este cambio agilizó el proceso de prospección, volviéndolo más efectivo.
-        </template>
-      </ProjectTextCol>
-      <ProjectTextCol>
-        <template #title>
-          Aumento de acciones comerciales
-        </template>
-        <template #text>
-          La nueva presentación del sitio sirvió como base estratégica para múltiples campañas. Estas destacaron las fortalezas de cada servicio, acelerando el proceso de generación de leads y las oportunidades de negocio.
-        </template>
-      </ProjectTextCol>
-    </div>
-  </section>
+  <ProjectImpacto :listaImpacto="impact" />
 
   <!-- Aprendizajes -->
   <ProjectConclusion :conclusions="conclusions" />

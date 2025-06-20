@@ -3,8 +3,9 @@ import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
+import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 
-import type { Desafio, ItemEnfoque } from '../types/proyects';
+import type { Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
 
 const challenges: Desafio[] = [
   {
@@ -49,6 +50,34 @@ const methodology: ItemEnfoque[] = [
   }
 ] 
 
+const impact: ItemImpacto[] = [
+  {
+    id: 1,
+    title: "Expansión de audiencia",
+    text: "Las estrategias implementadas lograron una notable expansión de la base de seguidores en las plataformas de redes sociales de ambos clientes. Este crecimiento fue clave para sus objetivos."
+  },
+  {
+    id: 2,
+    title: "Mejora del engagement",
+    text: "Se observó un significativo incremento en la interacción y el engagement en las publicaciones. Los carruseles en LinkedIn e Instagram mostraron especial resonancia con la audiencia B2B."
+  },
+  {
+    id: 3,
+    title: "Coherencia de marca",
+    text: "Para la agencia de traducción, se logró establecer una estética de marca consistente y una voz unificada en todo el contenido digital. Esto mejoró su reconocimiento y profesionalismo."
+  },
+  {
+    id: 4,
+    title: "Claridad en la oferta de valor",
+    text: "A través del contenido, se educó a la audiencia sobre servicios complejos, clarificando su propuesta de valor. Esto permitió a los clientes potenciales comprender mejor las soluciones ofrecidas."
+  },
+  {
+    id: 5,
+    title: "Base para el tráfico orgánico",
+    text: "El enfoque en contenido educativo de valor en el blog sentó bases sólidas para el crecimiento del tráfico orgánico. Aunque las métricas estaban en desarrollo, se creó un activo de contenido a largo plazo."
+  }
+]
+
 </script>
 
 <template>
@@ -86,5 +115,7 @@ const methodology: ItemEnfoque[] = [
   <!-- Enfoque y metodología -->
   <ProjectEnfoque :itemsEnfoque="methodology" />
 
+  <!-- Impacto -->
+  <ProjectImpacto :listaImpacto="impact" />
 
 </template>

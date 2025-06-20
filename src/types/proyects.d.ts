@@ -19,3 +19,9 @@ export type ItemEnfoque = {
   title: string,
   text: string,
 }
+
+export type ItemImpacto = {
+  id: number,
+  title: string,
+  text: string,
+}
