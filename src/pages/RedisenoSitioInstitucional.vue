@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
-import SectionTitle from '../components/typography/SectionTitle.vue';
-import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';

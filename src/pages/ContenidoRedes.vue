@@ -4,8 +4,10 @@ import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
+import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
+import ButtonContained from '../components/ButtonContained.vue';
 
-import type { Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
+import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
 
 const challenges: Desafio[] = [
   {
@@ -78,6 +80,59 @@ const impact: ItemImpacto[] = [
   }
 ]
 
+const conclusions: Conclusion[] = [
+  {
+    id: 1,
+    img: {
+      src: "/src/assets/contenido-redes-valor.png",
+      alt: "Diamante sobresaliendo de una caja"
+    },
+    title: "Enfocarse en proveer valor",
+    text: "En el sector B2B, el contenido más efectivo es aquel que educa y resuelve problemas específicos de la audiencia. Es clave brindar información de valor, incluso al abordar temas técnicos o complejos.",
+    class: "md:col-span-4"
+  },
+  {
+    id: 2,
+    img: {
+      src: "/src/assets/contenido-redes-precision-cultural.png",
+      alt: "Grupo de personas conversando"
+    },
+    title: "La importancia de la precisión cultural",
+    text: "La experiencia de redactar contenido profesional para una agencia global, desde un contexto no nativo, resalta la importancia de la precisión lingüística y la sensibilidad cultural en comunicaciones internacionales.",
+    class: "md:col-span-4"
+  },
+  {
+    id: 3,
+    img: {
+      src: "/src/assets/contenido-redes-persuadir.png",
+      alt: "Viñetas de diálogo manteniendo una conversación"
+    },
+    title: "Conocer para persuadir",
+    text: 'La dedicación a la investigación de buyer personas y "pain points" es fundamental para crear copys y contenidos que realmente resuenen. Permite generar mensajes persuasivos que impulsan el engagement.',
+    class: "md:col-span-4"
+  },
+  {
+    id: 4,
+    img: {
+      src: "/src/assets/contenido-redes-marca.png",
+      alt: "Lápiz dibujando un logo"
+    },
+    title: "Sin coherencia, no hay marca",
+    text: "Unificar la voz y la estética de marca a través de diferentes plataformas y tipos de contenido es esencial. Esto construye una identidad sólida y reconocible que refuerza la presencia digital.",
+    class: "md:col-span-4"
+  },
+  {
+    id: 5,
+    img: {
+      src: "/src/assets/contenido-redes-eficiencia.png",
+      alt: "Tablero de planificación"
+    },
+    title: "Planificar la eficiencia",
+    text: "La planificación anticipada y la validación temprana con el cliente son cruciales para un flujo de trabajo eficiente. Aseguran la coherencia de los temas, minimizan correcciones y optimizan la gestión de tiempo y recursos.",
+    class: "md:col-span-4 md:col-start-3"
+  },
+]
+
 </script>
 
 <template>
@@ -118,4 +173,13 @@ const impact: ItemImpacto[] = [
   <!-- Impacto -->
   <ProjectImpacto :listaImpacto="impact" />
 
+  <!-- Aprendizajes -->
+  <ProjectConclusion :conclusions="conclusions" />
+
+  <!-- Botón a proyectos -->
+  <section class="my-8">
+    <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
+      Ver más proyectos
+    </ButtonContained>
+  </section> 
 </template>
