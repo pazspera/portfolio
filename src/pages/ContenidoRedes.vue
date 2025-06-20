@@ -6,7 +6,9 @@ import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from '../components/ButtonContained.vue';
+import ImageSlider from '../components/ImageSlider.vue';
 
+import type { SliderImage } from '../types/imageSlider';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
 
 const challenges: Desafio[] = [
@@ -133,6 +135,63 @@ const conclusions: Conclusion[] = [
   },
 ]
 
+const sliderTelemarketingAgency: SliderImage[] = [
+  {
+    id: 1,
+    src: "/src/assets/slider-agencia-telemarketing-1.jpg",
+    alt: ""
+  },
+  {
+    id: 2,
+    src: "/src/assets/slider-agencia-telemarketing-2.jpg",
+    alt: ""
+  },
+  {
+    id: 3,
+    src: "/src/assets/slider-agencia-telemarketing-3.jpg",
+    alt: ""
+  },
+  {
+    id: 4,
+    src: "/src/assets/slider-agencia-telemarketing-4.jpg",
+    alt: ""
+  },
+  {
+    id: 5,
+    src: "/src/assets/slider-agencia-telemarketing-5.jpg",
+    alt: ""
+  },
+  {
+    id: 6,
+    src: "/src/assets/slider-agencia-telemarketing-6.jpg",
+    alt: ""
+  },
+  {
+    id: 7,
+    src: "/src/assets/slider-agencia-telemarketing-7.jpg",
+    alt: ""
+  },
+  {
+    id: 8,
+    src: "/src/assets/slider-agencia-telemarketing-8.jpg",
+    alt: ""
+  },
+  {
+    id: 9,
+    src: "/src/assets/slider-agencia-telemarketing-9.jpg",
+    alt: ""
+  },
+  {
+    id: 10,
+    src: "/src/assets/slider-agencia-telemarketing-10.jpg",
+    alt: ""
+  },
+  {
+    id: 11,
+    src: "/src/assets/slider-agencia-telemarketing-11.jpg",
+    alt: ""
+  },
+]
 </script>
 
 <template>
@@ -166,6 +225,9 @@ const conclusions: Conclusion[] = [
 
   <!-- Desafío -->
   <ProjectDesafio :desafios="challenges" />
+
+  <!-- Carrusel agencia telemarketing -->
+  <ImageSlider :images="sliderTelemarketingAgency" />
 
   <!-- Enfoque y metodología -->
   <ProjectEnfoque :itemsEnfoque="methodology" />
