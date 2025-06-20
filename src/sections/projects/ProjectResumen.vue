@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import type { Resumen } from "../../types/proyects";
 import SectionTitle from "../../components/typography/SectionTitle.vue";
 import HighlightText from "../../components/typography/HighlightText.vue";
 import RoleCard from "../../components/projects/RoleCard.vue";
 
-defineProps<{
-  resumen: Resumen,
-}>();
 </script>
 
 <template>
@@ -19,19 +15,19 @@ defineProps<{
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="lg:col-span-8 lg:order-last lg:ps-8 lg:pt-4">
         <HighlightText>
-          {{ resumen.summary }}
+          <slot name="summary"></slot>
         </HighlightText>
       </div>
       <!-- Rol -->
       <RoleCard>
         <template #role>
-          {{ resumen.roleCard.role }}
+          <slot name="role"></slot>
         </template>
         <template #client>
-          {{ resumen.roleCard.client }}
+          <slot name="client"></slot>
         </template>
         <template #duration>
-          {{ resumen.roleCard.role }}
+          <slot name="duration"></slot>
         </template>
       </RoleCard>
     </div>

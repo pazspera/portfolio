@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
-import HighlightText from '../components/typography/HighlightText.vue';
 import MainText from '../components/typography/MainText.vue';
-import RoleCard from '../components/projects/RoleCard.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 </script>
 
@@ -21,29 +19,20 @@ import ProjectResumen from '../sections/projects/ProjectResumen.vue';
   </ProjectHero>
 
   <!-- Resumen -->
-  <section class="pt-12 pb-8">
-    <div class="lg:mb-6">
-      <SectionTitle class="text-primary-900 dark:text-primary-300">Resumen del proyecto</SectionTitle>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-12">
-      <div class="lg:col-span-8 lg:order-last lg:ps-8 lg:pt-4">
-        <HighlightText>
-          Lideré la estrategia de contenido y la ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas, diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn) y la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
-        </HighlightText>
-      </div>
-      <RoleCard>
-        <template #role>
-          UX Writer, Content Strategist, Diseñadora UI
-        </template>
-        <template #client>
-          Agencia de telemarketing y generación de leads B2B y agencia de traducción global
-        </template>
-        <template #duration>
-          10 y 6 meses, respectivamente
-        </template>
-      </RoleCard>
-    </div>
-  </section>
+  <ProjectResumen>
+    <template #summary>
+      Lideré la estrategia de contenido y la ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas, diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn) y la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
+    </template>
+    <template #role>
+      UX Writer, Content Strategist, Diseñadora UI
+    </template>
+    <template #client>
+      Agencia de telemarketing y generación de leads B2B y agencia de traducción global
+    </template>
+    <template #duration>
+      10 y 6 meses, respectivamente
+    </template>
+  </ProjectResumen>
 
   <!-- Desafío -->
   <section class="py-6">

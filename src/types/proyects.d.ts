@@ -9,11 +9,3 @@ export type Conclusion = {
   class?: string,
 }
 
-export type Resumen = {
-  summary: string,
-  roleCard: {
-    role: string,
-    client: string,
-    duration: string,
-  }
-}

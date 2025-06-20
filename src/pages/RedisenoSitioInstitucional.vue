@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import SectionTitle from '../components/typography/SectionTitle.vue';
-import HighlightText from '../components/typography/HighlightText.vue';
 import MainText from '../components/typography/MainText.vue';
 import ProjectTextCol from '../components/projects/ProjectTextCol.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from "../components/ButtonContained.vue";
-import RoleCard from '../components/projects/RoleCard.vue';
-import type { Conclusion, Resumen } from "../types/proyects";
+import type { Conclusion } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -69,15 +67,6 @@ const conclusions: Conclusion[] = [
   },
 ]
 
-const summary: Resumen = {
-  summary: "Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.",
-  roleCard: {
-    role: "Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)",
-    client: "Agencia de telemarketing y generación de leads B2B",
-    duration: "7 meses",
-  }
-} 
-
 </script>
 
 <template>
@@ -93,7 +82,20 @@ const summary: Resumen = {
     </template>
   </ProjectHero>
   <!-- Resumen -->
-  <ProjectResumen :resumen="summary" />
+  <ProjectResumen>
+    <template #summary>
+      Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
+    </template>
+    <template #role>
+      Diseñadora UX/UI y desarrolladora web (única responsable de investigación, diseño y desarrollo)
+    </template>
+    <template #client>
+      Agencia de telemarketing y generación de leads B2B
+    </template>
+    <template #duration>
+      7 meses
+    </template>
+  </ProjectResumen>
 
   <!-- Desafío -->
   <section class="py-6">
