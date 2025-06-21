@@ -3,6 +3,12 @@
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
+    /* Opciones de resolución de módulos y compatibilidad */
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true, // ¡Esta es la clave para ignorar errores de tipado en librerías!
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -12,8 +18,8 @@
     "noUncheckedSideEffectImports": true
   },
   "include": [
-    "src/**/*.ts", 
-    "src/**/*.tsx", 
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "src/**/*.vue",
     "shims-vue.d.ts"
   ]
