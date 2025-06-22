@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Bars3Icon } from "@heroicons/vue/24/outline";
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useIsMobile } from "../../composables/useIsMobile";
 import NavLink from "./NavLink.vue";
 import NavLogo from "./NavLogo.vue";
@@ -12,10 +12,42 @@ const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 }
 
+const isNavbarVisible = ref(true);
+const lastScrollPosition = ref(0);
+
+const handleScroll = () => {
+  const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  // stops navbar from blinking
+  if (currentScrollPosition === 0) {
+    isNavbarVisible.value = true;
+  }
+
+  // hides navbar on scroll down
+  else if(currentScrollPosition > lastScrollPosition.value && currentScrollPosition > 50) {
+    isNavbarVisible.value = false;
+  } 
+
+  // shows navbar on scroll up
+  else if (currentScrollPosition < lastScrollPosition.value) {
+    isNavbarVisible.value = true;
+  }
+
+  lastScrollPosition.value = currentScrollPosition;
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+})
+
 </script>
 
 <template>
-  <header class="bg-primary-800 w-full h-auto ">
+  <header class="bg-primary-800 w-full h-auto" :class="{ 'navbar-hidden': !isNavbarVisible, 'navbar-visble': isNavbarVisible }">
     <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
@@ -39,7 +71,6 @@ const toggleMenu = () => {
             </div>
           </div>
         </div>
-
       </nav>
     </div>
 
@@ -68,4 +99,26 @@ const toggleMenu = () => {
   opacity: 1;
   transform: translateY(0);
 }
+
+header {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 </style>
