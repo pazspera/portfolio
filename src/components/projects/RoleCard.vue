@@ -5,7 +5,7 @@ import MainText from '../typography/MainText.vue';
 
 <template>
   <div
-    class="lg:col-span-4 lg:order-first lg:pe-5 mt-4  max-w-[400px] bg-primary-100 dark:bg-primary-300 py-4 px-8 rounded-lg dark:text-zinc-900">
+    class="lg:col-span-4 lg:order-first lg:pe-5 mt-4  max-w-[400px] bg-primary-200 dark:bg-primary-400 py-4 px-8 rounded-lg dark:text-zinc-900">
     <div class="pt-4 pb-2">
       <SecondaryTitle>
         Rol
