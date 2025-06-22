@@ -2,10 +2,12 @@
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import type { Options } from '@splidejs/splide';
 import type { SliderImage } from '../types/imageSlider';
+import CaptionText from './typography/CaptionText.vue';
 import '@splidejs/vue-splide/css';
 
 defineProps<{
   images: SliderImage[];
+  caption: string
 }>();
 
 const sliderOptions: Options = {
@@ -46,5 +48,8 @@ const sliderOptions: Options = {
         <img :src="image.src" :alt="image.alt">
       </SplideSlide>
     </Splide>
+    <CaptionText>
+      {{ caption }}
+    </CaptionText>
   </section>
 </template>

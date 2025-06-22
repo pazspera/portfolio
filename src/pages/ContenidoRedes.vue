@@ -7,6 +7,7 @@ import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from '../components/ButtonContained.vue';
 import ImageSlider from '../components/ImageSlider.vue';
+import CaptionText from '../components/typography/CaptionText.vue';
 
 import type { SliderImage } from '../types/imageSlider';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
@@ -301,13 +302,13 @@ const sliderTranslationAgency: SliderImage[] = [
   <ProjectDesafio :desafios="challenges" />
 
   <!-- Carrusel agencia telemarketing -->
-  <ImageSlider :images="sliderTelemarketingAgency" />
+  <ImageSlider :images="sliderTelemarketingAgency" caption="Ejemplos de carruseles diseñados para la agencia de telemarketing y generación de leads B2B"  />
 
   <!-- Enfoque y metodología -->
   <ProjectEnfoque :itemsEnfoque="methodology" />
 
   <!-- Carrusel agencia traducción -->
-  <ImageSlider :images="sliderTranslationAgency" />
+  <ImageSlider :images="sliderTranslationAgency" caption="Ejemplos de carruseles diseñados para la agencia de traducción" />
 
   <!-- Impacto -->
   <ProjectImpacto :listaImpacto="impact" />
