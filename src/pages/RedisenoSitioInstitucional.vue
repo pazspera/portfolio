@@ -7,6 +7,7 @@ import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ButtonContained from "../components/ButtonContained.vue";
 import CaptionText from '../components/typography/CaptionText.vue';
+import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
@@ -142,6 +143,8 @@ const impact: ItemImpacto[] = [
 </script>
 
 <template>
+  <ReadingProgressBar/>
+
   <ProjectHero :imgHero="{
     imgSrc: '/src/assets/mockup_rediseno_institucional.png',
     imgAlt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'

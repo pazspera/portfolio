@@ -7,6 +7,7 @@ import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from '../components/ButtonContained.vue';
 import ImageSlider from '../components/ImageSlider.vue';
+import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import CaptionText from '../components/typography/CaptionText.vue';
 
 import type { SliderImage } from '../types/imageSlider';
@@ -270,6 +271,8 @@ const sliderTranslationAgency: SliderImage[] = [
 </script>
 
 <template>
+  <ReadingProgressBar/>
+  
   <ProjectHero :imgHero="{
     imgSrc: '/src/assets/mockup_rrss.png',
     imgAlt: 'Mockup de notebook con una página de Instagram con una publicación'
