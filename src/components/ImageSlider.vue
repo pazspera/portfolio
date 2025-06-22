@@ -3,9 +3,11 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import type { Options } from '@splidejs/splide';
 import type { SliderImage } from '../types/imageSlider';
 import CaptionText from './typography/CaptionText.vue';
+import { ref } from "vue";
+import VueEasyLightbox from 'vue-easy-lightbox';
 import '@splidejs/vue-splide/css';
 
-defineProps<{
+const props = defineProps<{
   images: SliderImage[];
   caption: string
 }>();
@@ -38,18 +40,48 @@ const sliderOptions: Options = {
   }
 }
 
+const lightboxVisible = ref(false);
+const lightboxIndex = ref(0);
+const lightboxImages = ref(
+  props.images.map(image => ({
+    src: image.src,
+    alt: image.alt,
+  }))
+)
+
+const showLightbox = (index: number) => {
+  lightboxIndex.value = index;
+  lightboxVisible.value = true;
+}
+
+const hideLightbox = () => {
+  lightboxVisible.value = false;
+}
 
 </script>
 
 <template>
   <section class="py-6">
     <Splide :options="sliderOptions">
-      <SplideSlide v-for="image in images" :key="image.id">
-        <img :src="image.src" :alt="image.alt">
+      <SplideSlide v-for="(image, index) in images" :key="image.id">
+        <img :src="image.src" :alt="image.alt" class="splide-image clickable" @click="showLightbox(index)">
       </SplideSlide>
     </Splide>
     <CaptionText>
       {{ caption }}
     </CaptionText>
   </section>
+
+  <vue-easy-lightbox 
+    :visible="lightboxVisible"
+    :imgs="lightboxImages"
+    :index="lightboxIndex"
+    @hide="hideLightbox"
+  />
 </template>
+
+<style scoped>
+.clickable {
+  cursor: pointer;
+}
+</style>
