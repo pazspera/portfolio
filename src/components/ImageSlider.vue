@@ -2,7 +2,7 @@
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import type { Options } from '@splidejs/splide';
 import type { SliderImage } from '../types/imageSlider';
-import '@splidejs/vue-splide/css/default.css';
+import '@splidejs/vue-splide/css';
 
 defineProps<{
   images: SliderImage[];
@@ -10,16 +10,29 @@ defineProps<{
 
 const sliderOptions: Options = {
   perPage: 1,
+  gap: '1em',
   breakpoints: {
-    768: {
-      perpPage: 2,
+    1500: {
+      perPage: 4,
     },
     1200: {
       perPage: 3,
     },
-    1500: {
-      perPage: 4,
-    }
+    900: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 2,
+    },
+    500: {
+      perPage: 2,
+    },
+    400: {
+      perPage: 1,
+    },
+    300: {
+      perPage: 1,
+    },
   }
 }
 
