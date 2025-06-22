@@ -6,6 +6,7 @@ import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ButtonContained from "../components/ButtonContained.vue";
+import CaptionText from '../components/typography/CaptionText.vue';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
@@ -185,6 +186,9 @@ const impact: ItemImpacto[] = [
       :sliderLineWidth="3"
       :sliderPositionPercentage="0.5"
     />
+    <CaptionText>
+      Rediseño de la página de inicio del sitio institucional
+    </CaptionText>
   </section>
 
   <!-- Enfoque y proceso -->
@@ -203,6 +207,9 @@ const impact: ItemImpacto[] = [
       :sliderLineWidth="3"
       :sliderPositionPercentage="0.5"
     />
+    <CaptionText>
+      Rediseño de la página de producción de video
+    </CaptionText>
   </section>
 
   <!-- Impacto -->
