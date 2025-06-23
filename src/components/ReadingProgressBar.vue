@@ -4,7 +4,6 @@ import { useNavbarStore } from "../stores/navbar";
 
 const progressBarWidth = ref(0);
 const progressBarTop = ref(0);
-const progressBarZIndex = ref(999);
 
 const navbarStore = useNavbarStore();
 
@@ -30,6 +29,7 @@ const calculateScrollProgress = () => {
     progressBarTop.value = 0;
   }
 
+  console.log('RPB - isVisible:', navbarStore.isVisible, 'height:', navbarStore.height, 'top:', progressBarTop.value);
 }
 
 onMounted(() => {
@@ -38,8 +38,8 @@ onMounted(() => {
 
   // watch changes in store
   watch([()=> navbarStore.height, ()=> navbarStore.isVisible], ()=> {
-    calculateScrollProgress;
-  })
+    calculateScrollProgress();
+  }, { immediate: true })
 
 })
 
@@ -50,7 +50,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="reading-progress-bar-container bg-gray-500">
+  <div class="reading-progress-bar-container bg-gray-500" :style="{ top: progressBarTop + 'px !important' }">
     <div class="reading-progress-bar bg-primary-500" :style="{ width: progressBarWidth + '%' }"></div>
   </div>
 </template>
@@ -58,11 +58,11 @@ onUnmounted(() => {
 <style scoped>
 .reading-progress-bar-container {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   height: 6px;
   transition: top 0.3s ease-in-out, z-index 0s;
+  z-index: 1001;
 }
 
 .reading-progress-bar {

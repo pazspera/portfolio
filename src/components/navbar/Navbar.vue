@@ -42,7 +42,13 @@ const handleScroll = () => {
   // that's the next tick
   nextTick(()=> {
     if (headerRef.value) {
-      navbarStore.setHeight(headerRef.value.offsetHeight);
+      if(isNavbarVisible.value) {
+        navbarStore.setHeight(headerRef.value.offsetHeight);
+      } else {
+        navbarStore.setHeight(0);
+        // this is needed because the ReadingProgressBar was
+        // not updating the top value when the navbar is hidden
+      }
     }
   })
 
@@ -67,7 +73,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header ref="headerRef" class="bg-primary-800 w-full h-auto" :class="{ 'navbar-hidden': !isNavbarVisible, 'navbar-visble': isNavbarVisible }">
+  <header ref="headerRef" class="bg-primary-800 w-full h-auto" :class="{ 'navbar-hidden': !isNavbarVisible, 'navbar-visible': isNavbarVisible }">
     <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->

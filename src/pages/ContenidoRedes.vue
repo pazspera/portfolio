@@ -270,58 +270,60 @@ const sliderTranslationAgency: SliderImage[] = [
 </script>
 
 <template>
-  <ReadingProgressBar/>
+  <div>
+    <ReadingProgressBar/>
   
-  <ProjectHero :imgHero="{
-    imgSrc: '/src/assets/mockup_rrss.png',
-    imgAlt: 'Mockup de notebook con una página de Instagram con una publicación'
-  }">
-    <template #title>
-      Contenido estratégico para redes
-    </template>
-    <template #text>
-      Diseñé y ejecuté estrategias de UX Writing para potenciar la comunicación, la presencia digital y el engagement de dos agencias B2B en mercados especializados.
-    </template>
-  </ProjectHero>
+    <ProjectHero :imgHero="{
+      imgSrc: '/src/assets/mockup_rrss.png',
+      imgAlt: 'Mockup de notebook con una página de Instagram con una publicación'
+    }">
+      <template #title>
+        Contenido estratégico para redes
+      </template>
+      <template #text>
+        Diseñé y ejecuté estrategias de UX Writing para potenciar la comunicación, la presencia digital y el engagement de dos agencias B2B en mercados especializados.
+      </template>
+    </ProjectHero>
 
-  <!-- Resumen -->
-  <ProjectResumen>
-    <template #summary>
-      Lideré la estrategia de contenido y la ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas, diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn) y la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
-    </template>
-    <template #role>
-      UX Writer, Content Strategist, Diseñadora UI
-    </template>
-    <template #client>
-      Agencia de telemarketing y generación de leads B2B y agencia de traducción global
-    </template>
-    <template #duration>
-      10 y 6 meses, respectivamente
-    </template>
-  </ProjectResumen>
+    <!-- Resumen -->
+    <ProjectResumen>
+      <template #summary>
+        Lideré la estrategia de contenido y la ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas, diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn) y la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
+      </template>
+      <template #role>
+        UX Writer, Content Strategist, Diseñadora UI
+      </template>
+      <template #client>
+        Agencia de telemarketing y generación de leads B2B y agencia de traducción global
+      </template>
+      <template #duration>
+        10 y 6 meses, respectivamente
+      </template>
+    </ProjectResumen>
 
-  <!-- Desafío -->
-  <ProjectDesafio :desafios="challenges" />
+    <!-- Desafío -->
+    <ProjectDesafio :desafios="challenges" />
 
-  <!-- Carrusel agencia telemarketing -->
-  <ImageSlider :images="sliderTelemarketingAgency" caption="Ejemplos de carruseles diseñados para la agencia de telemarketing y generación de leads B2B"  />
+    <!-- Carrusel agencia telemarketing -->
+    <ImageSlider :images="sliderTelemarketingAgency" caption="Ejemplos de carruseles diseñados para la agencia de telemarketing y generación de leads B2B"  />
 
-  <!-- Enfoque y metodología -->
-  <ProjectEnfoque :itemsEnfoque="methodology" />
+    <!-- Enfoque y metodología -->
+    <ProjectEnfoque :itemsEnfoque="methodology" />
 
-  <!-- Carrusel agencia traducción -->
-  <ImageSlider :images="sliderTranslationAgency" caption="Ejemplos de carruseles diseñados para la agencia de traducción" />
+    <!-- Carrusel agencia traducción -->
+    <ImageSlider :images="sliderTranslationAgency" caption="Ejemplos de carruseles diseñados para la agencia de traducción" />
 
-  <!-- Impacto -->
-  <ProjectImpacto :listaImpacto="impact" />
+    <!-- Impacto -->
+    <ProjectImpacto :listaImpacto="impact" />
 
-  <!-- Aprendizajes -->
-  <ProjectConclusion :conclusions="conclusions" />
+    <!-- Aprendizajes -->
+    <ProjectConclusion :conclusions="conclusions" />
 
-  <!-- Botón a proyectos -->
-  <section class="my-8">
-    <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
-      Ver más proyectos
-    </ButtonContained>
-  </section> 
+    <!-- Botón a proyectos -->
+    <section class="my-8">
+      <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
+        Ver más proyectos
+      </ButtonContained>
+    </section> 
+  </div>
 </template>
