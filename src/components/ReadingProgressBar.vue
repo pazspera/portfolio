@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, watch } from "vue";
+import { useNavbarStore } from "../stores/navbar";
 
 const progressBarWidth = ref(0);
+const progressBarTop = ref(0);
+const progressBarZIndex = ref(999);
+
+const navbarStore = useNavbarStore();
 
 const calculateScrollProgress = () => {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -17,11 +22,25 @@ const calculateScrollProgress = () => {
   } else {
     progressBarWidth.value = 0;
   }
+
+  // adjust top and z-index of progress bar based on the store
+  if(navbarStore.isVisible) {
+    progressBarTop.value = navbarStore.height;
+  } else {
+    progressBarTop.value = 0;
+  }
+
 }
 
 onMounted(() => {
   window.addEventListener("scroll", calculateScrollProgress);
   calculateScrollProgress();
+
+  // watch changes in store
+  watch([()=> navbarStore.height, ()=> navbarStore.isVisible], ()=> {
+    calculateScrollProgress;
+  })
+
 })
 
 onUnmounted(() => {
@@ -43,7 +62,7 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 6px;
-  z-index: 1000;
+  transition: top 0.3s ease-in-out, z-index 0s;
 }
 
 .reading-progress-bar {

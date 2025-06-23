@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { Bars3Icon } from "@heroicons/vue/24/outline";
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 import { useIsMobile } from "../../composables/useIsMobile";
 import NavLink from "./NavLink.vue";
 import NavLogo from "./NavLogo.vue";
 import DarkToggle from "./DarkToggle.vue";
+import { useNavbarStore } from "../../stores/navbar";
 
 const menuOpen = ref(false);
 const { isMobile } = useIsMobile();
@@ -14,6 +15,8 @@ const toggleMenu = () => {
 
 const isNavbarVisible = ref(true);
 const lastScrollPosition = ref(0);
+const headerRef = ref<HTMLElement | null>(null);
+const navbarStore = useNavbarStore();
 
 const handleScroll = () => {
   const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -21,23 +24,40 @@ const handleScroll = () => {
   // stops navbar from blinking
   if (currentScrollPosition === 0) {
     isNavbarVisible.value = true;
-  }
-
+  } 
   // hides navbar on scroll down
   else if(currentScrollPosition > lastScrollPosition.value && currentScrollPosition > 50) {
     isNavbarVisible.value = false;
   } 
-
   // shows navbar on scroll up
   else if (currentScrollPosition < lastScrollPosition.value) {
     isNavbarVisible.value = true;
   }
+
+  // update visibility in store
+  navbarStore.setIsVisible(isNavbarVisible.value);
+
+  // waits until next tick to get current height and update it in store
+  // the change is immediate but won't be applied until the dom updates
+  // that's the next tick
+  nextTick(()=> {
+    if (headerRef.value) {
+      navbarStore.setHeight(headerRef.value.offsetHeight);
+    }
+  })
 
   lastScrollPosition.value = currentScrollPosition;
 }
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+  // initializes height and visibility in store
+  nextTick(()=> {
+    if(headerRef.value) {
+      navbarStore.setHeight(headerRef.value.offsetHeight);
+      navbarStore.setIsVisible(isNavbarVisible.value);
+    }
+  })
 })
 
 onBeforeUnmount(() => {
@@ -47,7 +67,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="bg-primary-800 w-full h-auto" :class="{ 'navbar-hidden': !isNavbarVisible, 'navbar-visble': isNavbarVisible }">
+  <header ref="headerRef" class="bg-primary-800 w-full h-auto" :class="{ 'navbar-hidden': !isNavbarVisible, 'navbar-visble': isNavbarVisible }">
     <div class="container mx-auto px-4 py-1.5 md:px-6">
       <nav class="flex justify-between items-center">
         <!-- Logo -->
@@ -106,7 +126,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .navbar-hidden {
