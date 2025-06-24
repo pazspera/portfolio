@@ -19,8 +19,7 @@ const techStack = [
   { src: '/src/assets/sass-original.svg', alt: 'Logo de Sass', label: "Sass"},
   { src: '/src/assets/git-original.svg', alt: 'Logo de Git', label: "Git"},
   { src: '/src/assets/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
-  { src: '/src/assets/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"},
-  { src: '/src/assets/wordpress-plain.svg', alt: 'Logo de Wodpress', label: "Wordpress"},
+  { src: '/src/assets/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"}
 ]
 
 </script>
