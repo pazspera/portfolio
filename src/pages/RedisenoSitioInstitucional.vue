@@ -8,6 +8,7 @@ import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ButtonContained from "../components/ButtonContained.vue";
 import CaptionText from '../components/typography/CaptionText.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
+import { useDocumentTitle } from '../composables/useDocumentTitle';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/proyects";
 
 import { VueCompareImage } from 'vue3-compare-image';
@@ -139,6 +140,8 @@ const impact: ItemImpacto[] = [
     text: "La nueva presentación del sitio sirvió como base estratégica para múltiples campañas. Estas destacaron las fortalezas de cada servicio, acelerando el proceso de generación de leads y las oportunidades de negocio."
   }
 ]
+
+useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
 
 </script>
 

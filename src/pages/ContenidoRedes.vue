@@ -8,9 +8,12 @@ import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from '../components/ButtonContained.vue';
 import ImageSlider from '../components/ImageSlider.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
+import { useDocumentTitle } from '../composables/useDocumentTitle';
 
 import type { SliderImage } from '../types/imageSlider';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
+
+useDocumentTitle("Contenido estratégico para redes - Paz Spera");
 
 const challenges: Desafio[] = [
   {
