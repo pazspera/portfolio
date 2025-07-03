@@ -33,13 +33,13 @@ const challenges: Desafio[] = [
 const methodology: ItemEnfoque[] = [
   {
     id: 1,
-    title: "Análisis de audiencia y puntos de dolor",
-    text: 'El primer paso fue hacer una investigación para entender a la audiencia objetivo. Identifiqué sus "pain points" específicos y los argumentos más convincentes para presentar soluciones relevantes.'
+    title: "Análisis de audiencia",
+    text: 'El primer paso fue hacer una investigación para entender a la audiencia objetivo. Identifiqué sus puntos de dolor específicos y los argumentos más convincentes para presentar soluciones relevantes.'
   },
   {
     id: 2,
     title: "Estrategia de contenido educativo",
-    text: "Desarrollé una estrategia de contenido enfocada en educar y empoderar a la buyer persona. Brindé valor con información clave para la toma de decisiones, desde la importancia de la certificación hasta la mejora en la generación de leads."
+    text: "Desarrollé una estrategia de contenido enfocada en educar y empoderar a la buyer persona. Busqué brindar valor con información clave para la toma de decisiones, desde la importancia de la certificación hasta la mejora en la generación de leads."
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ const methodology: ItemEnfoque[] = [
   {
     id: 5,
     title: "Unificación de identidad de marca",
-    text: "Aseguré una voz de marca consistente y reconocible en todas las comunicaciones. Diseñé piezas gráficas y carruseles visualmente atractivos, que reflejaban la identidad de cada marca para lograr cohesión y profesionalismo."
+    text: "Aseguré una voz de marca consistente y reconocible en todas las comunicaciones. Diseñé piezas gráficas y carruseles visualmente atractivos, que reflejaran la identidad de cada marca para lograr cohesión y profesionalismo."
   }
 ] 
 
@@ -67,7 +67,7 @@ const impact: ItemImpacto[] = [
   {
     id: 2,
     title: "Mejora del engagement",
-    text: "Se observó un significativo incremento en la interacción y el engagement en las publicaciones. Los carruseles en LinkedIn e Instagram mostraron especial resonancia con la audiencia B2B."
+    text: "Se observó un significativo incremento en la interacción y el engagement en las publicaciones. Los carruseles en LinkedIn e Instagram fueron muy bien recibidos por la audiencia B2B."
   },
   {
     id: 3,
@@ -77,12 +77,12 @@ const impact: ItemImpacto[] = [
   {
     id: 4,
     title: "Claridad en la oferta de valor",
-    text: "A través del contenido, se educó a la audiencia sobre servicios complejos, clarificando su propuesta de valor. Esto permitió a los clientes potenciales comprender mejor las soluciones ofrecidas."
+    text: "En el caso de la agencia de telemarketing, se educó a la audiencia sobre servicios complejos, clarificando su propuesta de valor. Esto permitió a los clientes potenciales comprender mejor las soluciones ofrecidas."
   },
   {
     id: 5,
     title: "Base para el tráfico orgánico",
-    text: "El enfoque en contenido educativo de valor en el blog sentó bases sólidas para el crecimiento del tráfico orgánico. Aunque las métricas estaban en desarrollo, se creó un activo de contenido a largo plazo."
+    text: "El contenido educativo del blog sentó las bases para un crecimiento orgánico sostenido. Aunque las métricas estaban en fase incial, se estableció una estrategia de generación de valor que potencie el tráfico y engagement futuro."
   }
 ]
 
@@ -94,7 +94,7 @@ const conclusions: Conclusion[] = [
       alt: "Diamante sobresaliendo de una caja"
     },
     title: "Enfocarse en proveer valor",
-    text: "En el sector B2B, el contenido más efectivo es aquel que educa y resuelve problemas específicos de la audiencia. Es clave brindar información de valor, incluso al abordar temas técnicos o complejos.",
+    text: "En el sector B2B, el contenido más efectivo es aquel que educa y resuelve problemas específicos de la audiencia. Es clave brindar información de valor, especialmente al abordar temas técnicos o complejos.",
     class: "md:col-span-4"
   },
   {
@@ -104,7 +104,7 @@ const conclusions: Conclusion[] = [
       alt: "Grupo de personas conversando"
     },
     title: "La importancia de la precisión cultural",
-    text: "La experiencia de redactar contenido profesional para una agencia global, desde un contexto no nativo, resalta la importancia de la precisión lingüística y la sensibilidad cultural en comunicaciones internacionales.",
+    text: "La experiencia de redactar contenido profesional para una agencia global, desde un contexto no nativo, me enseñó la importancia de la precisión lingüística y la sensibilidad cultural en comunicaciones internacionales.",
     class: "md:col-span-4"
   },
   {
@@ -114,7 +114,7 @@ const conclusions: Conclusion[] = [
       alt: "Viñetas de diálogo manteniendo una conversación"
     },
     title: "Conocer para persuadir",
-    text: 'La dedicación a la investigación de buyer personas y "pain points" es fundamental para crear copys y contenidos que realmente resuenen. Permite generar mensajes persuasivos que impulsan el engagement.',
+    text: 'Dedicar tiempo a investigar las buyer personas y sus puntos de dolor es fundamental para crear contenidos que realmente impacten. Sin ese trabajo previo, es muy difícil conectar con la audiencia objetivo.',
     class: "md:col-span-4"
   },
   {
@@ -291,7 +291,7 @@ const sliderTranslationAgency: SliderImage[] = [
     <!-- Resumen -->
     <ProjectResumen>
       <template #summary>
-        Lideré la estrategia de contenido y la ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas, diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn) y la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
+        Lideré la estrategia de contenido y ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas y el diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn). También me encargué de la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
       </template>
       <template #role>
         UX Writer, Content Strategist, Diseñadora UI
