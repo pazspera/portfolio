@@ -36,13 +36,13 @@ const techStack = [
             Diseñar, escribir y programar son medios, no fines. <br> Lo importante es construir soluciones que funcionen.
           </HighlightText>
           <MainText>
-            Mi enfoque combina tres disciplinas (UX/UI, desarrollo frontend y copywriting) para un mismo fin: que cada proyecto tenga impacto.
+            Mi enfoque combina tres disciplinas (UX/UI, desarrollo frontend y copywriting) con un único objetivo: que cada proyecto tenga impacto.
           </MainText>
           <MainText>
-            El primer paso es entender el negocio: qué necesita lograr y a quién se dirige. A partir de eso, diseño y redacto contenido que conecte con esa audiencia, priorizando la claridad, persuasión y conversión.
+            El primer paso es entender el negocio, qué necesita lograr y a quién se dirige. Una vez definido esto, diseño una interfaz y redacto contenido que conecte con esa audiencia, priorizando la persuasión y conversión.
           </MainText>  
           <MainText>
-            Después, valido con usuarios reales para asegurarme de que el mensaje conecte y detectar puntos de fricción. Porque una solución efectiva no se improvisa: se construye, se prueba y se ajusta hasta que convierte.
+            Incorporo un espacio de validación con usuarios reales para detectar puntos de fricción. Porque las soluciones efectivas no se improvisan: se construyen, se prueban y se ajustan hasta que logren los objetivos planteados.
           </MainText>  
           <MainText class="font-semibold text-primary-700 dark:text-primary-500">
             Iterando evolucionamos.
