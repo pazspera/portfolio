@@ -8,7 +8,7 @@ const projects = [
     title: "Rediseño de sitio institucional",
     text: "Reestructuración desde cero con foco en usabilidad, actualización visual de la identidad de marca y desarrollo de componentes consistentes a través de un sistema de diseño personalizado.",
     // agregar ruta para btn
-    src: new URL("../assets/card-institutional-redesign.jpg", import.meta.url).href,
+    src: "/images/card-institutional-redesign.jpg",
     alt: "Mockups de proyecto de rediseño de sitio institucional",
     to: { name: 'rediseno' }
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "Contenido estratégico para redes",
     text: "Desarrollo de piezas y textos para campañas en redes sociales, ajustados a la voz y público de cada marca. Las acciones buscan mejorar la interacción y el posicionamiento orgánico.",
     // agregar ruta para btn
-    src: new URL("../assets/card-contenido-redes.jpg", import.meta.url).href,
+    src: "/images/card-contenido-redes.jpg",
     alt: "Mockups de publicaciones para redes sociales",
     to: { name: 'redes' }
   }
