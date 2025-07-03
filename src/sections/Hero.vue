@@ -32,7 +32,7 @@ import RoleLabel from "../components/typography/RoleLabel.vue";
         </div>
         <!-- Img -->
         <div class="md:col-span-3 md:col-start-6 self-center flex flex-col items-center justify-center">
-          <img src="/src/assets/bio.png" alt="Paz Spera" class="max-w-2xs md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0" />
+          <img src="/images/bio.png" alt="Paz Spera" class="max-w-2xs md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0" />
             <div class="bg-primary-400 bg-opacity-60 text-black dark:bg-primary-200 text-sm lg:text-lg py-2 px-4 rounded-sm z-10 -mt-8 relative">
               <div class="flex flex-col items-center">
                 <RoleLabel>
