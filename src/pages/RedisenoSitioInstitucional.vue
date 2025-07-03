@@ -55,7 +55,7 @@ const conclusions: Conclusion[] = [
       alt: "Capas superpuestas de un diseño"
     },
     title: "Organizar para avanzar",
-    text: "Dividir el proyecto en etapas y sprints ayuda a sostener el avance, incluso cuando hay urgencias diarias. Sin planificación, es fácil quedar atrapada en lo inmediato y no llegar a los objetivos del rediseño.",
+    text: "Dividir el proyecto en etapas y sprints ayuda a sostener el avance, incluso cuando hay urgencias diarias. Sin planificación, es fácil quedar atrapada en lo inmediato y no llegar a los objetivos.",
     class: "md:col-span-4"
   },
   {
@@ -65,7 +65,7 @@ const conclusions: Conclusion[] = [
       alt: "Mapa con un plan estratégico detrás de una pieza de ajedrez"
     },
     title: "Construir con visión",
-    text: "La urgencia empuja a improvisar, pero sin organización solo se construyen parches. Apostar al orden desde el principio es lo que permite crecer con foco, claridad y solidez en el tiempo.",
+    text: "La urgencia empuja a improvisar y sin organización solo se construyen parches. Apostar al orden desde el principio es lo que permite crecer con foco, claridad y solidez en el tiempo.",
     class: "md:col-span-4 md:col-start-3"
   },
 ]
@@ -99,7 +99,7 @@ const methodology: ItemEnfoque[] = [
   {
     id: 3,
     title: "Wireframes y prototipos",
-    text: "Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar flujos según urgencia de promover ciertos servicios."
+    text: "Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar el contenido según la urgencia de promover ciertos servicios."
   },
   {
     id: 4,
@@ -119,7 +119,7 @@ const methodology: ItemEnfoque[] = [
   {
     id: 7,
     title: "Materiales promocionales",
-    text: "Diseñé presentaciones comerciales y flyers digitales para email marketing y propuestas a clientes potenciales. Estas piezas reflejaron la nueva organización de servicios, detallando soluciones y explicando la oferta de servicios."
+    text: "Diseñé presentaciones comerciales y flyers digitales para email marketing y propuestas a clientes potenciales. Estas piezas reflejaron la nueva organización de servicios, detallando soluciones y explicando sus beneficios principales."
   }
 ]
 
@@ -156,7 +156,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
       Rediseño de sitio institucional
     </template>
     <template #text>
-      Mejoré la experiencia de usuario, reorganizando la navegación y reforzando la comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
+      Adapté una nueva identidad de marca y reorganicé la presentación y comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
     </template>
   </ProjectHero>
 
