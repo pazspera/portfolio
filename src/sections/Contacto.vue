@@ -8,6 +8,7 @@ import { reactive, computed, ref } from "vue";
 import useVuelidate from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
 import emailjs from "@emailjs/browser";
+import { useRouter } from "vue-router";
 
 type ContactForm = {
   name: string,
@@ -21,6 +22,8 @@ const sheetURL = import.meta.env.VITE_SHEET_URL;
 const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+const router = useRouter(); 
 
 const form = reactive<ContactForm>({
   name: "",
@@ -84,6 +87,9 @@ const handleSubmit = async () => {
       form.name = "";
       form.email = "";
       form.message = "";
+
+      // navigate to thank you page
+      router.push({ name: "gracias" });
 
     } catch (error) {
       submitError.value = `Algo falló en el envío. No sos vos, soy yo. Podés escribirme directamente a <a href="mailto:spera.paz@gmail.com" class="underline">spera.paz@gmail.com</a>.`;
