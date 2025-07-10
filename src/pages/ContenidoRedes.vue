@@ -12,6 +12,7 @@ import { useDocumentTitle } from '../composables/useDocumentTitle';
 
 import type { SliderImage } from '../types/imageSlider';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
+import type { Tech } from '../types/techChips';
 
 useDocumentTitle("Contenido estratégico para redes - Paz Spera");
 
@@ -137,6 +138,10 @@ const conclusions: Conclusion[] = [
     text: "La planificación anticipada y la validación temprana con el cliente son cruciales para un flujo de trabajo eficiente. Aseguran la coherencia de los temas, minimizan correcciones y optimizan la gestión de tiempo y recursos.",
     class: "md:col-span-4 md:col-start-3"
   },
+]
+
+const techStack: Tech[] = [
+{ src: '/src/assets/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
 ]
 
 const sliderTelemarketingAgency: SliderImage[] = [
@@ -289,7 +294,7 @@ const sliderTranslationAgency: SliderImage[] = [
     </ProjectHero>
 
     <!-- Resumen -->
-    <ProjectResumen>
+    <ProjectResumen :techStack="techStack">
       <template #summary>
         Lideré la estrategia de contenido y ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas y el diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn). También me encargué de la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
       </template>

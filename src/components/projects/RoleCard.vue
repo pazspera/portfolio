@@ -31,10 +31,5 @@ import MainText from '../typography/MainText.vue';
         <slot name="duration"></slot>
       </MainText>
     </div>
-    <div class="py-2">
-      <SecondaryTitle>
-        Tecnologías utilizadas
-      </SecondaryTitle>
-    </div>
   </div>
 </template>
