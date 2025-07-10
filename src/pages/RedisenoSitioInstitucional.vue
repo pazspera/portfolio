@@ -10,6 +10,7 @@ import CaptionText from '../components/typography/CaptionText.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/proyects";
+import type { Tech } from '../types/techChips';
 
 import { VueCompareImage } from 'vue3-compare-image';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
@@ -141,6 +142,14 @@ const impact: ItemImpacto[] = [
   }
 ]
 
+const techStack: Tech[] = [
+{ src: '/src/assets/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
+{ src: '/src/assets/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
+{ src: '/src/assets/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
+{ src: '/src/assets/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+{ src: '/src/assets/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
+];
+
 useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
 
 </script>
@@ -161,7 +170,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
   </ProjectHero>
 
   <!-- Resumen -->
-  <ProjectResumen>
+  <ProjectResumen :techStack="techStack">
     <template #summary>
       Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
     </template>

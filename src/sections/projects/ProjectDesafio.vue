@@ -3,6 +3,7 @@ import type { Desafio } from '../../types/proyects';
 import SectionTitle from '../../components/typography/SectionTitle.vue';
 import MainText from '../../components/typography/MainText.vue';
 
+
 defineProps<{
   desafios: Desafio[],
 }>();

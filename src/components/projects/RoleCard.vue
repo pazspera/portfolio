@@ -2,8 +2,6 @@
 import SecondaryTitle from '../typography/SecondaryTitle.vue';
 import MainText from '../typography/MainText.vue';
 
-
-
 </script>
 
 <template>
