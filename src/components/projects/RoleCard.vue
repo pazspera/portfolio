@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import SecondaryTitle from '../typography/SecondaryTitle.vue';
 import MainText from '../typography/MainText.vue';
+
+
+
 </script>
 
 <template>
@@ -29,6 +32,11 @@ import MainText from '../typography/MainText.vue';
       <MainText>
         <slot name="duration"></slot>
       </MainText>
+    </div>
+    <div class="py-2">
+      <SecondaryTitle>
+        Tecnologías utilizadas
+      </SecondaryTitle>
     </div>
   </div>
 </template>

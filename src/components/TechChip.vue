@@ -1,9 +1,5 @@
 <script setup lang="ts">
-type Tech = {
-  src: string,
-  alt: string,
-  label: string
-}
+import type { Tech } from '../types/techChips';  
 
 defineProps<{
   tech: Tech;
