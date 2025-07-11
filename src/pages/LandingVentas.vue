@@ -145,7 +145,7 @@ const conclusions: Conclusion[] = [
     </ProjectHero>
 
     <!-- Resumen -->
-    <ProjectResumen :techStack="techStack">
+    <ProjectResumen :techStack="techStack" :url="'https://liquid-sound.com.ar/'">
       <template #summary>
         Diseñé y desarrollé una landing page comercial para Liquid Sound, una empresa de insumos de higiene y asepsia. El desafío fue pasar de un enfoque institucional a uno orientado a ventas directas, optimizando la captación de leads de alto valor. Prioricé la creación de contenido persuasivo, orientando la experiencia de usuarios en la generación de prospectos. Implementé el sitio con React y Material UI, incluyendo automatización de formularios y gestión de leads.
       </template>

@@ -8,6 +8,7 @@ import type { Tech } from "../../types/techChips";
 
 defineProps<{
   techStack: Tech[],
+  url?: string,
 }>();
 
 </script>
@@ -36,7 +37,7 @@ defineProps<{
         </div>
       </div>
       <!-- Rol -->
-      <RoleCard :techStack="techStack">
+      <RoleCard :techStack="techStack" :url="url">
         <template #role>
           <slot name="role"></slot>
         </template>

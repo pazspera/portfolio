@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import SecondaryTitle from '../typography/SecondaryTitle.vue';
 import MainText from '../typography/MainText.vue';
+import ButtonContained from '../ButtonContained.vue';
+
+defineProps<{
+  url?: string,
+}>();
 
 </script>
 
@@ -30,6 +35,11 @@ import MainText from '../typography/MainText.vue';
       <MainText>
         <slot name="duration"></slot>
       </MainText>
+    </div>
+    <div v-if="url" class="pt-2 pb-4">
+      <ButtonContained :href="url" class="max-w-fit" size="small">
+        Visitar sitio
+      </ButtonContained>
     </div>
   </div>
 </template>
