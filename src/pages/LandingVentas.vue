@@ -3,6 +3,7 @@ import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
+import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import ButtonContained from '../components/ButtonContained.vue';
@@ -78,7 +79,7 @@ const impact: ItemImpacto[] = [
   {
     id: 2,
     title: "Refuerzo de la identidad de marca",
-    text: "La optimización del contenido y el diseño no solo informan, sino que también consolidan la imagen del cliente como un proveedor confiable y experto. Esto genera una mayor confianza en el público objetivo y destaca la relevancia de la marca para satisfacer sus requerimientos específicos."
+    text: "La optimización del contenido y el diseño no solo informan, sino que también consolidan la imagen de Liquid Sound como un proveedor confiable y experto. Esto genera una mayor confianza en el público objetivo y destaca la relevancia de la marca para satisfacer sus requerimientos específicos."
   }
 ]
 
@@ -130,6 +131,18 @@ const conclusions: Conclusion[] = [
 <template>
   <div>
     <ReadingProgressBar/>
+
+    <ProjectHero :imgHero="{
+      imgSrc: '/images/mockup_landing_ventas.png',
+      imgAlt: 'Mockup de notebook mostrando una pantalla de la landing page optimizada para ventas'
+    }">
+      <template #title>
+        Landing optimizada para ventas
+      </template>
+      <template #text>
+        Diseñé y desarrollé una sitio web comercial para Liquid Sound, reorientando su presencia de marca hacia la venta directa y la captación de leads calificados.
+      </template>
+    </ProjectHero>
 
     <!-- Resumen -->
     <ProjectResumen :techStack="techStack">
