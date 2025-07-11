@@ -170,7 +170,7 @@ const conclusions: Conclusion[] = [
     </section>
 
     <!-- Impacto -->
-    <ProjectImpacto :listaImpacto="impact" />
+    <ProjectImpacto :listaImpacto="impact" class="pb-10" />
 
     <!-- Aprendizajes -->
     <ProjectConclusion :conclusions="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />
