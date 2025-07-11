@@ -291,7 +291,7 @@ const sliderTranslationAgency: SliderImage[] = [
       <template #text>
         Diseñé y ejecuté estrategias de UX Writing para potenciar la comunicación, la presencia digital y el engagement de dos agencias B2B en mercados especializados.
       </template>
-    </ProjectHero>
+    </ProjectHero>  
 
     <!-- Resumen -->
     <ProjectResumen :techStack="techStack">
@@ -299,7 +299,7 @@ const sliderTranslationAgency: SliderImage[] = [
         Lideré la estrategia de contenido y ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas y el diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn). También me encargué de la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
       </template>
       <template #role>
-        UX Writer, Content Strategist, Diseñadora UI
+        Copywriter y diseñadora gráfica
       </template>
       <template #client>
         Agencia de telemarketing y generación de leads B2B y agencia de traducción global
