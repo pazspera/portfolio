@@ -3,9 +3,11 @@ import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
+import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
+import ButtonContained from '../components/ButtonContained.vue';
 
-import type { Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects';
+import type { Desafio, ItemEnfoque, ItemImpacto, Conclusion } from '../types/proyects';
 import type { Tech } from '../types/techChips';
 
 import { useDocumentTitle } from '../composables/useDocumentTitle';
@@ -73,13 +75,55 @@ const impact: ItemImpacto[] = [
   }
 ]
 
+const conclusions: Conclusion[] = [
+  {
+    id: 1,
+    img: {
+      src: "/src/assets/landing-ventas-propuesta-valor.png",
+      alt: "Manos sosteniendo piezas de un rompecabezas"
+    },
+    title: "Entender la propuesta de valor",
+    text: "Sentarse a hablar con el cliente es fundamental para destilar los puntos fuertes de su propuesta. El desafío está en presentarlos persuasivamente, conectando directamente con las necesidades y problemas de la buyer persona.",
+    class: "md:col-span-4"
+  },
+  {
+    id: 2,
+    img: {
+      src: "/src/assets/landing-ventas-simple.png",
+      alt: "Tiro al blanco con una flecha en el medio"
+    },
+    title: "Lo simple es más claro",
+    text: "Priorizar la efectividad del mensajes es fundamental. Si un diseño es atractivo pero confunde o distrae, no sirve. El objetivo principal es que el usuario entienda la propuesta de valor y quitar todos los elementos que compitan con la comprensión de este punto. ",
+    class: "md:col-span-4"
+  },
+  {
+    id: 3,
+    img: {
+      src: "/src/assets/landing-ventas-soporte.png",
+      alt: "Sitio web con un engranaje para seleccionar preferencias"
+    },
+    title: "Soporte integral",
+    text: "Ofrecer un producto completo implica un compromiso más allá de la entrega. Proveer soporte para solucionar inconvenientes construye una relación sólida y de confianza con el cliente a largo plazo.",
+    class: "md:col-span-4"
+  },
+  {
+    id: 4,
+    img: {
+      src: "/src/assets/landing-ventas-audiencia.png",
+      alt: "Iconos de cuatro personas, una está destacada"
+    },
+    title: "Enfoque estratégico en la audiencia",
+    text: "Alinear la estrategia de contenido con la rentabilidad del cliente es clave. Priorizar sectores específicos para la landing optimiza el mensaje y direcciona los recursos de marketing hacia audiencias con mayor retorno de inversión.",
+    class: "md:col-span-4"
+  },
+]
+
 </script>
 
 <template>
   <div>
     <ReadingProgressBar/>
 
-    
     <!-- Resumen -->
     <ProjectResumen :techStack="techStack">
       <template #summary>
@@ -105,5 +149,14 @@ const impact: ItemImpacto[] = [
     <!-- Impacto -->
     <ProjectImpacto :listaImpacto="impact" />
 
+    <!-- Aprendizajes -->
+    <ProjectConclusion :conclusions="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />
+
+    <!-- Botón a proyectos -->
+    <section class="my-8">
+      <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
+        Ver más proyectos
+      </ButtonContained>
+    </section> 
   </div>
 </template>
