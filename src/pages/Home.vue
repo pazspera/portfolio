@@ -10,8 +10,10 @@ useDocumentTitle("Paz Spera")
 </script>
 
 <template>
-  <Hero />
-  <Proyectos />
-  <AcercaDe />
-  <Contacto />
+  <section>
+    <Hero />
+    <Proyectos />
+    <AcercaDe />
+    <Contacto />
+  </section>
 </template>

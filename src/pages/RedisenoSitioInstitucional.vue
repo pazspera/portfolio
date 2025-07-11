@@ -155,88 +155,90 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
 </script>
 
 <template>
-  <ReadingProgressBar/>
+  <section>
+    <ReadingProgressBar/>
 
-  <ProjectHero :imgHero="{
-    imgSrc: '/images/mockup_rediseno_institucional.png',
-    imgAlt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'
-  }">
-    <template #title>
-      Rediseño de sitio institucional
-    </template>
-    <template #text>
-      Adapté una nueva identidad de marca y reorganicé la presentación y comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
-    </template>
-  </ProjectHero>
+    <ProjectHero :imgHero="{
+      imgSrc: '/images/mockup_rediseno_institucional.png',
+      imgAlt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'
+    }">
+      <template #title>
+        Rediseño de sitio institucional
+      </template>
+      <template #text>
+        Adapté una nueva identidad de marca y reorganicé la presentación y comunicación de servicios para una agencia de telemarketing y generación de leads B2B.
+      </template>
+    </ProjectHero>
 
-  <!-- Resumen -->
-  <ProjectResumen :techStack="techStack">
-    <template #summary>
-      Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
-    </template>
-    <template #role>
-      Diseñadora UX/UI y desarrolladora frontend (única responsable de investigación, diseño y desarrollo)
-    </template>
-    <template #client>
-      Agencia de telemarketing y generación de leads B2B
-    </template>
-    <template #duration>
-      7 meses
-    </template>
-  </ProjectResumen>
+    <!-- Resumen -->
+    <ProjectResumen :techStack="techStack">
+      <template #summary>
+        Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
+      </template>
+      <template #role>
+        Diseñadora UX/UI y desarrolladora frontend (única responsable de investigación, diseño y desarrollo)
+      </template>
+      <template #client>
+        Agencia de telemarketing y generación de leads B2B
+      </template>
+      <template #duration>
+        7 meses
+      </template>
+    </ProjectResumen>
 
-  <!-- Desafío -->
-  <ProjectDesafio :desafios="challenges" />
+    <!-- Desafío -->
+    <ProjectDesafio :desafios="challenges" />
 
-  <!-- Image compare home -->
-  <section class="py-6">
-    <VueCompareImage 
-      :leftImage="imgOldHome" 
-      :rightImage="imgNewHome" 
-      leftImageAlt="Versión anterior del hero y sección principal del sitio institucional"
-      rightImageAlt="Versión rediseñada del hero y sección principal del sitio institucional"
-      :keyboard="true" 
-      :keyboardStep="0.1"
-      sliderLineColor="#033035"
-      :sliderLineWidth="3"
-      :sliderPositionPercentage="0.5"
-    />
-    <CaptionText>
-      Rediseño de la página de inicio del sitio institucional
-    </CaptionText>
+    <!-- Image compare home -->
+    <section class="py-6">
+      <VueCompareImage 
+        :leftImage="imgOldHome" 
+        :rightImage="imgNewHome" 
+        leftImageAlt="Versión anterior del hero y sección principal del sitio institucional"
+        rightImageAlt="Versión rediseñada del hero y sección principal del sitio institucional"
+        :keyboard="true" 
+        :keyboardStep="0.1"
+        sliderLineColor="#033035"
+        :sliderLineWidth="3"
+        :sliderPositionPercentage="0.5"
+      />
+      <CaptionText>
+        Rediseño de la página de inicio del sitio institucional
+      </CaptionText>
+    </section>
+
+    <!-- Enfoque y proceso -->
+    <ProjectEnfoque :itemsEnfoque="methodology" /> 
+
+    <!-- Image compare video -->
+    <section class="py-6">
+      <VueCompareImage
+        :leftImage="imgOldVideo"
+        :rightImage="imgNewVideo" 
+        leftImageAlt="Versión anterior de la página de producción de video"
+        rightImageAlt="Versión anterior de la página de producción de video"
+        :keyboard="true"
+        :keyboardStep="0.1"
+        sliderLineColor="#033035"
+        :sliderLineWidth="3"
+        :sliderPositionPercentage="0.5"
+      />
+      <CaptionText>
+        Rediseño de la página de producción de video
+      </CaptionText>
+    </section>
+
+    <!-- Impacto -->
+    <ProjectImpacto :listaImpacto="impact" />
+
+    <!-- Aprendizajes -->
+    <ProjectConclusion :conclusions="conclusions" />
+
+    <!-- Botón a proyectos -->
+    <section class="my-8">
+      <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
+        Ver más proyectos
+      </ButtonContained>
+    </section> 
   </section>
-
-  <!-- Enfoque y proceso -->
-  <ProjectEnfoque :itemsEnfoque="methodology" /> 
-
-  <!-- Image compare video -->
-  <section class="py-6">
-    <VueCompareImage
-      :leftImage="imgOldVideo"
-      :rightImage="imgNewVideo" 
-      leftImageAlt="Versión anterior de la página de producción de video"
-      rightImageAlt="Versión anterior de la página de producción de video"
-      :keyboard="true"
-      :keyboardStep="0.1"
-      sliderLineColor="#033035"
-      :sliderLineWidth="3"
-      :sliderPositionPercentage="0.5"
-    />
-    <CaptionText>
-      Rediseño de la página de producción de video
-    </CaptionText>
-  </section>
-
-  <!-- Impacto -->
-  <ProjectImpacto :listaImpacto="impact" />
-
-  <!-- Aprendizajes -->
-  <ProjectConclusion :conclusions="conclusions" />
-
-  <!-- Botón a proyectos -->
-  <section class="my-8">
-    <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
-      Ver más proyectos
-    </ButtonContained>
-  </section> 
 </template>

@@ -129,7 +129,7 @@ const conclusions: Conclusion[] = [
 </script>
 
 <template>
-  <div>
+  <section>
     <ReadingProgressBar/>
 
     <ProjectHero :imgHero="{
@@ -214,5 +214,5 @@ const conclusions: Conclusion[] = [
         Ver más proyectos
       </ButtonContained>
     </section> 
-  </div>
+  </section>
 </template>

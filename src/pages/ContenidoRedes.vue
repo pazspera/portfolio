@@ -278,7 +278,7 @@ const sliderTranslationAgency: SliderImage[] = [
 </script>
 
 <template>
-  <div>
+  <section>
     <ReadingProgressBar/>
   
     <ProjectHero :imgHero="{
@@ -333,5 +333,5 @@ const sliderTranslationAgency: SliderImage[] = [
         Ver más proyectos
       </ButtonContained>
     </section> 
-  </div>
+  </section>
 </template>
