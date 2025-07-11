@@ -11,6 +11,8 @@ import CaptionText from '../components/typography/CaptionText.vue';
 import { VueCompareImage } from 'vue3-compare-image';
 import imgProductsWireframe  from "../assets/slider-landing-nuestros-productos-wireframe.jpg";
 import imgProductsFinal from "../assets/slider-landing-nuestros-productos-final.jpg";
+import imgWireframe from "../assets/slider-landing-wireframe.jpg";
+import imgFinal from "../assets/slider-landing-final.jpg";
 
 import type { Desafio, ItemEnfoque, ItemImpacto, Conclusion } from '../types/proyects';
 import type { Tech } from '../types/techChips';
@@ -147,6 +149,24 @@ const conclusions: Conclusion[] = [
 
     <!-- Desafío -->
     <ProjectDesafio :desafios="challenges" />
+
+    <!-- Image compare wireframe y sitio final -->
+    <section class="py-6">
+      <VueCompareImage 
+        :leftImage="imgWireframe"
+        :rightImage="imgFinal"
+        leftImageAlt="Wireframe del hero y sección Por qué elegirnos"
+        rigthImageAlt="Diseño final del hero y sección Por qué elegirnos"
+        :keyboard="true"
+        :keyboardStep="0.1"
+        sliderLineColor="#033035"
+        :sliderLineWidth="3"
+        :sliderPositionPercentage="0.5"
+      />
+      <CaptionText>
+        Proceso de diseño de las secciones de Hero y ¿Por qué elegirnos?
+      </CaptionText>
+    </section>
 
     <!-- Enfoque y metodología -->
     <ProjectEnfoque :itemsEnfoque="methodology" />
