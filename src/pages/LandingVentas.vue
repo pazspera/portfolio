@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+import ProjectResumen from '../sections/projects/ProjectResumen.vue';
+import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 
 import type { Desafio } from '../types/proyects';
+import type { Tech } from '../types/techChips';
 
 import { useDocumentTitle } from '../composables/useDocumentTitle';
 
@@ -22,12 +25,35 @@ const challenges: Desafio[] = [
   }
 ]
 
+const techStack: Tech[] = [
+  { src: '/src/assets/react-original.svg', alt: 'Logo de React', label: "React"},
+  { src: '/src/assets/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
+]
+
 </script>
 
 <template>
   <div>
+    <ReadingProgressBar/>
+
+    
+    <!-- Resumen -->
+    <ProjectResumen :techStack="techStack">
+      <template #summary>
+        Diseñé y desarrollé una landing page comercial para Liquid Sound, una empresa de insumos de higiene y asepsia. El desafío fue pasar de un enfoque institucional a uno orientado a ventas directas, optimizando la captación de leads de alto valor. Prioricé la creación de contenido persuasivo, orientando la experiencia de usuarios en la generación de prospectos. Implementé el sitio con React y Material UI, incluyendo automatización de formularios y gestión de leads.
+      </template>
+      <template #role>
+        Diseñadora UX/UI, Desarrolladora Frontend y Copywriter (única responsable del proyecto)
+      </template>
+      <template #client>
+        Liquid Sound (fabricación y distribución de insumos de higiene)
+      </template>
+      <template #duration>
+        5 semanas
+      </template>
+    </ProjectResumen>
 
     <!-- Desafío -->
-    <ProjectDesafio />
+    <ProjectDesafio :desafios="challenges" />
   </div>
 </template>
