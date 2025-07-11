@@ -13,6 +13,14 @@ const projects = [
     to: { name: 'rediseno' }
   },
   {
+    id: 2,
+    title: "Landing Optimizada para Ventas",
+    text: "Diseñé y desarrollé una landing page comercial para Liquid Sound, transformando su comunicación a un enfoque de ventas directo. El objetivo fue optimizar la captación de leads de alto valor y establecer una plataforma efectiva para campañas.",
+    src: "",
+    alt: "",
+    to: { name: "landing" }
+  },
+  {
     id: 3,
     title: "Contenido estratégico para redes",
     text: "Desarrollé artículos y piezas gráficas para campañas de redes sociales de empresas B2B. Se buscó mejorar el engagement y posicionamiento orgánico, definiendo una voz de marca que conecte con el público objetivo. ",

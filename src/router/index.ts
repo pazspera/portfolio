@@ -11,7 +11,7 @@ const router = createRouter({
     { path: "/", name: "home", component: Home },
     { path: "/rediseno-institucional", name: "rediseno", component: RedisenoSitioInstitucional },
     { path: "/contenido-redes", name: "redes", component: ContenidoRedes },
-    { path: "/landing-ventas", component: LandingVentas },
+    { path: "/landing-ventas", name: "landing", component: LandingVentas },
     { path: "/gracias-por-contactarse", name: "gracias", component: GraciasContactarse }
   ],
   scrollBehavior(to, from, savedPosition) {
