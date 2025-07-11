@@ -14,10 +14,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Landing Optimizada para Ventas",
+    title: "Landing optimizada para ventas",
     text: "Diseñé y desarrollé una landing page comercial para Liquid Sound, transformando su comunicación a un enfoque de ventas directo. El objetivo fue optimizar la captación de leads de alto valor y establecer una plataforma efectiva para campañas.",
-    src: "",
-    alt: "",
+    src: "/images/card-landing-ventas.jpg",
+    alt: "Mockup de landing optimizada para ventas",
     to: { name: "landing" }
   },
   {
