@@ -40,9 +40,11 @@ const isHovered = ref(false);
           {{ project.text }}
         </MainText>
       </div>
-      <ButtonContained class="mt-4 align-self-end" size="small" :to="project.to"> 
-        Ver caso de estudio
-      </ButtonContained>
+      <div class="flex flex-col justify-end grow">
+        <ButtonContained class="mt-4 align-self-end" size="small" :to="project.to"> 
+          Ver caso de estudio
+        </ButtonContained>
+      </div>
     </div>
   </article>
 </template>
