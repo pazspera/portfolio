@@ -6,6 +6,11 @@ import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import ButtonContained from '../components/ButtonContained.vue';
+import CaptionText from '../components/typography/CaptionText.vue';
+
+import { VueCompareImage } from 'vue3-compare-image';
+import imgProductsWireframe  from "../assets/slider-landing-nuestros-productos-wireframe.jpg";
+import imgProductsFinal from "../assets/slider-landing-nuestros-productos-final.jpg";
 
 import type { Desafio, ItemEnfoque, ItemImpacto, Conclusion } from '../types/proyects';
 import type { Tech } from '../types/techChips';
@@ -145,6 +150,24 @@ const conclusions: Conclusion[] = [
 
     <!-- Enfoque y metodología -->
     <ProjectEnfoque :itemsEnfoque="methodology" />
+
+    <!-- Image compare sección Nuestros Productos -->
+    <section class="py-6">
+      <VueCompareImage 
+        :leftImage="imgProductsWireframe"
+        :rightImage="imgProductsFinal"
+        leftImageAlt="Wireframe de la sección Nuestros Productos con diseño de capas superpuestas"
+        rightImageAlt="Sección final de la sección Nuestros Productos con dos columnas"
+        :keyboard="true"
+        :keyboardStep="0.1"
+        sliderLineColor="#033035"
+        :sliderLineWidth="3"
+        :sliderPositionPercentage="0.5"
+      />
+      <CaptionText>
+        Cambio de diseño en la sección de Nuestros Productos
+      </CaptionText>
+    </section>
 
     <!-- Impacto -->
     <ProjectImpacto :listaImpacto="impact" />
