@@ -6,7 +6,7 @@ import LandingVentas from "../pages/LandingVentas.vue";
 import GraciasContactarse from "../pages/GraciasContactarse.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: "/", name: "home", component: Home },
     { path: "/rediseno-institucional", name: "rediseno", component: RedisenoSitioInstitucional },
