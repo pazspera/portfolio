@@ -38,8 +38,8 @@ const challenges: Desafio[] = [
 ]
 
 const techStack: Tech[] = [
-  { src: '/src/assets/react-original.svg', alt: 'Logo de React', label: "React"},
-  { src: '/src/assets/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
+  { src: '/images/react-original.svg', alt: 'Logo de React', label: "React"},
+  { src: '/images/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
 ]
 
 const methodology: ItemEnfoque[] = [
@@ -87,7 +87,7 @@ const conclusions: Conclusion[] = [
   {
     id: 1,
     img: {
-      src: "/src/assets/landing-ventas-propuesta-valor.png",
+      src: "/images/landing-ventas-propuesta-valor.png",
       alt: "Manos sosteniendo piezas de un rompecabezas"
     },
     title: "Entender la propuesta de valor",
@@ -97,7 +97,7 @@ const conclusions: Conclusion[] = [
   {
     id: 2,
     img: {
-      src: "/src/assets/landing-ventas-simple.png",
+      src: "/images/landing-ventas-simple.png",
       alt: "Tiro al blanco con una flecha en el medio"
     },
     title: "Lo simple es más claro",
@@ -107,7 +107,7 @@ const conclusions: Conclusion[] = [
   {
     id: 3,
     img: {
-      src: "/src/assets/landing-ventas-soporte.png",
+      src: "/images/landing-ventas-soporte.png",
       alt: "Sitio web con un engranaje para seleccionar preferencias"
     },
     title: "Soporte integral",
@@ -117,7 +117,7 @@ const conclusions: Conclusion[] = [
   {
     id: 4,
     img: {
-      src: "/src/assets/landing-ventas-audiencia.png",
+      src: "/images/landing-ventas-audiencia.png",
       alt: "Iconos de cuatro personas, una está destacada"
     },
     title: "Enfoque estratégico en la audiencia",
