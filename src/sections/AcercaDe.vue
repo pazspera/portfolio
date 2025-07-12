@@ -6,20 +6,20 @@ import SecondaryTitle from "../components/typography/SecondaryTitle.vue";
 import TechChip from "../components/TechChip.vue";
 
 const techStack = [
-  { src: '/src/assets/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
-  { src: '/src/assets/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
-  { src: '/src/assets/react-original.svg', alt: 'Logo de React', label: "React"},
-  { src: '/src/assets/firebase-original.svg', alt: 'Logo de Firebase', label: "Firebase"},
-  { src: '/src/assets/php-original.svg', alt: 'Logo de PHP', label: "PHP"},
-  { src: '/src/assets/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
-  { src: '/src/assets/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
-  { src: '/src/assets/tailwindcss-original.svg', alt: 'Logo de Tailwind', label: "Tailwind"},
-  { src: '/src/assets/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
-  { src: '/src/assets/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
-  { src: '/src/assets/sass-original.svg', alt: 'Logo de Sass', label: "Sass"},
-  { src: '/src/assets/git-original.svg', alt: 'Logo de Git', label: "Git"},
-  { src: '/src/assets/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
-  { src: '/src/assets/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"}
+  { src: '/images/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+  { src: '/images/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
+  { src: '/images/react-original.svg', alt: 'Logo de React', label: "React"},
+  { src: '/images/firebase-original.svg', alt: 'Logo de Firebase', label: "Firebase"},
+  { src: '/images/php-original.svg', alt: 'Logo de PHP', label: "PHP"},
+  { src: '/images/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
+  { src: '/images/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
+  { src: '/images/tailwindcss-original.svg', alt: 'Logo de Tailwind', label: "Tailwind"},
+  { src: '/images/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
+  { src: '/images/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
+  { src: '/images/sass-original.svg', alt: 'Logo de Sass', label: "Sass"},
+  { src: '/images/git-original.svg', alt: 'Logo de Git', label: "Git"},
+  { src: '/images/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
+  { src: '/images/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"}
 ]
 
 </script>
