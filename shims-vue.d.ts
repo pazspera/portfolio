@@ -3,3 +3,12 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module '*.css' {
+  const content: Record<string, string>;
+  export default content;
+}
+declare module '*.scss' {
+  const content: Record<string, string>;
+  export default content;
+}
