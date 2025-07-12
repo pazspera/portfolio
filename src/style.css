@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Colors */
+  /* - Primary */
+  --color-primary-100: #C9F4F9;
+  --color-primary-200: #99E8F0;
+  --color-primary-300: #70D4DE;
+  --color-primary-400: #39BBC8;
+  --color-primary-500: #0FA3B1;
+  --color-primary-600: #108A96;
+  --color-primary-700: #096771;
+  --color-primary-800: #074F57;
+  --color-primary-900: #033035;
+  /* - Background */
+  --color-light: #FFEFEB;
+  --color-dark: #272838;
+  /* Typography */
+  --font-title: "Merriweather", "serif";
+  --font-text: "Karla", "sans-serif";
+  --font-logo: "Fredericka the Great", "serif";
+}
+
+
+@custom-utility {
+  .bg-light {
+    background-color: #ffefeb;
+  }
+
+  .bg-dark {
+    background-color: #272838;
+  }
+}
