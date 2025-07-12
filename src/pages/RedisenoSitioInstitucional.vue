@@ -22,7 +22,7 @@ const conclusions: Conclusion[] = [
   {
     id: 1,
     img: {
-      src: "/src/assets/rediseno-institucional-componentes.png",
+      src: "/images/rediseno-institucional-componentes.png",
       alt: "Pieza acercándose a completar un rompecabezas"
     },
     title: "Pensar en componentes",
@@ -32,7 +32,7 @@ const conclusions: Conclusion[] = [
   {
     id: 2,
     img: {
-      src: "/src/assets/rediseno-institucional-iterar.png",
+      src: "/images/rediseno-institucional-iterar.png",
       alt: "Calendario con un icono representando iteración dentro"
     },
     title: "Iterar, no esperar",
@@ -42,7 +42,7 @@ const conclusions: Conclusion[] = [
   {
     id: 3,
     img: {
-      src: "/src/assets/rediseno-institucional-idioma.png",
+      src: "/images/rediseno-institucional-idioma.png",
       alt: "Viñetas de diálogo con letras de distintos idiomas"
     },
     title: "Hablar el mismo idioma",
@@ -52,7 +52,7 @@ const conclusions: Conclusion[] = [
   {
     id: 4,
     img: {
-      src: "/src/assets/rediseno-institucional-organizar.png",
+      src: "/images/rediseno-institucional-organizar.png",
       alt: "Capas superpuestas de un diseño"
     },
     title: "Organizar para avanzar",
@@ -62,7 +62,7 @@ const conclusions: Conclusion[] = [
   {
     id: 5,
     img: {
-      src: "/src/assets/rediseno-institucional-vision.png",
+      src: "/images/rediseno-institucional-vision.png",
       alt: "Mapa con un plan estratégico detrás de una pieza de ajedrez"
     },
     title: "Construir con visión",
@@ -143,11 +143,11 @@ const impact: ItemImpacto[] = [
 ]
 
 const techStack: Tech[] = [
-{ src: '/src/assets/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
-{ src: '/src/assets/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
-{ src: '/src/assets/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
-{ src: '/src/assets/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
-{ src: '/src/assets/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
+{ src: '/images/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
+{ src: '/images/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
+{ src: '/images/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
+{ src: '/images/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+{ src: '/images/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
 ];
 
 useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
