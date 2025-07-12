@@ -24,10 +24,12 @@ import RoleLabel from "../components/typography/RoleLabel.vue";
             Cuando el diseño, el código y las palabras trabajan en equipo, los resultados no tardan en llegar.
           </HeroBlurb>
           <div class="mt-6 flex gap-6">
-            <ButtonContained href="#proyectos" size="medium">
+            <ButtonContained to="/#proyectos" size="medium">
               Ver proyectos
             </ButtonContained>
-            <ButtonText href="#contacto" label="Contacto"/>
+            <ButtonText to="/#contacto">
+              Contacto
+            </ButtonText>
           </div>
         </div>
         <!-- Img -->
