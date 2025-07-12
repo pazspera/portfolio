@@ -91,7 +91,7 @@ const conclusions: Conclusion[] = [
   {
     id: 1,
     img: {
-      src: "/src/assets/contenido-redes-valor.png",
+      src: "/images/contenido-redes-valor.png",
       alt: "Diamante sobresaliendo de una caja"
     },
     title: "Enfocarse en proveer valor",
@@ -101,7 +101,7 @@ const conclusions: Conclusion[] = [
   {
     id: 2,
     img: {
-      src: "/src/assets/contenido-redes-precision-cultural.png",
+      src: "/images/contenido-redes-precision-cultural.png",
       alt: "Grupo de personas conversando"
     },
     title: "La importancia de la precisión cultural",
@@ -111,7 +111,7 @@ const conclusions: Conclusion[] = [
   {
     id: 3,
     img: {
-      src: "/src/assets/contenido-redes-persuadir.png",
+      src: "/images/contenido-redes-persuadir.png",
       alt: "Viñetas de diálogo manteniendo una conversación"
     },
     title: "Conocer para persuadir",
@@ -121,7 +121,7 @@ const conclusions: Conclusion[] = [
   {
     id: 4,
     img: {
-      src: "/src/assets/contenido-redes-marca.png",
+      src: "/images/contenido-redes-marca.png",
       alt: "Lápiz dibujando un logo"
     },
     title: "Sin coherencia, no hay marca",
@@ -131,7 +131,7 @@ const conclusions: Conclusion[] = [
   {
     id: 5,
     img: {
-      src: "/src/assets/contenido-redes-eficiencia.png",
+      src: "/images/contenido-redes-eficiencia.png",
       alt: "Tablero de planificación"
     },
     title: "Planificar la eficiencia",
@@ -141,63 +141,63 @@ const conclusions: Conclusion[] = [
 ]
 
 const techStack: Tech[] = [
-{ src: '/src/assets/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
+{ src: '/images/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
 ]
 
 const sliderTelemarketingAgency: SliderImage[] = [
   {
     id: 1,
-    src: "/src/assets/slider-agencia-telemarketing-1.jpg",
+    src: "/images/slider-agencia-telemarketing-1.jpg",
     alt: "Portada de carrusel de caso de éxito dashboard encuestas de satisfacción"
   },
   {
     id: 2,
-    src: "/src/assets/slider-agencia-telemarketing-2.jpg",
+    src: "/images/slider-agencia-telemarketing-2.jpg",
     alt: "Explicación del desafío sobre las encuestas de satisfacción"
   },
   {
     id: 3,
-    src: "/src/assets/slider-agencia-telemarketing-3.jpg",
+    src: "/images/slider-agencia-telemarketing-3.jpg",
     alt: "Implementación de mejoras con un dashboard personalizado"
   },
   {
     id: 4,
-    src: "/src/assets/slider-agencia-telemarketing-4.jpg",
+    src: "/images/slider-agencia-telemarketing-4.jpg",
     alt: "Explicación de características principales del dashboard"
   },
   {
     id: 5,
-    src: "/src/assets/slider-agencia-telemarketing-5.jpg",
+    src: "/images/slider-agencia-telemarketing-5.jpg",
     alt: "Impacto de la solución planteada"
   },
   {
     id: 6,
-    src: "/src/assets/slider-agencia-telemarketing-6.jpg",
+    src: "/images/slider-agencia-telemarketing-6.jpg",
     alt: "Cierre con cta del carrusel"
   },
   {
     id: 7,
-    src: "/src/assets/slider-agencia-telemarketing-7.jpg",
+    src: "/images/slider-agencia-telemarketing-7.jpg",
     alt: "Portada de carrusel sobre los usos de telemarketing en ambientes B2B"
   },
   {
     id: 8,
-    src: "/src/assets/slider-agencia-telemarketing-8.jpg",
+    src: "/images/slider-agencia-telemarketing-8.jpg",
     alt: "Venta de productos y servicios"
   },
   {
     id: 9,
-    src: "/src/assets/slider-agencia-telemarketing-9.jpg",
+    src: "/images/slider-agencia-telemarketing-9.jpg",
     alt: "Verificación de datos"
   },
   {
     id: 10,
-    src: "/src/assets/slider-agencia-telemarketing-10.jpg",
+    src: "/images/slider-agencia-telemarketing-10.jpg",
     alt: "Generador de reuniones"
   },
   {
     id: 11,
-    src: "/src/assets/slider-agencia-telemarketing-11.jpg",
+    src: "/images/slider-agencia-telemarketing-11.jpg",
     alt: "Conclusión del carrusel con CTA"
   },
 ]
@@ -205,72 +205,72 @@ const sliderTelemarketingAgency: SliderImage[] = [
 const sliderTranslationAgency: SliderImage[] = [
 {
     id: 1,
-    src: "/src/assets/slider-agencia-traduccion-1.jpg",
+    src: "/images/slider-agencia-traduccion-1.jpg",
     alt: "Portada de carrusel sobre las implicaciones del uso de IA en traducciones legales"
   },
 {
     id: 2,
-    src: "/src/assets/slider-agencia-traduccion-2.jpg",
+    src: "/images/slider-agencia-traduccion-2.jpg",
     alt: "Desafíos en la precisión de terminología"
   },
 {
     id: 3,
-    src: "/src/assets/slider-agencia-traduccion-3.jpg",
+    src: "/images/slider-agencia-traduccion-3.jpg",
     alt: "Limitaciones en la adaptación multicultural"
   },
 {
     id: 4,
-    src: "/src/assets/slider-agencia-traduccion-4.jpg",
+    src: "/images/slider-agencia-traduccion-4.jpg",
     alt: "Repercusiones legales"
   },
 {
     id: 5,
-    src: "/src/assets/slider-agencia-traduccion-5.jpg",
+    src: "/images/slider-agencia-traduccion-5.jpg",
     alt: "Recomendaciones: complementar IA con revisión humana"
   },
 {
     id: 6,
-    src: "/src/assets/slider-agencia-traduccion-6.jpg",
+    src: "/images/slider-agencia-traduccion-6.jpg",
     alt: "Recomendaciones: mantenerse actualizado en novedades de IA"
   },
 {
     id: 7,
-    src: "/src/assets/slider-agencia-traduccion-7.jpg",
+    src: "/images/slider-agencia-traduccion-7.jpg",
     alt: "Recomendaciones: confirmar que se mantenga el compliance requerido"
   },
 {
     id: 8,
-    src: "/src/assets/slider-agencia-traduccion-8.jpg",
+    src: "/images/slider-agencia-traduccion-8.jpg",
     alt: "Cierre de carrusel con CTA"
   },
 {
     id: 9,
-    src: "/src/assets/slider-agencia-traduccion-9.jpg",
+    src: "/images/slider-agencia-traduccion-9.jpg",
     alt: "Portada carrusel sobre la norma ISO 9001"
   },
 {
     id: 10,
-    src: "/src/assets/slider-agencia-traduccion-10.jpg",
+    src: "/images/slider-agencia-traduccion-10.jpg",
     alt: "¿Qué es la norma ISO 9001?"
   },
 {
     id: 11,
-    src: "/src/assets/slider-agencia-traduccion-11.jpg",
+    src: "/images/slider-agencia-traduccion-11.jpg",
     alt: "¿Cómo ayuda a las empresas a mejorar sus operaciones?"
   },
 {
     id: 12,
-    src: "/src/assets/slider-agencia-traduccion-12.jpg",
+    src: "/images/slider-agencia-traduccion-12.jpg",
     alt: "Otros beneficios de implementar la norma ISO 9001"
   },
 {
     id: 13,
-    src: "/src/assets/slider-agencia-traduccion-13.jpg",
+    src: "/images/slider-agencia-traduccion-13.jpg",
     alt: "Certificación ISO 9001 de la agencia de traducción"
   },
 {
     id: 14,
-    src: "/src/assets/slider-agencia-traduccion-14.jpg",
+    src: "/images/slider-agencia-traduccion-14.jpg",
     alt: "Conclusión del carrusel con CTA"
   },
 ]
