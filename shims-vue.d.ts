@@ -12,3 +12,8 @@ declare module '*.scss' {
   const content: Record<string, string>;
   export default content;
 }
+
+declare module '@splidejs/vue-splide/css' {
+  const content: string; // O Record<string, string>;
+  export default content;
+}

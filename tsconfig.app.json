@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": false,
-    "skipLibCheck": true, // ¡Esta es la clave para ignorar errores de tipado en librerías!
+    "skipLibCheck": true, 
 
     /* Linting */
     "strict": true,
