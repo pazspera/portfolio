@@ -25,7 +25,7 @@ useDocumentTitle("Landing optimizada para ventas - Paz Spera");
 const challenges: Desafio[] = [
   {
     id: 1,
-    text: "Liquid Sound necesitaba una landing page comercial para campañas, ya que su sitio institucional limitaba la captación estratégica de leads."
+    text: "Liquid Sound necesitaba una landing page comercial para campañas. Su sitio institucional limitaba la captación estratégica de leads."
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const challenges: Desafio[] = [
   },
   {
     id: 3,
-    text: "La prioridad fue optimizar la experiencia de usuario y guiarlo hacia la acción, para reforzar el carácter comercial de la marca."
+    text: "La prioridad fue optimizar la experiencia de usuario y guiarlo hacia la acción, reforzando el carácter comercial de la marca."
   }
 ]
 
@@ -46,7 +46,7 @@ const methodology: ItemEnfoque[] = [
   {
     id: 1,
     title: "Focalizarse en el valor",
-    text: "Definí junto al cliente los aspectos más relevantes de su propuesta de valor para la audiencia objetivo. Esta comprensión profunda fue fundamental para estructurar el contenido de la landing de forma persuasiva."
+    text: "Definí junto al cliente los aspectos más relevantes de su propuesta de valor para la audiencia objetivo. Esta comprensión fue fundamental para estructurar el contenido de la landing de forma efectiva."
   },
   {
     id: 2,
@@ -61,7 +61,7 @@ const methodology: ItemEnfoque[] = [
   {
     id: 4,
     title: "Prototipado y validación",
-    text: "En la sección de Nuestros Productos, el diseño inicial incluí un recuadro superpuesto a la imagen principal. Una vez que el cliente pasó las imágenes finales, este diseño ocultaba parte del catálogo de productos. Sugerí reformular la sección por un enfoque más tradicional que priorizara la visibilidad de los productos."
+    text: "En la sección de Nuestros Productos, el diseño inicial incluía un recuadro superpuesto a la imagen principal. Una vez que el cliente pasó las imágenes finales, este diseño ocultaba parte del catálogo de productos. Sugerí reformular la sección por un enfoque más tradicional que priorizara la visibilidad de los productos."
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ const impact: ItemImpacto[] = [
   {
     id: 1,
     title: "Base para estrategias de venta",
-    text: "El cliente cuenta una herramienta diseñada específicamente para sus objetivos comerciales. Esta plataforma les permitirá direccionar el tráfico de campañas hacia una experiencia optimizada para la conversión."
+    text: "Liquid Sound cuenta con una herramienta diseñada específicamente para sus objetivos comerciales. Esta plataforma le permitirá direccionar el tráfico de campañas hacia una experiencia optimizada para la conversión."
   },
   {
     id: 2,
@@ -147,13 +147,13 @@ const conclusions: Conclusion[] = [
     <!-- Resumen -->
     <ProjectResumen :techStack="techStack" :url="'https://liquid-sound.com.ar/'">
       <template #summary>
-        Diseñé y desarrollé una landing page comercial para Liquid Sound, una empresa de insumos de higiene y asepsia. El desafío fue pasar de un enfoque institucional a uno orientado a ventas directas, optimizando la captación de leads de alto valor. Prioricé la creación de contenido persuasivo, orientando la experiencia de usuarios en la generación de prospectos. Implementé el sitio con React y Material UI, incluyendo automatización de formularios y gestión de leads.
+        Diseñé y desarrollé una landing page comercial para Liquid Sound, una empresa de insumos de higiene. El desafío fue pasar de un enfoque institucional a uno orientado a ventas directas, optimizando la captación de leads de alto valor. Prioricé la creación de contenido persuasivo, orientando la experiencia de usuarios en la generación de prospectos. Implementé el sitio con React y Material UI, incluyendo automatización de formularios y gestión de leads.
       </template>
       <template #role>
-        Diseñadora UX/UI, Desarrolladora Frontend y Copywriter (única responsable del proyecto)
+        Diseñadora UX/UI, desarrolladora frontend y copywriter (única responsable del proyecto)
       </template>
       <template #client>
-        Liquid Sound (fabricación y distribución de insumos de higiene)
+        Liquid Sound (empresa de fabricación y distribución de insumos de higiene)
       </template>
       <template #duration>
         5 semanas

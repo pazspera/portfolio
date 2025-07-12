@@ -176,7 +176,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
         Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
       </template>
       <template #role>
-        Diseñadora UX/UI y desarrolladora frontend (única responsable de investigación, diseño y desarrollo)
+        Diseñadora UX/UI, desarrolladora frontend y copywriter (única responsable de investigación, diseño y desarrollo)
       </template>
       <template #client>
         Agencia de telemarketing y generación de leads B2B
