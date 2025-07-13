@@ -48,8 +48,8 @@ const techStack = [
             Iterando evolucionamos.
           </MainText>
           
-          <div class="mt-8 py-6  bg-slate-200 rounded-2xl">  
-            <SecondaryTitle class="text-center mb-6  text-primary-900">
+          <div class="mt-8 py-6 px-6 md:px-0 bg-slate-200 rounded-2xl">  
+            <SecondaryTitle class="text-center mb-4  text-primary-900">
               Tecnologías que uso
             </SecondaryTitle>
             <div class="flex flex-wrap gap-3 px-2 lg:px-9 justify-center">
