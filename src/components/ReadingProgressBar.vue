@@ -29,7 +29,6 @@ const calculateScrollProgress = () => {
     progressBarTop.value = 0;
   }
 
-  console.log('RPB - isVisible:', navbarStore.isVisible, 'height:', navbarStore.height, 'top:', progressBarTop.value);
 }
 
 onMounted(() => {
