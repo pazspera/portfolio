@@ -9,6 +9,17 @@
 
 import type { Tech } from "./techChips";
 
+export type Challenge = {
+  id: number,
+  text: string,
+}
+
+export type MethodologyItem = {
+  id: number,
+  title: string,
+  text: string,
+}
+
 export interface ProjectHeroContent {
   imgSrc: string,
   imgAlt: string,
@@ -16,13 +27,18 @@ export interface ProjectHeroContent {
   text: string,
 }
 
-export interface ProjectResumenContent {
+export interface ProjectSummaryContent {
   techStack: Tech[];
   role: string,
   client: string,
   duration: string,
 }
 
-export interface ProjectDesafioContent {
-  
+export interface ProjectChallengeContent {
+  challenges: Challenge[],
 }
+
+export interface ProjectMethodologyContent {
+  items: MethodologyItem[];
+}
+
