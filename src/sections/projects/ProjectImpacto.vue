@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ItemImpacto } from '../../types/proyects';
+import type { ItemImpacto } from '../../types/projects';
 
 import SectionTitle from '../../components/typography/SectionTitle.vue';
 import ProjectTextCol from '../../components/projects/ProjectTextCol.vue';

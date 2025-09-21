@@ -9,7 +9,7 @@ import ButtonContained from "../components/ButtonContained.vue";
 import CaptionText from '../components/typography/CaptionText.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
-import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/proyects";
+import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/projects";
 import type { Tech } from '../types/techChips';
 
 import { VueCompareImage } from 'vue3-compare-image';

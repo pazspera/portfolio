@@ -11,7 +11,7 @@ import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
 
 import type { SliderImage } from '../types/imageSlider.ts';
-import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/proyects.ts';
+import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from '../types/projects.ts';
 import type { Tech } from '../types/techChips.ts';
 
 useDocumentTitle("Contenido estratégico para redes - Paz Spera");

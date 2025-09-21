@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Desafio } from '../../types/proyects';
+import type { Desafio } from '../../types/projects';
 import SectionTitle from '../../components/typography/SectionTitle.vue';
 import MainText from '../../components/typography/MainText.vue';
 

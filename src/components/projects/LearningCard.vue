@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SecondaryTitle from "../typography/SecondaryTitle.vue";
 import MainText from "../typography/MainText.vue";
-import type { Conclusion } from "../../types/proyects";
+import type { Conclusion } from "../../types/projects";
 
 defineProps<{
   conclusion: Conclusion;

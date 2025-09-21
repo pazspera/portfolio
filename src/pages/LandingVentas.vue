@@ -15,7 +15,7 @@ import imgProductsFinal from "../assets/slider-landing-nuestros-productos-final.
 import imgWireframe from "../assets/slider-landing-wireframe.jpg";
 import imgFinal from "../assets/slider-landing-final.jpg";
 
-import type { Desafio, ItemEnfoque, ItemImpacto, Conclusion } from '../types/proyects';
+import type { Desafio, ItemEnfoque, ItemImpacto, Conclusion } from '../types/projects';
 import type { Tech } from '../types/techChips';
 
 import { useDocumentTitle } from '../composables/useDocumentTitle';

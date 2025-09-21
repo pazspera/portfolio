@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SectionTitle from '../../components/typography/SectionTitle.vue';
 import LearningCard from '../../components/projects/LearningCard.vue';
-import type { Conclusion } from "../../types/proyects";
+import type { Conclusion } from "../../types/projects";
 
 defineProps<{
   conclusions: Conclusion[],
