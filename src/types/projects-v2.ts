@@ -9,17 +9,29 @@
 
 import type { Tech } from "./techChips";
 
-export type Challenge = {
+export type ChallengeItem = {
   id: number,
   text: string,
 }
 
-export type MethodologyItem = {
+export type ContentItem = {
   id: number,
   title: string,
   text: string,
 }
 
+export type TakeawayItem = {
+  id: number,
+  img: {
+    src: string,
+    alt: string,
+  },
+  title: string,
+  text: string,
+  class?: string,
+}
+
+// ProjectHero
 export interface ProjectHeroContent {
   imgSrc: string,
   imgAlt: string,
@@ -27,6 +39,7 @@ export interface ProjectHeroContent {
   text: string,
 }
 
+// ProjectResumen
 export interface ProjectSummaryContent {
   techStack: Tech[];
   role: string,
@@ -34,11 +47,18 @@ export interface ProjectSummaryContent {
   duration: string,
 }
 
+// ProjectDesafio
 export interface ProjectChallengeContent {
-  challenges: Challenge[],
+  challenges: ChallengeItem[],
 }
 
-export interface ProjectMethodologyContent {
-  items: MethodologyItem[];
+// ProjectEnfoque y ProjectImpacto
+// son iguales, se pueden unificar en un solo componente
+export interface ProjectListSection {
+  items: ContentItem[],
 }
 
+// ProjectConclusion
+export interface ProjectTakeawaysContent {
+  items: TakeawayItem[],
+}
