@@ -6,12 +6,13 @@ import ProjectTextCol from '../../components/projects/ProjectTextCol.vue';
 const props = defineProps<{
   title: string,
   items: ContentItem[],
+  class?: string,
 }>();
 
 </script>
 
 <template>
-  <section class="py-6">
+  <section class="py-6" :class="props.class">
     <SectionTitle class="text-primary-900 dark:text-primary-300 mb-8">
       {{ props.title }}
     </SectionTitle>

@@ -2,8 +2,7 @@
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
-import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
-import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
+import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from '../components/ButtonContained.vue';
 import ImageSlider from '../components/ImageSlider.vue';
@@ -316,13 +315,13 @@ const sliderTranslationAgency: SliderImage[] = [
     <ImageSlider :images="sliderTelemarketingAgency" caption="Ejemplos de carruseles diseñados para la agencia de telemarketing y generación de leads B2B"  />
 
     <!-- Enfoque y metodología -->
-    <ProjectEnfoque :itemsEnfoque="methodology" />
+    <ProjectListSection :items="methodology" :title="'Enfoque y metodología'" />
 
     <!-- Carrusel agencia traducción -->
     <ImageSlider :images="sliderTranslationAgency" caption="Ejemplos de carruseles diseñados para la agencia de traducción" />
 
     <!-- Impacto -->
-    <ProjectImpacto :listaImpacto="impact" />
+    <ProjectListSection :items="impact" :title="'Impacto'" />
 
     <!-- Aprendizajes -->
     <ProjectConclusion :conclusions="conclusions" />

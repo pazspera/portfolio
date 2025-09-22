@@ -2,9 +2,8 @@
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
-import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
+import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
-import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ButtonContained from "../components/ButtonContained.vue";
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
@@ -198,8 +197,8 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
       Rediseño de la página de inicio del sitio institucional
     </ImageCompare>
 
-    <!-- Enfoque y proceso -->
-    <ProjectEnfoque :itemsEnfoque="methodology" /> 
+    <!-- Enfoque y proceso --> 
+    <ProjectListSection :items="methodology" :title="'Enfoque y metodología'" />
 
     <!-- Image compare video -->
     <ImageCompare
@@ -212,7 +211,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
     </ImageCompare>
 
     <!-- Impacto -->
-    <ProjectImpacto :listaImpacto="impact" />
+    <ProjectListSection :items="impact" :title="'Impacto'" />
 
     <!-- Aprendizajes -->
     <ProjectConclusion :conclusions="conclusions" />

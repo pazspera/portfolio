@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
-import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
-import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
+import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
@@ -173,7 +172,7 @@ const conclusions: Conclusion[] = [
     </ImageCompare>
 
     <!-- Enfoque y metodología -->
-    <ProjectEnfoque :itemsEnfoque="methodology" />
+    <ProjectListSection :items="methodology" :title="'Enfoque y metodología'" />
 
     <!-- Image compare sección Nuestros Productos -->
     <ImageCompare
@@ -186,7 +185,7 @@ const conclusions: Conclusion[] = [
     </ImageCompare>
 
     <!-- Impacto -->
-    <ProjectImpacto :listaImpacto="impact" class="pb-10" />
+    <ProjectListSection :items="impact" :title="'Impacto'" :class="'pb-10'" />
 
     <!-- Aprendizajes -->
     <ProjectConclusion :conclusions="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />

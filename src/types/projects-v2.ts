@@ -56,6 +56,8 @@ export interface ProjectChallengeContent {
 // son iguales, se pueden unificar en un solo componente
 export interface ProjectListSection {
   items: ContentItem[],
+  title: string,
+  class?: string, 
 }
 
 // ProjectConclusion
