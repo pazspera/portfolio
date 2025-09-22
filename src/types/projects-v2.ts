@@ -23,10 +23,7 @@ export type ContentItem = {
 
 export type TakeawayItem = {
   id: number,
-  img: {
-    src: string,
-    alt: string,
-  },
+  img: ImageProps,
   title: string,
   text: string,
   class?: string,
