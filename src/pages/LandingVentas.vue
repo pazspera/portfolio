@@ -10,6 +10,7 @@ import ButtonContained from '../components/ButtonContained.vue';
 import CaptionText from '../components/typography/CaptionText.vue';
 
 import { VueCompareImage } from 'vue3-compare-image';
+import ImageCompare from '../components/ImageCompare.vue';
 import imgProductsWireframe  from "../assets/slider-landing-nuestros-productos-wireframe.jpg";
 import imgProductsFinal from "../assets/slider-landing-nuestros-productos-final.jpg";
 import imgWireframe from "../assets/slider-landing-wireframe.jpg";
@@ -164,43 +165,27 @@ const conclusions: Conclusion[] = [
     <ProjectDesafio :desafios="challenges" />
 
     <!-- Image compare wireframe y sitio final -->
-    <section class="py-6">
-      <VueCompareImage 
-        :leftImage="imgWireframe"
-        :rightImage="imgFinal"
-        leftImageAlt="Wireframe del hero y sección Por qué elegirnos"
-        rigthImageAlt="Diseño final del hero y sección Por qué elegirnos"
-        :keyboard="true"
-        :keyboardStep="0.1"
-        sliderLineColor="#033035"
-        :sliderLineWidth="3"
-        :sliderPositionPercentage="0.5"
-      />
-      <CaptionText>
-        Proceso de diseño de las secciones de Hero y ¿Por qué elegirnos?
-      </CaptionText>
-    </section>
+    <ImageCompare
+      :imgOld="imgWireframe"
+      :imgNew="imgFinal"
+      :altImgOld="'Wireframe del hero y sección Por qué elegirnos'"
+      :altImgNew="'Diseño final del hero y sección Por qué elegirnos'"
+    >
+      Proceso de diseño de las secciones de Hero y ¿Por qué elegirnos?
+    </ImageCompare>
 
     <!-- Enfoque y metodología -->
     <ProjectEnfoque :itemsEnfoque="methodology" />
 
     <!-- Image compare sección Nuestros Productos -->
-    <section class="py-6">
-      <VueCompareImage 
-        :leftImage="imgProductsWireframe"
-        :rightImage="imgProductsFinal"
-        leftImageAlt="Wireframe de la sección Nuestros Productos con diseño de capas superpuestas"
-        rightImageAlt="Sección final de la sección Nuestros Productos con dos columnas"
-        :keyboard="true"
-        :keyboardStep="0.1"
-        sliderLineColor="#033035"
-        :sliderLineWidth="3"
-        :sliderPositionPercentage="0.5"
-      />
-      <CaptionText>
-        Cambio de diseño en la sección de Nuestros Productos
-      </CaptionText>
-    </section>
+    <ImageCompare
+      :imgOld="imgProductsWireframe"
+      :imgNew="imgProductsFinal"
+      :altImgOld="'Wireframe de la sección Nuestros Productos con diseño de capas superpuestas'"
+      :altImgNew="'Sección final de la sección Nuestros Productos con dos columnas'"
+    >
+      Cambio de diseño en la sección de Nuestros Productos
+    </ImageCompare>
 
     <!-- Impacto -->
     <ProjectImpacto :listaImpacto="impact" class="pb-10" />

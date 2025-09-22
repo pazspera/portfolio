@@ -6,13 +6,11 @@ import ProjectEnfoque from '../sections/projects/ProjectEnfoque.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectImpacto from '../sections/projects/ProjectImpacto.vue';
 import ButtonContained from "../components/ButtonContained.vue";
-import CaptionText from '../components/typography/CaptionText.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
 import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/projects";
 import type { Tech } from '../types/techChips';
 
-import { VueCompareImage } from 'vue3-compare-image';
 import ImageCompare from '../components/ImageCompare.vue';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
 import imgNewHome from "../assets/institucional-nuevo-home.jpg";
@@ -200,43 +198,18 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
       Rediseño de la página de inicio del sitio institucional
     </ImageCompare>
 
-    <section class="py-6">
-      <VueCompareImage 
-        :leftImage="imgOldHome" 
-        :rightImage="imgNewHome" 
-        leftImageAlt="Versión anterior del hero y sección principal del sitio institucional"
-        rightImageAlt="Versión rediseñada del hero y sección principal del sitio institucional"
-        :keyboard="true" 
-        :keyboardStep="0.1"
-        sliderLineColor="#033035"
-        :sliderLineWidth="3"
-        :sliderPositionPercentage="0.5"
-      />
-      <CaptionText>
-        Rediseño de la página de inicio del sitio institucional
-      </CaptionText>
-    </section>
-
     <!-- Enfoque y proceso -->
     <ProjectEnfoque :itemsEnfoque="methodology" /> 
 
     <!-- Image compare video -->
-    <section class="py-6">
-      <VueCompareImage
-        :leftImage="imgOldVideo"
-        :rightImage="imgNewVideo" 
-        leftImageAlt="Versión anterior de la página de producción de video"
-        rightImageAlt="Versión anterior de la página de producción de video"
-        :keyboard="true"
-        :keyboardStep="0.1"
-        sliderLineColor="#033035"
-        :sliderLineWidth="3"
-        :sliderPositionPercentage="0.5"
-      />
-      <CaptionText>
-        Rediseño de la página de producción de video
-      </CaptionText>
-    </section>
+    <ImageCompare
+      :imgOld="imgOldVideo"
+      :imgNew="imgNewVideo"
+      :altImgOld="'Versión anterior de la página de producción de video'"
+      :altImgNew="'Versión anterior de la página de producción de video'"
+    >
+      Rediseño de la página de producción de video
+    </ImageCompare>
 
     <!-- Impacto -->
     <ProjectImpacto :listaImpacto="impact" />
