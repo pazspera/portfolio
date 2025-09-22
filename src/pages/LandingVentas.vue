@@ -7,9 +7,7 @@ import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import ButtonContained from '../components/ButtonContained.vue';
-import CaptionText from '../components/typography/CaptionText.vue';
 
-import { VueCompareImage } from 'vue3-compare-image';
 import ImageCompare from '../components/ImageCompare.vue';
 import imgProductsWireframe  from "../assets/slider-landing-nuestros-productos-wireframe.jpg";
 import imgProductsFinal from "../assets/slider-landing-nuestros-productos-final.jpg";
