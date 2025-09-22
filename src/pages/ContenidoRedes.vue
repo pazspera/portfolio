@@ -280,9 +280,9 @@ const sliderTranslationAgency: SliderImage[] = [
   <section>
     <ReadingProgressBar/>
   
-    <ProjectHero :imgHero="{
-      imgSrc: '/images/mockup_rrss.png',
-      imgAlt: 'Mockup de notebook con una página de Instagram con una publicación'
+    <ProjectHero :img="{
+      src: '/images/mockup_rrss.png',
+      alt: 'Mockup de notebook con una página de Instagram con una publicación'
     }">
       <template #title>
         Contenido estratégico para redes

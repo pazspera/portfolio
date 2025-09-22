@@ -130,9 +130,9 @@ const conclusions: Conclusion[] = [
   <section>
     <ReadingProgressBar/>
 
-    <ProjectHero :imgHero="{
-      imgSrc: '/images/mockup_landing_ventas.png',
-      imgAlt: 'Mockup de notebook mostrando una pantalla de la landing page optimizada para ventas'
+    <ProjectHero :img="{
+      src: '/images/mockup_landing_ventas.png',
+      alt: 'Mockup de notebook mostrando una pantalla de la landing page optimizada para ventas'
     }">
       <template #title>
         Landing optimizada para ventas
