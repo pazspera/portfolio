@@ -13,6 +13,7 @@ import type { Conclusion, Desafio, ItemEnfoque, ItemImpacto } from "../types/pro
 import type { Tech } from '../types/techChips';
 
 import { VueCompareImage } from 'vue3-compare-image';
+import ImageCompare from '../components/ImageCompare.vue';
 import imgOldHome from "../assets/institucional-viejo-home.jpg";
 import imgNewHome from "../assets/institucional-nuevo-home.jpg";
 import imgOldVideo from "../assets/institucional-viejo-video.jpg";
@@ -190,6 +191,15 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
     <ProjectDesafio :desafios="challenges" />
 
     <!-- Image compare home -->
+    <ImageCompare
+      :imgOld="imgOldHome"
+      :imgNew="imgNewHome"
+      :altImgOld="'Versión anterior del hero y sección principal del sitio institucional'"
+      :altImgNew="'Versión rediseñada del hero y sección principal del sitio institucional'"
+    >
+      Rediseño de la página de inicio del sitio institucional
+    </ImageCompare>
+
     <section class="py-6">
       <VueCompareImage 
         :leftImage="imgOldHome" 
