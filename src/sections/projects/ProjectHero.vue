@@ -1,14 +1,10 @@
 <script setup lang="ts">
+import { ImageProps } from '../../types/general';
 import HeroTitle from '../../components/typography/HeroTitle.vue';
 import HeroBlurb from "../../components/typography/HeroBlurb.vue";
 
-type ImgHero = {
-  imgSrc?: string,
-  imgAlt?: string,
-}
-
-defineProps<{
-  imgHero: ImgHero;
+const props = defineProps<{
+  img: ImageProps,
 }>();
 
 </script>
@@ -28,7 +24,7 @@ defineProps<{
          </div>
          <!-- Image -->
           <div class="md:col-span-4 md:col-start-5 lg:col-start-7 2xl:col-start-10 max-w-[100%] md:w-[52vw] md:max-lg:max-w-[55vw] lg:max-xl:max-w-[52vw] xl:max-w-[800px] 2xl:max-w-[800px] mb-[-7%] md:mb-[-2%] lg:ps-3 lg:ms-3 xl:ms-5 2xl:ms-12 transform translate-y-[12%] md:translate-y-0 md:translate-x-[3%]">
-            <img :src="imgHero.imgSrc" :alt="imgHero.imgAlt" class="w-full ">
+            <img :src="props.img.src" :alt="props.img.alt" class="w-full ">
           </div>
       </div>
     </div>

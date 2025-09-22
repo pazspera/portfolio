@@ -8,6 +8,7 @@
 */
 
 import type { Tech } from "./techChips";
+import { ImageProps } from "./general";
 
 export type ChallengeItem = {
   id: number,
@@ -33,8 +34,7 @@ export type TakeawayItem = {
 
 // ProjectHero
 export interface ProjectHeroContent {
-  imgSrc: string,
-  imgAlt: string,
+  img: ImageProps,
   title: string,
   text: string,
 }

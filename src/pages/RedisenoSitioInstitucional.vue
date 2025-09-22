@@ -156,9 +156,9 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
   <section>
     <ReadingProgressBar/>
 
-    <ProjectHero :imgHero="{
-      imgSrc: '/images/mockup_rediseno_institucional.png',
-      imgAlt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'
+    <ProjectHero :img="{
+      src: '/images/mockup_rediseno_institucional.png',
+      alt: 'Mockup de notebook mostrando una pantalla del rediseño del sitio institucional'
     }">
       <template #title>
         Rediseño de sitio institucional
