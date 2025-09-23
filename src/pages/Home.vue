@@ -5,7 +5,7 @@ import Contacto from "../sections/Contacto.vue";
 import Proyectos from '../sections/Proyectos.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
 
-useDocumentTitle("Paz Spera")
+useDocumentTitle("Paz Spera - Inicio")
 
 </script>
 
