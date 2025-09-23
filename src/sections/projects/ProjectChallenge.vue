@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import type { Desafio } from '../../types/projects';
+import { ProjectChallengeContent } from '../../types/projects-v2';
 import SectionTitle from '../../components/typography/SectionTitle.vue';
 import MainText from '../../components/typography/MainText.vue';
 
 
-defineProps<{
-  desafios: Desafio[],
-}>();
+defineProps<ProjectChallengeContent>();
 </script>
 
 <template>
@@ -19,9 +17,9 @@ defineProps<{
       </div>
       <div class="lg:col-span-8 ps-4 lg:ps-8">
         <ul>
-          <li v-for="desafio in desafios" :key="desafio.id" class="list-disc list-inside pb-3">
+          <li v-for="challenge in challenges" :key="challenge.id" class="list-disc list-inside pb-3">
             <MainText class="inline">
-              {{ desafio.text }}
+              {{ challenge.text }}
             </MainText>
           </li>
         </ul>

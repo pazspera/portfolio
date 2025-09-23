@@ -10,6 +10,7 @@ export type Conclusion = {
   class?: string,
 }
 
+// ChallengeItem
 export type Desafio = {
   id: number,
   text: string,

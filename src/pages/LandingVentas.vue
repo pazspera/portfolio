@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectHero from '../sections/projects/ProjectHero.vue';
@@ -159,7 +159,7 @@ const conclusions: Conclusion[] = [
     </ProjectResumen>
 
     <!-- Desafío -->
-    <ProjectDesafio :desafios="challenges" />
+    <ProjectChallenge :challenges="challenges" />
 
     <!-- Image compare wireframe y sitio final -->
     <ImageCompare

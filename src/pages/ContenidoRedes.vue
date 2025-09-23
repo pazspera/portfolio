@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
-import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
 import ButtonContained from '../components/ButtonContained.vue';
@@ -309,7 +309,7 @@ const sliderTranslationAgency: SliderImage[] = [
     </ProjectResumen>
 
     <!-- Desafío -->
-    <ProjectDesafio :desafios="challenges" />
+    <ProjectChallenge :challenges="challenges" />
 
     <!-- Carrusel agencia telemarketing -->
     <ImageSlider :images="sliderTelemarketingAgency" caption="Ejemplos de carruseles diseñados para la agencia de telemarketing y generación de leads B2B"  />

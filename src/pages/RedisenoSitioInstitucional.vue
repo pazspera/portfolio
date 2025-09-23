@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
-import ProjectDesafio from '../sections/projects/ProjectDesafio.vue';
+import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ButtonContained from "../components/ButtonContained.vue";
@@ -185,7 +185,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
     </ProjectResumen>
 
     <!-- Desafío -->
-    <ProjectDesafio :desafios="challenges" />
+    <ProjectChallenge :challenges="challenges" />
 
     <!-- Image compare home -->
     <ImageCompare
