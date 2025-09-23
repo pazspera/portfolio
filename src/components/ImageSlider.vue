@@ -1,16 +1,13 @@
 <script setup lang="ts">
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import type { Options } from '@splidejs/splide';
-import type { SliderImage } from '../types/imageSlider.ts';
+import type { ImageSliderContent } from '../types/imageSlider.ts';
 import CaptionText from './typography/CaptionText.vue';
 import { ref } from "vue";
 import VueEasyLightbox from 'vue-easy-lightbox';
 import '@splidejs/vue-splide/css';
 
-const props = defineProps<{
-  images: SliderImage[];
-  caption: string
-}>();
+const props = defineProps<ImageSliderContent>();
 
 const sliderOptions: Options = {
   perPage: 1,

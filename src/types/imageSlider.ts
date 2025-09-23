@@ -3,3 +3,8 @@ export type SliderImage = {
   src: string,
   alt: string,
 }
+
+export interface ImageSliderContent {
+  images: SliderImage[],
+  caption: string,
+}
