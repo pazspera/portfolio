@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="relative overflow-visible bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-4 sm:px-6 lg:px-8 pt-6 lg:pt-8 xl:pt-10 pb-8 sm:pb-12 md:pb-6 lg:pb-8 xl:pb-10 mb-10 rounded-br-[120px] md:rounded-r-[120px] md:rounded-br-none">
+  <section class="relative overflow-visible bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-6 sm:px-12 md:px-8 lg:px-10 pt-8 lg:pt-10 xl:pt-12 pb-8 sm:pb-12 md:pb-8 lg:pb-8 xl:pb-10 mb-10 rounded-br-[120px] md:rounded-r-[120px] md:rounded-br-none">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 2xl:grid-cols-18 gap-2">
         <!-- Text -->
