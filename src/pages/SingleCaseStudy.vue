@@ -14,6 +14,7 @@ import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectTakeaways from '../sections/projects/ProjectTakeaways.vue';
 import ImageSlider from '../components/ImageSlider.vue';
 import ImageCompare from '../components/ImageCompare.vue';
+import ReadingProgressBar from "../components/ReadingProgressBar.vue";
 
 // el slug después va a venir de route.params.slug
 const slug = "rediseno-institucional"
@@ -50,12 +51,17 @@ const componentsMap = {
 </script>
 
 <template>
-  <div v-if="project">
-    <div v-for="section in filteredSection" :key="section.type">
-      <component
-        :is="componentsMap[section.type]"
-        :content="section.content"
-      />
+  <section>
+    <ReadingProgressBar/>
+
+    <div v-if="project">
+      <div v-for="section in filteredSection" :key="section.type">
+        <component
+          :is="componentsMap[section.type]"
+          :content="section.content"
+        />
+      </div>
     </div>
-  </div>
+
+  </section>
 </template>
