@@ -10,6 +10,7 @@
 import type { Tech } from "./techChips";
 import { ImageProps } from "./general";
 import type { SliderImage } from "./imageSlider";
+import { ImageCompareContent } from "./imageCompare";
 
 export type ChallengeItem = {
   id: number,
@@ -76,3 +77,11 @@ export type ProjectSection =
 | { type: "ProjectImpact", content: ProjectListSection }
 | { type: "ProjectTakeaways", content: ProjectTakeawaysContent }
 | { type: "ProjectImageSlider", content: SliderImage}
+| { type: "ProjectImageCompare", content: ImageCompareContent }
+
+// Master Project type
+export interface Project {
+  id: string,
+  slug: string,
+  sections: ProjectSection[],
+}
