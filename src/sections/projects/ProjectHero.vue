@@ -3,7 +3,7 @@ import { ProjectHeroContent } from '../../types/projects-v2';
 import HeroTitle from '../../components/typography/HeroTitle.vue';
 import HeroBlurb from "../../components/typography/HeroBlurb.vue";
 
-const props = defineProps<{
+defineProps<{
   content: ProjectHeroContent
 }>();
 

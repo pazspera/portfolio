@@ -50,7 +50,6 @@ const componentsMap = {
 </script>
 
 <template>
-  <h1>Test</h1>
   <div v-if="project">
     <div v-for="section in filteredSection" :key="section.type">
       <component
