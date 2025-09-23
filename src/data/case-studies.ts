@@ -4,6 +4,7 @@ export const caseStudies: Project[] = [
   {
     id: "redesign-institutional-site",
     slug: "rediseno-institucional",
+    title: "Rediseño de sitio institucional - Paz Spera",
     sections: [
       {
         type: "ProjectHero",

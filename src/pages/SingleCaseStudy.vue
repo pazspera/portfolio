@@ -16,6 +16,8 @@ import ImageSlider from '../components/ImageSlider.vue';
 import ImageCompare from '../components/ImageCompare.vue';
 import ReadingProgressBar from "../components/ReadingProgressBar.vue";
 
+import { useDocumentTitle } from "../composables/useDocumentTitle";
+
 // el slug después va a venir de route.params.slug
 const slug = "rediseno-institucional"
 
@@ -46,6 +48,10 @@ const componentsMap = {
   ProjectTakeaways,
   ProjectImageSlider: ImageSlider,
   ProjectImageCompare: ImageCompare,
+}
+
+if(project) {
+  useDocumentTitle(project.title);
 }
 
 </script>

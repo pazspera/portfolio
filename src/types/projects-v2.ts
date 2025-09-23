@@ -75,5 +75,6 @@ export type ProjectSection =
 export interface Project {
   id: string,
   slug: string,
+  title: string,
   sections: ProjectSection[],
 }
