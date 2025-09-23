@@ -3,7 +3,7 @@ import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
-import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
+import ProjectTakeaways from '../sections/projects/ProjectTakeaways.vue';
 import ButtonContained from '../components/ButtonContained.vue';
 import ImageSlider from '../components/ImageSlider.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
@@ -324,7 +324,7 @@ const sliderTranslationAgency: SliderImage[] = [
     <ProjectListSection :items="impact" :title="'Impacto'" />
 
     <!-- Aprendizajes -->
-    <ProjectConclusion :items="conclusions" />
+    <ProjectTakeaways :items="conclusions" />
 
     <!-- Botón a proyectos -->
     <section class="my-8">

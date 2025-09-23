@@ -3,7 +3,7 @@ import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectResumen from '../sections/projects/ProjectResumen.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectHero from '../sections/projects/ProjectHero.vue';
-import ProjectConclusion from '../sections/projects/ProjectConclusion.vue';
+import ProjectTakeaways from '../sections/projects/ProjectTakeaways.vue';
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import ButtonContained from '../components/ButtonContained.vue';
 
@@ -188,7 +188,7 @@ const conclusions: Conclusion[] = [
     <ProjectListSection :items="impact" :title="'Impacto'" :class="'pb-10'" />
 
     <!-- Aprendizajes -->
-    <ProjectConclusion :items="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />
+    <ProjectTakeaways :items="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />
 
     <!-- Botón a proyectos -->
     <section class="my-8">
