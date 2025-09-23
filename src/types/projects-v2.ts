@@ -64,7 +64,7 @@ export interface ProjectTakeawaysContent {
 export type ProjectSection =
 | { type: "ProjectHero", content: ProjectHeroContent }
 | { type: "ProjectSummary", content: ProjectSummaryContent } 
-| { type: "ProjectChallege", content: ProjectChallengeContent }
+| { type: "ProjectChallenge", content: ProjectChallengeContent }
 | { type: "ProjectMethodology", content: ProjectListSection }
 | { type: "ProjectImpact", content: ProjectListSection }
 | { type: "ProjectTakeaways", content: ProjectTakeawaysContent }

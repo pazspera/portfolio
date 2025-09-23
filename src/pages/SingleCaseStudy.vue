@@ -5,7 +5,7 @@
 - si no existe proyecto, mensaje 404 (después redirigir a página not found)
 
 */
-
+import { computed } from "vue";
 import { caseStudies } from '../data/case-studies';
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectSummary from '../sections/projects/ProjectSummary.vue';
@@ -26,6 +26,14 @@ if(!project) {
   console.log("Project not found");
 }
 
+// Filtro para elegir una sección y probarla
+// con todas tira error
+const sectionToTest = "ProjectHero";
+const filteredSection = computed(()=> {
+  if(!project) return [];
+  return project.sections.filter(section => section.type === sectionToTest);
+})
+
 // Objeto que une los strings de tipos de componente
 // con los componentes en sí mismos
 const componentsMap = {
@@ -44,7 +52,7 @@ const componentsMap = {
 <template>
   <h1>Test</h1>
   <div v-if="project">
-    <div v-for="section in project.sections" :key="section.type">
+    <div v-for="section in filteredSection" :key="section.type">
       <component
         :is="componentsMap[section.type]"
         :content="section.content"
