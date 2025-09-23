@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ImageProps } from '../../types/general';
+import { ProjectHeroContent } from '../../types/projects-v2';
 import HeroTitle from '../../components/typography/HeroTitle.vue';
 import HeroBlurb from "../../components/typography/HeroBlurb.vue";
 
 const props = defineProps<{
-  img: ImageProps,
+  content: ProjectHeroContent
 }>();
 
 </script>
@@ -16,15 +16,15 @@ const props = defineProps<{
         <!-- Text -->
          <div class="md:col-span-4 lg:col-span-6 2xl:col-span-9 lg:max-xl:not-first:pe-8 lg:flex lg:flex-col lg:justify-center">
             <HeroTitle>
-              <slot name="title"></slot>
+              <span v-html="content.title"></span>
             </HeroTitle>
             <HeroBlurb>
-              <slot name="text"></slot>
+              <span v-html="content.text"></span>
             </HeroBlurb>
          </div>
          <!-- Image -->
           <div class="md:col-span-4 md:col-start-5 lg:col-start-7 2xl:col-start-10 max-w-[100%] md:w-[52vw] md:max-lg:max-w-[55vw] lg:max-xl:max-w-[52vw] xl:max-w-[800px] 2xl:max-w-[800px] mb-[-7%] md:mb-[-2%] lg:ps-3 lg:ms-3 xl:ms-5 2xl:ms-12 transform translate-y-[12%] md:translate-y-0 md:translate-x-[3%]">
-            <img :src="props.img.src" :alt="props.img.alt" class="w-full ">
+            <img :src="content.img.src" :alt="content.img.alt" class="w-full ">
           </div>
       </div>
     </div>
