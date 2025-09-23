@@ -188,7 +188,7 @@ const conclusions: Conclusion[] = [
     <ProjectListSection :items="impact" :title="'Impacto'" :class="'pb-10'" />
 
     <!-- Aprendizajes -->
-    <ProjectConclusion :conclusions="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />
+    <ProjectConclusion :items="conclusions" class="md:pb-16 lg:pb-18 xl:pb-20" />
 
     <!-- Botón a proyectos -->
     <section class="my-8">

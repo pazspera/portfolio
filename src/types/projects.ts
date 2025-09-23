@@ -1,3 +1,4 @@
+// Takeaway item
 export type Conclusion = {
   id: number,
   img: {

@@ -60,4 +60,5 @@ export interface ProjectListSection {
 // ProjectConclusion
 export interface ProjectTakeawaysContent {
   items: TakeawayItem[],
+  class?: string,
 }

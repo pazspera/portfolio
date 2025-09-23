@@ -324,7 +324,7 @@ const sliderTranslationAgency: SliderImage[] = [
     <ProjectListSection :items="impact" :title="'Impacto'" />
 
     <!-- Aprendizajes -->
-    <ProjectConclusion :conclusions="conclusions" />
+    <ProjectConclusion :items="conclusions" />
 
     <!-- Botón a proyectos -->
     <section class="my-8">
