@@ -4,6 +4,7 @@ import RedisenoSitioInstitucional from "../pages/RedisenoSitioInstitucional.vue"
 import ContenidoRedes from "../pages/ContenidoRedes.vue";
 import LandingVentas from "../pages/LandingVentas.vue";
 import GraciasContactarse from "../pages/GraciasContactarse.vue";
+import SingleCaseStudy from "../pages/SingleCaseStudy.vue";
 import NotFound from "../pages/NotFound.vue";
 
 const router = createRouter({
@@ -14,6 +15,7 @@ const router = createRouter({
     { path: "/contenido-redes", name: "redes", component: ContenidoRedes },
     { path: "/landing-ventas", name: "landing", component: LandingVentas },
     { path: "/gracias-por-contactarse", name: "gracias", component: GraciasContactarse },
+    { path: "/test", name: "gracias", component: SingleCaseStudy },
     { path: "/:catchAll(.*)*", name: "notFound", component: NotFound}
   ],
   scrollBehavior(to, _from, _savedPosition) {

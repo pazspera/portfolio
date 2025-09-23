@@ -1,12 +1,3 @@
-/* 
-
-1. Definir los tipos de contenido de cada sección
-2. Asignar un tipo a cada sección
-3. Crear tipo unión ProjectSection
-4. Crear tipo final Project
-
-*/
-
 import type { Tech } from "./techChips";
 import { ImageProps } from "./general";
 import type { SliderImage } from "./imageSlider";
