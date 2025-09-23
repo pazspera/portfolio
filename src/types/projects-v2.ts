@@ -44,6 +44,7 @@ export interface ProjectSummaryContent {
   role: string,
   client: string,
   duration: string,
+  summary: string,
 }
 
 // ProjectDesafio
