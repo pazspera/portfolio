@@ -9,6 +9,7 @@
 
 import type { Tech } from "./techChips";
 import { ImageProps } from "./general";
+import type { SliderImage } from "./imageSlider";
 
 export type ChallengeItem = {
   id: number,
@@ -62,3 +63,16 @@ export interface ProjectTakeawaysContent {
   items: TakeawayItem[],
   class?: string,
 }
+
+// ProjectSection
+// Union types of possible sections
+// It's defining the type of objects that
+// can exist in a section
+export type ProjectSection =
+| { type: "ProjectHero", content: ProjectHeroContent }
+| { type: "ProjectSummary", content: ProjectSummaryContent } 
+| { type: "ProjectChallege", content: ProjectChallengeContent }
+| { type: "ProjectMethodology", content: ProjectListSection }
+| { type: "ProjectImpact", content: ProjectListSection }
+| { type: "ProjectTakeaways", content: ProjectTakeawaysContent }
+| { type: "ProjectImageSlider", content: SliderImage}
