@@ -3,7 +3,7 @@ import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectTakeaways from '../sections/projects/ProjectTakeaways.vue';
 import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
-import ProjectResumen from '../sections/projects/ProjectResumen.vue';
+import ProjectSummary from '../sections/projects/ProjectSummary.vue';
 import ButtonContained from "../components/ButtonContained.vue";
 import ReadingProgressBar from '../components/ReadingProgressBar.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
@@ -169,7 +169,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
     </ProjectHero>
 
     <!-- Resumen -->
-    <ProjectResumen :techStack="techStack">
+    <ProjectSummary :techStack="techStack">
       <template #summary>
         Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.
       </template>
@@ -182,7 +182,7 @@ useDocumentTitle("Rediseño de sitio institucional - Paz Spera");
       <template #duration>
         7 meses
       </template>
-    </ProjectResumen>
+    </ProjectSummary>
 
     <!-- Desafío -->
     <ProjectChallenge :challenges="challenges" />

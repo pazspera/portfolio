@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ProjectHero from '../sections/projects/ProjectHero.vue';
-import ProjectResumen from '../sections/projects/ProjectResumen.vue';
+import ProjectSummary from '../sections/projects/ProjectSummary.vue';
 import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
 import ProjectListSection from '../sections/projects/ProjectListSection.vue';
 import ProjectTakeaways from '../sections/projects/ProjectTakeaways.vue';
@@ -293,7 +293,7 @@ const sliderTranslationAgency: SliderImage[] = [
     </ProjectHero>  
 
     <!-- Resumen -->
-    <ProjectResumen :techStack="techStack">
+    <ProjectSummary :techStack="techStack">
       <template #summary>
         Lideré la estrategia de contenido y ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas y el diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn). También me encargué de la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.
       </template>
@@ -306,7 +306,7 @@ const sliderTranslationAgency: SliderImage[] = [
       <template #duration>
         10 y 6 meses, respectivamente
       </template>
-    </ProjectResumen>
+    </ProjectSummary>
 
     <!-- Desafío -->
     <ProjectChallenge :challenges="challenges" />
