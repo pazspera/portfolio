@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import CaptionText from './typography/CaptionText.vue';
 import { VueCompareImage } from 'vue3-compare-image';
+import type { ImageCompareContent } from '../types/imageCompare';
 
-const props = defineProps<{
-  imgOld: string;
-  imgNew: string;
-  altImgOld: string;
-  altImgNew: string;
-}>();
+const props = defineProps<ImageCompareContent>();
 
 </script>
 
