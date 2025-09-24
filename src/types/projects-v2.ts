@@ -1,6 +1,6 @@
 import type { Tech } from "./techChips";
 import { ImageProps } from "./general";
-import type { SliderImage } from "./imageSlider";
+import type { ImageSliderContent } from "./imageSlider";
 import { ImageCompareContent } from "./imageCompare";
 
 export type ChallengeItem = {
@@ -73,7 +73,7 @@ export type ProjectSection =
 | { type: "ProjectMethodology", content: ProjectListSection }
 | { type: "ProjectImpact", content: ProjectListSection }
 | { type: "ProjectTakeaways", content: ProjectTakeawaysContent }
-| { type: "ProjectImageSlider", content: SliderImage}
+| { type: "ProjectImageSlider", content: ImageSliderContent}
 | { type: "ProjectImageCompare", content: ImageCompareContent }
 
 // Master Project type

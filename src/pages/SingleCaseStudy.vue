@@ -5,7 +5,6 @@
 - si no existe proyecto, mensaje 404 (después redirigir a página not found)
 
 */
-import { computed } from "vue";
 import { caseStudies } from '../data/case-studies';
 import { useDocumentTitle } from "../composables/useDocumentTitle";
 

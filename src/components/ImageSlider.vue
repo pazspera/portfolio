@@ -7,7 +7,9 @@ import { ref } from "vue";
 import VueEasyLightbox from 'vue-easy-lightbox';
 import '@splidejs/vue-splide/css';
 
-const props = defineProps<ImageSliderContent>();
+const props = defineProps<{
+  content: ImageSliderContent
+}>();
 
 const sliderOptions: Options = {
   perPage: 1,
@@ -40,7 +42,7 @@ const sliderOptions: Options = {
 const lightboxVisible = ref(false);
 const lightboxIndex = ref(0);
 const lightboxImages = ref(
-  props.images.map(image => ({
+  props.content.images.map(image => ({
     src: image.src,
     alt: image.alt,
   }))
@@ -60,12 +62,12 @@ const hideLightbox = () => {
 <template>
   <section class="py-6">
     <Splide :options="sliderOptions">
-      <SplideSlide v-for="(image, index) in images" :key="image.id">
+      <SplideSlide v-for="(image, index) in content.images" :key="image.id">
         <img :src="image.src" :alt="image.alt" class="splide-image clickable" @click="showLightbox(index)">
       </SplideSlide>
     </Splide>
     <CaptionText>
-      {{ caption }}
+      {{ content.caption }}
     </CaptionText>
   </section>
 
