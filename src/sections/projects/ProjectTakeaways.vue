@@ -3,7 +3,9 @@ import SectionTitle from '../../components/typography/SectionTitle.vue';
 import LearningCard from '../../components/projects/LearningCard.vue';
 import { ProjectTakeawaysContent } from '../../types/projects-v2';
 
-defineProps<ProjectTakeawaysContent>();
+defineProps<{
+  content: ProjectTakeawaysContent,
+}>();
 
 </script>
 
@@ -14,7 +16,7 @@ defineProps<ProjectTakeawaysContent>();
         Aprendizajes 
       </SectionTitle>
       <div class="grid grid-cols-1 md:grid-cols-8 gap-6">
-        <LearningCard v-for="item in items" :key="item.id" :conclusion="item" />
+        <LearningCard v-for="item in content.items" :key="item.id" :conclusion="item" />
       </div>
     </div>
   </section>
