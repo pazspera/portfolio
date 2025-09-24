@@ -53,6 +53,49 @@ export const caseStudies: Project[] = [
             }
           ]
         }
+      },
+      {
+        type: "ProjectMethodology",
+        content: {
+          title: "Enfoque y metodología",
+          items: [
+            {
+              id: 1,
+              title: "Relevamiento de información",
+              text: "Entrevisté a referentes de cada área para comprender el público, los beneficios y la metodología de sus servicios. Esto evidenció tres problemas: falta de claridad, lenguaje demasiado técnico y contenido sin actualizar."
+            },
+            {
+              id: 2,
+              title: "Arquitectura de información",
+              text: "Diseñé un mapa de sitio inicial con todas los servicios ofrecidos. Fue necesario realizar tres iteraciones del mapa debido a cambios de prioridades internas."
+            },
+            {
+              id: 3,
+              title: "Wireframes y prototipos",
+              text: "Creé prototipos de baja y alta fidelidad, validándolos con el área comercial para ajustar el contenido según la urgencia de promover ciertos servicios."
+            },
+            {
+              id: 4,
+              title: "Sistema de diseño",
+              text: "Desarrollé un sistema de diseño en Figma aplicando la metodología de Atomic Design. Definí tokens basados en la nueva identidad visual. Construí componentes que permitieran mantener consistencia y escalabilidad."
+            },
+            {
+              id: 5,
+              title: "Copywriting centrado en el usuario",
+              text: "Redacté contenidos que comunicaban beneficios de forma clara y persuasiva, resaltando cómo resolvían las necesidades de los prospectos."
+            },
+            {
+              id: 6,
+              title: "Desarrollo frontend",
+              text: "El sitio fue desarrollado en HTML, CSS y JavaScript. Implementé componentes reutilizables en Vue.js para la gestión de formularios complejos, optimizando la interactividad y validaciones."
+            },
+            {
+              id: 7,
+              title: "Materiales promocionales",
+              text: "Diseñé presentaciones comerciales y flyers digitales para email marketing y propuestas a clientes potenciales. Estas piezas reflejaron la nueva organización de servicios, detallando soluciones y explicando sus beneficios principales."
+            }
+          ]
+        }
       }
     ]
   }

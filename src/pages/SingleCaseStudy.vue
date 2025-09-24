@@ -31,7 +31,7 @@ if(!project) {
 
 // Filtro para elegir una sección y probarla
 // con todas tira error
-const sectionToTest = "ProjectChallenge";
+const sectionToTest = "ProjectMethodology";
 const filteredSection = computed(()=> {
   if(!project) return [];
   return project.sections.filter(section => section.type === sectionToTest);
