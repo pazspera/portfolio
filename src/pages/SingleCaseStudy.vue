@@ -7,6 +7,7 @@
 */
 import { caseStudies } from '../data/case-studies';
 import { useDocumentTitle } from "../composables/useDocumentTitle";
+import { computed } from 'vue';
 
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectSummary from '../sections/projects/ProjectSummary.vue';
@@ -40,11 +41,16 @@ const componentsMap = {
   ProjectTakeaways,
   ProjectImageSlider: ImageSlider,
   ProjectImageCompare: ImageCompare,
-}
+} as const;
 
 if(project) {
   useDocumentTitle(project.title);
 }
+
+const sections = computed(()=> {
+  if (!project) return [];
+  return project.sections as typeof project.sections;
+})
 
 </script>
 
@@ -53,9 +59,9 @@ if(project) {
     <ReadingProgressBar/>
 
     <div v-if="project">
-      <div v-for="section in project.sections" :key="section.type">
+      <div v-for="section in sections" :key="section.type">
         <component
-          :is="componentsMap[section.type]"
+          :is="componentsMap[section.type] as any"
           :content="section.content"
         />
       </div>
