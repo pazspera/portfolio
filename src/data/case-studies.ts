@@ -108,6 +108,16 @@ export const caseStudies: Project[] = [
         }
       },
       {
+        type: "ProjectImageCompare",
+        content: {
+          imgOld: "institucional-viejo-video.jpg",
+          imgNew: "institucional-nuevo-video.jpg",
+          altImgOld: "Versión anterior de la página de producción de video",
+          altImgNew: "Versión anterior de la página de producción de video",
+          caption: "Rediseño de la página de producción de video",
+        }
+      },
+      {
         type: "ProjectImpact",
         content: {
           title: "Impacto",
