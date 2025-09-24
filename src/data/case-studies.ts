@@ -55,6 +55,16 @@ export const caseStudies: Project[] = [
         }
       },
       {
+        type: "ProjectImageCompare",
+        content: {
+          imgOld: "institucional-viejo-home.jpg",
+          imgNew: "institucional-nuevo-home.jpg",
+          altImgOld: "Versión anterior del hero y sección principal del sitio institucional",
+          altImgNew: "Versión rediseñada del hero y sección principal del sitio institucional",
+          caption: "Rediseño de la página de inicio del sitio institucional",
+        }
+      },
+      {
         type: "ProjectMethodology",
         content: {
           title: "Enfoque y metodología",

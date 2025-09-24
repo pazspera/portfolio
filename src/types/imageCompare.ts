@@ -3,4 +3,5 @@ export interface ImageCompareContent {
   imgNew: string;
   altImgOld: string;
   altImgNew: string;
+  caption: string;
 }
