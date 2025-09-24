@@ -10,7 +10,7 @@ export const caseStudies: Project[] = [
         type: "ProjectHero",
         content: {
           img: {
-            src: "/images/mockup_rediseno_institucional.png",
+            src: "mockup_rediseno_institucional.png",
             alt: "Mockup de notebook mostrando una pantalla del rediseño del sitio institucional"
           },
           title: "Rediseño de sitio institucional",
