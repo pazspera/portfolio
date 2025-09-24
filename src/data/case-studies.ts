@@ -33,6 +33,25 @@ export const caseStudies: Project[] = [
             client: "Agencia de telemarketing y generación de leads B2B",
             duration: "7 meses",
           }
+        },
+      }, 
+      {
+        type: "ProjectChallenge",
+        content: {
+          challenges: [
+            {
+              id: 1,
+              text: "El sitio anterior, desarrollado en WordPress, llevaba años sin actualizarse y solo mostraba cuatro servicios básicos. Mientras tanto, la agencia ya ofrecía ocho, pero esa información no estaba reflejada online."
+            },
+            {
+              id: 2,
+              text: "Internamente, muchos empleados desconocían la gama completa de servicios. Externamente, la buyer persona no tenía claridad sobre el alcance de la agencia."
+            }, 
+            {
+              id: 3,
+              text: "Se requería implementar la nueva identidad visual (logo, paleta, tipografía) que solo existía en materiales offline."
+            }
+          ]
         }
       }
     ]
