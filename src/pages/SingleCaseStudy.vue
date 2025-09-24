@@ -7,6 +7,8 @@
 */
 import { computed } from "vue";
 import { caseStudies } from '../data/case-studies';
+import { useDocumentTitle } from "../composables/useDocumentTitle";
+
 import ProjectHero from '../sections/projects/ProjectHero.vue';
 import ProjectSummary from '../sections/projects/ProjectSummary.vue';
 import ProjectChallenge from '../sections/projects/ProjectChallenge.vue';
@@ -15,8 +17,7 @@ import ProjectTakeaways from '../sections/projects/ProjectTakeaways.vue';
 import ImageSlider from '../components/ImageSlider.vue';
 import ImageCompare from '../components/ImageCompare.vue';
 import ReadingProgressBar from "../components/ReadingProgressBar.vue";
-
-import { useDocumentTitle } from "../composables/useDocumentTitle";
+import ButtonContained from "../components/ButtonContained.vue";
 
 // el slug después va a venir de route.params.slug
 const slug = "rediseno-institucional"
@@ -28,14 +29,6 @@ const project = caseStudies.find(c => c.slug === slug);
 if(!project) {
   console.log("Project not found");
 }
-
-// Filtro para elegir una sección y probarla
-// con todas tira error
-const sectionToTest = "ProjectImageCompare";
-const filteredSection = computed(()=> {
-  if(!project) return [];
-  return project.sections.filter(section => section.type === sectionToTest);
-})
 
 // Objeto que une los strings de tipos de componente
 // con los componentes en sí mismos
@@ -61,7 +54,7 @@ if(project) {
     <ReadingProgressBar/>
 
     <div v-if="project">
-      <div v-for="section in filteredSection" :key="section.type">
+      <div v-for="section in project.sections" :key="section.type">
         <component
           :is="componentsMap[section.type]"
           :content="section.content"
@@ -69,5 +62,11 @@ if(project) {
       </div>
     </div>
 
+    <!-- Botón a proyectos -->
+    <section class="my-8">
+      <ButtonContained size="medium" to="/#proyectos" class="mx-auto">
+        Ver más proyectos
+      </ButtonContained>
+    </section> 
   </section>
 </template>
