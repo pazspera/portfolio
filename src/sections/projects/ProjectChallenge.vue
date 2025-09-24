@@ -16,7 +16,7 @@ defineProps<{
           Desafío
         </SectionTitle>
       </div>
-      <div class="lg:col-span-8 ps-4 lg:ps-8">
+      <div class="lg:col-span-8 ">
         <ul>
           <li v-for="challenge in content.challenges" :key="challenge.id" class="list-disc list-inside pb-3">
             <MainText class="inline">
