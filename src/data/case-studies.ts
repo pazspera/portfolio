@@ -27,10 +27,12 @@ export const caseStudies: Project[] = [
             { src: '/images/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
             { src: '/images/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
           ],
-          role: "Diseñadora UX/UI, desarrolladora frontend y copywriter (única responsable de investigación, diseño y desarrollo)",
-          client: "Agencia de telemarketing y generación de leads B2B",
-          duration: "7 meses",
           summary: "Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.",
+          roleCard: {
+            role: "Diseñadora UX/UI, desarrolladora frontend y copywriter (única responsable de investigación, diseño y desarrollo)",
+            client: "Agencia de telemarketing y generación de leads B2B",
+            duration: "7 meses",
+          }
         }
       }
     ]

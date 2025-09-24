@@ -1,14 +1,13 @@
 <script setup lang="ts">
+import TechChip from "../../components/TechChip.vue";
+import { ProjectSummaryContent } from "../../types/projects-v2";
 import SectionTitle from "../../components/typography/SectionTitle.vue";
 import HighlightText from "../../components/typography/HighlightText.vue";
 import RoleCard from "../../components/projects/RoleCard.vue";
 import SecondaryTitle from "../../components/typography/SecondaryTitle.vue";
-import TechChip from "../../components/TechChip.vue";
-import type { Tech } from "../../types/techChips";
 
 defineProps<{
-  techStack: Tech[],
-  url?: string,
+  content: ProjectSummaryContent
 }>();
 
 </script>
@@ -23,13 +22,13 @@ defineProps<{
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="lg:col-span-8 lg:order-last lg:ps-8 lg:pt-4">
         <HighlightText>
-          <slot name="summary"></slot>
+          <span v-html="content.summary"></span>
         </HighlightText>
         <div class="py-4 2xl:py-6">
           <SecondaryTitle>Tecnologías utilizadas</SecondaryTitle>
           <div class="flex flex-wrap gap-3 py-2 md:py-4">
             <TechChip
-              v-for="(tech, index) in techStack"
+              v-for="(tech, index) in content.techStack"
               :key="index"
               :tech="tech"
             />
@@ -37,17 +36,7 @@ defineProps<{
         </div>
       </div>
       <!-- Rol -->
-      <RoleCard :techStack="techStack" :url="url">
-        <template #role>
-          <slot name="role"></slot>
-        </template>
-        <template #client>
-          <slot name="client"></slot>
-        </template>
-        <template #duration>
-          <slot name="duration"></slot>
-        </template>
-      </RoleCard>
+      <RoleCard :="content.roleCard" />
     </div>
   </section>
 </template>

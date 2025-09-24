@@ -22,6 +22,13 @@ export type TakeawayItem = {
   class?: string,
 }
 
+export type RoleCard = {
+  role: string,
+  client: string,
+  duration: string,
+  url?: string,
+}
+
 // ProjectHero
 export interface ProjectHeroContent {
   img: ImageProps,
@@ -32,10 +39,8 @@ export interface ProjectHeroContent {
 // ProjectResumen
 export interface ProjectSummaryContent {
   techStack: Tech[];
-  role: string,
-  client: string,
-  duration: string,
   summary: string,
+  roleCard: RoleCard,
 }
 
 // ProjectDesafio

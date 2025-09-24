@@ -1,11 +1,10 @@
 <script setup lang="ts">
+import { RoleCard } from '../../types/projects-v2';
 import SecondaryTitle from '../typography/SecondaryTitle.vue';
 import MainText from '../typography/MainText.vue';
 import ButtonContained from '../ButtonContained.vue';
 
-defineProps<{
-  url?: string,
-}>();
+defineProps<RoleCard>();
 
 </script>
 
@@ -17,7 +16,7 @@ defineProps<{
         Rol
       </SecondaryTitle>
       <MainText>
-        <slot name="role"></slot>
+        <span v-html="role"></span>
       </MainText>
     </div>
     <div class="py-2">
@@ -25,7 +24,7 @@ defineProps<{
         Cliente
       </SecondaryTitle>
       <MainText>
-        <slot name="client"></slot>
+        <span v-html="client"></span>
       </MainText>
     </div>
     <div class="py-2">
@@ -33,7 +32,7 @@ defineProps<{
         Duración
       </SecondaryTitle>
       <MainText>
-        <slot name="duration"></slot>
+        <span v-html="duration"></span>
       </MainText>
     </div>
     <div v-if="url" class="pt-2 pb-4">
