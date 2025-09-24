@@ -96,6 +96,29 @@ export const caseStudies: Project[] = [
             }
           ]
         }
+      },
+      {
+        type: "ProjectImpact",
+        content: {
+          title: "Impacto",
+          items: [
+            {
+              id: 1,
+              title: "Mejora en la visiblidad interna",
+              text: "El nuevo sitio dio un panorama integral de la oferta de servicios para los empleados. Esto optimizó la coordinación interna y facilitó la cooperación entre las áreas de marketing, ventas y operaciones. "
+            }, 
+            {
+              id: 2,
+              title: "Mayor claridad para prospectos",
+              text: "La gama de soluciones de la agencia se presentó de forma más fácil de entender, reduciendo las dudas de los clientes potenciales. Este cambio agilizó el proceso de prospección, volviéndolo más efectivo."
+            },
+            {
+              id: 3,
+              title: "Aumento de acciones comerciales",
+              text: "La nueva presentación del sitio sirvió como base estratégica para múltiples campañas. Estas destacaron las fortalezas de cada servicio, acelerando el proceso de generación de leads y las oportunidades de negocio."
+            }
+          ]
+        }
       }
     ]
   }
