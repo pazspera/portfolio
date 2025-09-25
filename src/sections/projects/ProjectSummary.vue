@@ -36,7 +36,7 @@ defineProps<{
         </div>
       </div>
       <!-- Rol -->
-      <RoleCard :="content.roleCard" />
+      <RoleCard :="content.roleCard" :url="content.url" />
     </div>
   </section>
 </template>
