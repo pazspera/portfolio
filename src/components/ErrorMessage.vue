@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { ExclamationCircleIcon } from '@heroicons/vue/24/outline';
+import { ErrorMessage } from '../types/contact';
 
-defineProps<{
-  content?: string,
-  html?: boolean
-}>();
+defineProps<ErrorMessage>();
 </script>
 
 <template>
