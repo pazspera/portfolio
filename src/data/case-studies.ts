@@ -212,7 +212,7 @@ export const caseStudies: Project[] = [
             alt: "Mockup de notebook mostrando una pantalla de la landing page optimizada para ventas"
           },
           title: "Landing optimizada para ventas",
-          text: " Diseñé y desarrollé una sitio web comercial para Liquid Sound, reorientando su presencia de marca hacia la venta directa y la captación de leads calificados."
+          text: "Diseñé y desarrollé una sitio web comercial para Liquid Sound, reorientando su presencia de marca hacia la venta directa y la captación de leads calificados."
         }
       },
       {
@@ -332,7 +332,7 @@ export const caseStudies: Project[] = [
                 alt: "Manos sosteniendo piezas de un rompecabezas"
               },
               title: "Entender la propuesta de valor",
-              text: "Sentarse a hablar con el cliente es fundamental para destilar los puntos fuertes de su propuesta. El desafío está en presentarlos persuasivamente, conectando directamente con las necesidades y problemas de la buyer persona",
+              text: "Sentarse a hablar con el cliente es fundamental para destilar los puntos fuertes de su propuesta. El desafío está en presentarlos persuasivamente, conectando directamente con las necesidades y problemas de la buyer persona.",
               class: "md:col-span-4"
             },
             {
@@ -364,6 +364,321 @@ export const caseStudies: Project[] = [
               title: "Enfoque estratégico en la audiencia",
               text: "Alinear la estrategia de contenido con la rentabilidad del cliente es clave. Priorizar sectores específicos para la landing optimiza el mensaje y direcciona los recursos de marketing hacia audiencias con mayor retorno de inversión.",
               class: "md:col-span-4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: "social-media-content",
+    slug: "contenido-redes",
+    title: "Contenido estratégico para redes - Paz Spera",
+    sections: [
+      {
+        type: "ProjectHero",
+        content: {
+          img: {
+            src: "mockup_rrss.png",
+            alt: "Mockup de notebook con una página de Instagram con una publicación"
+          },
+          title: "Contenido estratégico para redes",
+          text: "Diseñé y ejecuté estrategias de UX Writing para potenciar la comunicación, la presencia digital y el engagement de dos agencias B2B en mercados especializados."
+        }
+      },
+      {
+        type: "ProjectSummary",
+        content: {
+          techStack: [
+            { src: 'figma-original.svg', alt: 'Logo de Figma', label: "Figma"}
+          ],
+          summary: "Lideré la estrategia de contenido y ejecución de UX Writing para dos empresas B2B. Gestioné el proceso completo de definición de buyer personas y el diseño y redacción de copys persuasivos para redes sociales (con foco en LinkedIn). También me encargué de la investigación y redacción de artículos de blog especializados. Los objetivos principales fueron desarrollar la presencia digital, educar a las audiencias y posicionar a las marcas como autoridades en sus nichos.",
+          roleCard: {
+            role: "Copywriter y diseñadora gráfica",
+            client: "Agencia de telemarketing y generación de leads B2B y agencia de traducción global",
+            duration: "10 y 6 meses, respectivamente",
+          }
+        },
+      }, 
+      {
+        type: "ProjectChallenge",
+        content: {
+          challenges: [
+            {
+              id: 1,
+              text: "Establecer una presencia digital distintiva y persuasiva para ambas agencias en mercados competitivos. Era crucial definir una voz y estética de marca consistentes."
+            },
+            {
+              id: 2,
+              text: "Para la agencia de telemarketing, el reto fue comunicar su reposicionamiento estratégico. Esto implicaba integrar nuevos servicios sin perder el foco en su experiencia histórica en telemarketing."
+            }, 
+            {
+              id: 3,
+              text: "La agencia de traducción global necesitaba educar sobre la importancia de la traducción profesional certificada. El objetivo era resaltar el valor del conocimiento humano frente a las soluciones automatizadas."
+            }
+          ]
+        }
+      },
+      {
+        type: "ProjectImageSlider",
+        content: {
+          caption: "Ejemplos de carruseles diseñados para la agencia de telemarketing y generación de leads B2B",
+          images: [
+            {
+              id: 1,
+              src: "slider-agencia-telemarketing-1.jpg",
+              alt: "Portada de carrusel de caso de éxito dashboard encuestas de satisfacción",
+            },
+            {
+              id: 2,
+              src: "slider-agencia-telemarketing-2.jpg",
+              alt: "Explicación del desafío sobre las encuestas de satisfacción",
+            },
+            {
+              id: 3,
+              src: "slider-agencia-telemarketing-3.jpg",
+              alt: "Implementación de mejoras con un dashboard personalizado",
+            },
+            {
+              id: 4,
+              src: "slider-agencia-telemarketing-4.jpg",
+              alt: "Explicación de características principales del dashboard",
+            },
+            {
+              id: 5,
+              src: "slider-agencia-telemarketing-5.jpg",
+              alt: "Impacto de la solución planteada",
+            },
+            {
+              id: 6,
+              src: "slider-agencia-telemarketing-6.jpg",
+              alt: "Cierre con cta del carrusel",
+            },
+            {
+              id: 7,
+              src: "slider-agencia-telemarketing-7.jpg",
+              alt: "Portada de carrusel sobre los usos de telemarketing en ambientes B2B",
+            },
+            {
+              id: 8,
+              src: "slider-agencia-telemarketing-8.jpg",
+              alt: "Venta de productos y servicios",
+            },
+            {
+              id: 9,
+              src: "slider-agencia-telemarketing-9.jpg",
+              alt: "Verificación de datos",
+            },
+            {
+              id: 10,
+              src: "slider-agencia-telemarketing-10.jpg",
+              alt: "Generador de reuniones",
+            },
+            {
+              id: 11,
+              src: "slider-agencia-telemarketing-11.jpg",
+              alt: "Conclusión del carrusel con CTA",
+            },
+          ]
+        }
+      },
+      {
+        type: "ProjectMethodology",
+        content: {
+          title: "Enfoque y metodología",
+          items: [
+            {
+              id: 1,
+              title: "Análisis de audiencia",
+              text: "El primer paso fue hacer una investigación para entender a la audiencia objetivo. Identifiqué sus puntos de dolor específicos y los argumentos más convincentes para presentar soluciones relevantes."
+            },
+            {
+              id: 2,
+              title: "Estrategia de contenido educativo",
+              text: "Desarrollé una estrategia de contenido enfocada en educar y empoderar a la buyer persona. Busqué brindar valor con información clave para la toma de decisiones, desde la importancia de la certificación hasta la mejora en la generación de leads."
+            },
+            {
+              id: 3,
+              title: "Diseño de contenido multiplataforma",
+              text: "Fui responsable de la conceptualización, redacción y diseño de piezas. Creé copies persuasivos y carruseles para LinkedIn e Instagram, priorizando LinkedIn por ser la plataforma principal para el público B2B."
+            },
+            {
+              id: 4,
+              title: "Redacción de artículos especializados",
+              text: "Investigué y redacté artículos de blog detallados para posicionar a las marcas como autoridades. Este contenido educativo buscaba proveer valor y aumentar el tráfico orgánico, abordando temas relevantes y especializados."
+            },
+            {
+              id: 5,
+              title: "Unificación de identidad de marca",
+              text: "Aseguré una voz de marca consistente y reconocible en todas las comunicaciones. Diseñé piezas gráficas y carruseles visualmente atractivos, que reflejaran la identidad de cada marca para lograr cohesión y profesionalismo."
+            }
+          ]
+        }
+      },
+      {
+        type: "ProjectImageSlider",
+        content: {
+          caption: "Ejemplos de carruseles diseñados para la agencia de traducción",
+          images: [
+            {
+              id: 1,
+              src: "slider-agencia-traduccion-1.jpg",
+              alt: "Portada de carrusel sobre las implicaciones del uso de IA en traducciones legales",
+            },
+            {
+              id: 2,
+              src: "slider-agencia-traduccion-2.jpg",
+              alt: "Desafíos en la precisión de terminología",
+            },
+            {
+              id: 3,
+              src: "slider-agencia-traduccion-3.jpg",
+              alt: "Limitaciones en la adaptación multicultural",
+            },
+            {
+              id: 4,
+              src: "slider-agencia-traduccion-4.jpg",
+              alt: "Repercusiones legales",
+            },
+            {
+              id: 5,
+              src: "slider-agencia-traduccion-5.jpg",
+              alt: "Recomendaciones: complementar IA con revisión humana",
+            },
+            {
+              id: 6,
+              src: "slider-agencia-traduccion-6.jpg",
+              alt: "Recomendaciones: mantenerse actualizado en novedades de IA",
+            },
+            {
+              id: 7,
+              src: "slider-agencia-traduccion-7.jpg",
+              alt: "Recomendaciones: confirmar que se mantenga el compliance requerido",
+            },
+            {
+              id: 8,
+              src: "slider-agencia-traduccion-8.jpg",
+              alt: "Cierre de carrusel con CTA",
+            },
+            {
+              id: 9,
+              src: "slider-agencia-traduccion-9.jpg",
+              alt: "Portada carrusel sobre la norma ISO 9001",
+            },
+            {
+              id: 10,
+              src: "slider-agencia-traduccion-10.jpg",
+              alt: "¿Qué es la norma ISO 9001?",
+            },
+            {
+              id: 11,
+              src: "slider-agencia-traduccion-11.jpg",
+              alt: "¿Cómo ayuda a las empresas a mejorar sus operaciones?",
+            },
+            {
+              id: 12,
+              src: "slider-agencia-traduccion-12.jpg",
+              alt: "Otros beneficios de implementar la norma ISO 9001",
+            },
+            {
+              id: 13,
+              src: "slider-agencia-traduccion-13.jpg",
+              alt: "Certificación ISO 9001 de la agencia de traducción",
+            },
+            {
+              id: 14,
+              src: "slider-agencia-traduccion-14.jpg",
+              alt: "Conclusión del carrusel con CTA",
+            },
+          ]
+        }
+      },
+      {
+        type: "ProjectImpact",
+        content: {
+          title: "Impacto",
+          items: [
+            {
+              id: 1,
+              title: "Expansión de audiencia",
+              text: "Las estrategias implementadas lograron una notable expansión de la base de seguidores en las plataformas de redes sociales de ambos clientes. Este crecimiento fue clave para sus objetivos."
+            }, 
+            {
+              id: 2,
+              title: "Mejora del engagement",
+              text: "Se observó un significativo incremento en la interacción y el engagement en las publicaciones. Los carruseles en LinkedIn e Instagram fueron muy bien recibidos por la audiencia B2B."
+            },
+            {
+              id: 3,
+              title: "Coherencia de marca",
+              text: "Para la agencia de traducción, se logró establecer una estética de marca consistente y una voz unificada en todo el contenido digital. Esto mejoró su reconocimiento y profesionalismo."
+            },
+            {
+              id: 4,
+              title: "Claridad en la oferta de valor",
+              text: "En el caso de la agencia de telemarketing, se educó a la audiencia sobre servicios complejos, clarificando su propuesta de valor. Esto permitió a los clientes potenciales comprender mejor las soluciones ofrecidas."
+            },
+            {
+              id: 5,
+              title: "Base para el tráfico orgánico",
+              text: "El contenido educativo del blog sentó las bases para un crecimiento orgánico sostenido. Aunque las métricas estaban en fase incial, se estableció una estrategia de generación de valor que potencie el tráfico y engagement futuro."
+            },
+          ]
+        }
+      },
+      {
+        type: "ProjectTakeaways",
+        content: {
+          items: [
+            {
+              id: 1,
+              img: {
+                src: "contenido-redes-valor.png",
+                alt: "Diamante sobresaliendo de una caja"
+              },
+              title: "Enfocarse en proveer valor",
+              text: "En el sector B2B, el contenido más efectivo es aquel que educa y resuelve problemas específicos de la audiencia. Es clave brindar información de valor, especialmente al abordar temas técnicos o complejos.",
+              class: "md:col-span-4"
+            },
+            {
+              id: 2,
+              img: {
+                src: "contenido-redes-precision-cultural.png",
+                alt: "Grupo de personas conversando"
+              },
+              title: "La importancia de la precisión cultural",
+              text: "La experiencia de redactar contenido profesional para una agencia global, desde un contexto no nativo, me enseñó la importancia de la precisión lingüística y la sensibilidad cultural en comunicaciones internacionales.",
+              class: "md:col-span-4"
+            },
+            {
+              id: 3,
+              img: {
+                src: "contenido-redes-persuadir.png",
+                alt: "Viñetas de diálogo manteniendo una conversación"
+              },
+              title: "Conocer para persuadir",
+              text: "Dedicar tiempo a investigar las buyer personas y sus puntos de dolor es fundamental para crear contenidos que realmente impacten. Sin ese trabajo previo, es muy difícil conectar con la audiencia objetivo.",
+              class: "md:col-span-4"
+            },
+            {
+              id: 4,
+              img: {
+                src: "contenido-redes-marca.png",
+                alt: "Lápiz dibujando un logo"
+              },
+              title: "Sin coherencia, no hay marca",
+              text: "Unificar la voz y la estética de marca a través de diferentes plataformas y tipos de contenido es esencial. Esto construye una identidad sólida y reconocible que refuerza la presencia digital.",
+              class: "md:col-span-4"
+            },
+            {
+              id: 5,
+              img: {
+                src: "contenido-redes-eficiencia.png",
+                alt: "Tablero de planificación"
+              },
+              title: "Planificar la eficiencia",
+              text: "La planificación anticipada y la validación temprana con el cliente son cruciales para un flujo de trabajo eficiente. Aseguran la coherencia de los temas, minimizan correcciones y optimizan la gestión de tiempo y recursos.",
+              class: "md:col-span-4 md:col-start-3"
             }
           ]
         }
