@@ -147,7 +147,7 @@ export const caseStudies: Project[] = [
             {
               id: 1,
               img: {
-                src: "/images/rediseno-institucional-componentes.png",
+                src: "rediseno-institucional-componentes.png",
                 alt: "Pieza acercándose a completar un rompecabezas"
               },
               title: "Pensar en componentes",
@@ -157,7 +157,7 @@ export const caseStudies: Project[] = [
             {
               id: 2,
               img: {
-                src: "/images/rediseno-institucional-iterar.png",
+                src: "rediseno-institucional-iterar.png",
                 alt: "Calendario con un icono representando iteración dentro"
               },
               title: "Iterar, no esperar",
@@ -167,7 +167,7 @@ export const caseStudies: Project[] = [
             {
               id: 3,
               img: {
-                src: "/images/rediseno-institucional-idioma.png",
+                src: "rediseno-institucional-idioma.png",
                 alt: "Viñetas de diálogo con letras de distintos idiomas"
               },
               title: "Hablar el mismo idioma",
@@ -177,7 +177,7 @@ export const caseStudies: Project[] = [
             {
               id: 4,
               img: {
-                src: "/images/rediseno-institucional-organizar.png",
+                src: "rediseno-institucional-organizar.png",
                 alt: "Capas superpuestas de un diseño"
               },
               title: "Organizar para avanzar",
@@ -187,7 +187,7 @@ export const caseStudies: Project[] = [
             {
               id: 5,
               img: {
-                src: "/images/rediseno-institucional-vision.png",
+                src: "rediseno-institucional-vision.png",
                 alt: "Mapa con un plan estratégico detrás de una pieza de ajedrez"
               },
               title: "Construir con visión",
