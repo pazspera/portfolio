@@ -10,7 +10,6 @@ const router = createRouter({
     { path: "/", name: "home", component: Home },
     { path: "/proyectos/:slug", name: "SingleCaseStudy", component: SingleCaseStudy, props: true },
     { path: "/gracias-por-contactarse", name: "gracias", component: GraciasContactarse },
-    { path: "/test", name: "gracias", component: SingleCaseStudy },
     { path: "/:catchAll(.*)*", name: "notFound", component: NotFound}
   ],
   scrollBehavior(to, _from, _savedPosition) {

@@ -9,13 +9,7 @@ import useVuelidate from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "vue-router";
-
-type ContactForm = {
-  name: string,
-  email: string,
-  message: string,
-  date: string
-}
+import { ContactForm } from '../types/contact';
 
 const date = new Date().toLocaleDateString();
 const sheetURL = import.meta.env.VITE_SHEET_URL;
