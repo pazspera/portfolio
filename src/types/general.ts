@@ -12,3 +12,9 @@ export interface ButtonContained {
   size?: "small" | "medium",
   to?: RouteLocationRaw,
 }
+
+export interface ButtonText {
+  href?: string,
+  type?: "button" | "submit" | "reset",
+  to?: RouteLocationRaw
+}

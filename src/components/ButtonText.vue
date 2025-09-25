@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import type { RouteLocationRaw } from 'vue-router';
+import { ButtonText } from '../types/general';
 
-const props = defineProps<{
-  href?: string,
-  type?: "button" | "submit" | "reset",
-  to?: RouteLocationRaw
-}>();
+const props = defineProps<ButtonText>();
 const type = props.type ?? "button";
 </script>
 
