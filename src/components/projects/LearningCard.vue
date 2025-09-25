@@ -1,26 +1,26 @@
 <script setup lang="ts">
 import SecondaryTitle from "../typography/SecondaryTitle.vue";
 import MainText from "../typography/MainText.vue";
-import type { Conclusion } from "../../types/projects";
+import { TakeawayItem } from "../../types/projects-v2";
 import { useImageUrl } from "../../composables/useImageUrl";
 
 const props = defineProps<{
-  conclusion: Conclusion;
+  content: TakeawayItem;
 }>();
 
-const { imgUrl } = useImageUrl(props.conclusion.img.src);
+const { imgUrl } = useImageUrl(props.content.img.src);
 
 </script>
 
 <template>
-  <article :class="['p-4 lg:p-6  rounded-lg bg-primary-100', props.conclusion.class]">
-    <img :src="imgUrl" :alt="props.conclusion.img.alt" class="w-[70px] lg:w-[90px] mb-4 ">
+  <article :class="['p-4 lg:p-6  rounded-lg bg-primary-100', props.content.class]">
+    <img :src="imgUrl" :alt="props.content.img.alt" class="w-[70px] lg:w-[90px] mb-4 ">
     <div>
       <SecondaryTitle>
-      {{ props.conclusion.title }}
+      {{ props.content.title }}
       </SecondaryTitle>
       <MainText>
-        {{ props.conclusion.text }}
+        {{ props.content.text }}
       </MainText>
     </div>
   </article>

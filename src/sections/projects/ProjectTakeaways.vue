@@ -16,7 +16,7 @@ defineProps<{
         Aprendizajes 
       </SectionTitle>
       <div class="grid grid-cols-1 md:grid-cols-8 gap-6">
-        <LearningCard v-for="item in content.items" :key="item.id" :conclusion="item" />
+        <LearningCard v-for="item in content.items" :key="item.id" :content="item" />
       </div>
     </div>
   </section>
