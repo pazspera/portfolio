@@ -20,7 +20,7 @@ import ReadingProgressBar from "../components/ReadingProgressBar.vue";
 import ButtonContained from "../components/ButtonContained.vue";
 
 // el slug después va a venir de route.params.slug
-const slug = "rediseno-institucional"
+const slug = "landing-ventas"
 
 const project = caseStudies.find(c => c.slug === slug);
 

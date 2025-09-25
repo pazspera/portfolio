@@ -41,6 +41,7 @@ export interface ProjectSummaryContent {
   techStack: Tech[];
   summary: string,
   roleCard: RoleCard,
+  url?: string,
 }
 
 // ProjectDesafio
