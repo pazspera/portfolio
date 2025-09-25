@@ -21,11 +21,11 @@ export const caseStudies: Project[] = [
         type: "ProjectSummary",
         content: {
           techStack: [
-            { src: '/images/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
-            { src: '/images/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
-            { src: '/images/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
-            { src: '/images/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
-            { src: '/images/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
+            { src: 'html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
+            { src: 'css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
+            { src: 'bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
+            { src: 'javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+            { src: 'vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
           ],
           summary: "Rediseñé el sitio institucional de la agencia para mejorar la experiencia de usuario, aplicar la nueva identidad visual y reestructurar el catálogo de servicios de cuatro a ocho ofertas. Implementé un sistema de diseño en Figma basado en Atomic Design para garantizar consistencia y comencé la migración de páginas estáticas a componentes en PHP, preparando la base de un futuro CMS escalable.",
           roleCard: {

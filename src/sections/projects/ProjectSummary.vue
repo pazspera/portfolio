@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TechChip from "../../components/TechChip.vue";
 import { ProjectSummaryContent } from "../../types/projects-v2";
+import TechChip from "../../components/TechChip.vue";
 import SectionTitle from "../../components/typography/SectionTitle.vue";
 import HighlightText from "../../components/typography/HighlightText.vue";
 import RoleCard from "../../components/projects/RoleCard.vue";
