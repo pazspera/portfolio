@@ -376,16 +376,6 @@ export const caseStudies: Project[] = [
             {
               id: 3,
               img: {
-                src: "landing-ventas-soporte.png",
-                alt: "Sitio web con un engranaje para seleccionar preferencias"
-              },
-              title: "Soporte integral",
-              text: "Ofrecer un producto completo implica un compromiso más allá de la entrega. Proveer soporte para solucionar inconvenientes construye una relación sólida y de confianza con el cliente a largo plazo.",
-              class: "md:col-span-4"
-            },
-            {
-              id: 4,
-              img: {
                 src: "landing-ventas-audiencia.png",
                 alt: "Iconos de cuatro personas, una está destacada"
               },
