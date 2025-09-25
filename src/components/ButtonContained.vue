@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import Loader from './Loader.vue';
-import type { RouteLocationRaw } from "vue-router";
+import { ButtonContained } from '../types/general';
 
-const props = defineProps<{
-  href?: string,
-  type?: "button" | "submit" | "reset",
-  loading?: boolean,
-  size?: "small" | "medium",
-  to?: RouteLocationRaw
-}>()
+const props = defineProps<ButtonContained>();
+
 const type = props.type ?? "button";
 
 const sizeSmall = "text-sm lg:text-base 2xl:text-lg px-3 py-1.5 ";
