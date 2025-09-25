@@ -2,6 +2,7 @@ import type { Tech } from "./techChips";
 import { ImageProps } from "./general";
 import type { ImageSliderContent } from "./imageSlider";
 import { ImageCompareContent } from "./imageCompare";
+import { RouteLocationRaw } from "vue-router";
 
 export type ChallengeItem = {
   id: number,
@@ -27,6 +28,13 @@ export type RoleCard = {
   client: string,
   duration: string,
   url?: string,
+}
+
+export interface ProjectCard {
+  title: string,
+  text: string,
+  img: ImageProps,
+  to: RouteLocationRaw,
 }
 
 // ProjectHero
@@ -82,5 +90,6 @@ export interface Project {
   id: string,
   slug: string,
   title: string,
+  card: ProjectCard,
   sections: ProjectSection[],
 }
