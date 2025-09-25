@@ -5,6 +5,20 @@ export const caseStudies: Project[] = [
     id: "redesign-institutional-site",
     slug: "rediseno-institucional",
     title: "Rediseño de sitio institucional - Paz Spera",
+    card: {
+      title: "Rediseño de sitio institucional",
+      text: "Transformé la plataforma web de la empresa, implementando una nueva identidad de marca, reformulando la arquitectura de información y creando un sistema de diseño personalizado.",
+      img: {
+        src: "card-institutional-redesign.jpg",
+        alt: "Mockups de proyecto de rediseño de sitio institucional",
+      },
+      to: {
+        name: "SingleCaseStudy",
+        params: {
+          slug: "rediseno-institucional",
+        }
+      }
+    },
     sections: [
       {
         type: "ProjectHero",
@@ -203,6 +217,20 @@ export const caseStudies: Project[] = [
     id: "commercial-landing-page",
     slug: "landing-ventas",
     title: "Landing optimizada para ventas - Paz Spera",
+    card: {
+      title: "Landing optimizada para ventas",
+      text: "Diseñé y desarrollé una landing page comercial para Liquid Sound, transformando su comunicación a un enfoque de ventas directo. El objetivo fue optimizar la captación de leads de alto valor y establecer una plataforma efectiva para campañas.",
+      img: {
+        src: "card-landing-ventas.jpg",
+        alt: "Mockup de landing optimizada para ventas",
+      },
+      to: {
+        name: "SingleCaseStudy",
+        params: {
+          slug: "landing-ventas",
+        }
+      }
+    },
     sections: [
       {
         type: "ProjectHero",
@@ -374,6 +402,20 @@ export const caseStudies: Project[] = [
     id: "social-media-content",
     slug: "contenido-redes",
     title: "Contenido estratégico para redes - Paz Spera",
+    card: {
+      title: "Contenido estratégico para redes",
+      text: "Desarrollé artículos y piezas gráficas para campañas de redes sociales de empresas B2B. Se buscó mejorar el engagement y posicionamiento orgánico, definiendo una voz de marca que conecte con el público objetivo.",
+      img: {
+        src: "card-contenido-redes.jpg",
+        alt: "Mockups de publicaciones para redes sociales",
+      },
+      to: {
+        name: "SingleCaseStudy",
+        params: {
+          slug: "contenido-redes",
+        }
+      }
+    },
     sections: [
       {
         type: "ProjectHero",
