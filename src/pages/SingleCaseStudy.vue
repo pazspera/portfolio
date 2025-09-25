@@ -1,10 +1,4 @@
 <script setup lang="ts">
-/* 
-- Agregar caseStudies de data
-- buscar project con .find
-- si no existe proyecto, mensaje 404 (después redirigir a página not found)
-
-*/
 import { caseStudies } from '../data/case-studies';
 import { useDocumentTitle } from "../composables/useDocumentTitle";
 import { computed } from 'vue';

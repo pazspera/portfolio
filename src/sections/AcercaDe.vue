@@ -6,20 +6,20 @@ import SecondaryTitle from "../components/typography/SecondaryTitle.vue";
 import TechChip from "../components/TechChip.vue";
 
 const techStack = [
-  { src: '/images/javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
-  { src: '/images/vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
-  { src: '/images/react-original.svg', alt: 'Logo de React', label: "React"},
-  { src: '/images/firebase-original.svg', alt: 'Logo de Firebase', label: "Firebase"},
-  { src: '/images/php-original.svg', alt: 'Logo de PHP', label: "PHP"},
-  { src: '/images/bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
-  { src: '/images/materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
-  { src: '/images/tailwindcss-original.svg', alt: 'Logo de Tailwind', label: "Tailwind"},
-  { src: '/images/html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
-  { src: '/images/css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
-  { src: '/images/sass-original.svg', alt: 'Logo de Sass', label: "Sass"},
-  { src: '/images/git-original.svg', alt: 'Logo de Git', label: "Git"},
-  { src: '/images/figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
-  { src: '/images/photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"}
+  { src: 'javascript-original.svg', alt: 'Logo de JavaScript', label: "JavaScript"},
+  { src: 'vue.svg', alt: 'Logo de Vue.js', label: "Vue"},
+  { src: 'react-original.svg', alt: 'Logo de React', label: "React"},
+  { src: 'firebase-original.svg', alt: 'Logo de Firebase', label: "Firebase"},
+  { src: 'php-original.svg', alt: 'Logo de PHP', label: "PHP"},
+  { src: 'bootstrap-original.svg', alt: 'Logo de Bootstrap', label: "Bootstrap"},
+  { src: 'materialui-original.svg', alt: 'Logo de Material UI', label: "Material UI"},
+  { src: 'tailwindcss-original.svg', alt: 'Logo de Tailwind', label: "Tailwind"},
+  { src: 'html5-original.svg', alt: 'Logo de HTML5', label: "HTML5"},
+  { src: 'css3-original.svg', alt: 'Logo de CSS', label: "CSS"},
+  { src: 'sass-original.svg', alt: 'Logo de Sass', label: "Sass"},
+  { src: 'git-original.svg', alt: 'Logo de Git', label: "Git"},
+  { src: 'figma-original.svg', alt: 'Logo de Figma', label: "Figma"},
+  { src: 'photoshop-original.svg', alt: 'Logo de Photoshop', label: "Photoshop"}
 ]
 
 </script>
