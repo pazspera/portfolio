@@ -10,7 +10,8 @@ const skipTransition = ref(false);
 
 const { isMobile } = useIsMobile();
 const transitionName = computed(() => (isMobile.value ? 'mobile-slide' : 'fade'));
-const transitionMode = computed(() => (isMobile.value ? undefined : 'out-in'));
+const transitionMode = computed(() => (isMobile.value ? "in-out" : 'out-in'));
+const shouldSkipTransition = computed(()=> isMobile.value || skipTransition.value);
 
 watch(
   () => route.fullPath,
@@ -30,7 +31,7 @@ watch(
     <main class="container mx-auto px-4 md:px-6 pb-8 pt-24">
       <RouterView v-slot="{ Component  }">
         <!-- When navigation is only a hash change (same path), skip the transition to avoid unnecessary animations and allow immediate scrolling -->
-        <component v-if="skipTransition" :is="Component" :key="route.fullPath" />
+        <component v-if="shouldSkipTransition" :is="Component" :key="route.fullPath" />
           <transition v-else :name="transitionName" :mode="transitionMode">
             <component :is="Component" :key="route.fullPath" />
           </transition>
