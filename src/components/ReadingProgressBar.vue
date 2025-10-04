@@ -1,71 +1,87 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from "vue";
+import { computed, ref, onMounted, onUnmounted, watch, nextTick } from "vue";
 import { useNavbarStore } from "../stores/navbar";
 
-const progressBarWidth = ref(0);
-const progressBarTop = ref(0);
-
 const navbarStore = useNavbarStore();
+const progress = ref(0);
+const rafId = ref<number | null>(null);
 
-const calculateScrollProgress = () => {
+// top: usar la altura del navbar si existe, si está oculto usar 0
+const top = computed(() => {
+  const h = Number(navbarStore.height || 0);
+  return `${Math.max(0, h)}px`;
+});
+
+// NOTA: NO usamos navbarStore.isVisible para ocultar la barra.
+// La barra debe estar siempre presente (sticky/fixed) en la parte superior.
+const updateProgress = () => {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
   const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+  const total = Math.max(0, scrollHeight - clientHeight);
+  progress.value = total > 0 ? (scrollTop / total) * 100 : 0;
+};
 
-  // total of scrollable content
-  // total document height - window visible height
-  const totalScrollableHeight = scrollHeight - clientHeight;
-
-  if(totalScrollableHeight > 0) {
-    progressBarWidth.value =(scrollTop / totalScrollableHeight) * 100;
-  } else {
-    progressBarWidth.value = 0;
-  }
-
-  // adjust top and z-index of progress bar based on the store
-  if(navbarStore.isVisible) {
-    progressBarTop.value = navbarStore.height;
-  } else {
-    progressBarTop.value = 0;
-  }
-
-}
+const onScroll = () => {
+  if (rafId.value != null) cancelAnimationFrame(rafId.value);
+  rafId.value = requestAnimationFrame(() => {
+    updateProgress();
+    rafId.value = null;
+  });
+};
 
 onMounted(() => {
-  window.addEventListener("scroll", calculateScrollProgress);
-  calculateScrollProgress();
-
-  // watch changes in store
-  watch([()=> navbarStore.height, ()=> navbarStore.isVisible], ()=> {
-    calculateScrollProgress();
-  }, { immediate: true })
-
-})
+  window.addEventListener("scroll", onScroll, { passive: true });
+  nextTick(() => updateProgress());
+  // reaccionar a cambios en la altura del navbar para recalcular position/progreso
+  watch(() => navbarStore.height, () => {
+    // recalcular progreso y asegurar repaint estable
+    nextTick(updateProgress);
+  }, { immediate: true });
+});
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", calculateScrollProgress);
-})
-
+  window.removeEventListener("scroll", onScroll);
+  if (rafId.value != null) cancelAnimationFrame(rafId.value);
+});
 </script>
 
 <template>
-  <div class="reading-progress-bar-container bg-gray-500" :style="{ top: progressBarTop + 'px !important' }">
-    <div class="reading-progress-bar bg-primary-500" :style="{ width: progressBarWidth + '%' }"></div>
+  <!-- siempre renderizar la barra; top viene del computed -->
+  <div
+    class="reading-progress visible"
+    :style="{ top }"
+    role="progressbar"
+    :aria-valuenow="Math.round(progress)"
+  >
+    <div class="reading-progress__bar" :style="{ width: progress + '%' }"></div>
   </div>
 </template>
 
 <style scoped>
-.reading-progress-bar-container {
+.reading-progress {
   position: fixed;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 6px;
-  transition: top 0.3s ease-in-out, z-index 0s;
-  z-index: 1001;
+  pointer-events: none;
+  transform: translateY(-6px);
+  opacity: 0;
+  transition: transform 200ms ease, opacity 200ms ease;
+  will-change: transform, opacity;
+  z-index: 1100; /* por encima del navbar */
 }
 
-.reading-progress-bar {
+/* siempre visible, pero animada sutilmente con transform/opacity */
+.reading-progress.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reading-progress__bar {
   height: 100%;
-  transition: width 0.1s ease-out;
+  background: linear-gradient(90deg, var(--primary-600, #06b6d4), var(--primary-400, #60a5fa));
+  width: 0%;
+  transition: width 120ms linear;
 }
 </style>

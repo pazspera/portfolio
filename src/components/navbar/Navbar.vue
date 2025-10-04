@@ -18,6 +18,18 @@ const lastScrollPosition = ref(0);
 const headerRef = ref<HTMLElement | null>(null);
 const navbarStore = useNavbarStore();
 
+// ResizeObserver + resize handler
+let resizeObserver: ResizeObserver | null = null;
+const handleResize = () => {
+  if (headerRef.value) {
+    const h = headerRef.value.offsetHeight;
+    navbarStore.setHeight(h);
+    // opcional: exponer a CSS para uso en otros componentes
+    document.documentElement.style.setProperty('--navbar-height', `${h}px`);
+  }
+};
+
+// scroll handler (mantener lógica existente y actualizar store)
 const handleScroll = () => {
   const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -38,8 +50,6 @@ const handleScroll = () => {
   navbarStore.setIsVisible(isNavbarVisible.value);
 
   // waits until next tick to get current height and update it in store
-  // the change is immediate but won't be applied until the dom updates
-  // that's the next tick
   nextTick(()=> {
     if (headerRef.value) {
       if(isNavbarVisible.value) {
@@ -56,20 +66,39 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-  // initializes height and visibility in store
+  // scroll listener
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  // initializes height and visibility in store after first paint
   nextTick(()=> {
     if(headerRef.value) {
       navbarStore.setHeight(headerRef.value.offsetHeight);
       navbarStore.setIsVisible(isNavbarVisible.value);
+      document.documentElement.style.setProperty('--navbar-height', `${headerRef.value.offsetHeight}px`);
     }
-  })
-})
+
+    // Setup ResizeObserver if disponible
+    if (headerRef.value && typeof ResizeObserver !== "undefined") {
+      resizeObserver = new ResizeObserver(() => {
+        nextTick(() => handleResize());
+      });
+      resizeObserver.observe(headerRef.value);
+    }
+
+    // fallback: window resize
+    window.addEventListener("resize", handleResize, { passive: true });
+  });
+});
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("resize", handleResize);
+  if (resizeObserver && headerRef.value) {
+    resizeObserver.unobserve(headerRef.value);
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  }
 })
-
 </script>
 
 <template>
@@ -146,5 +175,4 @@ header {
   opacity: 1;
   pointer-events: auto;
 }
-
 </style>
