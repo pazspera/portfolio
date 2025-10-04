@@ -6,7 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit:d-home": "lighthouse --form-factor=desktop --screen-emulation-disabled=true --output-path=./lighthouse-reports/desktop/home-$(date +%Y%m%d).html http://localhost:5173",
+    "audit:d-institucional": "lighthouse --form-factor=desktop --screen-emulation-disabled=true --output-path=./lighthouse-reports/desktop/institucional-$(date +%Y%m%d).html http://localhost:5173/proyectos/institucional",
+    "audit:d-landing": "lighthouse --form-factor=desktop --screen-emulation-disabled=true --output-path=./lighthouse-reports/desktop/landing-$(date +%Y%m%d).html http://localhost:5173/proyectos/landing",
+    "audit:d-redes": "lighthouse --form-factor=desktop --screen-emulation-disabled=true --output-path=./lighthouse-reports/desktop/redes-$(date +%Y%m%d).html http://localhost:5173/proyectos/redes",
+    "audit:m-home": "lighthouse --form-factor=mobile --screen-emulation-disabled=false --output-path=./lighthouse-reports/mobile/home-$(date +%Y%m%d).html http://localhost:5173",
+    "audit:m-institucional": "lighthouse --form-factor=mobile --screen-emulation-disabled=false --output-path=./lighthouse-reports/mobile/institucional-$(date +%Y%m%d).html http://localhost:5173/proyectos/institucional",
+    "audit:m-landing": "lighthouse --form-factor=mobile --screen-emulation-disabled=false --output-path=./lighthouse-reports/mobile/landing-$(date +%Y%m%d).html http://localhost:5173/proyectos/landing",
+    "audit:m-redes": "lighthouse --form-factor=mobile --output-path=./lighthouse-reports/mobile/redes-$(date +%Y%m%d).html http://localhost:5173/proyectos/redes"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
