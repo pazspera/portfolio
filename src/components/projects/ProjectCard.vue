@@ -22,7 +22,7 @@ const { imgUrl } = useImageUrl(props.card.img.src);
     @mouseleave="isHovered = false"
   >
     <div class="overflow-hidden relative transition-all duration-150 ease-in-out">
-      <img :src="imgUrl" :alt="card.img.alt" :class="[isHovered ? 'scale-105' : 'scale-100' , 'w-full h-auto object-cover transition-all duration-300']">
+      <img :src="imgUrl" :alt="card.img.alt" :class="[isHovered ? 'scale-105' : 'scale-100' , 'w-full h-auto object-cover transition-all duration-300']" loading="lazy"/>
     </div>  
     <div class="p-6 bg-slate-300 dark:bg-slate-700 dark:text-zinc-200 flex flex-col flex-grow place-items-between rounded-b-lg">
       <div class="align-self-start">

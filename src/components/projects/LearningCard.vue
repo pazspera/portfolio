@@ -14,7 +14,7 @@ const { imgUrl } = useImageUrl(props.content.img.src);
 
 <template>
   <article :class="['p-4 lg:p-6  rounded-lg bg-primary-100', props.content.class]">
-    <img :src="imgUrl" :alt="props.content.img.alt" class="w-[70px] lg:w-[90px] mb-4 ">
+    <img :src="imgUrl" :alt="props.content.img.alt" class="w-[70px] lg:w-[90px] mb-4" loading="lazy">
     <div>
       <SecondaryTitle>
       {{ props.content.title }}
