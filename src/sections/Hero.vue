@@ -6,9 +6,32 @@ import EyebrowText from '../components/typography/EyebrowText.vue';
 import HeroBlurb from "../components/typography/HeroBlurb.vue";
 import RoleLabel from "../components/typography/RoleLabel.vue";
 import { useImageUrl } from '../composables/useImageUrl';
+import { ImageSrcSet } from '../types/general';
+import { onMounted } from 'vue';
 
 const heroImageSrc = "bio.png";
 const { imgUrl } = useImageUrl(heroImageSrc);
+const testImgSrcSet = {
+  srcSet: [
+    {
+    src: 'bio-288w.jpg',
+    width: '288w'
+    },
+    {
+      src: 'bio-200w.jpg',
+      width: '200w'
+    },
+    {
+    src: 'bio-288w.jpg',
+    width: '1024w'
+    },
+  ],
+  sizes: "(width < 767px) 288w, 200w, (width > 1025px) 1024px"
+}
+
+onMounted(() => {
+  useImageUrl(testImgSrcSet);
+});
 
 </script>
 

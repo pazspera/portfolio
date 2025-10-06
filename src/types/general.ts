@@ -5,6 +5,16 @@ export interface ImageProps {
   alt: string,
 }
 
+export interface IndividualImageSrc {
+  src: string,
+  width: string,
+}
+
+export interface ImageSrcSet {
+  srcSet: IndividualImageSrc[],
+  sizes: string,
+}
+
 export interface ButtonContained {
   href?: string,
   type?: "button" | "submit" | "reset",
