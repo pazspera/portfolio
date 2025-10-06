@@ -6,11 +6,11 @@ const navbarStore = useNavbarStore();
 const progress = ref(0);
 const rafId = ref<number | null>(null);
 
-// top: usar la altura del navbar si existe, si está oculto usar 0
-const top = computed(() => {
-  const h = Number(navbarStore.height || 0);
-  return `${Math.max(0, h)}px`;
-});
+// usa translateY en vez de definir top para poder
+// animar el componente con el mismo ritmo que Navbar
+const translateY = computed(()=> {
+  return `translateY(${navbarStore.isVisible ? navbarStore.height : 0}px)`;
+})
 
 // NOTA: NO usamos navbarStore.isVisible para ocultar la barra.
 // La barra debe estar siempre presente (sticky/fixed) en la parte superior.
@@ -50,7 +50,7 @@ onUnmounted(() => {
   <!-- siempre renderizar la barra; top viene del computed -->
   <div
     class="reading-progress visible"
-    :style="{ top }"
+    :style="{ top: '0px', transform: translateY }"
     role="progressbar"
     :aria-valuenow="Math.round(progress)"
   >
@@ -63,11 +63,12 @@ onUnmounted(() => {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   height: 6px;
   pointer-events: none;
-  transform: translateY(-6px);
+  transform: translateY(-10px);
   opacity: 0;
-  transition: transform 200ms ease, opacity 200ms ease;
+  transition: transform var(--nav-transition-duration) var(--nav-transition-easing), opacity 200ms ease;
   will-change: transform, opacity;
   z-index: 1100; /* por encima del navbar */
 }

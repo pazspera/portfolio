@@ -54,11 +54,11 @@ const handleScroll = () => {
     if (headerRef.value) {
       if(isNavbarVisible.value) {
         navbarStore.setHeight(headerRef.value.offsetHeight);
-      } else {
+      } /* else {
         navbarStore.setHeight(0);
         // this is needed because the ReadingProgressBar was
         // not updating the top value when the navbar is hidden
-      }
+      } */
     }
   })
 
@@ -156,7 +156,7 @@ onBeforeUnmount(() => {
 }
 
 header {
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform var(--nav-transition-duration) var(--nav-transition-easing), opacity 200ms ease;
   position: fixed;
   top: 0;
   left: 0;

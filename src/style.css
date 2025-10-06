@@ -24,6 +24,9 @@
   --font-title: "Merriweather", "serif";
   --font-text: "Karla", "sans-serif";
   --font-logo: "Fredericka the Great", "serif";
+  /* Navbar */
+  --nav-transition-duration: 300ms;
+  --nav-transition-easing: cubic-bezier(.2,.9,.2,1);
 }
 
 
