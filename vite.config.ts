@@ -8,5 +8,8 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: './'
+  base: './',
+  build: {
+    assetsInlineLimit: 0,
+  }
 })
