@@ -381,7 +381,7 @@ export const caseStudies: Project[] = [
               },
               title: "Enfoque estratégico en la audiencia",
               text: "Alinear la estrategia de contenido con la rentabilidad del cliente es clave. Priorizar sectores específicos para la landing optimiza el mensaje y direcciona los recursos de marketing hacia audiencias con mayor retorno de inversión.",
-              class: "md:col-span-4"
+              class: "md:col-span-4 md:col-start-3"
             }
           ]
         }
