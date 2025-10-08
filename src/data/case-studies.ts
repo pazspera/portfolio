@@ -385,6 +385,7 @@ export const caseStudies: Project[] = [
             }
           ]
         }
+        
       }
     ]
   },

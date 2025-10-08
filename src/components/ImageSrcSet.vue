@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { useImageUrl } from '../composables/useImageUrl';
+import { ImageSrcSet } from '../types/general';
 
 const testImgSrcSet = {
   srcSet: [
@@ -20,11 +20,35 @@ const testImgSrcSet = {
   sizes: "(width < 767px) 288w, 200w, (width > 1025px) 1024px"
 }
 
-onMounted(() => {
-  useImageUrl(testImgSrcSet);
-  console.log("Dentro de imageSrcSet", typeof testImgSrcSet.srcSet);
-  console.log(testImgSrcSet.srcSet)
-});
+
+const createImgSrcSetRoute = (imgArray : ImageSrcSet) => {
+  /* 
+    iterar en la prop srcSet dentro de imgArray (objeto)
+    dentro de cada objeto en srcSet, llamar a useImageUrl para que cree la ruta de imagen
+    concatenar ruta imagen + " " + width + ","
+    guardar todo esto en un string
+    sacarle la coma final al string
+    devolverlo
+  */
+  let srcSetString = "";
+
+  imgArray.srcSet.map((img)=> {
+    console.log("img", img);
+    console.log("img.src", img.src);
+    console.log("img.width", img.width);
+    // srcWithRoute devuelve un objeto
+    // hay que acceder a imgUrl.value para obtener el string
+    // useImageUrl devuelve el objeto, hay que sacarle la prop
+    let { imgUrl } = useImageUrl(img.src);
+    // y entrar al value para obtener la ruta
+    let newImageRoute = imgUrl.value;
+    console.log("newImageRoute", newImageRoute);
+  })
+  
+  return srcSetString;
+}
+
+createImgSrcSetRoute(testImgSrcSet);
 
 /* 
 Le paso un array con el nombre de la imagen
