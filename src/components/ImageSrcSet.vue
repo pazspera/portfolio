@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useImageUrl } from '../composables/useImageUrl';
 import { ImageSrcSet } from '../types/general';
+import { createStaticImageRoute } from '../utility/staticImageRoute';
 
 const testImgSrcSet = {
   srcSet: [
@@ -43,6 +44,8 @@ const createImgSrcSetRoute = (imgArray : ImageSrcSet) => {
     // y entrar al value para obtener la ruta
     let newImageRoute = imgUrl.value;
     console.log("newImageRoute", newImageRoute);
+    let simpleRoute = createStaticImageRoute(img.src);
+    console.log("simpleRoute", simpleRoute);
   })
   
   return srcSetString;

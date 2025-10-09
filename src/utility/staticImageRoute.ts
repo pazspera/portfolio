@@ -1,3 +1,9 @@
+const ASSETS_BASE_URL = new URL("../assets/images/", import.meta.url).href;
+
 export const createStaticImageRoute = (imageInfo: string) => {
-  return new URL(`../assets/images/${imageInfo}`, import.meta.url).href;
+  if(!imageInfo){
+    return "";
+  }
+
+  return `${ASSETS_BASE_URL}/${imageInfo}`;
 }
