@@ -3,6 +3,7 @@ import { ImageProps } from "./general";
 import type { ImageSliderContent } from "./imageSlider";
 import { ImageCompareContent } from "./imageCompare";
 import { RouteLocationRaw } from "vue-router";
+import { ImageSrcSet } from "./general";
 
 export type ChallengeItem = {
   id: number,
@@ -33,7 +34,8 @@ export type RoleCard = {
 export interface ProjectCard {
   title: string,
   text: string,
-  img: ImageProps,
+  img?: ImageProps,
+  imgSrcSet?: ImageSrcSet,
   to: RouteLocationRaw,
 }
 

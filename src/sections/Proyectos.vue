@@ -11,9 +11,28 @@ const exampleProject: Project =   {
     card: {
       title: "Rediseño de sitio institucional",
       text: "Transformé la plataforma web de la empresa, implementando una nueva identidad de marca, reformulando la arquitectura de información y creando un sistema de diseño personalizado.",
-      img: {
-        src: "card-institutional-redesign.jpg",
-        alt: "Mockups de proyecto de rediseño de sitio institucional",
+      imgSrcSet: {
+        srcSet: [
+          {
+            src: "368.jpg",
+            width: "368w",
+          },
+          {
+            src: "476.jpg",
+            width: "476w",
+          },
+          {
+            src: "608.jpg",
+            width: "608w",
+          },
+          {
+            src: "732.jpg",
+            width: "732w",
+          }
+        ],
+        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        srcDefault: "608.jpg",
+        alt: "Mockups de proyecto de rediseño de sitio institucional"
       },
       to: {
         name: "SingleCaseStudy",
@@ -215,7 +234,7 @@ const exampleProject: Project =   {
         }
       }
     ]
-  }
+}
 
 </script>
 
@@ -226,15 +245,15 @@ const exampleProject: Project =   {
         Proyectos
       </SectionTitle>
       <h2>Ejemplo card</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ProjectCard :card="exampleProject.card" />
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ProjectCard
+          <!-- <ProjectCard
             v-for="project in caseStudies"
             :key="project.id"
             :card="project.card"
-          />
+          /> -->
       </div>
     </div>
   </section>

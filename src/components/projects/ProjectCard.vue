@@ -5,13 +5,15 @@ import ButtonContained from "../ButtonContained.vue";
 import { ref } from "vue";
 import { ProjectCard } from "../../types/projects-v2";
 import { useImageUrl } from "../../composables/useImageUrl";
+import ImageSrcSet from "../ImageSrcSet.vue";
 
 const props = defineProps<{
   card: ProjectCard
 }>();
 
 const isHovered = ref(false);
-const { imgUrl } = useImageUrl(props.card.img.src);
+const imgSource = props.card.img?.src;
+const { imgUrl } = useImageUrl(imgSource || "");
 
 </script>
 
@@ -22,7 +24,8 @@ const { imgUrl } = useImageUrl(props.card.img.src);
     @mouseleave="isHovered = false"
   >
     <div class="overflow-hidden relative transition-all duration-150 ease-in-out">
-      <img :src="imgUrl" :alt="card.img.alt" :class="[isHovered ? 'scale-105' : 'scale-100' , 'w-full h-auto object-cover transition-all duration-300']" loading="lazy"/>
+      <img v-if="card.img" :src="imgUrl" :alt="card.img.alt" :class="[isHovered ? 'scale-105' : 'scale-100' , 'w-full h-auto object-cover transition-all duration-300']" loading="lazy"/>
+      <ImageSrcSet v-if="card.imgSrcSet" :img="card.imgSrcSet" />
     </div>  
     <div class="p-6 bg-slate-300 dark:bg-slate-700 dark:text-zinc-200 flex flex-col flex-grow place-items-between rounded-b-lg">
       <div class="align-self-start">
