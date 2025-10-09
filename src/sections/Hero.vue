@@ -5,30 +5,26 @@ import HeroTitle from '../components/typography/HeroTitle.vue';
 import EyebrowText from '../components/typography/EyebrowText.vue';
 import HeroBlurb from "../components/typography/HeroBlurb.vue";
 import RoleLabel from "../components/typography/RoleLabel.vue";
-import { useImageUrl } from '../composables/useImageUrl';
 import ImageSrcSet from '../components/ImageSrcSet.vue';
 
-const heroImageSrc = "bio.png";
-const { imgUrl } = useImageUrl(heroImageSrc);
-
-const testImgSrcSet = {
+const bioImageSrcSet = {
   srcSet: [
     {
-    src: '288S.png',
+    src: 'bio-288w.png',
     width: '288w'
     },
     {
-      src: '200.png',
+      src: 'bio-200w.png',
       width: '200w'
     },
     {
-    src: '288S.png',
+    src: 'bio-288w.png',
     width: '1024w'
     },
   ],
   sizes: "(max-width: 768px) 288px, (max-width: 1024px) 200px, 1024px",
-  srcDefault: "288S.png",
-  alt: "img test props"
+  srcDefault: "bio-288w.png",
+  alt: "Paz Spera"
 }
 
 </script>
@@ -59,7 +55,9 @@ const testImgSrcSet = {
         </div>
         <!-- Img -->
         <div class="md:col-span-3 md:col-start-6 self-center flex flex-col items-center justify-center">
-          <img :src="imgUrl" alt="Paz Spera" class="max-w-2xs md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0" />
+          <div class="max-w-2xs md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0">
+            <ImageSrcSet :img="bioImageSrcSet" />
+          </div>
             <div class="bg-primary-400 bg-opacity-60 text-black dark:bg-primary-200 text-sm lg:text-lg py-2 px-4 rounded-sm z-10 -mt-8 relative">
               <div class="flex flex-col items-center">
                 <RoleLabel>
@@ -74,6 +72,4 @@ const testImgSrcSet = {
       </div>
     </div>
   </section>
-
-  <ImageSrcSet :img="testImgSrcSet" />
 </template>
