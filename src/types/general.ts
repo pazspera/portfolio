@@ -13,6 +13,8 @@ export interface IndividualImageSrc {
 export interface ImageSrcSet {
   srcSet: IndividualImageSrc[],
   sizes: string,
+  srcDefault: string,
+  alt: string,
 }
 
 export interface ButtonContained {

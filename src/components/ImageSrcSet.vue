@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { useImageUrl } from '../composables/useImageUrl';
 import { ImageSrcSet } from '../types/general';
 import { createStaticImageRoute } from '../utility/staticImageRoute';
+import { onMounted, ref } from 'vue';
+
+const props = defineProps<{
+  img: ImageSrcSet,
+}>();
+
+const newSrcSet = ref(""); 
 
 const testImgSrcSet = {
   srcSet: [
@@ -18,7 +24,9 @@ const testImgSrcSet = {
     width: '1024w'
     },
   ],
-  sizes: "(width < 767px) 288w, 200w, (width > 1025px) 1024px"
+  sizes: "(width < 767px) 288w, 200w, (width > 1025px) 1024px",
+  srcDefault: "/288S.png",
+  alt: "img test directo"
 }
 
 
@@ -34,24 +42,29 @@ const createImgSrcSetRoute = (imgArray : ImageSrcSet) => {
   let srcSetString = "";
 
   imgArray.srcSet.map((img)=> {
-    console.log("img", img);
+    /* console.log("img", img);
     console.log("img.src", img.src);
-    console.log("img.width", img.width);
+    console.log("img.width", img.width); */
     // srcWithRoute devuelve un objeto
     // hay que acceder a imgUrl.value para obtener el string
     // useImageUrl devuelve el objeto, hay que sacarle la prop
-    let { imgUrl } = useImageUrl(img.src);
-    // y entrar al value para obtener la ruta
-    let newImageRoute = imgUrl.value;
-    console.log("newImageRoute", newImageRoute);
-    let simpleRoute = createStaticImageRoute(img.src);
-    console.log("simpleRoute", simpleRoute);
+    let newImageRoute = createStaticImageRoute(img.src);
+    srcSetString += `${newImageRoute} ${img.width}, `
+    console.log("srcSetString", srcSetString);
   })
+
+  if(srcSetString.endsWith(", ")) {
+    srcSetString = srcSetString.slice(0, -2);
+  }
   
   return srcSetString;
 }
 
-createImgSrcSetRoute(testImgSrcSet);
+onMounted(()=> {
+  createImgSrcSetRoute(testImgSrcSet);
+  newSrcSet.value = createImgSrcSetRoute(props.img);
+  console.log("newSrcSet",newSrcSet);
+})
 
 /* 
 Le paso un array con el nombre de la imagen
@@ -98,5 +111,12 @@ Agregarle una coma al final, excepto al último
     srcset="/288S.png 288w, /200.png 200w, /288S.png 1024w"
     sizes="(max-width: 768px) 288px, (max-width: 1024px) 200px, 1024px"
     src="/288S.png"
-    alt="test">
+    alt="test" />
+  
+  <h1>Test con props</h1>
+  <img 
+    :srcset="newSrcSet"
+    :sizes="props.img.sizes"
+    :src="props.img.srcDefault"
+    :alt="props.img.alt" />
 </template>

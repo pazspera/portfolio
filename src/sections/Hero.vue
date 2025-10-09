@@ -11,8 +11,27 @@ import ImageSrcSet from '../components/ImageSrcSet.vue';
 const heroImageSrc = "bio.png";
 const { imgUrl } = useImageUrl(heroImageSrc);
 
-</script>
+const testImgSrcSet = {
+  srcSet: [
+    {
+    src: 'bio-288w.jpg',
+    width: '288w'
+    },
+    {
+      src: 'bio-200w.jpg',
+      width: '200w'
+    },
+    {
+    src: 'bio-288w.jpg',
+    width: '1024w'
+    },
+  ],
+  sizes: "(width < 767px) 288w, 200w, (width > 1025px) 1024px",
+  srcDefault: "/288S.png",
+  alt: "img test props"
+}
 
+</script>
 
 <template>
   <section class="bg-primary-200 dark:bg-primary-400 dark:text-zinc-900 px-4 sm:px-6 lg:px-8 pt-6 lg:pt-8 xl:pt-10 pb-14 sm:pb-12 md:pb-6 lg:pb-8 xl:pb-10 rounded-br-[120px] md:rounded-r-[120px] md:rounded-br-none">
@@ -56,5 +75,5 @@ const { imgUrl } = useImageUrl(heroImageSrc);
     </div>
   </section>
 
-  <ImageSrcSet />
+  <ImageSrcSet :img="testImgSrcSet" />
 </template>
