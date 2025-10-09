@@ -8,9 +8,28 @@ export const caseStudies: Project[] = [
     card: {
       title: "Rediseño de sitio institucional",
       text: "Transformé la plataforma web de la empresa, implementando una nueva identidad de marca, reformulando la arquitectura de información y creando un sistema de diseño personalizado.",
-      img: {
-        src: "card-institutional-redesign.jpg",
-        alt: "Mockups de proyecto de rediseño de sitio institucional",
+      imgSrcSet: {
+        srcSet: [
+          {
+            src: "card-institutional-redesign-368w.jpg",
+            width: "368w",
+          },
+          {
+            src: "card-institutional-redesign-476w.jpg",
+            width: "476w",
+          },
+          {
+            src: "card-institutional-redesign-608w.jpg",
+            width: "608w",
+          },
+          {
+            src: "card-institutional-redesign-732w.jpg",
+            width: "732w",
+          }
+        ],
+        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        srcDefault: "card-institutional-redesign-608w.jpg",
+        alt: "Mockups de proyecto de rediseño de sitio institucional"
       },
       to: {
         name: "SingleCaseStudy",
@@ -220,9 +239,28 @@ export const caseStudies: Project[] = [
     card: {
       title: "Landing optimizada para ventas",
       text: "Diseñé y desarrollé una landing page comercial para Liquid Sound, transformando su comunicación a un enfoque de ventas directo. El objetivo fue optimizar la captación de leads de alto valor y establecer una plataforma efectiva para campañas.",
-      img: {
-        src: "card-landing-ventas.jpg",
-        alt: "Mockup de landing optimizada para ventas",
+      imgSrcSet: {
+        srcSet: [
+          {
+            src: "card-landing-ventas-368w.jpg",
+            width: "368w",
+          },
+          {
+            src: "card-landing-ventas-476w.jpg",
+            width: "476w",
+          },
+          {
+            src: "card-landing-ventas-608w.jpg",
+            width: "608w",
+          },
+          {
+            src: "card-landing-ventas-732w.jpg",
+            width: "732w",
+          }
+        ],
+        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        srcDefault: "card-landing-ventas-608w.jpg",
+        alt: "Mockup de landing optimizada para ventas"
       },
       to: {
         name: "SingleCaseStudy",
@@ -396,9 +434,28 @@ export const caseStudies: Project[] = [
     card: {
       title: "Contenido estratégico para redes",
       text: "Desarrollé artículos y piezas gráficas para campañas de redes sociales de empresas B2B. Se buscó mejorar el engagement y posicionamiento orgánico, definiendo una voz de marca que conecte con el público objetivo.",
-      img: {
-        src: "card-contenido-redes.jpg",
-        alt: "Mockups de publicaciones para redes sociales",
+      imgSrcSet: {
+        srcSet: [
+          {
+            src: "card-contenido-redes-368w.jpg",
+            width: "368w",
+          },
+          {
+            src: "card-contenido-redes-476w.jpg",
+            width: "476w",
+          },
+          {
+            src: "card-contenido-redes-608w.jpg",
+            width: "608w",
+          },
+          {
+            src: "card-contenido-redes-732w.jpg",
+            width: "732w",
+          }
+        ],
+        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        srcDefault: "card-contenido-redes-608w.jpg",
+        alt: "Mockups de publicaciones para redes sociales"
       },
       to: {
         name: "SingleCaseStudy",
