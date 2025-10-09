@@ -14,20 +14,20 @@ const { imgUrl } = useImageUrl(heroImageSrc);
 const testImgSrcSet = {
   srcSet: [
     {
-    src: 'bio-288w.jpg',
+    src: '288S.png',
     width: '288w'
     },
     {
-      src: 'bio-200w.jpg',
+      src: '200.png',
       width: '200w'
     },
     {
-    src: 'bio-288w.jpg',
+    src: '288S.png',
     width: '1024w'
     },
   ],
-  sizes: "(width < 767px) 288w, 200w, (width > 1025px) 1024px",
-  srcDefault: "/288S.png",
+  sizes: "(max-width: 768px) 288px, (max-width: 1024px) 200px, 1024px",
+  srcDefault: "288S.png",
   alt: "img test props"
 }
 

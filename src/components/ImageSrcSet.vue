@@ -110,13 +110,13 @@ Agregarle una coma al final, excepto al último
   <img 
     srcset="/288S.png 288w, /200.png 200w, /288S.png 1024w"
     sizes="(max-width: 768px) 288px, (max-width: 1024px) 200px, 1024px"
-    src="/288S.png"
+    :src="createStaticImageRoute(props.img.srcDefault)"
     alt="test" />
   
   <h1>Test con props</h1>
   <img 
     :srcset="newSrcSet"
     :sizes="props.img.sizes"
-    :src="props.img.srcDefault"
+    :src="createStaticImageRoute(props.img.srcDefault)"
     :alt="props.img.alt" />
 </template>
