@@ -56,7 +56,7 @@ const bioImageSrcSet = {
         <!-- Img -->
         <div class="md:col-span-3 md:col-start-6 self-center flex flex-col items-center justify-center">
           <div class="max-w-2xs md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0">
-            <ImageSrcSet :img="bioImageSrcSet" />
+            <ImageSrcSet :img="bioImageSrcSet" loading="eager" />
           </div>
             <div class="bg-primary-400 bg-opacity-60 text-black dark:bg-primary-200 text-sm lg:text-lg py-2 px-4 rounded-sm z-10 -mt-8 relative">
               <div class="flex flex-col items-center">

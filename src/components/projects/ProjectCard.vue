@@ -6,7 +6,7 @@ import { ref } from "vue";
 import { ProjectCard } from "../../types/projects-v2";
 import ImageSrcSet from "../ImageSrcSet.vue";
 
-const props = defineProps<{
+defineProps<{
   card: ProjectCard
 }>();
 
