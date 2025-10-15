@@ -27,7 +27,7 @@ export const caseStudies: Project[] = [
             width: "732w",
           }
         ],
-        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        sizes: "(max-width: 767px) 100vw, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px",
         srcDefault: "card-institutional-redesign-608w.jpg",
         alt: "Mockups de proyecto de rediseño de sitio institucional"
       },
@@ -258,7 +258,7 @@ export const caseStudies: Project[] = [
             width: "732w",
           }
         ],
-        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        sizes: "(max-width: 767px) 100vw, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px",
         srcDefault: "card-landing-ventas-608w.jpg",
         alt: "Mockup de landing optimizada para ventas"
       },
@@ -453,7 +453,7 @@ export const caseStudies: Project[] = [
             width: "732w",
           }
         ],
-        sizes: "(max-width: 400px) 368px, (max-width: 767px) 608px, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px)",
+        sizes: "(max-width: 767px) 100vw, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px",
         srcDefault: "card-contenido-redes-608w.jpg",
         alt: "Mockups de publicaciones para redes sociales"
       },
