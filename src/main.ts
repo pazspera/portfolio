@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import "./style.css";
-import "devicon/devicon.min.css";
 import router from "./router";
 import { createPinia } from "pinia";
 import App from "./App.vue";
