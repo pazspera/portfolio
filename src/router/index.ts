@@ -1,16 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../pages/Home.vue";
-import GraciasContactarse from "../pages/GraciasContactarse.vue";
-import SingleCaseStudy from "../pages/SingleCaseStudy.vue";
-import NotFound from "../pages/NotFound.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: "/", name: "home", component: Home },
-    { path: "/proyectos/:slug", name: "SingleCaseStudy", component: SingleCaseStudy, props: true },
-    { path: "/gracias-por-contactarse", name: "gracias", component: GraciasContactarse },
-    { path: "/:catchAll(.*)*", name: "notFound", component: NotFound}
+    { path: "/proyectos/:slug", name: "SingleCaseStudy", component: ()=> import("../pages/SingleCaseStudy.vue"), props: true },
+    { path: "/gracias-por-contactarse", name: "gracias", component: ()=> import("../pages/GraciasContactarse.vue") },
+    { path: "/:catchAll(.*)*", name: "notFound", component: ()=> import("../pages/NotFound.vue")}
   ],
   scrollBehavior(to, from, savedPosition) {
     // Si hay una posición guardada (navegación atrás/adelante), devolverla
