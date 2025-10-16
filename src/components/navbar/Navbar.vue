@@ -1,104 +1,71 @@
 <script setup lang="ts">
 import { Bars3Icon } from "@heroicons/vue/24/outline";
-import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
-import { useIsMobile } from "../../composables/useIsMobile";
+import { ref, onMounted, onBeforeUnmount, nextTick, watch } from "vue";
+import { useScroll, useResizeObserver } from '@vueuse/core';
+import { isMobile } from "../../composables/breakpoints";
 import NavLink from "./NavLink.vue";
 import NavLogo from "./NavLogo.vue";
 import DarkToggle from "./DarkToggle.vue";
 import { useNavbarStore } from "../../stores/navbar";
 
 const menuOpen = ref(false);
-const { isMobile } = useIsMobile();
+const isNavbarVisible = ref(true);
+const headerRef = ref<HTMLElement | null>(null);
+const navbarStore = useNavbarStore();
+const lastY = ref(0);
+
+const handleResize = ()=> {
+  if(headerRef.value) {
+    const h = headerRef.value.offsetHeight;
+    navbarStore.setHeight(h);
+    document.documentElement.style.setProperty("--navbar-height", `${h}px`);
+  }
+}
+
+const { y } = useScroll(window, {
+  throttle: 100,
+})
+
+const { stop: stopResizeObserver } = useResizeObserver(headerRef, (entries)=> {
+  handleResize();
+})
+
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 }
 
-const isNavbarVisible = ref(true);
-const lastScrollPosition = ref(0);
-const headerRef = ref<HTMLElement | null>(null);
-const navbarStore = useNavbarStore();
-
-// ResizeObserver + resize handler
-let resizeObserver: ResizeObserver | null = null;
-const handleResize = () => {
-  if (headerRef.value) {
-    const h = headerRef.value.offsetHeight;
-    navbarStore.setHeight(h);
-    // opcional: exponer a CSS para uso en otros componentes
-    document.documentElement.style.setProperty('--navbar-height', `${h}px`);
-  }
-};
-
-// scroll handler (mantener lógica existente y actualizar store)
-const handleScroll = () => {
-  const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-  // stops navbar from blinking
-  if (currentScrollPosition === 0) {
+watch(y, (currentY) => {
+  // Usamos lastY.value para la comparación
+  if(currentY === 0) {
     isNavbarVisible.value = true;
-  } 
-  // hides navbar on scroll down
-  else if(currentScrollPosition > lastScrollPosition.value && currentScrollPosition > 50) {
+  }
+  // Bajar: se oculta
+  else if(currentY > lastY.value && currentY > 50) {
     isNavbarVisible.value = false;
-  } 
-  // shows navbar on scroll up
-  else if (currentScrollPosition < lastScrollPosition.value) {
+  }
+  // Subir: se muestra
+  else if(currentY < lastY.value) {
     isNavbarVisible.value = true;
   }
 
-  // update visibility in store
   navbarStore.setIsVisible(isNavbarVisible.value);
 
-  // waits until next tick to get current height and update it in store
-  nextTick(()=> {
-    if (headerRef.value) {
-      if(isNavbarVisible.value) {
-        navbarStore.setHeight(headerRef.value.offsetHeight);
-      } /* else {
-        navbarStore.setHeight(0);
-        // this is needed because the ReadingProgressBar was
-        // not updating the top value when the navbar is hidden
-      } */
-    }
-  })
-
-  lastScrollPosition.value = currentScrollPosition;
-}
+  // 💡 ACTUALIZAR: Almacenamos la posición actual como la "última" para la próxima ejecución.
+  lastY.value = currentY;
+} )
 
 onMounted(() => {
-  // scroll listener
-  window.addEventListener("scroll", handleScroll, { passive: true });
-
-  // initializes height and visibility in store after first paint
   nextTick(()=> {
-    if(headerRef.value) {
-      navbarStore.setHeight(headerRef.value.offsetHeight);
-      navbarStore.setIsVisible(isNavbarVisible.value);
-      document.documentElement.style.setProperty('--navbar-height', `${headerRef.value.offsetHeight}px`);
-    }
-
-    // Setup ResizeObserver if disponible
-    if (headerRef.value && typeof ResizeObserver !== "undefined") {
-      resizeObserver = new ResizeObserver(() => {
-        nextTick(() => handleResize());
-      });
-      resizeObserver.observe(headerRef.value);
-    }
-
-    // fallback: window resize
-    window.addEventListener("resize", handleResize, { passive: true });
-  });
+    handleResize();
+    navbarStore.setIsVisible(isNavbarVisible.value);
+    lastY.value = y.value;
+  })
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener("scroll", handleScroll);
-  window.removeEventListener("resize", handleResize);
-  if (resizeObserver && headerRef.value) {
-    resizeObserver.unobserve(headerRef.value);
-    resizeObserver.disconnect();
-    resizeObserver = null;
-  }
+  stopResizeObserver();
 })
+
 </script>
 
 <template>
