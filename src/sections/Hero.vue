@@ -22,7 +22,12 @@ const bioImageSrcSet = {
     width: '1024w'
     },
   ],
-  sizes: "(max-width: 768px) 288px, (max-width: 1024px) 200px, 1024px",
+  srcSetWebp: [
+    { src: 'bio-288w.webp', width: '288w' },
+    { src: 'bio-200w.webp', width: '200w' },
+    { src: 'bio-288w.webp', width: '1024w' },
+  ],
+  sizes: "(max-width: 768px) 288px, 200px",
   srcDefault: "bio-288w.png",
   alt: "Paz Spera"
 }
@@ -55,7 +60,7 @@ const bioImageSrcSet = {
         </div>
         <!-- Img -->
         <div class="md:col-span-3 md:col-start-6 self-center flex flex-col items-center justify-center">
-          <div class="max-w-2xs md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0">
+          <div class="w-72 md:max-lg:max-w-[200px] h-auto pb-2 object-cover z-0">
             <ImageSrcSet :img="bioImageSrcSet" loading="eager" />
           </div>
             <div class="bg-primary-400 bg-opacity-60 text-black dark:bg-primary-200 text-sm lg:text-lg py-2 px-4 rounded-sm z-10 -mt-8 relative">
