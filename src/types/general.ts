@@ -12,6 +12,7 @@ export interface IndividualImageSrc {
 
 export interface ImageSrcSet {
   srcSet: IndividualImageSrc[],
+  srcSetWebp?: IndividualImageSrc[],
   sizes: string,
   srcDefault: string,
   alt: string,

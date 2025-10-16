@@ -27,6 +27,24 @@ export const caseStudies: Project[] = [
             width: "732w",
           }
         ],
+        srcSetWebp: [
+          {
+            src: "card-institutional-redesign-368w.webp",
+            width: "368w",
+          },
+          {
+            src: "card-institutional-redesign-476w.webp",
+            width: "476w",
+          },
+          {
+            src: "card-institutional-redesign-608w.webp",
+            width: "608w",
+          },
+          {
+            src: "card-institutional-redesign-732w.webp",
+            width: "732w",
+          }
+        ],
         sizes: "(max-width: 767px) 100vw, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px",
         srcDefault: "card-institutional-redesign-608w.jpg",
         alt: "Mockups de proyecto de rediseño de sitio institucional"
@@ -258,6 +276,24 @@ export const caseStudies: Project[] = [
             width: "732w",
           }
         ],
+        srcSetWebp: [
+          {
+            src: "card-landing-ventas-368w.webp",
+            width: "368w",
+          },
+          {
+            src: "card-landing-ventas-476w.webp",
+            width: "476w",
+          },
+          {
+            src: "card-landing-ventas-608w.webp",
+            width: "608w",
+          },
+          {
+            src: "card-landing-ventas-732w.webp",
+            width: "732w",
+          }
+        ],
         sizes: "(max-width: 767px) 100vw, (max-width: 1023px) 368px, (max-width: 1279px) 476px, (max-width: 1535px) 608px, 732px",
         srcDefault: "card-landing-ventas-608w.jpg",
         alt: "Mockup de landing optimizada para ventas"
@@ -450,6 +486,24 @@ export const caseStudies: Project[] = [
           },
           {
             src: "card-contenido-redes-732w.jpg",
+            width: "732w",
+          }
+        ],
+        srcSetWebp: [
+          {
+            src: "card-contenido-redes-368w.webp",
+            width: "368w",
+          },
+          {
+            src: "card-contenido-redes-476w.webp",
+            width: "476w",
+          },
+          {
+            src: "card-contenido-redes-608w.webp",
+            width: "608w",
+          },
+          {
+            src: "card-contenido-redes-732w.webp",
             width: "732w",
           }
         ],

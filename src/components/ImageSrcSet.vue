@@ -1,41 +1,49 @@
 <script setup lang="ts">
 import { ImageSrcSet } from '../types/general';
+import { IndividualImageSrc } from '../types/general';
 import { createStaticImageRoute } from '../utility/staticImageRoute';
-import { onMounted, ref } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps<{
   img: ImageSrcSet,
 }>();
 
-const newSrcSet = ref(""); 
-
-const createImgSrcSetRoute = (imgArray : ImageSrcSet) => {
-  let srcSetString = "";
-
-  imgArray.srcSet.map((img)=> {
-    let newImageRoute = createStaticImageRoute(img.src);
-    srcSetString += `${newImageRoute} ${img.width}, `
-    console.log("srcSetString", srcSetString);
-  })
-
-  if(srcSetString.endsWith(", ")) {
-    srcSetString = srcSetString.slice(0, -2);
+const createImgSrcSetRoute = (imgArray : IndividualImageSrc[] | undefined) => {
+  if(!imgArray) {
+    return "";
   }
+
+  const srcSetString = imgArray.map((img) => {
+    const newImageRoute = createStaticImageRoute(img.src);
+    return `${newImageRoute} ${img.width}`;
+  }).join(", ")
   
   return srcSetString;
 }
 
-onMounted(()=> {
-  newSrcSet.value = createImgSrcSetRoute(props.img);
-  console.log("newSrcSet",newSrcSet);
+const newSrcSet = computed(()=> {
+  return createImgSrcSetRoute(props.img.srcSet);
+}) 
+
+const newSrcSetWebp = computed(()=> {
+  return createImgSrcSetRoute(props.img.srcSetWebp);
 })
 
 </script>
 
 <template>
-  <img 
-    :srcset="newSrcSet"
-    :sizes="props.img.sizes"
-    :src="createStaticImageRoute(props.img.srcDefault)"
-    :alt="props.img.alt" />
+  <picture>
+    <source
+      v-if="newSrcSetWebp"
+      :srcset="newSrcSetWebp"
+      :sizes="props.img.sizes"
+      type="image/webp"
+    />
+
+    <img 
+      :srcset="newSrcSet"
+      :sizes="props.img.sizes"
+      :src="createStaticImageRoute(props.img.srcDefault)"
+      :alt="props.img.alt" />
+  </picture>
 </template>
