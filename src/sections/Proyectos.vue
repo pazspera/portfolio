@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { caseStudies } from "../data/case-studies";
+import { caseStudiesCards } from "../data/case-studies";
 import ProjectCard from "../components/projects/ProjectCard.vue";
 import SectionTitle from "../components/typography/SectionTitle.vue";
 
@@ -13,7 +13,7 @@ import SectionTitle from "../components/typography/SectionTitle.vue";
       </SectionTitle>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ProjectCard
-            v-for="project in caseStudies"
+            v-for="project in caseStudiesCards"
             :key="project.id"
             :card="project.card"
           />

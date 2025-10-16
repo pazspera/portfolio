@@ -830,3 +830,8 @@ export const caseStudies: Project[] = [
     ]
   }
 ]
+
+export const caseStudiesCards = caseStudies.map(project => ({
+  id: project.id,
+  card: project.card,
+}))
