@@ -1,9 +1,10 @@
 <script setup>
 import Hero from '../sections/Hero.vue';
-import AcercaDe from '../sections/AcercaDe.vue';
-import Contacto from "../sections/Contacto.vue";
 import Proyectos from '../sections/Proyectos.vue';
 import { useDocumentTitle } from '../composables/useDocumentTitle';
+import { defineAsyncComponent } from 'vue';
+const AcercaDe = defineAsyncComponent(()=> import('../sections/AcercaDe.vue'));
+const Contacto = defineAsyncComponent(()=> import("../sections/Contacto.vue"));
 
 useDocumentTitle("Paz Spera - Inicio")
 
@@ -13,7 +14,11 @@ useDocumentTitle("Paz Spera - Inicio")
   <section>
     <Hero />
     <Proyectos />
-    <AcercaDe />
-    <Contacto />
+    <Suspense>
+      <AcercaDe />
+    </Suspense>
+    <Suspense>
+      <Contacto />
+    </Suspense>
   </section>
 </template>
