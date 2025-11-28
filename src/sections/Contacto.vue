@@ -135,7 +135,7 @@ const handleSubmit = async () => {
           <form @submit.prevent="handleSubmit">
             <div class="flex flex-col mb-3">
               <label for="name">Nombre *</label>
-              <input type="text" name="name" v-model="form.name" @blur="v$.name.$touch()"
+              <input type="text" name="name" id="name" v-model="form.name" @blur="v$.name.$touch()"
                 class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700 ">
               <ErrorMessage v-if="v$.name.$dirty && v$.name.$error">
                 Uh, me perdí tu nombre. ¿Lo podrías volver a escribir?
@@ -143,7 +143,7 @@ const handleSubmit = async () => {
             </div>
             <div class="flex flex-col mb-3">
               <label for="email">Email *</label>
-              <input type="text" name="name" v-model="form.email" @blur="v$.email.$touch()"
+              <input type="text" name="email" id="email" v-model="form.email" @blur="v$.email.$touch()"
                 class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 focus:outline-none focus:ring-2 focus:ring-primary-700">
               <span v-if="v$.email.$dirty && v$.email.$error" class="mt-2">
                 <ErrorMessage v-if="v$.email.required.$invalid">
@@ -156,7 +156,7 @@ const handleSubmit = async () => {
             </div>
             <div class="flex flex-col mb-3">
               <label for="message">Mensaje *</label>
-              <textarea name="message" v-model="form.message" @blur="v$.message.$touch()"
+              <textarea name="message" id="message" v-model="form.message" @blur="v$.message.$touch()"
                 class="block bg-white py-1.5 px-3 rounded-sm text-base text-zinc-900 resize-none h-32 focus:outline-none focus:ring-2 focus:ring-primary-700"></textarea>
               <ErrorMessage v-if="v$.message.$dirty && v$.message.$error">
                 Me dejaste con la intriga. ¿Qué ibas a decir?
