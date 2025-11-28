@@ -3,6 +3,8 @@ node_modules
 
 info.md
 
+lighthouse-reports
+
 # local env files
 .env
 .env.local

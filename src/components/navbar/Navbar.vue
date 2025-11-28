@@ -82,13 +82,13 @@ onBeforeUnmount(() => {
             <NavLink to="/#acerca-de">Acerca De</NavLink>
             <NavLink to="/#contacto">Contacto</NavLink>
           </div>
-  
+
           <!-- Buttons -->
           <div class="flex items-end gap-4 md:gap-0">
             <DarkToggle />
             <div v-if="isMobile">
-              <button @click="toggleMenu" class="p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200">
-                <Bars3Icon class="w-6 h-6 text-primary-100 cursor-pointer hover:text-primary-400 transition ease-in-out md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200"/>
+              <button @click="toggleMenu" class="p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200" aria-label="abrir menu" :aria-expanded="menuOpen ? true : false">
+                <Bars3Icon class="w-6 h-6 text-primary-100 cursor-pointer hover:text-primary-400 transition ease-in-out md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200" aria-hidden="true" />
               </button>
             </div>
           </div>
