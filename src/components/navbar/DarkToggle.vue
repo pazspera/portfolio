@@ -8,7 +8,7 @@ const toggleDark = useToggle(isDark);
 </script>
 
 <template>
-  <button @click="toggleDark()" class="p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200">
+  <button @click="toggleDark()" class="p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-100  dark:focus-visible:ring-primary-400 active:text-primary-300 dark:active:text-primary-200" :aria-label="isDark ? 'cambiar a modo claro' : 'cambiar a modo oscuro'">
     <Transition name="fade" mode="out-in">
       <component
         :is="isDark ? MoonIcon : SunIcon"
